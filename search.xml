@@ -1289,92 +1289,6 @@ E\)</span>越大.</p></li>
       </categories>
   </entry>
   <entry>
-    <title>Foobar2000配置教程</title>
-    <url>/2023/05/10/004foobar2000/</url>
-    <content><![CDATA[<p>Foobar2000是当前主流的Hifi本地音乐播放器，拥有强大的功能，并支持绝大多数主流音乐格式，这篇文章将简要介绍一些Foobar2000基础配置。注意，本篇文章不涉及理论，仅考虑功能。当然，欢迎各位路过的大佬传授经验，提供建议，也欢迎小白提问，我会尽力解答。</p>
-<span id="more"></span>
-<h2 id="ui与界面">UI与界面</h2>
-<p>首先，Foobar2000的下载完全免费，对于下载和安装我就不再赘述。</p>
-<h3 id="ui整合包">UI整合包</h3>
-<p>对于一般人，自己设计制作Foobar2000的UI界面难度过大，也不能满足全方面的使用要求。因此，我推荐使用大佬们制作的UI整合包，下载这些整合包时，一般自带Foobar2000的本体，所以可以不必另行安装本体。这些整合包中，我个人比较推荐Foobox，也可以选择Foobaka、FlatLite等使用。这是我的Foobox整合包界面，可以感受一下是否符合自己的审美。</p>
-<p><img src="/2023/05/10/004foobar2000/1.jpg"></p>
-<h3 id="foobox设置">Foobox设置</h3>
-<p>选择设置，并进入Foobox设置，可以在不改变基本结构的基础上，自定义Foobar2000（后文简称fb2k）的界面。</p>
-<p><img src="/2023/05/10/004foobar2000/2.jpg"></p>
-<p>这些设置都简单易懂，比较值得一提的是列设置，通过开启/关闭列，可以改变播放界面展示的歌曲信息。</p>
-<h2 id="foobar2000的基础配置">Foobar2000的基础配置</h2>
-<p>接下来，让我们进入fb2k软件的原生配置环节。通过foobox设置中转入，或右上角菜单栏，可以进入设置选项。提示，fb2k最好开启音频独占使用。</p>
-<h3 id="播放与dsp管理器">播放与DSP管理器</h3>
-<ul>
-<li><p>播放增益：简单来讲就是播放音量与原始音量的差值</p>
-<ul>
-<li>源模式：专辑</li>
-<li>处理：应用增益并根据峰值阻止谐波失真</li>
-</ul></li>
-<li><p>DSP管理器：提供各类小工具</p>
-<ul>
-<li><p>高级限幅器、硬-6dB限幅器：可以减少杂音干扰，推荐开启</p></li>
-<li><p>重采样：个人认为，这东西并不是开的越高越好，要看解码器水平与音频质量，在保证不出杂音的情况下，尽可能开高。如果有解码器的朋友，记得在解码驱动程序中同时调节，保持与fb2k中采样率的一致。</p></li>
-<li><p>立体声、声道、上混等：我没用过，各位可以看心情试试</p></li>
-<li><p>交叉渐变器：听起来很牛，其实只是音乐淡入淡出</p></li>
-<li><p>跳过静音区域：字面意思</p></li>
-<li><p>均衡器：调节EQ曲线，个人喜欢原汁原味，但是据说有些耳机调了有奇效</p></li>
-</ul></li>
-</ul>
-<h3 id="解码与输出">解码与输出</h3>
-<ul>
-<li><p>解码：没什么要调的，勾选即可</p></li>
-<li><p>输出：放张图看看</p>
-<p><img src="/2023/05/10/004foobar2000/3.jpg"></p>
-<ul>
-<li>设备：没有解码耳放的朋友，可以选择wasapi播放，比默认略好一些；有解码耳放的朋友，可以选择asio+dsd输出（asio也可以，这里仅以自己的配置进行说明）。</li>
-<li>缓冲长度：基本保持默认即可。</li>
-<li>输出格式：声卡/解码耳放支持的最高位数。</li>
-</ul></li>
-<li><p>asio+dsd：默认即可。</p></li>
-</ul>
-<h2 id="工具">工具</h2>
-<h3 id="dsd处理器">DSD处理器</h3>
-<p><img src="/2023/05/10/004foobar2000/4.jpg"></p>
-<p>SDM类型选择A，采样选择8×即可。输出一栏的调节俗称升频功能，需参考解码器最大支持的码率调节。升频和上文提及的重采样类似，不求极致，但求合适。由于我在解码器中已经设置了升频，因此软件中没有重复设置。</p>
-<h3 id="eslyric">ESLyric</h3>
-<ul>
-<li><p>主选单：搜索按如图设置即可，是否启用桌面歌词看个人喜好</p>
-<p><img src="/2023/05/10/004foobar2000/5.jpg"></p></li>
-<li><p>歌词选项：关联全选，其余基本默认即可，保存格式为UTF-8</p></li>
-<li><p>桌面歌词：按个人喜好配置即可，分享一下我的配置：</p>
-<p><img src="/2023/05/10/004foobar2000/6.jpg"></p></li>
-<li><p>高级选项：保持默认即可</p></li>
-</ul>
-<h3 id="sacd">SACD</h3>
-<p>输出类型选择DSD，转换选择多级64fp，使用DSD处理器。声道优先看个人喜好，我选择无。剩下的直接上图看吧：</p>
-<p><img src="/2023/05/10/004foobar2000/7.jpg"></p>
-<h3 id="播放增益扫描器">播放增益扫描器</h3>
-<p>印象中基本无需更改，如图设置即可：</p>
-<p><img src="/2023/05/10/004foobar2000/8.jpg"></p>
-<p>其余项目印象中不需要什么调整，就不多讲了。</p>
-<h2 id="杂项设置">杂项设置</h2>
-<h3 id="快捷键">快捷键</h3>
-<p>可以自行添加、移除快捷键；通过点击按键栏，再用键盘指定键位的方式修改；对于暂停，下一首等常用按键，推荐勾选全局设置。</p>
-<p><img src="/2023/05/10/004foobar2000/9.jpg"></p>
-<h3 id="媒体库-可视化">媒体库 &amp; 可视化</h3>
-<p>请设置为自己音乐所在的文件目录，以便fb2k统计播放数据。</p>
-<p>可视化保持默认即可（还有一个对大多数人可有可无的网络设置也是）。</p>
-<p>这两项设置其实毫无关系，只是因为都只有一句话，就放在一起了。</p>
-<h3 id="外壳交互">外壳交互</h3>
-<p>设置如图，另外，可以在系统设置中，将主流音频格式默认关联到fb2k。</p>
-<p><img src="/2023/05/10/004foobar2000/10.jpg"></p>
-<h3 id="显示">显示</h3>
-<p>这一部分主要可以个性化设置的是主窗口栏，这依然是一个看个人喜好的设置，不妨自行调整测试，得出最适合自己的配置方案。</p>
-<h3 id="组件与高级">组件与高级</h3>
-<p>因为这是一篇基础教程，所以这两项并不会涉及，有兴趣请自行深入研究。另外，对于一般的UI整合包，必要的组件已经预安装完成，如果您使用原版fb2k，并且发现我上面提到的一些设置选项不存在，就需要安装对应的组合包了。</p>
-<p>最后想说，我本人并不专业，按照这个配置，可能无法达到最完美的播放效果。感谢各位的阅读，也欢迎各位提出自己的建议，指出我的错误！</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-  </entry>
-  <entry>
     <title>线性代数笔记整理</title>
     <url>/2023/05/10/003mathnoted1s/</url>
     <content><![CDATA[<p>大一上学期，自己用Latex整理的线性代数笔记，欢迎各位浏览学习。</p>
@@ -2268,6 +2182,92 @@ n\)</span>. </p></li>
       </categories>
   </entry>
   <entry>
+    <title>Foobar2000配置教程</title>
+    <url>/2023/05/10/004foobar2000/</url>
+    <content><![CDATA[<p>Foobar2000是当前主流的Hifi本地音乐播放器，拥有强大的功能，并支持绝大多数主流音乐格式，这篇文章将简要介绍一些Foobar2000基础配置。注意，本篇文章不涉及理论，仅考虑功能。当然，欢迎各位路过的大佬传授经验，提供建议，也欢迎小白提问，我会尽力解答。</p>
+<span id="more"></span>
+<h2 id="ui与界面">UI与界面</h2>
+<p>首先，Foobar2000的下载完全免费，对于下载和安装我就不再赘述。</p>
+<h3 id="ui整合包">UI整合包</h3>
+<p>对于一般人，自己设计制作Foobar2000的UI界面难度过大，也不能满足全方面的使用要求。因此，我推荐使用大佬们制作的UI整合包，下载这些整合包时，一般自带Foobar2000的本体，所以可以不必另行安装本体。这些整合包中，我个人比较推荐Foobox，也可以选择Foobaka、FlatLite等使用。这是我的Foobox整合包界面，可以感受一下是否符合自己的审美。</p>
+<p><img src="/2023/05/10/004foobar2000/1.jpg"></p>
+<h3 id="foobox设置">Foobox设置</h3>
+<p>选择设置，并进入Foobox设置，可以在不改变基本结构的基础上，自定义Foobar2000（后文简称fb2k）的界面。</p>
+<p><img src="/2023/05/10/004foobar2000/2.jpg"></p>
+<p>这些设置都简单易懂，比较值得一提的是列设置，通过开启/关闭列，可以改变播放界面展示的歌曲信息。</p>
+<h2 id="foobar2000的基础配置">Foobar2000的基础配置</h2>
+<p>接下来，让我们进入fb2k软件的原生配置环节。通过foobox设置中转入，或右上角菜单栏，可以进入设置选项。提示，fb2k最好开启音频独占使用。</p>
+<h3 id="播放与dsp管理器">播放与DSP管理器</h3>
+<ul>
+<li><p>播放增益：简单来讲就是播放音量与原始音量的差值</p>
+<ul>
+<li>源模式：专辑</li>
+<li>处理：应用增益并根据峰值阻止谐波失真</li>
+</ul></li>
+<li><p>DSP管理器：提供各类小工具</p>
+<ul>
+<li><p>高级限幅器、硬-6dB限幅器：可以减少杂音干扰，推荐开启</p></li>
+<li><p>重采样：个人认为，这东西并不是开的越高越好，要看解码器水平与音频质量，在保证不出杂音的情况下，尽可能开高。如果有解码器的朋友，记得在解码驱动程序中同时调节，保持与fb2k中采样率的一致。</p></li>
+<li><p>立体声、声道、上混等：我没用过，各位可以看心情试试</p></li>
+<li><p>交叉渐变器：听起来很牛，其实只是音乐淡入淡出</p></li>
+<li><p>跳过静音区域：字面意思</p></li>
+<li><p>均衡器：调节EQ曲线，个人喜欢原汁原味，但是据说有些耳机调了有奇效</p></li>
+</ul></li>
+</ul>
+<h3 id="解码与输出">解码与输出</h3>
+<ul>
+<li><p>解码：没什么要调的，勾选即可</p></li>
+<li><p>输出：放张图看看</p>
+<p><img src="/2023/05/10/004foobar2000/3.jpg"></p>
+<ul>
+<li>设备：没有解码耳放的朋友，可以选择wasapi播放，比默认略好一些；有解码耳放的朋友，可以选择asio+dsd输出（asio也可以，这里仅以自己的配置进行说明）。</li>
+<li>缓冲长度：基本保持默认即可。</li>
+<li>输出格式：声卡/解码耳放支持的最高位数。</li>
+</ul></li>
+<li><p>asio+dsd：默认即可。</p></li>
+</ul>
+<h2 id="工具">工具</h2>
+<h3 id="dsd处理器">DSD处理器</h3>
+<p><img src="/2023/05/10/004foobar2000/4.jpg"></p>
+<p>SDM类型选择A，采样选择8×即可。输出一栏的调节俗称升频功能，需参考解码器最大支持的码率调节。升频和上文提及的重采样类似，不求极致，但求合适。由于我在解码器中已经设置了升频，因此软件中没有重复设置。</p>
+<h3 id="eslyric">ESLyric</h3>
+<ul>
+<li><p>主选单：搜索按如图设置即可，是否启用桌面歌词看个人喜好</p>
+<p><img src="/2023/05/10/004foobar2000/5.jpg"></p></li>
+<li><p>歌词选项：关联全选，其余基本默认即可，保存格式为UTF-8</p></li>
+<li><p>桌面歌词：按个人喜好配置即可，分享一下我的配置：</p>
+<p><img src="/2023/05/10/004foobar2000/6.jpg"></p></li>
+<li><p>高级选项：保持默认即可</p></li>
+</ul>
+<h3 id="sacd">SACD</h3>
+<p>输出类型选择DSD，转换选择多级64fp，使用DSD处理器。声道优先看个人喜好，我选择无。剩下的直接上图看吧：</p>
+<p><img src="/2023/05/10/004foobar2000/7.jpg"></p>
+<h3 id="播放增益扫描器">播放增益扫描器</h3>
+<p>印象中基本无需更改，如图设置即可：</p>
+<p><img src="/2023/05/10/004foobar2000/8.jpg"></p>
+<p>其余项目印象中不需要什么调整，就不多讲了。</p>
+<h2 id="杂项设置">杂项设置</h2>
+<h3 id="快捷键">快捷键</h3>
+<p>可以自行添加、移除快捷键；通过点击按键栏，再用键盘指定键位的方式修改；对于暂停，下一首等常用按键，推荐勾选全局设置。</p>
+<p><img src="/2023/05/10/004foobar2000/9.jpg"></p>
+<h3 id="媒体库-可视化">媒体库 &amp; 可视化</h3>
+<p>请设置为自己音乐所在的文件目录，以便fb2k统计播放数据。</p>
+<p>可视化保持默认即可（还有一个对大多数人可有可无的网络设置也是）。</p>
+<p>这两项设置其实毫无关系，只是因为都只有一句话，就放在一起了。</p>
+<h3 id="外壳交互">外壳交互</h3>
+<p>设置如图，另外，可以在系统设置中，将主流音频格式默认关联到fb2k。</p>
+<p><img src="/2023/05/10/004foobar2000/10.jpg"></p>
+<h3 id="显示">显示</h3>
+<p>这一部分主要可以个性化设置的是主窗口栏，这依然是一个看个人喜好的设置，不妨自行调整测试，得出最适合自己的配置方案。</p>
+<h3 id="组件与高级">组件与高级</h3>
+<p>因为这是一篇基础教程，所以这两项并不会涉及，有兴趣请自行深入研究。另外，对于一般的UI整合包，必要的组件已经预安装完成，如果您使用原版fb2k，并且发现我上面提到的一些设置选项不存在，就需要安装对应的组合包了。</p>
+<p>最后想说，我本人并不专业，按照这个配置，可能无法达到最完美的播放效果。感谢各位的阅读，也欢迎各位提出自己的建议，指出我的错误！</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
     <title>宫越县背景设定及简介</title>
     <url>/2023/05/15/007csl-miakoshi-01/</url>
     <content><![CDATA[<p>城市天际线：宫越县相关设定资料，格式参考百度百科，历史背景等实在脑补不出来，以及受游戏限制，有诸多不合理的地方，内容已基本更新完成，后续会加入更多配图。</p>
@@ -2742,34 +2742,6 @@ Album》和水樹奈々的《深爱》。</p>
       <categories>
         <category>娱乐</category>
         <category>动画</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>日式城市命名思路</title>
-    <url>/2023/05/17/009pyrandomname/</url>
-    <content><![CDATA[<p>最近在天际线中建造日式城市时，经常需要为城市中的行政区划和轨道线路等命名，那么如何创作出合适的日式城市名称呢？</p>
-<span id="more"></span>
-<p>首先，最简单的办法，就是从地图中寻找灵感，如果是一些小地方的地名，直接借用也无妨。个人比较推荐的是Bing地图，可以非常便利的查看世界各地的详情。顺便贴一下网址：https://cn.bing.com/maps?cc=hk</p>
-<p>其次，可以利用已有地名衍生类比得出新的地名，比如更改一些方位词、表颜色等特征的形容词。</p>
-<p>但是，灵感终究会枯竭，我又发现，日本许多姓氏来自于地名，自然也可以反过来利用。我找到了这个网站，收录了日本绝大多数的姓氏：https://htmfiles.englishhome.org/Japsurnames/Japsurnames.htm</p>
-<p>可能这样查看也不是很方便，于是我利用Python，简单写了一个爬取姓氏信息并随机给出姓氏与对应罗马音的程序。由于本人并不熟练，可能代码会有一些冗长，希望各位可以加以指正，代码如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> linecache</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gethtml</span>():</span><br><span class="line">    url = <span class="string">&#x27;https://htmfiles.englishhome.org/Japsurnames/Japsurnames-&#x27;</span></span><br><span class="line">    filename = <span class="string">&#x27;result.txt&#x27;</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    r = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;j&#x27;</span>, <span class="string">&#x27;k1&#x27;</span>, <span class="string">&#x27;k2&#x27;</span>, <span class="string">&#x27;m&#x27;</span>, <span class="string">&#x27;n&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;t&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;v&#x27;</span>, <span class="string">&#x27;z&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;a+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">22</span>):</span><br><span class="line">        htr = url + <span class="built_in">str</span>(r[i]) + <span class="built_in">str</span>(<span class="string">&#x27;.htm&#x27;</span>)</span><br><span class="line">        response = requests.get(htr)</span><br><span class="line">        response.encoding = response.apparent_encoding</span><br><span class="line">        html = response.text</span><br><span class="line">        pattern = re.<span class="built_in">compile</span>(<span class="string">&#x27;&lt;td width=&quot;45%&quot;(.+)&lt;/td&gt;&#x27;</span>)</span><br><span class="line">        result = pattern.findall(html,re.S)</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> result:</span><br><span class="line">            f.write(line + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">correct</span>():</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    subp = [<span class="string">&#x27;。&#x27;</span>, <span class="string">&#x27;&gt;&#x27;</span>, <span class="string">&#x27; height=&quot;[0-9][0-9]&quot;&#x27;</span>]</span><br><span class="line">    filename = <span class="string">&#x27;result.txt&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">        f = <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">        alllines = f.readlines()</span><br><span class="line">        f.close()</span><br><span class="line">        f = <span class="built_in">open</span>(filename, <span class="string">&#x27;w+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> eachline <span class="keyword">in</span> alllines:</span><br><span class="line">            a = re.sub(subp[i], <span class="string">&#x27; &#x27;</span>, eachline)</span><br><span class="line">            f.writelines(a)</span><br><span class="line">        f.close()</span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    alllines = f.readlines()</span><br><span class="line">    f.close()</span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;w+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> eachline <span class="keyword">in</span> alllines:</span><br><span class="line">        a = re.sub(<span class="string">&#x27;Itoda&#x27;</span>, <span class="string">&#x27;伊藤\nItoda&#x27;</span>, eachline)</span><br><span class="line">        f.writelines(a)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myrandom</span>():</span><br><span class="line">    p = random.randint(<span class="number">1</span>, <span class="number">12652</span>)</span><br><span class="line">    <span class="keyword">if</span> p % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        q = p</span><br><span class="line">        p = p - <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        q = p + <span class="number">1</span></span><br><span class="line">    prtl1 = linecache.getline(<span class="string">&#x27;result.txt&#x27;</span>, p)</span><br><span class="line">    prtl2 = linecache.getline(<span class="string">&#x27;result.txt&#x27;</span>, q)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;罗马音：&quot;</span>, prtl1, <span class="string">&quot;名称：&quot;</span>, prtl2)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---欢迎使用随机命名工具，本工具会在相同目录下创建列表，并根据需求随机给出日语名称及对应罗马音---\n&quot;</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    flag = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;---输入1以获取列表---\n&quot;</span><span class="string">&quot;---输入2以随机获得名称---\n---输入0以退出---\n---请输入:&quot;</span>))</span><br><span class="line">    path = os.path.exists(<span class="string">&#x27;result.txt&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> path==<span class="literal">True</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---您已获取过列表---\n&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---这可能需要1分钟时间，请耐心等候---&quot;</span>)</span><br><span class="line">            gethtml()</span><br><span class="line">            correct()</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---获取完成---\n&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">if</span> path == <span class="literal">True</span>:</span><br><span class="line">            myrandom()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---请先获取列表---\n&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---进程已结束---&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>另外也有这个小工具封装为exe的版本，欢迎试用并提出建议！</p>
-<p>链接：https://pan.baidu.com/s/1EgK1MoQJFJ6nMXrLd4rbzQ 提取码：vpfm
-解压码：octdafu</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Sigil制作epub电子书入门</title>
-    <url>/2023/05/10/005sigilepub/</url>
-    <content><![CDATA[<p>开坑待填</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>教程</category>
       </categories>
   </entry>
   <entry>
@@ -3312,6 +3284,61 @@ Eric Kwok
 ]]></content>
       <categories>
         <category>杂记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Sigil制作epub电子书入门</title>
+    <url>/2023/05/10/005sigilepub/</url>
+    <content><![CDATA[<p>开坑待填</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>日式城市命名思路</title>
+    <url>/2023/05/17/009pyrandomname/</url>
+    <content><![CDATA[<p>最近在天际线中建造日式城市时，经常需要为城市中的行政区划和轨道线路等命名，那么如何创作出合适的日式城市名称呢？</p>
+<span id="more"></span>
+<p>首先，最简单的办法，就是从地图中寻找灵感，如果是一些小地方的地名，直接借用也无妨。个人比较推荐的是Bing地图，可以非常便利的查看世界各地的详情。顺便贴一下网址：https://cn.bing.com/maps?cc=hk</p>
+<p>其次，可以利用已有地名衍生类比得出新的地名，比如更改一些方位词、表颜色等特征的形容词。</p>
+<p>但是，灵感终究会枯竭，我又发现，日本许多姓氏来自于地名，自然也可以反过来利用。我找到了这个网站，收录了日本绝大多数的姓氏：https://htmfiles.englishhome.org/Japsurnames/Japsurnames.htm</p>
+<p>可能这样查看也不是很方便，于是我利用Python，简单写了一个爬取姓氏信息并随机给出姓氏与对应罗马音的程序。由于本人并不熟练，可能代码会有一些冗长，希望各位可以加以指正，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> linecache</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gethtml</span>():</span><br><span class="line">    url = <span class="string">&#x27;https://htmfiles.englishhome.org/Japsurnames/Japsurnames-&#x27;</span></span><br><span class="line">    filename = <span class="string">&#x27;result.txt&#x27;</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    r = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;j&#x27;</span>, <span class="string">&#x27;k1&#x27;</span>, <span class="string">&#x27;k2&#x27;</span>, <span class="string">&#x27;m&#x27;</span>, <span class="string">&#x27;n&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;t&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;v&#x27;</span>, <span class="string">&#x27;z&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;a+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">22</span>):</span><br><span class="line">        htr = url + <span class="built_in">str</span>(r[i]) + <span class="built_in">str</span>(<span class="string">&#x27;.htm&#x27;</span>)</span><br><span class="line">        response = requests.get(htr)</span><br><span class="line">        response.encoding = response.apparent_encoding</span><br><span class="line">        html = response.text</span><br><span class="line">        pattern = re.<span class="built_in">compile</span>(<span class="string">&#x27;&lt;td width=&quot;45%&quot;(.+)&lt;/td&gt;&#x27;</span>)</span><br><span class="line">        result = pattern.findall(html,re.S)</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> result:</span><br><span class="line">            f.write(line + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">correct</span>():</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    subp = [<span class="string">&#x27;。&#x27;</span>, <span class="string">&#x27;&gt;&#x27;</span>, <span class="string">&#x27; height=&quot;[0-9][0-9]&quot;&#x27;</span>]</span><br><span class="line">    filename = <span class="string">&#x27;result.txt&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">        f = <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">        alllines = f.readlines()</span><br><span class="line">        f.close()</span><br><span class="line">        f = <span class="built_in">open</span>(filename, <span class="string">&#x27;w+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> eachline <span class="keyword">in</span> alllines:</span><br><span class="line">            a = re.sub(subp[i], <span class="string">&#x27; &#x27;</span>, eachline)</span><br><span class="line">            f.writelines(a)</span><br><span class="line">        f.close()</span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    alllines = f.readlines()</span><br><span class="line">    f.close()</span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;w+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> eachline <span class="keyword">in</span> alllines:</span><br><span class="line">        a = re.sub(<span class="string">&#x27;Itoda&#x27;</span>, <span class="string">&#x27;伊藤\nItoda&#x27;</span>, eachline)</span><br><span class="line">        f.writelines(a)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myrandom</span>():</span><br><span class="line">    p = random.randint(<span class="number">1</span>, <span class="number">12652</span>)</span><br><span class="line">    <span class="keyword">if</span> p % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        q = p</span><br><span class="line">        p = p - <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        q = p + <span class="number">1</span></span><br><span class="line">    prtl1 = linecache.getline(<span class="string">&#x27;result.txt&#x27;</span>, p)</span><br><span class="line">    prtl2 = linecache.getline(<span class="string">&#x27;result.txt&#x27;</span>, q)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;罗马音：&quot;</span>, prtl1, <span class="string">&quot;名称：&quot;</span>, prtl2)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---欢迎使用随机命名工具，本工具会在相同目录下创建列表，并根据需求随机给出日语名称及对应罗马音---\n&quot;</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    flag = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;---输入1以获取列表---\n&quot;</span><span class="string">&quot;---输入2以随机获得名称---\n---输入0以退出---\n---请输入:&quot;</span>))</span><br><span class="line">    path = os.path.exists(<span class="string">&#x27;result.txt&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> path==<span class="literal">True</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---您已获取过列表---\n&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---这可能需要1分钟时间，请耐心等候---&quot;</span>)</span><br><span class="line">            gethtml()</span><br><span class="line">            correct()</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---获取完成---\n&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">if</span> path == <span class="literal">True</span>:</span><br><span class="line">            myrandom()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---请先获取列表---\n&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---进程已结束---&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>另外也有这个小工具封装为exe的版本，欢迎试用并提出建议！</p>
+<p>链接：https://pan.baidu.com/s/1EgK1MoQJFJ6nMXrLd4rbzQ 提取码：vpfm
+解压码：octdafu</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Octrans</title>
+    <url>/2023/05/21/011Octrans/</url>
+    <content><![CDATA[<p>Octrans是一款基于百度api的翻译软件，由本人自制，功能一般，bug也很多，欢迎各位指正！</p>
+<span id="more"></span>
+<p>当前版本：V2.0</p>
+<p>下载地址：https://pan.baidu.com/s/1AsiDCQL3j0mEOsKNR2NivA
+提取码：x9yd</p>
+<h1 id="说明">说明</h1>
+<h2 id="v2.0">V2.0</h2>
+<ul>
+<li>使用PyQt5编写了简单的图形界面</li>
+<li>可以选择翻译使用的语言与系统语言</li>
+<li>通过在输入栏打字或导入txt文件进行翻译</li>
+<li>可以将翻译结果导出到txt文件</li>
+</ul>
+<h1 id="源码">源码</h1>
+<h2 id="ui部分">UI部分</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtCore, QtGui, QtWidgets</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">langdic=&#123;</span><br><span class="line">            <span class="string">&quot;汉语&quot;</span>:<span class="string">&#x27;zh&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;英语&quot;</span>:<span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;粤语&quot;</span>:<span class="string">&#x27;yue&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;文言文&quot;</span>:<span class="string">&#x27;wyw&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;法语&quot;</span>:<span class="string">&#x27;fra&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;德语&quot;</span>:<span class="string">&#x27;de&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;日语&quot;</span>:<span class="string">&#x27;jp&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;韩语&quot;</span>:<span class="string">&#x27;kor&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;西班牙语&quot;</span>:<span class="string">&#x27;spa&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;葡萄牙语&quot;</span>:<span class="string">&#x27;pt&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;意大利语&quot;</span>:<span class="string">&#x27;it&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;阿拉伯语&quot;</span>:<span class="string">&#x27;ara&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">ch_intro=<span class="string">&quot;欢迎使用Octdafu翻译器！\n这是一个基于百度api的简易翻译器，支持多种语言的翻译，\n感谢您的使用和支持！&quot;</span></span><br><span class="line">en_intro=<span class="string">&quot;Welcome to Octrans! \nThis is a simle translator based on Baidu api, which supports translation between varies of languages. \nThanks for your using and supporting!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ui_Octrans</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">setupUi</span>(<span class="params">self, Octrans</span>):</span><br><span class="line">        Octrans.setObjectName(<span class="string">&quot;Octrans&quot;</span>)</span><br><span class="line">        Octrans.resize(<span class="number">780</span>, <span class="number">587</span>)</span><br><span class="line">        self.centralwidget = QtWidgets.QWidget(Octrans)</span><br><span class="line">        self.centralwidget.setObjectName(<span class="string">&quot;centralwidget&quot;</span>)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)</span><br><span class="line">        self.gridLayout.setObjectName(<span class="string">&quot;gridLayout&quot;</span>)</span><br><span class="line">        self.lanchoice = QtWidgets.QComboBox(self.centralwidget)</span><br><span class="line">        self.lanchoice.setObjectName(<span class="string">&quot;lanchoice&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.lanchoice, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.inptext = QtWidgets.QTextEdit(self.centralwidget)</span><br><span class="line">        self.inptext.setObjectName(<span class="string">&quot;inptext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.inptext, <span class="number">2</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.transbut = QtWidgets.QPushButton(self.centralwidget)</span><br><span class="line">        self.transbut.setObjectName(<span class="string">&quot;transbut&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.transbut, <span class="number">3</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.introtext = QtWidgets.QLabel(self.centralwidget)</span><br><span class="line">        self.introtext.setTextFormat(QtCore.Qt.MarkdownText)</span><br><span class="line">        self.introtext.setObjectName(<span class="string">&quot;introtext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.introtext, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.outext = QtWidgets.QTextEdit(self.centralwidget)</span><br><span class="line">        self.outext.setObjectName(<span class="string">&quot;outext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.outext, <span class="number">4</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        Octrans.setCentralWidget(self.centralwidget)</span><br><span class="line">        self.menubar = QtWidgets.QMenuBar(Octrans)</span><br><span class="line">        self.menubar.setGeometry(QtCore.QRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">780</span>, <span class="number">22</span>))</span><br><span class="line">        self.menubar.setObjectName(<span class="string">&quot;menubar&quot;</span>)</span><br><span class="line">        self.Filem = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.Filem.setObjectName(<span class="string">&quot;Filem&quot;</span>)</span><br><span class="line">        self.settingm = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.settingm.setObjectName(<span class="string">&quot;settingm&quot;</span>)</span><br><span class="line">        self.menulanm = QtWidgets.QMenu(self.settingm)</span><br><span class="line">        self.menulanm.setObjectName(<span class="string">&quot;menulanm&quot;</span>)</span><br><span class="line">        Octrans.setMenuBar(self.menubar)</span><br><span class="line">        self.statusbar = QtWidgets.QStatusBar(Octrans)</span><br><span class="line">        self.statusbar.setObjectName(<span class="string">&quot;statusbar&quot;</span>)</span><br><span class="line">        Octrans.setStatusBar(self.statusbar)</span><br><span class="line">        self.openm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.openm.setObjectName(<span class="string">&quot;openm&quot;</span>)</span><br><span class="line">        self.savem = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.savem.setObjectName(<span class="string">&quot;savem&quot;</span>)</span><br><span class="line">        self.chm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.chm.setObjectName(<span class="string">&quot;chm&quot;</span>)</span><br><span class="line">        self.enm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.enm.setObjectName(<span class="string">&quot;enm&quot;</span>)</span><br><span class="line">        self.Filem.addAction(self.openm)</span><br><span class="line">        self.Filem.addAction(self.savem)</span><br><span class="line">        self.menulanm.addAction(self.chm)</span><br><span class="line">        self.menulanm.addAction(self.enm)</span><br><span class="line">        self.settingm.addAction(self.menulanm.menuAction())</span><br><span class="line">        self.menubar.addAction(self.Filem.menuAction())</span><br><span class="line">        self.menubar.addAction(self.settingm.menuAction())</span><br><span class="line"></span><br><span class="line">        self.retranslateUi(Octrans)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(Octrans)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">retranslateUi</span>(<span class="params">self, Octrans</span>):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        Octrans.setWindowTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;Octrans-Version 2.0&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;汉语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;英语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;粤语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;文言文&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;法语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;德语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;日语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;韩语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;西班牙语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;葡萄牙语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;意大利语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;阿拉伯语&quot;</span>))</span><br><span class="line">        self.transbut.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;翻译&quot;</span>))</span><br><span class="line">        self.introtext.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, ch_intro))</span><br><span class="line">        self.Filem.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;file&quot;</span>))</span><br><span class="line">        self.settingm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;setting&quot;</span>))</span><br><span class="line">        self.menulanm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;Applanguage&quot;</span>))</span><br><span class="line">        self.openm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;open&quot;</span>))</span><br><span class="line">        self.savem.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;save&quot;</span>))</span><br><span class="line">        self.chm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;Chinese&quot;</span>))</span><br><span class="line">        self.enm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;English&quot;</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">userlangchoice</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> langdic[self.lanchoice.currentText()]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_sys_ch</span>(<span class="params">self</span>):</span><br><span class="line">        self.introtext.setText(ch_intro)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_sys_en</span>(<span class="params">self</span>):</span><br><span class="line">        self.introtext.setText(en_intro)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">print_text</span>(<span class="params">self</span>):</span><br><span class="line">        user_input = self.inptext.toPlainText()</span><br><span class="line">        <span class="keyword">return</span>(user_input)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">openfile</span>(<span class="params">self</span>):</span><br><span class="line">        filename,_=QtWidgets.QFileDialog.getOpenFileName(self.centralwidget,<span class="string">&#x27;choose a file&#x27;</span>,os.getcwd(),<span class="string">&quot;Text Files(*.txt)&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> filename:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                    data = f.read()</span><br><span class="line">            <span class="keyword">except</span> Exception:</span><br><span class="line">                data=<span class="literal">None</span></span><br><span class="line">            <span class="keyword">if</span> data <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">                self.inptext.setText(data)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            data=<span class="literal">None</span></span><br><span class="line">        <span class="keyword">return</span> data</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">savefile</span>(<span class="params">self</span>):</span><br><span class="line">        filename,_=QtWidgets.QFileDialog.getOpenFileName(self.centralwidget,<span class="string">&#x27;choose a file&#x27;</span>,os.getcwd(),<span class="string">&quot;Text Files(*.txt)&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> filename:</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(filename,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                data=self.outext.toPlainText()</span><br><span class="line">                f.write(data)</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
+<h2 id="主程序部分">主程序部分</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication, QMainWindow</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> translate</span><br><span class="line"></span><br><span class="line">appid = <span class="string">&#x27;不给你看喵&#x27;</span></span><br><span class="line">appkey = <span class="string">&#x27;不给你看喵&#x27;</span></span><br><span class="line"></span><br><span class="line">from_lang =<span class="string">&#x27;auto&#x27;</span></span><br><span class="line"></span><br><span class="line">endpoint = <span class="string">&#x27;http://api.fanyi.baidu.com&#x27;</span></span><br><span class="line">path = <span class="string">&#x27;/api/trans/vip/translate&#x27;</span></span><br><span class="line">url = endpoint + path</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">make_md5</span>(<span class="params">s, encoding=<span class="string">&#x27;utf-8&#x27;</span></span>):</span><br><span class="line">    <span class="keyword">return</span> md5(s.encode(encoding)).hexdigest()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">trans</span>(<span class="params">userinputs</span>):</span><br><span class="line">    <span class="keyword">for</span> userinput <span class="keyword">in</span> userinputs.split(<span class="string">&#x27;\n&#x27;</span>):</span><br><span class="line">        salt = random.randint(<span class="number">32768</span>, <span class="number">65536</span>)</span><br><span class="line">        sign = make_md5(appid + userinput + <span class="built_in">str</span>(salt) + appkey)</span><br><span class="line">        <span class="comment"># Build request</span></span><br><span class="line">        headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">        payload = &#123;<span class="string">&#x27;appid&#x27;</span>: appid, <span class="string">&#x27;q&#x27;</span>: userinput, <span class="string">&#x27;from&#x27;</span>: from_lang, <span class="string">&#x27;to&#x27;</span>: to_lang, <span class="string">&#x27;salt&#x27;</span>: salt, <span class="string">&#x27;sign&#x27;</span>: sign&#125;</span><br><span class="line">        <span class="comment"># Send request</span></span><br><span class="line">        r = requests.post(url, params=payload, headers=headers)</span><br><span class="line">        result = json.loads(r.text)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;trans_result&#x27;</span> <span class="keyword">in</span> result:</span><br><span class="line">            trans_result = result[<span class="string">&#x27;trans_result&#x27;</span>]</span><br><span class="line">            <span class="keyword">for</span> item <span class="keyword">in</span> trans_result:</span><br><span class="line">                <span class="keyword">if</span> <span class="string">&#x27;dst&#x27;</span> <span class="keyword">in</span> item:</span><br><span class="line">                    dst = item[<span class="string">&#x27;dst&#x27;</span>]</span><br><span class="line">        <span class="comment"># Show response</span></span><br><span class="line">        ui.outext.append(dst)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">makesure_trans</span>():</span><br><span class="line">    userinputs=ui.print_text()</span><br><span class="line">    <span class="keyword">global</span> to_lang</span><br><span class="line">    to_lang=ui.userlangchoice()</span><br><span class="line">    ui.outext.setText(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    trans(userinputs)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    Octrans = QMainWindow()</span><br><span class="line">    ui = translate.Ui_Octrans()</span><br><span class="line">    ui.setupUi(Octrans)</span><br><span class="line">    Octrans.show()</span><br><span class="line"></span><br><span class="line">    ui.chm.triggered.connect(ui.set_sys_ch)</span><br><span class="line">    ui.enm.triggered.connect(ui.set_sys_en)</span><br><span class="line">    ui.openm.triggered.connect(ui.openfile)</span><br><span class="line">    ui.savem.triggered.connect(ui.savefile)</span><br><span class="line">    ui.transbut.clicked.connect(makesure_trans)</span><br><span class="line"></span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习资料</category>
+        <category>程序</category>
       </categories>
   </entry>
 </search>
