@@ -12,92 +12,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Foobar2000配置教程</title>
-    <url>/2023/05/10/004foobar2000/</url>
-    <content><![CDATA[<p>Foobar2000是当前主流的Hifi本地音乐播放器，拥有强大的功能，并支持绝大多数主流音乐格式，这篇文章将简要介绍一些Foobar2000基础配置。注意，本篇文章不涉及理论，仅考虑功能。当然，欢迎各位路过的大佬传授经验，提供建议，也欢迎小白提问，我会尽力解答。</p>
-<span id="more"></span>
-<h2 id="ui与界面">UI与界面</h2>
-<p>首先，Foobar2000的下载完全免费，对于下载和安装我就不再赘述。</p>
-<h3 id="ui整合包">UI整合包</h3>
-<p>对于一般人，自己设计制作Foobar2000的UI界面难度过大，也不能满足全方面的使用要求。因此，我推荐使用大佬们制作的UI整合包，下载这些整合包时，一般自带Foobar2000的本体，所以可以不必另行安装本体。这些整合包中，我个人比较推荐Foobox，也可以选择Foobaka、FlatLite等使用。这是我的Foobox整合包界面，可以感受一下是否符合自己的审美。</p>
-<p><img src="/2023/05/10/004foobar2000/1.jpg"></p>
-<h3 id="foobox设置">Foobox设置</h3>
-<p>选择设置，并进入Foobox设置，可以在不改变基本结构的基础上，自定义Foobar2000（后文简称fb2k）的界面。</p>
-<p><img src="/2023/05/10/004foobar2000/2.jpg"></p>
-<p>这些设置都简单易懂，比较值得一提的是列设置，通过开启/关闭列，可以改变播放界面展示的歌曲信息。</p>
-<h2 id="foobar2000的基础配置">Foobar2000的基础配置</h2>
-<p>接下来，让我们进入fb2k软件的原生配置环节。通过foobox设置中转入，或右上角菜单栏，可以进入设置选项。提示，fb2k最好开启音频独占使用。</p>
-<h3 id="播放与dsp管理器">播放与DSP管理器</h3>
-<ul>
-<li><p>播放增益：简单来讲就是播放音量与原始音量的差值</p>
-<ul>
-<li>源模式：专辑</li>
-<li>处理：应用增益并根据峰值阻止谐波失真</li>
-</ul></li>
-<li><p>DSP管理器：提供各类小工具</p>
-<ul>
-<li><p>高级限幅器、硬-6dB限幅器：可以减少杂音干扰，推荐开启</p></li>
-<li><p>重采样：个人认为，这东西并不是开的越高越好，要看解码器水平与音频质量，在保证不出杂音的情况下，尽可能开高。如果有解码器的朋友，记得在解码驱动程序中同时调节，保持与fb2k中采样率的一致。</p></li>
-<li><p>立体声、声道、上混等：我没用过，各位可以看心情试试</p></li>
-<li><p>交叉渐变器：听起来很牛，其实只是音乐淡入淡出</p></li>
-<li><p>跳过静音区域：字面意思</p></li>
-<li><p>均衡器：调节EQ曲线，个人喜欢原汁原味，但是据说有些耳机调了有奇效</p></li>
-</ul></li>
-</ul>
-<h3 id="解码与输出">解码与输出</h3>
-<ul>
-<li><p>解码：没什么要调的，勾选即可</p></li>
-<li><p>输出：放张图看看</p>
-<p><img src="/2023/05/10/004foobar2000/3.jpg"></p>
-<ul>
-<li>设备：没有解码耳放的朋友，可以选择wasapi播放，比默认略好一些；有解码耳放的朋友，可以选择asio+dsd输出（asio也可以，这里仅以自己的配置进行说明）。</li>
-<li>缓冲长度：基本保持默认即可。</li>
-<li>输出格式：声卡/解码耳放支持的最高位数。</li>
-</ul></li>
-<li><p>asio+dsd：默认即可。</p></li>
-</ul>
-<h2 id="工具">工具</h2>
-<h3 id="dsd处理器">DSD处理器</h3>
-<p><img src="/2023/05/10/004foobar2000/4.jpg"></p>
-<p>SDM类型选择A，采样选择8×即可。输出一栏的调节俗称升频功能，需参考解码器最大支持的码率调节。升频和上文提及的重采样类似，不求极致，但求合适。由于我在解码器中已经设置了升频，因此软件中没有重复设置。</p>
-<h3 id="eslyric">ESLyric</h3>
-<ul>
-<li><p>主选单：搜索按如图设置即可，是否启用桌面歌词看个人喜好</p>
-<p><img src="/2023/05/10/004foobar2000/5.jpg"></p></li>
-<li><p>歌词选项：关联全选，其余基本默认即可，保存格式为UTF-8</p></li>
-<li><p>桌面歌词：按个人喜好配置即可，分享一下我的配置：</p>
-<p><img src="/2023/05/10/004foobar2000/6.jpg"></p></li>
-<li><p>高级选项：保持默认即可</p></li>
-</ul>
-<h3 id="sacd">SACD</h3>
-<p>输出类型选择DSD，转换选择多级64fp，使用DSD处理器。声道优先看个人喜好，我选择无。剩下的直接上图看吧：</p>
-<p><img src="/2023/05/10/004foobar2000/7.jpg"></p>
-<h3 id="播放增益扫描器">播放增益扫描器</h3>
-<p>印象中基本无需更改，如图设置即可：</p>
-<p><img src="/2023/05/10/004foobar2000/8.jpg"></p>
-<p>其余项目印象中不需要什么调整，就不多讲了。</p>
-<h2 id="杂项设置">杂项设置</h2>
-<h3 id="快捷键">快捷键</h3>
-<p>可以自行添加、移除快捷键；通过点击按键栏，再用键盘指定键位的方式修改；对于暂停，下一首等常用按键，推荐勾选全局设置。</p>
-<p><img src="/2023/05/10/004foobar2000/9.jpg"></p>
-<h3 id="媒体库-可视化">媒体库 &amp; 可视化</h3>
-<p>请设置为自己音乐所在的文件目录，以便fb2k统计播放数据。</p>
-<p>可视化保持默认即可（还有一个对大多数人可有可无的网络设置也是）。</p>
-<p>这两项设置其实毫无关系，只是因为都只有一句话，就放在一起了。</p>
-<h3 id="外壳交互">外壳交互</h3>
-<p>设置如图，另外，可以在系统设置中，将主流音频格式默认关联到fb2k。</p>
-<p><img src="/2023/05/10/004foobar2000/10.jpg"></p>
-<h3 id="显示">显示</h3>
-<p>这一部分主要可以个性化设置的是主窗口栏，这依然是一个看个人喜好的设置，不妨自行调整测试，得出最适合自己的配置方案。</p>
-<h3 id="组件与高级">组件与高级</h3>
-<p>因为这是一篇基础教程，所以这两项并不会涉及，有兴趣请自行深入研究。另外，对于一般的UI整合包，必要的组件已经预安装完成，如果您使用原版fb2k，并且发现我上面提到的一些设置选项不存在，就需要安装对应的组合包了。</p>
-<p>最后想说，我本人并不专业，按照这个配置，可能无法达到最完美的播放效果。感谢各位的阅读，也欢迎各位提出自己的建议，指出我的错误！</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-  </entry>
-  <entry>
     <title>线性代数笔记整理</title>
     <url>/2023/05/10/003mathnoted1s/</url>
     <content><![CDATA[<p>大一上学期，自己用Latex整理的线性代数笔记，欢迎各位浏览学习。</p>
@@ -2268,6 +2182,92 @@ E\)</span>越大.</p></li>
       </categories>
   </entry>
   <entry>
+    <title>Foobar2000配置教程</title>
+    <url>/2023/05/10/004foobar2000/</url>
+    <content><![CDATA[<p>Foobar2000是当前主流的Hifi本地音乐播放器，拥有强大的功能，并支持绝大多数主流音乐格式，这篇文章将简要介绍一些Foobar2000基础配置。注意，本篇文章不涉及理论，仅考虑功能。当然，欢迎各位路过的大佬传授经验，提供建议，也欢迎小白提问，我会尽力解答。</p>
+<span id="more"></span>
+<h2 id="ui与界面">UI与界面</h2>
+<p>首先，Foobar2000的下载完全免费，对于下载和安装我就不再赘述。</p>
+<h3 id="ui整合包">UI整合包</h3>
+<p>对于一般人，自己设计制作Foobar2000的UI界面难度过大，也不能满足全方面的使用要求。因此，我推荐使用大佬们制作的UI整合包，下载这些整合包时，一般自带Foobar2000的本体，所以可以不必另行安装本体。这些整合包中，我个人比较推荐Foobox，也可以选择Foobaka、FlatLite等使用。这是我的Foobox整合包界面，可以感受一下是否符合自己的审美。</p>
+<p><img src="/2023/05/10/004foobar2000/1.jpg"></p>
+<h3 id="foobox设置">Foobox设置</h3>
+<p>选择设置，并进入Foobox设置，可以在不改变基本结构的基础上，自定义Foobar2000（后文简称fb2k）的界面。</p>
+<p><img src="/2023/05/10/004foobar2000/2.jpg"></p>
+<p>这些设置都简单易懂，比较值得一提的是列设置，通过开启/关闭列，可以改变播放界面展示的歌曲信息。</p>
+<h2 id="foobar2000的基础配置">Foobar2000的基础配置</h2>
+<p>接下来，让我们进入fb2k软件的原生配置环节。通过foobox设置中转入，或右上角菜单栏，可以进入设置选项。提示，fb2k最好开启音频独占使用。</p>
+<h3 id="播放与dsp管理器">播放与DSP管理器</h3>
+<ul>
+<li><p>播放增益：简单来讲就是播放音量与原始音量的差值</p>
+<ul>
+<li>源模式：专辑</li>
+<li>处理：应用增益并根据峰值阻止谐波失真</li>
+</ul></li>
+<li><p>DSP管理器：提供各类小工具</p>
+<ul>
+<li><p>高级限幅器、硬-6dB限幅器：可以减少杂音干扰，推荐开启</p></li>
+<li><p>重采样：个人认为，这东西并不是开的越高越好，要看解码器水平与音频质量，在保证不出杂音的情况下，尽可能开高。如果有解码器的朋友，记得在解码驱动程序中同时调节，保持与fb2k中采样率的一致。</p></li>
+<li><p>立体声、声道、上混等：我没用过，各位可以看心情试试</p></li>
+<li><p>交叉渐变器：听起来很牛，其实只是音乐淡入淡出</p></li>
+<li><p>跳过静音区域：字面意思</p></li>
+<li><p>均衡器：调节EQ曲线，个人喜欢原汁原味，但是据说有些耳机调了有奇效</p></li>
+</ul></li>
+</ul>
+<h3 id="解码与输出">解码与输出</h3>
+<ul>
+<li><p>解码：没什么要调的，勾选即可</p></li>
+<li><p>输出：放张图看看</p>
+<p><img src="/2023/05/10/004foobar2000/3.jpg"></p>
+<ul>
+<li>设备：没有解码耳放的朋友，可以选择wasapi播放，比默认略好一些；有解码耳放的朋友，可以选择asio+dsd输出（asio也可以，这里仅以自己的配置进行说明）。</li>
+<li>缓冲长度：基本保持默认即可。</li>
+<li>输出格式：声卡/解码耳放支持的最高位数。</li>
+</ul></li>
+<li><p>asio+dsd：默认即可。</p></li>
+</ul>
+<h2 id="工具">工具</h2>
+<h3 id="dsd处理器">DSD处理器</h3>
+<p><img src="/2023/05/10/004foobar2000/4.jpg"></p>
+<p>SDM类型选择A，采样选择8×即可。输出一栏的调节俗称升频功能，需参考解码器最大支持的码率调节。升频和上文提及的重采样类似，不求极致，但求合适。由于我在解码器中已经设置了升频，因此软件中没有重复设置。</p>
+<h3 id="eslyric">ESLyric</h3>
+<ul>
+<li><p>主选单：搜索按如图设置即可，是否启用桌面歌词看个人喜好</p>
+<p><img src="/2023/05/10/004foobar2000/5.jpg"></p></li>
+<li><p>歌词选项：关联全选，其余基本默认即可，保存格式为UTF-8</p></li>
+<li><p>桌面歌词：按个人喜好配置即可，分享一下我的配置：</p>
+<p><img src="/2023/05/10/004foobar2000/6.jpg"></p></li>
+<li><p>高级选项：保持默认即可</p></li>
+</ul>
+<h3 id="sacd">SACD</h3>
+<p>输出类型选择DSD，转换选择多级64fp，使用DSD处理器。声道优先看个人喜好，我选择无。剩下的直接上图看吧：</p>
+<p><img src="/2023/05/10/004foobar2000/7.jpg"></p>
+<h3 id="播放增益扫描器">播放增益扫描器</h3>
+<p>印象中基本无需更改，如图设置即可：</p>
+<p><img src="/2023/05/10/004foobar2000/8.jpg"></p>
+<p>其余项目印象中不需要什么调整，就不多讲了。</p>
+<h2 id="杂项设置">杂项设置</h2>
+<h3 id="快捷键">快捷键</h3>
+<p>可以自行添加、移除快捷键；通过点击按键栏，再用键盘指定键位的方式修改；对于暂停，下一首等常用按键，推荐勾选全局设置。</p>
+<p><img src="/2023/05/10/004foobar2000/9.jpg"></p>
+<h3 id="媒体库-可视化">媒体库 &amp; 可视化</h3>
+<p>请设置为自己音乐所在的文件目录，以便fb2k统计播放数据。</p>
+<p>可视化保持默认即可（还有一个对大多数人可有可无的网络设置也是）。</p>
+<p>这两项设置其实毫无关系，只是因为都只有一句话，就放在一起了。</p>
+<h3 id="外壳交互">外壳交互</h3>
+<p>设置如图，另外，可以在系统设置中，将主流音频格式默认关联到fb2k。</p>
+<p><img src="/2023/05/10/004foobar2000/10.jpg"></p>
+<h3 id="显示">显示</h3>
+<p>这一部分主要可以个性化设置的是主窗口栏，这依然是一个看个人喜好的设置，不妨自行调整测试，得出最适合自己的配置方案。</p>
+<h3 id="组件与高级">组件与高级</h3>
+<p>因为这是一篇基础教程，所以这两项并不会涉及，有兴趣请自行深入研究。另外，对于一般的UI整合包，必要的组件已经预安装完成，如果您使用原版fb2k，并且发现我上面提到的一些设置选项不存在，就需要安装对应的组合包了。</p>
+<p>最后想说，我本人并不专业，按照这个配置，可能无法达到最完美的播放效果。感谢各位的阅读，也欢迎各位提出自己的建议，指出我的错误！</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Sigil制作epub电子书入门</title>
     <url>/2023/05/10/005sigilepub/</url>
     <content><![CDATA[<p>开坑待填</p>
@@ -2275,173 +2275,6 @@ E\)</span>越大.</p></li>
 ]]></content>
       <categories>
         <category>教程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>个人向动画Top10榜单(V1.0)</title>
-    <url>/2023/05/10/006bestaniv1/</url>
-    <content><![CDATA[<p>个人喜爱的动画排行榜前10位，本人文学造纸不高，所以只给出评分细则及一两句简评。剧情分占50%，作画，演出各25%，综合得分加权后按总分10分记。</p>
-<span id="more"></span>
-<p>ps：按照这个标准和我在bangumi打的分和排名有较大偏差，打分会按客观的计入，排名依旧沿用我的主观排名。</p>
-<h3 id="top1-悠久之翼">Top1 : 悠久之翼</h3>
-<p><img src="/2023/05/10/006bestaniv1/1.jpg"></p>
-<p>总分：9</p>
-<ol type="1">
-<li><p>剧情总评：9</p>
-<ul>
-<li>流畅/合理性：7</li>
-<li>改编水平：10</li>
-<li>情感抒发：10</li>
-<li>高潮：9</li>
-</ul></li>
-<li><p>作画：8</p></li>
-<li><p>演出：10</p>
-<p>简评：gal改的巅峰之作。上篇memory内容密度高，留下许多坑，加上新房的风格，其实看起来有一点折磨。但是到了下篇melody，随着谜团逐渐解开，人物形象也丰满、立体起来，雨宫优子可以算得上我在动画界最喜爱的女神。
-作画虽然老了一些，但是非常整洁，淡雅，审美水平在线。新房的演出非常契合剧情，不得不满昏～</p></li>
-</ol>
-<h3 id="top2-白色相簿">Top2 : 白色相簿</h3>
-<p><img src="/2023/05/10/006bestaniv1/2.jpg"></p>
-<p>总分：8.5</p>
-<ol type="1">
-<li><p>剧情总评：9</p>
-<ul>
-<li>流畅/合理性：7</li>
-<li>改编水平：10</li>
-<li>情感抒发：10</li>
-<li>高潮：9</li>
-</ul></li>
-<li><p>作画：8</p></li>
-<li><p>演出：8</p>
-<p>简评：gal改的另一巅峰，只论动画水平远超wa2，不过杂糅各线剧情过多，加上偏向意识流的演出，让男主显得有些花心（尽管这并非事实），这也是引起作品争议的主要原因。这部作品看下来会给人以极强的无力感，随之而来的也有感动与震撼。作品中穿插的水粉风尽头为文艺性与画面加分颇多，但也有一些镜头稍显粗糙。另外，声优加大分，不妨去听听平野綾的《White
-Album》和水樹奈々的《深爱》。</p>
-<h3 id="top3-白箱">Top3 : 白箱</h3></li>
-</ol>
-<p><img src="/2023/05/10/006bestaniv1/3.jpg"></p>
-<p>总分：8.4</p>
-<ol type="1">
-<li>剧情总评：8.75
-<ul>
-<li>流畅/合理性：8</li>
-<li>原创水平：8</li>
-<li>情感抒发：9</li>
-<li>高潮：10</li>
-</ul></li>
-<li>作画：8</li>
-<li>演出：8</li>
-</ol>
-<p>简评：这部作品不仅带人深入了解了动画业界的真实，也让我们跟着主角们一同成长，体验挫折、成功与感动，是pa社当之无愧的最佳原创作品。无论现在的pa社退步有多大，因为《白箱》的存在，我也会选择相信pa的原创。在前三名中，这也是我认为最符合大众审美，并且很推荐学生党观看的一部。</p>
-<h3 id="top4-吹响悠风号-莉兹与青鸟">Top4 : 吹响！悠风号 &amp;
-莉兹与青鸟</h3>
-<p><img src="/2023/05/10/006bestaniv1/4.jpg"></p>
-<p>总分：8.8</p>
-<ol type="1">
-<li>剧情总评：8.5
-<ul>
-<li>流畅/合理性：8</li>
-<li>改编水平：9</li>
-<li>情感抒发：8</li>
-<li>高潮：9</li>
-</ul></li>
-<li>作画：10</li>
-<li>演出：8</li>
-</ol>
-<p>简评：本篇《吹响！悠风号》，从第一季后半渐入佳境，在第二季完成了美妙的情感爆发，个人认为算得上京阿尼tv动画的集大成者。而剧场版外传《莉兹与青鸟》，更是凭借绝美的作画，文艺清新的镜头语言，结合故事性与音乐性，成了无数百合厨心中的“圣经”。在此，也希望《吹响》第三季能再续辉煌，让观众看到京阿尼还是那个京阿尼。</p>
-<h3 id="top5-魔法少女小圆">Top5 : 魔法少女小圆</h3>
-<p><img src="/2023/05/10/006bestaniv1/5.jpg"></p>
-<p>总分：8.4</p>
-<ol type="1">
-<li><p>剧情总评：8.75</p>
-<ul>
-<li>流畅/合理性：7</li>
-<li>原创水平：9</li>
-<li>情感抒发：9</li>
-<li>高潮：10</li>
-</ul></li>
-<li><p>作画：8</p></li>
-<li><p>演出：8</p></li>
-</ol>
-<p>简评：首先，你知道我要说什么（就不鞭尸了）……
-这又是一部tv已然封神，剧场版又堪称神中神的作品，虚渊玄剧本的神展开，给观众带来了极强的冲击，从此魔法少女便成了高危职业。剧场版新篇吼姆拉酱的黑化，更带给人无限期待。老虚，再带我们冲一次吧！再提一下小圆独特的画风，刚一看有点接受不能，看久了越发好看。当然，梶浦由记的配乐也为《魔圆》锦上添花。</p>
-<h3 id="top6-轻音少女">Top6 : 轻音少女</h3>
-<p><img src="/2023/05/10/006bestaniv1/6.jpg"></p>
-<p>总分：7.8</p>
-<ol type="1">
-<li>剧情总评：8
-<ul>
-<li>流畅/合理性：8</li>
-<li>改编水平：8</li>
-<li>情感抒发：9</li>
-<li>高潮：7</li>
-</ul></li>
-<li>作画：8</li>
-<li>演出：7</li>
-</ol>
-<p>简评：很普通地把各个方面做好，其实就已经不普通了。休闲社团番天花板之一，看了心情绝对会很棒~</p>
-<h3 id="top7-少女歌剧">Top7 : 少女歌剧</h3>
-<p><img src="/2023/05/10/006bestaniv1/7.jpg"></p>
-<p>总分：8.5</p>
-<ol type="1">
-<li>剧情总评：8.5
-<ul>
-<li>流畅/合理性：6</li>
-<li>原创水平：9</li>
-<li>情感抒发：9</li>
-<li>高潮：10</li>
-</ul></li>
-<li>作画：9</li>
-<li>演出：8</li>
-</ol>
-<p>简评：和《魔圆》有异曲同工之妙，近几年原创的顶尖之作。</p>
-<h3 id="top8-日常">Top8 : 日常</h3>
-<p><img src="/2023/05/10/006bestaniv1/8.jpg"></p>
-<p>总分：7.9</p>
-<ol type="1">
-<li>剧情总评：7.25
-<ul>
-<li>流畅/合理性：6</li>
-<li>改编水平：8</li>
-<li>情感抒发：8</li>
-<li>高潮：7</li>
-</ul></li>
-<li>作画：8</li>
-<li>演出：9</li>
-</ol>
-<p>简评：两个字评价《日常》：《日常》。</p>
-<h3 id="top9-反叛的鲁鲁修">Top9 : 反叛的鲁鲁修</h3>
-<p><img src="/2023/05/10/006bestaniv1/9.jpg"></p>
-<p>总分：7.8</p>
-<ol type="1">
-<li>剧情总评：8.5
-<ul>
-<li>流畅/合理性：7</li>
-<li>改编水平：9</li>
-<li>情感抒发：8</li>
-<li>高潮：10</li>
-</ul></li>
-<li>作画：7</li>
-<li>演出：7</li>
-</ol>
-<p>简评：非要抠细节的话，剧情其实蛮多漏洞，但是结局的精妙足够让人忽略这些……</p>
-<h3 id="top10-攻壳机动队押井守版">Top10 : 攻壳机动队（押井守版）</h3>
-<p><img src="/2023/05/10/006bestaniv1/10.jpg"></p>
-<p>总分：8.4</p>
-<ol type="1">
-<li>剧情总评：7.75
-<ul>
-<li>流畅/合理性：7</li>
-<li>改编水平：10</li>
-<li>情感抒发：7</li>
-<li>高潮：7</li>
-</ul></li>
-<li>作画：9</li>
-<li>演出：9</li>
-</ol>
-<p>简评：我看不懂，但我大受震撼。</p>
-<p>看到这里的朋友可能会发现，后五部的简评明显要短得多，这不是我的设计，只是单纯写累了（笑）。总之，谢谢您的阅读，也欢迎留下自己的观点~</p>
-]]></content>
-      <categories>
-        <category>娱乐</category>
-        <category>动画</category>
       </categories>
   </entry>
   <entry>
@@ -2706,21 +2539,220 @@ Album》和水樹奈々的《深爱》。</p>
       </categories>
   </entry>
   <entry>
-    <title>日式城市命名思路</title>
-    <url>/2023/05/17/009pyrandomname/</url>
-    <content><![CDATA[<p>最近在天际线中建造日式城市时，经常需要为城市中的行政区划和轨道线路等命名，那么如何创作出合适的日式城市名称呢？</p>
+    <title>宫越县交通综合概要</title>
+    <url>/2023/05/15/008csl-miakoshi-02/</url>
+    <content><![CDATA[<p>城市天际线：宫越县交通相关内容。</p>
+<p>更新坏档了，这篇以后估计更新不能了（哭）</p>
 <span id="more"></span>
-<p>首先，最简单的办法，就是从地图中寻找灵感，如果是一些小地方的地名，直接借用也无妨。个人比较推荐的是Bing地图，可以非常便利的查看世界各地的详情。顺便贴一下网址：https://cn.bing.com/maps?cc=hk</p>
-<p>其次，可以利用已有地名衍生类比得出新的地名，比如更改一些方位词、表颜色等特征的形容词。</p>
-<p>但是，灵感终究会枯竭，我又发现，日本许多姓氏来自于地名，自然也可以反过来利用。我找到了这个网站，收录了日本绝大多数的姓氏：https://htmfiles.englishhome.org/Japsurnames/Japsurnames.htm</p>
-<p>可能这样查看也不是很方便，于是我利用Python，简单写了一个爬取姓氏信息并随机给出姓氏与对应罗马音的程序。由于本人并不熟练，可能代码会有一些冗长，希望各位可以加以指正，代码如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> linecache</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gethtml</span>():</span><br><span class="line">    url = <span class="string">&#x27;https://htmfiles.englishhome.org/Japsurnames/Japsurnames-&#x27;</span></span><br><span class="line">    filename = <span class="string">&#x27;result.txt&#x27;</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    r = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;j&#x27;</span>, <span class="string">&#x27;k1&#x27;</span>, <span class="string">&#x27;k2&#x27;</span>, <span class="string">&#x27;m&#x27;</span>, <span class="string">&#x27;n&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;t&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;v&#x27;</span>, <span class="string">&#x27;z&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;a+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">22</span>):</span><br><span class="line">        htr = url + <span class="built_in">str</span>(r[i]) + <span class="built_in">str</span>(<span class="string">&#x27;.htm&#x27;</span>)</span><br><span class="line">        response = requests.get(htr)</span><br><span class="line">        response.encoding = response.apparent_encoding</span><br><span class="line">        html = response.text</span><br><span class="line">        pattern = re.<span class="built_in">compile</span>(<span class="string">&#x27;&lt;td width=&quot;45%&quot;(.+)&lt;/td&gt;&#x27;</span>)</span><br><span class="line">        result = pattern.findall(html,re.S)</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> result:</span><br><span class="line">            f.write(line + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">correct</span>():</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    subp = [<span class="string">&#x27;。&#x27;</span>, <span class="string">&#x27;&gt;&#x27;</span>, <span class="string">&#x27; height=&quot;[0-9][0-9]&quot;&#x27;</span>]</span><br><span class="line">    filename = <span class="string">&#x27;result.txt&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">        f = <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">        alllines = f.readlines()</span><br><span class="line">        f.close()</span><br><span class="line">        f = <span class="built_in">open</span>(filename, <span class="string">&#x27;w+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> eachline <span class="keyword">in</span> alllines:</span><br><span class="line">            a = re.sub(subp[i], <span class="string">&#x27; &#x27;</span>, eachline)</span><br><span class="line">            f.writelines(a)</span><br><span class="line">        f.close()</span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    alllines = f.readlines()</span><br><span class="line">    f.close()</span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;w+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> eachline <span class="keyword">in</span> alllines:</span><br><span class="line">        a = re.sub(<span class="string">&#x27;Itoda&#x27;</span>, <span class="string">&#x27;伊藤\nItoda&#x27;</span>, eachline)</span><br><span class="line">        f.writelines(a)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myrandom</span>():</span><br><span class="line">    p = random.randint(<span class="number">1</span>, <span class="number">12652</span>)</span><br><span class="line">    <span class="keyword">if</span> p % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        q = p</span><br><span class="line">        p = p - <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        q = p + <span class="number">1</span></span><br><span class="line">    prtl1 = linecache.getline(<span class="string">&#x27;result.txt&#x27;</span>, p)</span><br><span class="line">    prtl2 = linecache.getline(<span class="string">&#x27;result.txt&#x27;</span>, q)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;罗马音：&quot;</span>, prtl1, <span class="string">&quot;名称：&quot;</span>, prtl2)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---欢迎使用随机命名工具，本工具会在相同目录下创建列表，并根据需求随机给出日语名称及对应罗马音---\n&quot;</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    flag = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;---输入1以获取列表---\n&quot;</span><span class="string">&quot;---输入2以随机获得名称---\n---输入0以退出---\n---请输入:&quot;</span>))</span><br><span class="line">    path = os.path.exists(<span class="string">&#x27;result.txt&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> path==<span class="literal">True</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---您已获取过列表---\n&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---这可能需要1分钟时间，请耐心等候---&quot;</span>)</span><br><span class="line">            gethtml()</span><br><span class="line">            correct()</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---获取完成---\n&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">if</span> path == <span class="literal">True</span>:</span><br><span class="line">            myrandom()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---请先获取列表---\n&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---进程已结束---&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>另外也有这个小工具封装为exe的版本，欢迎试用并提出建议！</p>
-<p>链接：https://pan.baidu.com/s/1EgK1MoQJFJ6nMXrLd4rbzQ 提取码：vpfm
-解压码：octdafu</p>
+<h2 id="铁道">铁道</h2>
+<h3 id="jr九州">JR九州</h3>
+<h4 id="新幹線">新幹線</h4>
+<p>東九州新幹線</p>
+<h4 id="在来線">在来線</h4>
+<ul>
+<li>杉橋線</li>
+</ul>
+<h3 id="私鉄">私鉄</h3>
+<ul>
+<li>浦山电铁</li>
+</ul>
+<h2 id="ケーブルカー"><em>ケーブルカー</em></h2>
+<ul>
+<li>白屋ロープウェイ</li>
+</ul>
+<h2 id="空港">空港</h2>
+<p>宮越国際空港</p>
+<h2 id="海港">海港</h2>
+<h2 id="自動車道">自動車道</h2>
+<h3 id="道路">道路</h3>
+<ul>
+<li>宮越自動車道</li>
+</ul>
+<h3 id="jct">JCT</h3>
+<ul>
+<li>南滝JCT</li>
+<li>白川JCT</li>
+<li>空港JCT</li>
+<li>箱沢JCT</li>
+<li>茂野JCT</li>
+<li>宇沢JCT</li>
+</ul>
+<h3 id="ic">IC</h3>
+<ul>
+<li><p>杉橋IC</p></li>
+<li><p>浦山IC</p></li>
+</ul>
 ]]></content>
       <categories>
-        <category>教程</category>
+        <category>娱乐</category>
+        <category>游戏</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>个人向动画Top10榜单(V1.0)</title>
+    <url>/2023/05/10/006bestaniv1/</url>
+    <content><![CDATA[<p>个人喜爱的动画排行榜前10位，本人文学造纸不高，所以只给出评分细则及一两句简评。剧情分占50%，作画，演出各25%，综合得分加权后按总分10分记。</p>
+<span id="more"></span>
+<p>ps：按照这个标准和我在bangumi打的分和排名有较大偏差，打分会按客观的计入，排名依旧沿用我的主观排名。</p>
+<h3 id="top1-悠久之翼">Top1 : 悠久之翼</h3>
+<p><img src="/2023/05/10/006bestaniv1/1.jpg"></p>
+<p>总分：9</p>
+<ol type="1">
+<li><p>剧情总评：9</p>
+<ul>
+<li>流畅/合理性：7</li>
+<li>改编水平：10</li>
+<li>情感抒发：10</li>
+<li>高潮：9</li>
+</ul></li>
+<li><p>作画：8</p></li>
+<li><p>演出：10</p>
+<p>简评：gal改的巅峰之作。上篇memory内容密度高，留下许多坑，加上新房的风格，其实看起来有一点折磨。但是到了下篇melody，随着谜团逐渐解开，人物形象也丰满、立体起来，雨宫优子可以算得上我在动画界最喜爱的女神。
+作画虽然老了一些，但是非常整洁，淡雅，审美水平在线。新房的演出非常契合剧情，不得不满昏～</p></li>
+</ol>
+<h3 id="top2-白色相簿">Top2 : 白色相簿</h3>
+<p><img src="/2023/05/10/006bestaniv1/2.jpg"></p>
+<p>总分：8.5</p>
+<ol type="1">
+<li><p>剧情总评：9</p>
+<ul>
+<li>流畅/合理性：7</li>
+<li>改编水平：10</li>
+<li>情感抒发：10</li>
+<li>高潮：9</li>
+</ul></li>
+<li><p>作画：8</p></li>
+<li><p>演出：8</p>
+<p>简评：gal改的另一巅峰，只论动画水平远超wa2，不过杂糅各线剧情过多，加上偏向意识流的演出，让男主显得有些花心（尽管这并非事实），这也是引起作品争议的主要原因。这部作品看下来会给人以极强的无力感，随之而来的也有感动与震撼。作品中穿插的水粉风尽头为文艺性与画面加分颇多，但也有一些镜头稍显粗糙。另外，声优加大分，不妨去听听平野綾的《White
+Album》和水樹奈々的《深爱》。</p>
+<h3 id="top3-白箱">Top3 : 白箱</h3></li>
+</ol>
+<p><img src="/2023/05/10/006bestaniv1/3.jpg"></p>
+<p>总分：8.4</p>
+<ol type="1">
+<li>剧情总评：8.75
+<ul>
+<li>流畅/合理性：8</li>
+<li>原创水平：8</li>
+<li>情感抒发：9</li>
+<li>高潮：10</li>
+</ul></li>
+<li>作画：8</li>
+<li>演出：8</li>
+</ol>
+<p>简评：这部作品不仅带人深入了解了动画业界的真实，也让我们跟着主角们一同成长，体验挫折、成功与感动，是pa社当之无愧的最佳原创作品。无论现在的pa社退步有多大，因为《白箱》的存在，我也会选择相信pa的原创。在前三名中，这也是我认为最符合大众审美，并且很推荐学生党观看的一部。</p>
+<h3 id="top4-吹响悠风号-莉兹与青鸟">Top4 : 吹响！悠风号 &amp;
+莉兹与青鸟</h3>
+<p><img src="/2023/05/10/006bestaniv1/4.jpg"></p>
+<p>总分：8.8</p>
+<ol type="1">
+<li>剧情总评：8.5
+<ul>
+<li>流畅/合理性：8</li>
+<li>改编水平：9</li>
+<li>情感抒发：8</li>
+<li>高潮：9</li>
+</ul></li>
+<li>作画：10</li>
+<li>演出：8</li>
+</ol>
+<p>简评：本篇《吹响！悠风号》，从第一季后半渐入佳境，在第二季完成了美妙的情感爆发，个人认为算得上京阿尼tv动画的集大成者。而剧场版外传《莉兹与青鸟》，更是凭借绝美的作画，文艺清新的镜头语言，结合故事性与音乐性，成了无数百合厨心中的“圣经”。在此，也希望《吹响》第三季能再续辉煌，让观众看到京阿尼还是那个京阿尼。</p>
+<h3 id="top5-魔法少女小圆">Top5 : 魔法少女小圆</h3>
+<p><img src="/2023/05/10/006bestaniv1/5.jpg"></p>
+<p>总分：8.4</p>
+<ol type="1">
+<li><p>剧情总评：8.75</p>
+<ul>
+<li>流畅/合理性：7</li>
+<li>原创水平：9</li>
+<li>情感抒发：9</li>
+<li>高潮：10</li>
+</ul></li>
+<li><p>作画：8</p></li>
+<li><p>演出：8</p></li>
+</ol>
+<p>简评：首先，你知道我要说什么（就不鞭尸了）……
+这又是一部tv已然封神，剧场版又堪称神中神的作品，虚渊玄剧本的神展开，给观众带来了极强的冲击，从此魔法少女便成了高危职业。剧场版新篇吼姆拉酱的黑化，更带给人无限期待。老虚，再带我们冲一次吧！再提一下小圆独特的画风，刚一看有点接受不能，看久了越发好看。当然，梶浦由记的配乐也为《魔圆》锦上添花。</p>
+<h3 id="top6-轻音少女">Top6 : 轻音少女</h3>
+<p><img src="/2023/05/10/006bestaniv1/6.jpg"></p>
+<p>总分：7.8</p>
+<ol type="1">
+<li>剧情总评：8
+<ul>
+<li>流畅/合理性：8</li>
+<li>改编水平：8</li>
+<li>情感抒发：9</li>
+<li>高潮：7</li>
+</ul></li>
+<li>作画：8</li>
+<li>演出：7</li>
+</ol>
+<p>简评：很普通地把各个方面做好，其实就已经不普通了。休闲社团番天花板之一，看了心情绝对会很棒~</p>
+<h3 id="top7-少女歌剧">Top7 : 少女歌剧</h3>
+<p><img src="/2023/05/10/006bestaniv1/7.jpg"></p>
+<p>总分：8.5</p>
+<ol type="1">
+<li>剧情总评：8.5
+<ul>
+<li>流畅/合理性：6</li>
+<li>原创水平：9</li>
+<li>情感抒发：9</li>
+<li>高潮：10</li>
+</ul></li>
+<li>作画：9</li>
+<li>演出：8</li>
+</ol>
+<p>简评：和《魔圆》有异曲同工之妙，近几年原创的顶尖之作。</p>
+<h3 id="top8-日常">Top8 : 日常</h3>
+<p><img src="/2023/05/10/006bestaniv1/8.jpg"></p>
+<p>总分：7.9</p>
+<ol type="1">
+<li>剧情总评：7.25
+<ul>
+<li>流畅/合理性：6</li>
+<li>改编水平：8</li>
+<li>情感抒发：8</li>
+<li>高潮：7</li>
+</ul></li>
+<li>作画：8</li>
+<li>演出：9</li>
+</ol>
+<p>简评：两个字评价《日常》：《日常》。</p>
+<h3 id="top9-反叛的鲁鲁修">Top9 : 反叛的鲁鲁修</h3>
+<p><img src="/2023/05/10/006bestaniv1/9.jpg"></p>
+<p>总分：7.8</p>
+<ol type="1">
+<li>剧情总评：8.5
+<ul>
+<li>流畅/合理性：7</li>
+<li>改编水平：9</li>
+<li>情感抒发：8</li>
+<li>高潮：10</li>
+</ul></li>
+<li>作画：7</li>
+<li>演出：7</li>
+</ol>
+<p>简评：非要抠细节的话，剧情其实蛮多漏洞，但是结局的精妙足够让人忽略这些……</p>
+<h3 id="top10-攻壳机动队押井守版">Top10 : 攻壳机动队（押井守版）</h3>
+<p><img src="/2023/05/10/006bestaniv1/10.jpg"></p>
+<p>总分：8.4</p>
+<ol type="1">
+<li>剧情总评：7.75
+<ul>
+<li>流畅/合理性：7</li>
+<li>改编水平：10</li>
+<li>情感抒发：7</li>
+<li>高潮：7</li>
+</ul></li>
+<li>作画：9</li>
+<li>演出：9</li>
+</ol>
+<p>简评：我看不懂，但我大受震撼。</p>
+<p>看到这里的朋友可能会发现，后五部的简评明显要短得多，这不是我的设计，只是单纯写累了（笑）。总之，谢谢您的阅读，也欢迎留下自己的观点~</p>
+]]></content>
+      <categories>
+        <category>娱乐</category>
+        <category>动画</category>
       </categories>
   </entry>
   <entry>
@@ -2774,13 +2806,54 @@ Solidays
 </table>
 <p><img src="/2023/05/18/010bestcyxv1/solidays.jpg"></p>
 <h2 id="简介">简介</h2>
+<p>Solidays中唯二的新曲，陈奕迅演唱会安可常客，表达了对音乐的热爱与对音乐人的感谢</p>
 <h2 id="选取理由">选取理由</h2>
+<p>陈奕迅自称最爱的一首歌，好听，耐听，值得一听</p>
 <h2 id="我最喜欢的歌词">我最喜欢的歌词</h2>
+<p>其实你可以在本站找到（）</p>
 <details>
 <summary>
 展开查看完整歌词
 </summary>
-<pre><code>  </code></pre>
+<pre><code>它 倾倒你要经沮丧与兴奋
+来自多少个极善感的心
+谁把 感想 冥想出 快慢与起伏
+经历高低牵引
+催促它诞生
+跃动时如火星
+恬静时如水影
+随着动脉尽把悲喜照明
+掏尽你心声
+开心处留仙境
+伤心处融化心境
+留下发泄的反省过程
+纵使意难平
+痛得高兴
+它 一小节也许足够你抖震
+提炼于透视
+寂寞的灵魂
+从它 该知道你的快乐与不幸
+一路有陌路人陪你这一生
+为路途留灯影
+为剧情留剪影
+留下逐滴泪风干的旅程
+留下你身影
+为前尘留缩影
+为未来留了光影
+留下世界的兜转过程
+每一拍为这时代做证
+感谢永远有歌
+把心境道破
+哪论动或静
+谁也有情 情绪有它抚摸
+风景里随身听
+思想里随心听
+怀着万万万个心的结晶
+炼成时代 最亮发声
+它可以 高得掩盖炮火声
+迷惑你耳朵呼吸性情
+你想有共鸣
+以心倾听 </code></pre>
 </details>
 <h1 id="人来人往">人来人往</h1>
 <table>
@@ -2827,13 +2900,61 @@ The Line-Up
 </table>
 <p><img src="/2023/05/18/010bestcyxv1/thelineup.jpg"></p>
 <h2 id="简介-1">简介</h2>
+<p>陈奕迅，林夕，陈辉阳的黄金组合，造就了这首耐听也耐人寻味的金曲</p>
 <h2 id="选取理由-1">选取理由</h2>
+<p>现阶段或许不能称得上最喜欢，但是确实是我听得最多，也是困难时给我鼓励最多的一首歌</p>
 <h2 id="我最喜欢的歌词-1">我最喜欢的歌词</h2>
+<p>缠在那颈背后</p>
+<p>最美丽长发未留在我手</p>
+<p>我也开心饮过酒</p>
 <details>
 <summary>
 展开查看完整歌词
 </summary>
-<pre><code>  </code></pre>
+<pre><code>朋友已走
+刚升职的你举杯到凌晨还未够
+用尽心机拉我手
+缠在我颈背后
+说你男友有事忙是借口
+说到终于饮醉酒
+情侣会走
+刚失恋的你哭干眼泪前来自首
+寂寞因此牵我手
+除下了他手信后
+我已得到你没有
+但你我至少往后
+成为了密友
+闭起双眼你最挂念谁
+眼睛张开身边竟是谁
+感激车站里
+尚有月台能让我们满足到落泪
+拥不拥有也会记住谁
+快不快乐留在身体里
+爱若能够永不失去
+何以你今天竟想找寻伴侣
+谁也会走
+刚相恋的你先知我们原来未够
+借故松开我的手
+藏在贴纸相背后
+我这苦心开过没有
+但试过散心旅游
+如何答没有
+闭起双眼我最挂念谁
+眼睛张开身边竟是谁
+感激车站里
+尚有月台曾让我们满足到落泪
+拥不拥有也会记住谁
+快不快乐有天总过去
+爱若为了永不失去
+谁勉强娱乐过谁
+爱若难以放进手里
+何不将这双手放进心里
+时间会走
+刚失恋的我开始与旁人携着手
+但什么可以拥有
+缠在那颈背后
+最美丽长发未留在我手
+我也开心饮过酒</code></pre>
 </details>
 <h1 id="时代曲">时代曲</h1>
 <table>
@@ -2880,13 +3001,46 @@ The Line-Up
 </table>
 <p><img src="/2023/05/18/010bestcyxv1/cyx.jpg"></p>
 <h2 id="简介-2">简介</h2>
+<p>陈奕迅早期代表作，虽然同专辑我更喜欢伤信，但是时代曲似乎更具特色</p>
 <h2 id="选取理由-2">选取理由</h2>
+<p>陈奕迅最早一张专辑的主打歌，“历史意义”深刻，加上确实好听</p>
 <h2 id="我最喜欢的歌词-2">我最喜欢的歌词</h2>
+<p>好想唱一阕歌 见证日子怎过</p>
+<p>哪个时势能没有歌</p>
 <details>
 <summary>
 展开查看完整歌词
 </summary>
-<pre><code>  </code></pre>
+<pre><code>就散席了 人客急将美酒喝掉
+赶于舞曲奏尽前离坐
+是我夜了吧 最后这分钟到场
+待热情尽过 方看到场内灿烂灯火
+好想唱一阕歌 叫你认清楚我
+我也曾到来庆贺
+好想唱一阕歌 见证日子怎过
+哪个时势能没有歌
+若问你会如何 你会骂我别傻
+剩下光景不多
+但是你会如何 我也没有奈何
+盼你亦赏面安坐 替我用掌声和唱着这歌
+就散席了 人客心知个中奥妙
+将讲到一半话题完掉
+若注定这样 故事尾声方进场
+别人话迟极了 愿时代仍为我留了座
+只想唱一阕歌 叫你认清楚我
+我也曾到来庆贺
+只想唱一阕歌 一首凄美的赞歌
+派对完结前为你写的歌
+若问你会如何 你会骂我别傻
+剩下光景不多
+但是你会如何 我也没有奈何
+盼你耐心的安坐
+怕以后掌声未够是晚多
+若问哪里不妥 你会骂我别傻
+剩下光景不多 别寄望太多
+日后我会如何 我也没有奈何
+却怕在今晚之后 不知有谁来迫我
+转唱另一些歌</code></pre>
 </details>
 <h1 id="浮夸">浮夸</h1>
 <table>
@@ -2933,13 +3087,78 @@ U87
 </table>
 <p><img src="/2023/05/18/010bestcyxv1/u87.jpg"></p>
 <h2 id="简介-3">简介</h2>
+<p>一代神专U87，一代神曲浮夸（据说这首歌原本是写给张国荣的），极度考验技巧与情感表达的一首歌。</p>
 <h2 id="选取理由-3">选取理由</h2>
+<p>我听得最早的一首，也是陈奕迅最出名的音乐之一</p>
 <h2 id="我最喜欢的歌词-3">我最喜欢的歌词</h2>
+<p>其实怕被忘记至放大来演吧</p>
+<p>很不安 怎去优雅</p>
 <details>
 <summary>
 展开查看完整歌词
 </summary>
-<pre><code>  </code></pre>
+<pre><code>有人问我 我就会讲
+但是无人来
+我期待 到无奈
+有话要讲 得不到装载
+我的心情犹像樽盖等被揭开
+嘴巴却在养青苔
+人潮内 愈文静
+愈变得 不受理睬
+自己要搞出意外
+像突然地高歌
+任何地方也像开四面台
+着最闪的衫 扮十分感慨
+有人来拍照要记住插袋
+你当我是浮夸吧
+夸张只因我很怕
+似木头 似石头的话
+得到注意吗
+其实怕被忘记至放大来演吧
+很不安 怎去优雅
+世上还赞颂沉默吗
+不够爆炸
+怎么有话题 让我夸
+做大娱乐家
+那年十八 母校舞会
+站着如喽啰
+那时候我含泪发誓
+各位必须看到我
+在世间平凡又普通的路太多
+屋村你住哪一座
+情爱中 工作中
+受过的忽视太多
+自尊已饱经跌堕
+重视能治肚饿
+未曾获得过便知我为何
+大动作很多 犯下这些错
+搏人们看看我 算病态么
+你当我是浮夸吧
+夸张只因我很怕
+似木头 似石头的话
+得到注意吗
+其实怕被忘记至放大来演吧
+很不安 怎去优雅
+世上还赞颂沉默吗
+不够爆炸
+怎么有话题 让我夸
+做大娱乐家
+幸运儿并不多
+若然未当过就知我为何
+用十倍苦心做突出一个
+正常人够我富议论性么
+你叫我做浮夸吧
+加几声嘘声也不怕
+我在场 有闷场的话
+表演你看吗 够歇斯底里吗
+以眼泪淋花吧
+一心只想你惊讶
+我旧时似未存在吗
+加重注码 青筋也现形
+话我知 现在存在吗
+凝视我 别再只看天花
+我非你杯茶 也可尽情地喝吧
+别遗忘有人在为你声沙</code></pre>
 </details>
 <h1 id="反高潮">反高潮</h1>
 <table>
@@ -2986,13 +3205,51 @@ U87
 </table>
 <p><img src="/2023/05/18/010bestcyxv1/wdklsd.jpg"></p>
 <h2 id="简介-4">简介</h2>
+<p>陈奕迅，黄伟文，王双骏，又一个黄金组合，造就了这首疯癫，高潮迭起，同时难度爆炸的神曲</p>
 <h2 id="选取理由-4">选取理由</h2>
+<p>陈奕迅最难唱的一首歌，也是他自己作曲的代表作之一</p>
 <h2 id="我最喜欢的歌词-4">我最喜欢的歌词</h2>
+<p>灵与欲已升级了</p>
+<p>怎可再跌落寂寥</p>
 <details>
 <summary>
 展开查看完整歌词
 </summary>
-<pre><code>  </code></pre>
+<pre><code>这秒钟 十分感动
+接下来 只可以更加激进
+如若要平庸 十一分的平庸
+微笑大笑后必须发疯
+动不动 就很感动
+纵坏时 生死也懒得起哄
+娱乐再无穷 但本质都雷同
+矛盾渐进就己是沉沦
+如何留得住高潮
+一招了 太过少
+灵与欲已升级了
+怎可再跌落寂寥
+这十八层怎么跳
+敌不动 自己不动
+厚面皮 一刀剌进都不痛
+危难中儿童 撞冰山的邮轮
+难煽动我又满面愁容
+如何留得住高潮
+一招了 太过少
+灵与欲已升级了
+怎可再跌落寂寥
+这十八层怎么跳
+不清楚 怎么纵坏了
+不得了 想得到 得到了嫌少
+这一秒 只知多么需要
+留得住高潮
+一招了 太过少
+灵与欲已升级了
+怎可再跌落寂寥
+这道断桥即管跳
+心不死
+我最多情感渐失调
+糟了
+最近连高潮都停不了
+连高潮都烦扰</code></pre>
 </details>
 <h1 id="心的距离">心的距离</h1>
 <table>
@@ -3039,13 +3296,59 @@ U87
 </table>
 <p><img src="/2023/05/18/010bestcyxv1/swldkh.jpg"></p>
 <h2 id="简介-5">简介</h2>
+<p>“我不唱声嘶力竭的情歌”，手动狗头……这张专辑以及其中所有歌其实都比较冷，但是真心蛮不错的</p>
 <h2 id="选取理由-5">选取理由</h2>
+<p>我最喜欢的陈奕迅国语歌，杰出的情感表达</p>
 <h2 id="我最喜欢的歌词-5">我最喜欢的歌词</h2>
+<p>看前面 我忘记了是哪个夏天</p>
+<p>你轻靠着我 飘散而过的落叶</p>
 <details>
 <summary>
 展开查看完整歌词
 </summary>
-<pre><code>  </code></pre>
+<pre><code>看前面 我忘记了是哪个夏天
+你轻靠着我 飘散而过的落叶
+为了誓言 让时间延伸就像永远
+迟钝如我 也感觉到的边缘
+在思念的空间里不断徘徊
+那距离却越明显
+持续的提醒我 现实的界限
+又一遍 我忘记了是哪些时间
+你言辞闪烁 原因当然不明显
+试着看见 让时间倒转回到从前
+认真如我 又抓不到的边缘
+在想象的空间里不断徘徊
+让画面永远明确
+就算是闭上眼 也无法否决
+我怎么会让自己舍身不断涉险
+你怎么会对我的心不断地拒绝
+爱失去你的包围
+每次退后又错过你的世界一点
+我没有办法清醒应付新的对决
+你却轻易让我的心委屈到极限
+爱有了你 却失去了我的一切
+衡量你的心只限到我之间
+没有跨越的机会
+又一遍 我忘记了是哪些时间
+你言辞闪烁 原因当然不明显
+试着看见 让时间倒转回到从前
+认真如我 又抓不到的边缘
+在想象的空间里不断徘徊
+让画面永远明确
+就算是闭上眼 也无法否决
+我怎么会让自己舍身不断涉险
+你怎么会对我的心不断地拒绝
+爱失去你的包围
+每次退后又错过你的世界一点
+我没有办法清醒应付新的对决
+你却轻易让我的心委屈到极限
+爱有了你 却失去了我的一切
+衡量你的心只限到我之间
+没有跨越的机会
+没有跨越的机会
+no衡量你的心只限到我之间
+没有跨越的机会no no no
+看前面 我忘记了是哪个夏天</code></pre>
 </details>
 <h1 id="富士山下">富士山下</h1>
 <table>
@@ -3093,13 +3396,60 @@ What'S Going On...?
 </table>
 <p><img src="/2023/05/18/010bestcyxv1/whatsgoingon.jpg"></p>
 <h2 id="简介-6">简介</h2>
+<p>“你喜欢一个人，就像喜欢富士山。你可以看到它，但是不能搬走它。你有什么方法可以移动一座富士山，回答是，你自己走过去。爱情也如此，逛过就已经足够。”这是林夕说的，不是我。</p>
 <h2 id="选取理由-6">选取理由</h2>
+<p>陈奕迅最火的歌之一，也是我小时候很喜欢的一首</p>
 <h2 id="我最喜欢的歌词-6">我最喜欢的歌词</h2>
+<p>何不把悲哀感觉假设是来自你虚构</p>
+<p>试管里找不到它染污眼眸</p>
 <details>
 <summary>
 展开查看完整歌词
 </summary>
-<pre><code>  </code></pre>
+<pre><code>拦路雨偏似雪花 饮泣的你冻吗
+这风褛我给你磨到有襟花
+连调了职也不怕 怎么始终牵挂
+苦心选中今天想车你回家
+原谅我不再送花 伤口应要结疤
+花瓣铺满心里坟场才害怕
+如若你非我不嫁 彼此终必火化
+一生一世等一天需要代价
+谁都只得那双手靠拥抱亦难任你拥有
+要拥有必先懂失去怎接受
+曾沿着雪路浪游 为何为好事泪流
+谁能凭爱意要富士山私有
+何不把悲哀感觉假设是来自你虚构
+试管里找不到它染污眼眸
+前尘硬化像石头 随缘地抛下便逃走
+我绝不罕有 往街里绕过一周
+我便化乌有
+情人节不要说穿 只敢抚你发端
+这种姿态可会令你更心酸
+留在汽车里取暖 应该怎么规劝
+怎么可以将手腕忍痛划损
+人活到几岁算短 失恋只有更短
+归家需要几里路谁能预算
+忘掉我跟你恩怨 樱花开了几转
+东京之旅一早比一世遥远
+谁都只得那双手靠拥抱亦难任你拥有
+要拥有必先懂失去怎接受
+曾沿着雪路浪游 为何为好事泪流
+谁能凭爱意要富士山私有
+何不把悲哀感觉假设是来自你虚构
+试管里找不到它染污眼眸
+前尘硬化像石头 随缘地抛下便逃走
+我绝不罕有 往街里绕过一周
+我便化乌有
+谁都只得那双手靠拥抱亦难任你拥有
+要拥有必先懂失去怎接受
+曾沿着雪路浪游 为何为好事泪流
+谁能凭爱意要富士山私有
+何不把悲哀感觉假设是来自你虚构
+试管里找不到它染污眼眸
+前尘硬化像石头 随缘地抛下便逃走
+我绝不罕有 往街里绕过一周
+我便化乌有
+你还嫌不够 我把这陈年风褛 送赠你解咒</code></pre>
 </details>
 <h1 id="任我行">任我行</h1>
 <table>
@@ -3146,13 +3496,48 @@ The Key
 </table>
 <p><img src="/2023/05/18/010bestcyxv1/thekey.jpg"></p>
 <h2 id="简介-7">简介</h2>
+<p>2010年以来最神专The
+Key，其中最传统，最温柔的一首，但又并非传统情歌。林夕作词里最爱的一首，我很难挑出最喜欢的一句</p>
 <h2 id="选取理由-7">选取理由</h2>
+<p>很多陈奕迅粉丝心中的Top1，我也同样很喜欢</p>
 <h2 id="我最喜欢的歌词-7">我最喜欢的歌词</h2>
+<p>从何时开始忌讳空山无人 从何时开始怕遥望星尘</p>
+<p>原来神仙鱼横渡大海会断魂 听不到世人爱听的福音</p>
 <details>
 <summary>
 展开查看完整歌词
 </summary>
-<pre><code>  </code></pre>
+<pre><code>天真得只有你 令神仙鱼归天要怪谁
+以为留在原地不够遨游 就让它沙滩里戏水
+那次得你冒险半夜上山 争拗中队友不想撑下去
+那时其实尝尽真正自由 但又感到没趣
+不要紧 山野都有雾灯 顽童亦学乖不敢太勇敢
+世上有多少个缤纷乐园 任你行
+从何时你也学会不要离群 从何时发觉没有同伴不行
+从何时惋惜蝴蝶困于那桃源 飞多远有谁会对它操心
+曾迷途才怕追不上满街赶路人 无人理睬如何求生
+顽童大了没那么笨 可以聚脚于康庄旅途然后同沐浴温泉
+为何在雨伞外独行
+这么多好去处 漫游到独家村去探谁
+既然沿着寻梦之旅出发 就站出点吸引赞许
+逛够几个睡房到达教堂 仿似一路飞奔七八十岁
+既然沿着情路走到这里 尽量不要后退
+亲爱的 闯遍所有路灯 还是令大家开心要紧
+抱住两厅双套天空海阔 任你行
+从何时你也学会不要离群 从何时发觉没有同伴不行
+从何时惋惜蝴蝶困于那桃源 飞多远有谁会对它操心
+曾迷途才怕追不上满街赶路人 无人理睬如何求生
+顽童大了没那么笨 可以聚脚于康庄旅途然后同沐浴温泉
+为何在雨伞外独行
+亲爱的 等遍所有绿灯 还是让自己疯一下要紧
+马路戏院商店天空海阔 任你行
+从何时开始忌讳空山无人 从何时开始怕遥望星尘
+原来神仙鱼横渡大海会断魂 听不到世人爱听的福音
+曾迷途才怕追不上满街赶路人 无人理睬如何求生
+顽童大了没那么笨 可以聚脚于康庄旅途然后同沐浴温泉
+为何在赤地上独行
+顽童大了别再追问 可以任我走怎么到头来又随着大队走
+人群是那么像羊群</code></pre>
 </details>
 <h1 id="沙龙">沙龙</h1>
 <table>
@@ -3199,13 +3584,47 @@ H3M
 </table>
 <p><img src="/2023/05/18/010bestcyxv1/h3m.jpg"></p>
 <h2 id="简介-8">简介</h2>
+<p>沙龙，陀飞轮，人车志，葡萄成熟时，被戏称为玩物丧志四部曲，分别讲了摄影，手表，跑车和酒的故事，其中我最爱沙龙</p>
 <h2 id="选取理由-8">选取理由</h2>
+<p>陈奕迅自己作曲当之无愧的最佳</p>
 <h2 id="我最喜欢的歌词-8">我最喜欢的歌词</h2>
+<p>捉紧　生命浓度　坦白流露　感情和态度</p>
+<p>留下　浮光　掠影　飞舞</p>
 <details>
 <summary>
 展开查看完整歌词
 </summary>
-<pre><code>  </code></pre>
+<pre><code>对焦　她的爱
+对慢了　爱人会失去可爱
+记低　这感慨
+世事变　有没有将你淹盖
+只一格　经典的偶遇已　不再
+尽量框住目前大概
+留住　温度　速度　温柔和愤怒
+凝住　今日　怎样　好
+捉紧　生命浓度　坦白流露　感情和态度
+留下　浮光　掠影　飞舞
+每张　都罕有
+拍下过　记住过　好过拥有　光圈爱漫游
+眼睛等色诱
+有人性　镜头里总有丰收
+虽则那　即影即有售罄　菲林都已拆走
+但是冲动用完　又再有
+留住　温度　速度　温柔和愤怒
+凝住　今日　怎样　好
+捉紧　生命浓度　坦白流露　感情和态度
+停下时光　静止衰老
+登高峰一秒　得奖一秒　再破纪录的一秒
+港湾晚灯　山顶破晓　摘下怀念　记住美妙
+升职那刻　新婚那朝　成为父母的一秒
+要拍照的事　可不少
+音乐　话剧　诗词和舞蹈
+揉合　生命　千样好　摄入相簿
+绚烂如电　虚幻如雾　哀愁和仰慕
+游乐人间　活得好　谈何容易
+拍着照片　一路同步　坦白流露　感情和态度
+其实　人生并非虚耗
+何来尘埃飞舞</code></pre>
 </details>
 <h1 id="无人之境">无人之境</h1>
 <table>
@@ -3252,66 +3671,88 @@ Eric Kwok
 </table>
 <p><img src="/2023/05/18/010bestcyxv1/timeflies.jpg"></p>
 <h2 id="简介-9">简介</h2>
+<p>黄伟文作词的最爱一首，同样很难调出哪句词最喜欢，情感丰富深厚，建议搭配10年duo演唱会食用</p>
 <h2 id="选取理由-9">选取理由</h2>
+<p>挑首自己喜欢的，不需要理由</p>
 <h2 id="我最喜欢的歌词-9">我最喜欢的歌词</h2>
+<p>多么想跟你散步桥上把臂看着风景</p>
+<p>但是我清醒</p>
+<p>月亮总不肯照亮情欲深处那道背影</p>
 <details>
 <summary>
 展开查看完整歌词
 </summary>
-<pre><code>  </code></pre>
+<pre><code>让理智在叫着冷静冷静 还恃住年少气盛
+让我对着冲动背着宿命 浑忘自己的姓
+沉睡的凶猛在苏醒 完全为你现形
+这个世界最坏罪名 叫太易动情
+但我喜欢这罪名
+惊天动地 只可惜天地亦无情
+不敢有风 不敢有声 这爱情无人证
+飞天遁地 贪一刻的乐极忘形
+好想说谎 不眨眼睛 这爱情无人性
+若世界陷进大骗局里面 朋友亦难以发现
+共你隔着空在秘密通电 挑战道德底线
+如若早三五年相见 何来内心交战
+我信与你继续乱缠 难再有发展 但我想跟你乱缠
+惊天动地 只可惜天地亦无情
+不敢有风 不敢有声 这爱情无人证
+飞天遁地 贪一刻的乐极忘形
+好想说谎 不眨眼睛 似进入无人境
+即使间 整个约会情调幽暗似地下城
+还是算温馨
+多么想跟你散步桥上把臂看着风景
+但是我清醒
+月亮总不肯照亮情欲深处那道背影
+你我像快快乐乐 同游在异境
+浪漫到一起惹绝症
+不想说明 只想反应</code></pre>
 </details>
+<h1 id="真正的榜单">真正的榜单</h1>
+<p>个人喜好（这会随着时间改变）的Top 20榜单：</p>
+<ol type="1">
+<li>无人之境</li>
+<li>心的距离</li>
+<li>十面埋伏</li>
+<li>任我行</li>
+<li>两种讲法</li>
+<li>信心花舍</li>
+<li>歌颂</li>
+<li>热带雨林</li>
+<li>时代巨轮</li>
+<li>今日</li>
+<li>我的快乐时代</li>
+<li>告别娑婆</li>
+<li>季军</li>
+<li>新曲+精选</li>
+<li>忘记歌词</li>
+<li>阿牛</li>
+<li>沙龙</li>
+<li>黄金时代</li>
+<li>天使的礼物</li>
+<li>生命有几好</li>
+</ol>
 ]]></content>
       <categories>
         <category>杂记</category>
       </categories>
   </entry>
   <entry>
-    <title>宫越县交通综合概要</title>
-    <url>/2023/05/15/008csl-miakoshi-02/</url>
-    <content><![CDATA[<p>城市天际线：宫越县交通相关内容，更新中……</p>
+    <title>日式城市命名思路</title>
+    <url>/2023/05/17/009pyrandomname/</url>
+    <content><![CDATA[<p>最近在天际线中建造日式城市时，经常需要为城市中的行政区划和轨道线路等命名，那么如何创作出合适的日式城市名称呢？</p>
 <span id="more"></span>
-<h2 id="铁道">铁道</h2>
-<h3 id="jr九州">JR九州</h3>
-<h4 id="新幹線">新幹線</h4>
-<p>東九州新幹線</p>
-<h4 id="在来線">在来線</h4>
-<ul>
-<li>杉橋線</li>
-</ul>
-<h3 id="私鉄">私鉄</h3>
-<ul>
-<li>浦山电铁</li>
-</ul>
-<h2 id="ケーブルカー"><em>ケーブルカー</em></h2>
-<ul>
-<li>白屋ロープウェイ</li>
-</ul>
-<h2 id="空港">空港</h2>
-<p>宮越国際空港</p>
-<h2 id="海港">海港</h2>
-<h2 id="自動車道">自動車道</h2>
-<h3 id="道路">道路</h3>
-<ul>
-<li>宮越自動車道</li>
-</ul>
-<h3 id="jct">JCT</h3>
-<ul>
-<li>南滝JCT</li>
-<li>白川JCT</li>
-<li>空港JCT</li>
-<li>箱沢JCT</li>
-<li>茂野JCT</li>
-<li>宇沢JCT</li>
-</ul>
-<h3 id="ic">IC</h3>
-<ul>
-<li><p>杉橋IC</p></li>
-<li><p>浦山IC</p></li>
-</ul>
+<p>首先，最简单的办法，就是从地图中寻找灵感，如果是一些小地方的地名，直接借用也无妨。个人比较推荐的是Bing地图，可以非常便利的查看世界各地的详情。顺便贴一下网址：https://cn.bing.com/maps?cc=hk</p>
+<p>其次，可以利用已有地名衍生类比得出新的地名，比如更改一些方位词、表颜色等特征的形容词。</p>
+<p>但是，灵感终究会枯竭，我又发现，日本许多姓氏来自于地名，自然也可以反过来利用。我找到了这个网站，收录了日本绝大多数的姓氏：https://htmfiles.englishhome.org/Japsurnames/Japsurnames.htm</p>
+<p>可能这样查看也不是很方便，于是我利用Python，简单写了一个爬取姓氏信息并随机给出姓氏与对应罗马音的程序。由于本人并不熟练，可能代码会有一些冗长，希望各位可以加以指正，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> linecache</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gethtml</span>():</span><br><span class="line">    url = <span class="string">&#x27;https://htmfiles.englishhome.org/Japsurnames/Japsurnames-&#x27;</span></span><br><span class="line">    filename = <span class="string">&#x27;result.txt&#x27;</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    r = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;j&#x27;</span>, <span class="string">&#x27;k1&#x27;</span>, <span class="string">&#x27;k2&#x27;</span>, <span class="string">&#x27;m&#x27;</span>, <span class="string">&#x27;n&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;t&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;v&#x27;</span>, <span class="string">&#x27;z&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;a+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">22</span>):</span><br><span class="line">        htr = url + <span class="built_in">str</span>(r[i]) + <span class="built_in">str</span>(<span class="string">&#x27;.htm&#x27;</span>)</span><br><span class="line">        response = requests.get(htr)</span><br><span class="line">        response.encoding = response.apparent_encoding</span><br><span class="line">        html = response.text</span><br><span class="line">        pattern = re.<span class="built_in">compile</span>(<span class="string">&#x27;&lt;td width=&quot;45%&quot;(.+)&lt;/td&gt;&#x27;</span>)</span><br><span class="line">        result = pattern.findall(html,re.S)</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> result:</span><br><span class="line">            f.write(line + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">correct</span>():</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    subp = [<span class="string">&#x27;。&#x27;</span>, <span class="string">&#x27;&gt;&#x27;</span>, <span class="string">&#x27; height=&quot;[0-9][0-9]&quot;&#x27;</span>]</span><br><span class="line">    filename = <span class="string">&#x27;result.txt&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">        f = <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">        alllines = f.readlines()</span><br><span class="line">        f.close()</span><br><span class="line">        f = <span class="built_in">open</span>(filename, <span class="string">&#x27;w+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> eachline <span class="keyword">in</span> alllines:</span><br><span class="line">            a = re.sub(subp[i], <span class="string">&#x27; &#x27;</span>, eachline)</span><br><span class="line">            f.writelines(a)</span><br><span class="line">        f.close()</span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    alllines = f.readlines()</span><br><span class="line">    f.close()</span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;w+&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> eachline <span class="keyword">in</span> alllines:</span><br><span class="line">        a = re.sub(<span class="string">&#x27;Itoda&#x27;</span>, <span class="string">&#x27;伊藤\nItoda&#x27;</span>, eachline)</span><br><span class="line">        f.writelines(a)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myrandom</span>():</span><br><span class="line">    p = random.randint(<span class="number">1</span>, <span class="number">12652</span>)</span><br><span class="line">    <span class="keyword">if</span> p % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        q = p</span><br><span class="line">        p = p - <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        q = p + <span class="number">1</span></span><br><span class="line">    prtl1 = linecache.getline(<span class="string">&#x27;result.txt&#x27;</span>, p)</span><br><span class="line">    prtl2 = linecache.getline(<span class="string">&#x27;result.txt&#x27;</span>, q)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;罗马音：&quot;</span>, prtl1, <span class="string">&quot;名称：&quot;</span>, prtl2)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---欢迎使用随机命名工具，本工具会在相同目录下创建列表，并根据需求随机给出日语名称及对应罗马音---\n&quot;</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    flag = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;---输入1以获取列表---\n&quot;</span><span class="string">&quot;---输入2以随机获得名称---\n---输入0以退出---\n---请输入:&quot;</span>))</span><br><span class="line">    path = os.path.exists(<span class="string">&#x27;result.txt&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> path==<span class="literal">True</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---您已获取过列表---\n&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---这可能需要1分钟时间，请耐心等候---&quot;</span>)</span><br><span class="line">            gethtml()</span><br><span class="line">            correct()</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---获取完成---\n&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">if</span> path == <span class="literal">True</span>:</span><br><span class="line">            myrandom()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;---请先获取列表---\n&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;---进程已结束---&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>另外也有这个小工具封装为exe的版本，欢迎试用并提出建议！</p>
+<p>链接：https://pan.baidu.com/s/1EgK1MoQJFJ6nMXrLd4rbzQ 提取码：vpfm
+解压码：octdafu</p>
 ]]></content>
       <categories>
-        <category>娱乐</category>
-        <category>游戏</category>
+        <category>教程</category>
       </categories>
   </entry>
   <entry>
