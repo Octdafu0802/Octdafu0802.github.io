@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="预科二阶段，自己用Latex整理的近代物理基础笔记，欢迎各位浏览学习。 其中部分逗号有文本错误，不过暂时懒得改了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="近代物理基础笔记整理">
+<meta property="og:url" content="http://example.com/2023/05/10/002physicsnoteyk2/index.html">
+<meta property="og:site_name" content="Down the Rabbit Hole">
+<meta property="og:description" content="预科二阶段，自己用Latex整理的近代物理基础笔记，欢迎各位浏览学习。 其中部分逗号有文本错误，不过暂时懒得改了。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/1.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/15.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/3.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/4.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/5.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/6.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/7.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/8.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/9.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/10.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/11.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/12.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/13.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/14.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/16.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/17.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/18.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/19.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/20.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/21.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/22.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/23.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/24.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/25.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/27.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/28.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/29.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/30.jpg">
+<meta property="og:image" content="http://example.com/2023/05/10/002physicsnoteyk2/31.jpg">
+<meta property="article:published_time" content="2023-05-09T17:17:11.000Z">
+<meta property="article:modified_time" content="2023-05-10T00:58:54.651Z">
+<meta property="article:author" content="Octdafu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/05/10/002physicsnoteyk2/1.jpg">
+
+<link rel="canonical" href="http://example.com/2023/05/10/002physicsnoteyk2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>近代物理基础笔记整理 | Down the Rabbit Hole</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Down the Rabbit Hole</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Octdafu's Personal Blog Site</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/10/002physicsnoteyk2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Octdafu">
+      <meta itemprop="description" content="感谢永远有歌 把心境道破">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Down the Rabbit Hole">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          近代物理基础笔记整理
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-05-10 01:17:11 / 修改时间：08:58:54" itemprop="dateCreated datePublished" datetime="2023-05-10T01:17:11+08:00">2023-05-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" itemprop="url" rel="index"><span itemprop="name">学习资料</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E7%89%A9%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">物理</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2023/05/10/002physicsnoteyk2/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2023/05/10/002physicsnoteyk2/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>31k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>29 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>预科二阶段，自己用Latex整理的近代物理基础笔记，欢迎各位浏览学习。</p>
+<p>其中部分逗号有文本错误，不过暂时懒得改了。</p>
+<span id="more"></span>
+<ul>
+<li><ul>
+<li><h1 id="光的本质">光的本质</h1>
+<h2 id="反射与折射">反射与折射</h2>
+<ul>
+<li><p>反射角等于入射角.折射角保持与入射角同比例增减</p></li>
+<li><p>(17世纪 荷兰 斯涅耳)
+折射定律：光束的偏转率取决于各介质如何"搭配"</p></li>
+<li><p>(1662 法国 费马)
+费马最短时间原理：在从一点行进到另一点的所有可能的路径中，光所选择的一定是耗时最短的路径<span class="math inline">\(\Leftrightarrow\)</span>过两个定点A，B的光总选择光程一阶变分为零的路径</p></li>
+</ul>
+<h2 id="粒子or波">粒子<span class="math inline">\(or\)</span>波</h2>
+<ul>
+<li><ul>
+<li><p>微粒说：伽利略，牛顿</p></li>
+<li><p>波动说：胡克，惠更斯</p></li>
+</ul></li>
+<li><p>干涉和衍射现象<br>
+托马斯·杨（英国），菲涅尔<br>
+双缝实验，牛顿环，泊松斑<br>
+光是一列横波，光在介质中的传播速率与波长之间存在某种联系</p></li>
+<li><p>法拉第（英国）：场的概念<br>
+麦克斯韦（英国）1865：《电磁场的动力学理论》电动力学建立<br>
+麦克斯韦方程组<span class="math inline">\(\Rightarrow\)</span>光是一列电磁波</p></li>
+<li><p>赫兹 马可尼：证实光是电磁波，光电效应</p></li>
+</ul>
+<h1 id="狭义相对论">狭义相对论</h1>
+<h2 id="经典力学的相对性原理">经典力学的相对性原理</h2>
+<ul>
+<li><p>力学是研究物体的运动，即物体位置随时间的变化关系</p></li>
+<li><p>牛顿相对性原理：对于任何惯性参考系(牛顿运动定律在其中有效的参考系)，物体运动所遵循的力学规律是相同的，具有相同的数学表达形式<span class="math inline">\(\Leftrightarrow\)</span>描述力学现象的规律在所有惯性系是等价的</p></li>
+<li><p>伽利略变换：在两个惯性系中分析描述同一物理事件</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/1.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p><span class="math display">\[\begin{gathered}
+            x&#39;=x-ut\ y&#39;=y\ z&#39;=z\ t&#39;=t \\
+        v_{x}&#39;=v_{x}-u\ v_{y}&#39;=v_{y}\ v_{z}&#39;=v_{z}
+    \nonumber
+    \end{gathered}\]</span> 牛顿运动定律具有伽利略变换的不变性</p></li>
+<li><p>绝对时空观：时间和空间是绝对的，与物质的存在和运动无关：</p>
+<ul>
+<li><p>长度测量的绝对性</p></li>
+<li><p>同时的绝对性</p></li>
+<li><p>时间间隔的测量是绝对的</p></li>
+</ul></li>
+<li><p>牛顿力学<span class="math inline">\(\rightarrow\)</span>电磁波的传播速率随参考系的转换而变化<br>
+麦克斯韦<span class="math inline">\(\rightarrow\)</span>光速是不变的，"绝对的"<br>
+<span class="math inline">\(\Rightarrow\)</span>真空中存在以太?</p></li>
+</ul>
+<h2 id="狭义相对论的两个基本假设">狭义相对论的两个基本假设</h2>
+<ul>
+<li><p>1887年，迈克尔逊---莫雷实验：<br>
+希望验证光在同一惯性系中不同方向的速度差异<br>
+实际结果：不同的惯性系中，光在真空中的传播速率都是相同的<br>
+<span class="math inline">\(\Rightarrow\)</span>以太不存在</p></li>
+<li><p>1905年，爱因斯坦提出狭义相对论两个假设：</p>
+<ul>
+<li><p>光速不变原理：在所有的惯性系中，光在真空中的传播速率具有相同的值：
+<span class="math display">\[c=299792458m/s
+            \nonumber\]</span> <span class="math inline">\(\ast\)</span>光速不随观察者的运动而变化；光速不随光源的运动而变化</p></li>
+<li><p>相对性原理：一切物理规律在所有惯性系中具有相同的形式，不存在特殊的，绝对的惯性系</p></li>
+</ul></li>
+</ul>
+<h2 id="狭义相对论的时空观">狭义相对论的时空观</h2>
+<ul>
+<li><p>同时性的相对性：若两个事件在某一惯性系中为同时异地事件，则在其他惯性系中必定不是同时发生的；<br>
+在一个惯性系中同时同地发生的事件，在其它惯性系也必同时同地发生</p></li>
+<li><p>时间延缓</p>
+<ul>
+<li><p>高速运动与静止状态的<span class="math inline">\(\mu\)</span>子相比，其衰变被延缓了</p></li>
+<li><p>运动时钟变慢：研究在某一惯性系中，同一地点先后发生的两个事件的时间间隔，与另一惯性系中这两个事件的时间间隔之间的关系
+<span class="math display">\[\begin{gathered}
+                \Delta t=\frac{\Delta
+t&#39;}{\sqrt{1-u^{2}/c^{2}}}=\gamma \Delta t&#39; \\
+                \gamma=\frac{1}{\sqrt{1-v^{2}/c^{2}}}
+                \nonumber
+            \end{gathered}\]</span></p>
+<ul>
+<li><p>时间延缓效应显著与否取决于<span class="math inline">\(\gamma\)</span>，<span class="math inline">\(u\ll
+c\)</span>时，<span class="math inline">\(\Delta t&#39;\approx\Delta
+t\)</span></p></li>
+<li><p>使两事件在同地发生的参考系中测得的时间间隔称原时，原时最短</p></li>
+<li><p>时间延缓效应是相对的</p></li>
+</ul></li>
+</ul></li>
+<li><p>空间收缩： <span class="math display">\[l=l_{0}\sqrt{1-(u/c)^{2}}=l_{0}/\gamma
+        \nonumber\]</span></p>
+<ul>
+<li><p>在不同惯性系中测量同一尺长，原长(静止长度)最长</p></li>
+<li><p>长度收缩效应是相对的，是时间相对性的直接结果</p></li>
+<li><p>长度收缩效应只发生在物体的运动方向上，垂直于运动方向的长度不收缩</p></li>
+</ul></li>
+</ul>
+<h2 id="洛伦兹变换">洛伦兹变换</h2>
+<p>空间，时间并非相互独立 <span class="math display">\[{d}
+x^{\prime}=\frac{ {d} x-u {~d} t}{\sqrt{1-\beta^{2}}} \quad {~d}
+y^{\prime}={d} y \quad {~d} z^{\prime}={d} z \quad
+    {d} t^{\prime}=\frac{ {d} t-\frac{u}{c^{2}} {~d}
+x}{\sqrt{1-\beta^{2}}}
+\nonumber\]</span> 速度变换： <span class="math display">\[v_{x}^{\prime}=\frac{v_{x}-u}{1-\frac{u}{c^{2}}
+v_{x}} \quad v_{y}^{\prime}=\frac{v_{y}
+\sqrt{1-\beta^{2}}}{1-\frac{u}{c^{2}} v_{x}} \quad
+v_{z}^{\prime}=\frac{v_{z} \sqrt{1-\beta^{2}}}{1-\frac{u}{c^{2}} v_{x}}
+\nonumber\]</span></p>
+<h1 id="广义相对论">广义相对论</h1>
+<h2 id="广义相对性原理和等效原理">广义相对性原理和等效原理</h2>
+<ul>
+<li><p>广义相对性原理</p>
+<p>在任何参考系(包含非惯性系)中，物理规律都是相同的</p></li>
+<li><p>惯性力</p>
+<ul>
+<li><p>假设在以加速度<span class="math inline">\(\vec{a}\)</span>运动的非惯性系<span class="math inline">\(S&#39;\)</span>中的物体受到"非惯性力"的作用，不是真实的力，无施力物体，无反作用力，是非惯性系加速度的反映.</p></li>
+<li><p><span class="math inline">\(\vec{F_{惯}}=-\vec{F_{0}}=-m\vec{a_{0}}\)</span></p></li>
+</ul></li>
+<li><p>惯性质量与引力质量相等 <span class="math display">\[\left\{\begin{array}{l}
+             f(r)=-G\frac{Mm}{r^{2}}\vec{r} \\
+             f(r)=m&#39;a(r) \\
+        \end{array}\right.
+    \nonumber\]</span></p>
+<p>实验测得，在引力场中同一点，所有物体有相同的加速度： <span class="math display">\[a=\frac{m}{m&#39;}\frac{G_{0}M}{r^{2}}
+        \nonumber\]</span> <span class="math inline">\(\Rightarrow\)</span>惯性质量等于引力质量</p></li>
+<li><ul>
+<li><p>惯性力和引力等效；惯性力场与同方向引力场等效，抵消反方向引力场.</p></li>
+<li><p>在小体积内，引力场可视为均匀，从而可通过参考系的加速运动消除其中各点的引力影响.这种在局部空间范围消去了引力场的参考系称为局部惯性系.</p></li>
+</ul></li>
+</ul>
+<h2 id="广义相对论的几个结论">广义相对论的几个结论</h2>
+<ul>
+<li><p>物体的引力能使光线弯曲</p>
+<p><span class="math inline">\(\Rightarrow\)</span>星球的强引力场能使背后传来的光线汇聚(引力透镜效应)</p></li>
+<li><p>引力势较低的位置，时间进程比较慢</p></li>
+<li><p>引力频移</p>
+<ul>
+<li><p>光沿引力场方向传播<span class="math inline">\(\Rightarrow\)</span>接收到的光频率蓝移</p></li>
+<li><p>光逆引力场方向传播<span class="math inline">\(\Rightarrow\)</span>接收到的光频率红移</p></li>
+</ul></li>
+<li><p>空间在整体上是弯曲的(水星进动，引力波)</p></li>
+</ul>
+<h1 id="原子结构">原子结构</h1>
+<h2 id="原子早期认识">原子早期认识</h2>
+<ul>
+<li><p>古代原子论</p>
+<ul>
+<li><p>古希腊：物质都是由一些坚硬地，不可再分的微粒构成</p></li>
+<li><p>中国：不可无限分割/可以无限分割</p></li>
+<li><p>十九世纪一些重要的发现：原子是物质的一个层次</p></li>
+</ul></li>
+<li><p>原子可再分的确证</p>
+<ul>
+<li><p>X射线：1895年德国物理学家伦琴(W.Röntgen)发现了X射线</p></li>
+<li><p>放射性：1896年法国物理学家贝克勒尔(A.H.
+Becquerel)发现了放射性</p></li>
+<li><p>电子：1897年英国物理学家汤姆逊(J.J. Thomson)发现了电子，这是人
+类发现的第一个从原子中分离出来的更小的微粒.</p></li>
+</ul></li>
+<li><p>Thomson模型((1898)：原子中正电荷均匀分布在整个原子球体内，而电子则嵌在其中</p></li>
+</ul>
+<h2 id="卢瑟福模型">卢瑟福模型</h2>
+<ul>
+<li><p><span class="math inline">\(\alpha\)</span>粒子散射实验</p>
+<ul>
+<li><p>用<span class="math inline">\(\alpha\)</span>粒子轰击铂薄膜，观察荧光屏上散射的<span class="math inline">\(\alpha\)</span>粒子.</p></li>
+<li><p>绝大部分粒子进入箔后直穿而过，少数运动轨迹发生了较大角度的偏转，个别粒子(大约八千分之一)散射角<span class="math inline">\(&gt;90^\circ\)</span>，有的竟沿原路完全反弹回来.</p></li>
+<li><p>结果表明：原子内大部分区域是空的；<span class="math inline">\(\alpha\)</span>粒子遇到处于原子球体中心的质量比它大的东西，且所有正电荷均集中于此.</p></li>
+</ul></li>
+<li><p>核式结构模型：</p>
+<p>每个原子都有一个极小的核，这个核几乎集中了原子的全部质量，并带有<span class="math inline">\(Z\)</span>单位个正电荷，原子核外有<span class="math inline">\(Z\)</span>个电子绕核旋转，所以一般情况下，原子显中性.</p></li>
+<li><p>库仑散射公式</p>
+<ul>
+<li><p>对散射过程作几点假定：</p>
+<ul>
+<li><p>只发生单次散射</p></li>
+<li><p>只有库仑相互作用</p></li>
+<li><p>核外电子的作用可忽略不计</p></li>
+<li><p>靶核静止</p></li>
+<li><p>靶原子对α粒子前后不互相遮蔽</p></li>
+</ul></li>
+<li><p>库伦散射公式： <span class="math display">\[b=\frac{Z_{1} Z_{2}
+e^{2}}{8 \pi \varepsilon_{0} E} \cot \frac{\theta}{2}=\frac{a}{2} \cot
+\frac{\theta}{2}
+            \nonumber\]</span> 其中<span class="math inline">\(a=\frac{Z_{1} Z_{2} e^{2}}{4 \pi \varepsilon_{0}
+E}\)</span>称为库伦散射因子.</p></li>
+<li><p><span class="math inline">\(\theta\)</span>增大，<span class="math inline">\(b\)</span>也随之增大.</p></li>
+</ul></li>
+<li><p>卢瑟福公式</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/15.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<ul>
+<li><p>瞄准距离在<span class="math inline">\(b\rightarrow
+b-db\)</span>间的<span class="math inline">\(\alpha\)</span>粒子，经散射必定向<span class="math inline">\(\theta \rightarrow \theta
++d\theta\)</span>间的角度射出.</p></li>
+<li><p>以<span class="math inline">\(b-db\)</span>为内半径，<span class="math inline">\(b\)</span>为外半径的环形内的<span class="math inline">\(\alpha\)</span>粒子，必定散射在<span class="math inline">\(\theta \rightarrow \theta
++d\theta\)</span>间的一个空心圆锥体中.</p></li>
+<li><p>卢瑟福公式1 <span class="math display">\[{d}
+\sigma=\left(\frac{1}{4 \pi \varepsilon_{0}} \frac{Z e^{2}}{2
+E}\right)^{2} \frac{ {d} \Omega}{\sin ^{4} \frac{\theta}{2}}
+            \nonumber\]</span> <span class="math inline">\(d\sigma\)</span>称为有效散射截面(膜中每个原子的)或微分截面.</p></li>
+<li><ul>
+<li><p>立体角<span class="math inline">\(d\Omega\)</span>与<span class="math inline">\(d\theta\)</span>的关系： <span class="math display">\[{d} \Omega=\frac{2 \pi r^{2} \sin \theta {d}
+\theta}{r^{2}}=2 \pi \sin \theta {d} \theta
+                \nonumber\]</span></p></li>
+<li><p><span class="math inline">\(n\)</span>个<span class="math inline">\(\alpha\)</span>粒子打在薄箔上，在<span class="math inline">\(d\Omega\)</span>方向上测量到的<span class="math inline">\(\alpha\)</span>粒子应为： <span class="math display">\[{d} n=n N t {~d} \sigma=n N t\left(\frac{1}{4 \pi
+\varepsilon_{0}} \frac{Z_{1} Z_{2} e^{2}}{4 E}\right)^{2} \frac{ {d}
+\Omega}{\sin ^{4} \frac{\theta}{2}}
+                \nonumber\]</span></p></li>
+<li><p>薄箔中的原子(核)数：<span class="math inline">\(NS_{0}t\)</span></p>
+<p><span class="math inline">\(N\)</span>原子(核)数密度：<span class="math inline">\(N=\frac{N_{A}\rho}{A}\)</span></p></li>
+<li><p>卢瑟福公式2： <span class="math display">\[\sigma(\theta)=\frac{
+{d}\sigma}{ {d}\Omega}=\left(\frac{1}{4 \pi \varepsilon_{0}}
+\frac{Ze^{2}}{2 E}\right)^{2} \frac{1}{\sin ^{4} \frac{\theta}{2}}
+                \nonumber\]</span> <span class="math inline">\(\sigma(\theta)\)</span>可表示单位入射粒子被单位面积内的靶核散射到单位立体角内的散射粒子数.</p></li>
+</ul></li>
+</ul></li>
+<li><p>推断原子核大小：用入射粒子能靠近靶核的最小距离近似计算 <span class="math display">\[r_{m}=\frac{Z_{1} Z_{2} e^{2}}{4 \pi
+\varepsilon_{0} E} \cong a
+        \nonumber\]</span></p></li>
+<li><p>卢瑟福核式模型的意义</p>
+<ul>
+<li><p>提出了原子的"核式结构"解决了原子中正，负电荷的排布问题，使人们认识到高密度原子核的存在.</p></li>
+<li><p>开辟了一条研究微观粒子结构的新途径，即以散射为手段来探测，获得微观粒子内部信息的方法.</p></li>
+<li><p>困难：无法解释原子的稳定性，光谱</p></li>
+</ul></li>
+</ul>
+<h2 id="放射性元素的衰变">放射性元素的衰变</h2>
+<ul>
+<li><p>质子，中子的发现</p>
+<p>质子：带一个单位的正电荷 m=1.007277 原子质量单位</p>
+<p>中子：中性粒子 m=1.008665 原子质量单位</p>
+<p>质子，中子统称核子，在一定条件下可相互转化.</p></li>
+<li><p>元素符号表示</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/3.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<ul>
+<li><p>同位素：质子数相同，中子数不同</p></li>
+<li><p>同量异位素：核子数相同，质子数不同</p></li>
+</ul></li>
+<li><p>原子核衰变</p>
+<ul>
+<li><p>定义：我们把原子核由于放出某种粒子而转变为新核的变化叫做原子核的衰变</p></li>
+<li><p>原则：质量数守恒，电荷数守恒</p></li>
+<li><p>分类：</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/4.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p><span class="math inline">\(\alpha\)</span>衰变：原子核内少两个质子和两个中子</p>
+<p><span class="math inline">\(\beta\)</span>衰变：原子核内的一个中子变成质子，
+同时放出一个电子</p></li>
+</ul></li>
+<li><ul>
+<li><p>质量数守恒，生成物要以实验为基础</p></li>
+<li><p><span class="math inline">\(\gamma\)</span>射线经常是伴随着<span class="math inline">\(\alpha\)</span>射线和<span class="math inline">\(\beta\)</span>射线产生的，没有<span class="math inline">\(\gamma\)</span>衰变.</p></li>
+<li><p>一种元素只能发生一种衰变，但在一块放射性物质中可以同时放出<span class="math inline">\(\alpha ，\beta ，\gamma\)</span>三种射线.</p></li>
+</ul></li>
+<li><p>半衰期：放射性元素的原子核有半数发生衰变所需的时间，叫做这种元素的半衰期，描述的是统计规律.半衰期的长短由核内部自身的因素决定，不同的放射性元素，半衰期不同.</p></li>
+</ul>
+<h1 id="黑体辐射与光电效应">黑体辐射与光电效应</h1>
+<h2 id="黑体辐射">黑体辐射</h2>
+<ul>
+<li><p>热辐射：由温度决定的物体的电磁辐射</p>
+<p>物体辐射电磁波的同时，也吸收电磁波.辐射本领越大，其吸收本领也越大</p>
+<p>辐射和吸收达到平衡时，物体的温度不再变化，此时物体
+的热辐射称为平衡热辐射</p></li>
+<li><p>单色辐射出射度（单色辐出度）：一定温度<span class="math inline">\(T\)</span>下，物体单位
+表面在单位时间内发射的波长在<span class="math inline">\(l-l+\Delta
+l\)</span>内的辐射能<span class="math inline">\(\Delta
+M_{\lambda}\)</span>与波长间隔<span class="math inline">\(\Delta
+\lambda\)</span>的比值： <span class="math display">\[M_{\lambda}(T)=\frac{\Delta M_{\lambda}}{\Delta
+\lambda}
+        \nonumber\]</span> 辐出度：物体(温度
+T)单位表面在单位时间内发射的辐射能： <span class="math display">\[M(T)=\int_{0}^{\infty} M_{\lambda}(T) {d} \lambda
+        \nonumber\]</span>
+温度越高，辐出度越大.另外，辐出度还与材料性质有关.</p></li>
+<li><p>绝对黑体(黑体)：能够全部吸收各种波长的辐射且不反射和透射的物体.</p>
+<p>与同温度其它物体的热辐射相比，黑体热辐射本领最强，且只和温度有关.</p></li>
+<li><p>黑体辐射公式</p>
+<ul>
+<li><p>维恩公式(粒子)：从经典热力学思想出发.假设黑体辐射是由一些服从麦克斯韦速率分布的分子辐射出来的.短波下较为贴合实验结果.</p></li>
+<li><p>瑞利<span class="math inline">\(-\)</span>金斯公式(电磁波)：抛弃玻尔兹曼的分子运动假设，从经典的麦克斯韦理论出发得出公式.长波下较为贴合实验结果.</p></li>
+<li><p>普朗克公式(1900年) <span class="math display">\[M_{B
+\lambda}(T)=\frac{1}{\lambda^{5}} \cdot \frac{2 \pi h c^{2}}{e^{h c /
+\lambda k T}-1}
+            \nonumber\]</span> 普朗克常数：<span class="math inline">\(h=6.626\times 10^{-34}J\cdot s\)</span></p></li>
+</ul></li>
+<li><p>普朗克能量子假设</p>
+<ul>
+<li><p>谐振子与腔内电磁场交换能量时，其能量的变化是<span class="math inline">\(h\nu\)</span>的整数倍.</p></li>
+<li><p>首次提出微观粒子的能量是量子化的，打破了经典物理学中能量连续的观念.</p></li>
+<li><p>圆满地解释了绝对黑体的辐射问题，并可由此导出维恩公式，瑞利<span class="math inline">\(-\)</span>金斯公式.</p></li>
+</ul></li>
+</ul>
+<h2 id="光电效应">光电效应</h2>
+<ul>
+<li><p>实验装置</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/5.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure></li>
+<li><p>实验规律</p>
+<ul>
+<li><p>饱和电流<span class="math inline">\(i_{s}\)</span></p>
+<p><span class="math inline">\(I\propto
+i_{s}\propto\)</span>光电子数</p></li>
+<li><p>遏止电压<span class="math inline">\(U_{a}\)</span> <span class="math display">\[\frac{1}{2}mv_{m}^{2}=eU_{a}
+            \nonumber\]</span></p></li>
+<li><p>截止频率<span class="math inline">\(\nu_{0}\)</span></p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/6.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>只有光的频率<span class="math inline">\(\nu \geq
+\nu_{0}\)</span>时，电子才会逸出，且光电子最大初动能和光频率<span class="math inline">\(\nu\)</span>成线性关系</p></li>
+<li><p>即时发射，迟滞时间不超过<span class="math inline">\(10^{-9}\)</span>秒</p></li>
+</ul></li>
+<li><p>爱因斯坦光子假说：光是光子流，每一光子能量为<span class="math inline">\(h\nu\)</span>，电子吸收一个光子： <span class="math display">\[h\nu =A+\frac{1}{2}mv_{m}^{2}
+        \nonumber\]</span></p>
+<ul>
+<li><p>光频率<span class="math inline">\(\nu
+&gt;A/h\)</span>时，电子吸收一个光子即可克服逸出功<span class="math inline">\(A\)</span>逸出.</p></li>
+<li><p>单位时间到达单位垂直面积的光子数为<span class="math inline">\(N\)</span>，则光强<span class="math inline">\(I=Nh\nu\)</span>越强，到阴极的光子越多，则逸出的光电子越多.</p></li>
+<li><p>电子吸收一个光子即可逸出，不需要长时间的能量积累.</p></li>
+</ul></li>
+</ul>
+<h2 id="固体比热">固体比热</h2>
+<ul>
+<li><p>经典理论</p>
+<ul>
+<li><p>杜隆<span class="math inline">\(-\)</span>珀替定律 <span class="math display">\[C_{v}=3 R=3 N_{A} K_{B}
+            \nonumber\]</span> 分子具有<span class="math inline">\(t\)</span>个平动自由度和<span class="math inline">\(r\)</span>个转动自由度，<span class="math inline">\(s\)</span>个振动自由度，每个分子的平均总能量：
+<span class="math display">\[E=\frac{1}{2}(t+r+2s)kT
+        \nonumber\]</span></p></li>
+<li><p>局限性：杜隆<span class="math inline">\(-\)</span>珀替定律只适用于足够高的温度.</p>
+<p>(当<span class="math inline">\(T\rightarrow0\)</span>时，<span class="math inline">\(C_{v}\rightarrow0\)</span>，经典的能量均分定理无法解释)</p></li>
+</ul></li>
+<li><p>爱因斯坦模型</p>
+<ul>
+<li><p>假设：晶体中原子的振动是相互独立的，且所有原子都具有同一频率.</p></li>
+<li><p>根据量子理论，各个简谐振动的能量本征值是量子化的，即： <span class="math display">\[\bar{E}_{j}=\left(n_{j}+\frac{1}{2}\right) \hbar
+\omega_{j} \quad n_{j}\in Z
+            \nonumber\]</span>
+把晶体看作一个热力学系统，晶体中每个原子可看成相互独立的简谐振子，每个谐振子的统计平均能量等于零点能<span class="math inline">\(+\)</span>热能： <span class="math display">\[\bar{E}_{j}=\frac{1}{2} \hbar
+\omega_{j}+\frac{\hbar \omega_{j}}{e^{\beta \hbar \omega_{j}}-1}
+            \nonumber\]</span> 其中，平均声子数： <span class="math display">\[\overline{ {n}_{j}}=\frac{1}{e^{\frac{\hbar
+\omega_{j}}{ {k}_{B} T}}-1}
+            \nonumber\]</span> <span class="math inline">\(\Rightarrow\)</span>由<span class="math inline">\(N\)</span>个原子组成的晶体总振动能： <span class="math display">\[\bar{E}=E(t)+E_{0}
+        \nonumber\]</span></p></li>
+<li><p>局限性：成功证明<span class="math inline">\(T\rightarrow0\)</span>时，<span class="math inline">\(C_{v}\rightarrow0\)</span>，但模型过于简化，趋于零的速度太快.</p></li>
+</ul></li>
+</ul>
+<h1 id="氢原子光谱与玻尔模型">氢原子光谱与玻尔模型</h1>
+<h2 id="光谱氢原子光谱">光谱，氢原子光谱</h2>
+<ul>
+<li><p>光谱：电磁辐射的波长成分和强度分布的记录；研究原子结构的重要途径.</p>
+<ul>
+<li><p>类别：</p>
+<ul>
+<li><p>波长：红外光谱，可见光谱，紫外光谱</p></li>
+<li><p>产生：原子光谱(线状)，分子光谱(带状)</p></li>
+<li><p>形状：线状光谱，带状光谱，连续光谱</p></li>
+<li><p>是否通过吸收介质：发射光谱，吸收光谱</p></li>
+</ul></li>
+<li><p>1860年，<span class="math inline">\(R\ Bunsen\)</span>和<span class="math inline">\(G\
+Kirchhoff\)</span>发明光谱分析技术，发现每种元素都有其独特的光谱.</p></li>
+<li></li>
+</ul></li>
+<li><p>光谱仪：能将混合光按不同波长成分展开成光谱的仪器</p>
+<ul>
+<li><p>组成：光源，分光器，记录仪，照相设备(摄谱仪).</p></li>
+<li><p>种类：棱镜光谱仪，光栅光谱仪.</p></li>
+<li><p>原理：不同波长的光线会聚在屏上的不同位置，因此谱线的位置
+就严格地与波长的长短相对应(色散原理).</p></li>
+</ul></li>
+<li><p>氢原子光谱的发现：</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/7.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>氢光谱最早是由瑞典的埃格斯特朗<span class="math inline">\((Anders\
+Jonas\
+Åugström)\)</span>在1853年从氢放电管中获得.可见光区有4条，分别用<span class="math inline">\(H_{\alpha}，H_{\beta}，H_{\gamma}，H_{\delta}\)</span>来表示.</p></li>
+<li><p>巴耳末<span class="math inline">\((Balmer)\)</span>公式： <span class="math display">\[\begin{gathered}
+            \lambda=B\frac{n^{2}}{n^{2}-4}\\
+            n=3，4，5 \dots \quad B=364.56nm
+        \end{gathered}
+        \nonumber\]</span></p></li>
+<li><p>氢原子光谱的线系</p>
+<ul>
+<li><p>里德伯公式 <span class="math display">\[\tilde{\nu}=\frac{1}{\lambda}=R_{H}\left(\frac{1}{m^{2}}-\frac{1}{n^{2}}\right)
+            \nonumber\]</span> <span class="math inline">\(m=1，2，3\dots\)</span>，对每一个<span class="math inline">\(m，n=m+1，m+2，\dots\)</span>，构成一个谱线系.</p>
+<p>实验测得：氢光谱的里德伯常量<span class="math inline">\(R_{H}=1.0967758\times10^{7}m^{-1}\)</span></p></li>
+<li><p>每一谱线的波数都可以表示为两项之差，每一项都是正整数的函数，并且两项的形式一样.</p>
+<p>令<span class="math inline">\(T(m)=\frac{R_{H}}{m^{2}}，T(n)=\frac{R_{H}}{n^{2}}\)</span>
+<span class="math display">\[\Rightarrow \tilde{\nu} =T(m)-T(n)
+            \nonumber\]</span> 氢原子的光谱项普遍为：<span class="math inline">\(T=\frac{R_{H}}{n^{2}}\)</span>.</p></li>
+</ul></li>
+<li><p>氢原子光谱的实验规律</p>
+<ul>
+<li><p>彼此分立的线状谱，谱线有确定的位置.</p></li>
+<li><p>谱线间有一定的关系.</p></li>
+<li><p>每一条谱线的波数都可以表示为两光谱项之差.</p></li>
+</ul></li>
+</ul>
+<h2 id="玻尔的轨道能级理论">玻尔的轨道能级理论</h2>
+<ul>
+<li><p>经典电磁理论：作加速运动的电子不断向外辐射电磁，其频率等于电子绕核旋转的频率.</p>
+<p><span class="math inline">\(\Rightarrow\)</span>原子发射连续光谱，且稳定性估算小于<span class="math inline">\(10^{-10}\)</span>秒.</p></li>
+<li><p>玻尔模型</p>
+<ul>
+<li><p>定态假设：</p>
+<ul>
+<li><p>电子在稳定状态下作圆周运动</p></li>
+<li><p>不辐射电磁波</p></li>
+<li><p>这些稳定状态的能量不连续</p></li>
+</ul></li>
+<li><p>跃迁假设(频率条件)：原子从一个定态跃迁到另一定态，会发射或吸收一个光子.</p></li>
+<li><p>角动量量子化假设</p></li>
+</ul>
+<p><span class="math inline">\(\Rightarrow\)</span>玻尔半径： <span class="math display">\[R_{H}=\frac{m c^{2} e^{4}}{4 \pi\left(4 \pi
+\varepsilon_{0}\right)^{2}(c \hbar)^{3}}
+    \nonumber\]</span></p></li>
+<li><p>修正里德伯常数：考虑到核不会固定不动，电子质量应理解为折合质量<span class="math inline">\(\mu=\frac{mM}{m+M}\)</span></p></li>
+<li><p>类氢离子的光谱(略).</p></li>
+<li><p>玻尔理论的意义：</p>
+<ul>
+<li><p>成功的把氢原子结构和光谱线结构联系起来，从理论上说明了氢原子和类氢原子的光谱线结构</p></li>
+<li><p>揭示了微观体系的量子化规律，为建立量子力学奠定了基础.</p></li>
+<li><p>但不能处理复杂原子的问题，是半经典半量子的理论.</p></li>
+</ul></li>
+<li><p>光学共振实验</p>
+<ul>
+<li><p>现象：透过钠蒸气从玻璃泡出来的光束强度减弱，部分光强被蒸
+气吸收；被入射光穿透的钠蒸气本身变成了光源，它向空间各方向发出同样波长的光，称为共振荧光.</p></li>
+<li><p>荧光：一个物体受外界光束照射而同时发射出来的光，其频率一般低于产生此现象的原始光束的光频率.</p></li>
+<li><p>一般规律：只有当入射光束频率与构成蒸气的原子谱线频率相符时，单原子蒸气才能强烈的吸收这种光；只有在同时伴随有同一频率的荧光发射的某些谱线频率上才能观察到这种强吸收，这些区别于其他谱线的谱线被称为共振线.</p></li>
+<li><p>原理：应用玻尔假说解释.</p></li>
+</ul></li>
+</ul>
+<h1 id="原子蒸气的电子激发">原子蒸气的电子激发</h1>
+<h2 id="电离势">电离势</h2>
+<ul>
+<li><figure>
+<p>
+</p><p><img src="/2023/05/10/002physicsnoteyk2/8.jpg" alt="image"> <img src="/2023/05/10/002physicsnoteyk2/9.jpg" alt="image"></p>
+<p></p>
+</figure>
+<p>当<span class="math inline">\(V_{g}\)</span>大于某个初始值<span class="math inline">\(V_{i}\)</span>时，电流<span class="math inline">\(I\)</span>随<span class="math inline">\(V_{g}\)</span>的升高而迅速增长，这个电压就叫做相应原子的电离势.</p></li>
+<li><p>解释：若电子以非弹性碰撞轰击并将其全部动能交给原子，若该能量低于电离能<span class="math inline">\(W_{i}\)</span>，碰撞就不会引发原子电离；若能量足够大，会从原子中夺走一个电子.</p>
+<h2 id="激发势">激发势</h2>
+<ul>
+<li><p>弗兰克<span class="math inline">\(-\)</span>赫兹实验：观察碰撞过程中电子的行为</p>
+<ul>
+<li><p>若发生弹性碰撞，电子能克服电势差到达极板.</p></li>
+<li><p>若发生非弹性碰撞，其急剧降低的动能值等于原子得到的势能<span class="math inline">\(W\)</span>.</p></li>
+</ul></li>
+<li><p>实验现象：</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/10.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>电子相继与多个不同原子发生非弹性碰撞.</p></li>
+<li><p>结论：同一种原子可以处在能量不同的许多激发态中，而在前述实验中我们只讨论了一个激发态.</p></li>
+</ul></li>
+</ul>
+<h1 id="光子的动量">光子的动量</h1>
+<h2 id="辐射压强到光子动量">辐射压强到光子动量</h2>
+<ul>
+<li><p>1871年，麦克斯韦从理论上推论出电磁辐射会对所有暴露在其下的物体表面施加压力的事实.</p></li>
+<li><p>基本假设：电磁波射入的壁时不透明的，光波可在任意性质的壁面上反射，散射或被吸收.必须认为光波穿过壁表面一块厚度非常小的薄层，并对壁内的微观电荷和电流施加力.</p>
+<p><span class="math inline">\(\varpi\)</span>为辐射压强法向分量，<span class="math inline">\(u\)</span>为能量密度，<span class="math inline">\(i\)</span>为入射角. <span class="math display">\[\varpi_{z}=u \cos^{2}i
+        \nonumber\]</span></p>
+<p>若辐射各向同性，则 <span class="math display">\[\varpi_{z}=u / 3
+        \nonumber\]</span></p></li>
+<li><p>射到壁表面的电磁波施加压力<span class="math inline">\(\quad
+\vec{F}=S \vec{\omega}\)</span></p>
+<p><span class="math inline">\(\Rightarrow\)</span>给壁传递了一个动量<span class="math inline">\(\quad\vec{p}=m \vec{v}\)</span></p>
+<p><span class="math inline">\(\Rightarrow\)</span>光波和壁的孤立系统
+动量守恒</p>
+<p><span class="math inline">\(\Rightarrow\)</span>必须假设光波也具有动量，且<span class="math inline">\(\overrightarrow{p_{z}}_\text {壁
+}+\overrightarrow{p_{z}}_\text {波 }=\text{常数}\)</span>，则： <span class="math display">\[\delta{\overrightarrow{p_{z}}}_{\text {壁
+}}=F_{z} t=S \varpi_{z} t=S u t \cos ^{2} i
+        \nonumber\]</span></p>
+<ul>
+<li><p>吸收的情况：</p>
+<p>照在壁表面的光束在时间<span class="math inline">\(t\)</span>内传输能量：<span class="math inline">\(W=uctS\cos i\)</span> <span class="math display">\[\delta{\overrightarrow{p_{z}}}_{\text {壁
+}}=\overrightarrow{p_{z}}_\text {波 }=W \cos i /c
+            \nonumber\]</span></p></li>
+<li><p>反射的情况：</p>
+<p>照在壁表面的光束在时间<span class="math inline">\(t\)</span>内传输能量：<span class="math inline">\(W=\frac{u}{2}ctS\cos i\)</span> <span class="math display">\[\delta{\overrightarrow{p_{z}}}_{\text {壁
+}}=\overrightarrow{p_{z}}_\text {入 }-\overrightarrow{p_{z}}_\text {反
+}=2W \cos i /c
+            \nonumber\]</span></p></li>
+<li></li>
+</ul></li>
+<li><p>假定输送能量<span class="math inline">\(W\)</span>的光波列还具有动量矢量 <span class="math display">\[\vec{p}_{\text {波 }} \begin{cases}\text { 方向：
+} &amp; \text { 与传播方向相同 } \\ \text { 模： } &amp;
+\left|\vec{p}_{\text {波 }}\right|=W / c\end{cases}
+        \nonumber\]</span> 则一个能量为<span class="math inline">\(W=h\nu\)</span>的光子同样具有动量 <span class="math display">\[\vec{p}_{\text {波 }} \begin{cases}\text { 方向：
+} &amp; \text { 与传播方向相同， } \ \vec{p}=\hbar \vec{k}
+        \\ \text { 模： } &amp; p=h\nu /c =h/\lambda = \hbar
+k\end{cases}
+    \nonumber\]</span> 其中，波矢量<span class="math inline">\(k=2\pi
+/\lambda ，\ \hbar=h/2\pi\)</span></p></li>
+</ul>
+<h2 id="康普顿效应">康普顿效应</h2>
+<ul>
+<li><p><span class="math inline">\(X\)</span>射线及其波动性</p>
+<ul>
+<li><p>伦琴(1895年11月8日)气体放电实验荧光</p></li>
+<li><p>1906年英国物理学家巴克拉显示了<span class="math inline">\(X\)</span>射线偏振(双散射装置)，首次实验验证了<span class="math inline">\(X\)</span>射线的波动性</p></li>
+<li><p>X射线是波长极短的电磁波，不会被磁场偏转.</p>
+<p>X射线具有很强的穿透力，且波长越短，穿透力越强.</p></li>
+</ul></li>
+<li><p>康普顿散射效应的实验规律</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/11.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<ul>
+<li><p>出现两种波长<span class="math inline">\(\lambda_{0}\)</span>和<span class="math inline">\(lambda\)</span>，<span class="math inline">\(\Delta \lambda=\lambda-\lambda_{0}\)</span>随<span class="math inline">\(\theta\)</span>增大而增大，与散射物无关</p></li>
+<li><p>散射物不同，<span class="math inline">\(\lambda_{0}\)</span>和<span class="math inline">\(lambda\)</span>强度比不同，轻物质<span class="math inline">\(\lambda\)</span>强度大.</p></li>
+</ul></li>
+<li><p>经典物理解释： 单色电磁波照射<span class="math inline">\(\rightarrow\)</span>电子受迫振动<span class="math inline">\(\rightarrow\)</span>发射同频率散射线</p>
+<p>(只能说明波长不变的散射，而不能说明康普顿散射)</p></li>
+<li><p>光子理论解释：</p>
+<ul>
+<li><p>入射光子与原子外层电子弹性碰撞</p>
+<p>外层电子受原子核束缚弱<span class="math inline">\(\rightarrow\)</span>近似自由</p>
+<p>动能<span class="math inline">\(\ll\)</span>光子能量<span class="math inline">\(\rightarrow\)</span>近似静止</p>
+<p><span class="math inline">\(\Rightarrow\)</span>能量，动量守恒</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/12.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p><span class="math display">\[m_{0} c^{2}\left(v_{0}-v\right)=h v_{0}
+v(1-\cos \theta)
+            \nonumber\]</span> <span class="math display">\[\Delta
+\lambda=\lambda-\lambda_{0}=\frac{c}{v}-\frac{c}{v_{0}}=\frac{h}{m_{0}
+c}(1-\cos \theta)
+            \nonumber\]</span> 康普顿波长<span class="math inline">\(\quad \lambda_{c}={h}/{m_{0} c}={hc}/{m_{0}
+c^{2}}=0.002426nm\)</span></p></li>
+<li><p><span class="math inline">\(X\)</span>射线光子和原子内层电子相互作用</p>
+<p>内层电子被强束缚，光子相当于和整个原子发生碰撞；</p>
+<p>光子质量远小于原子，碰撞时光子不损失能量，波长不变.</p></li>
+</ul>
+<p>结论：</p>
+<p>光子碰撞内层电子，散射线波长不变；碰撞外层电子，波长变大</p>
+<p>轻物质多数电子弱束缚：<span class="math inline">\(\lambda_{0}\)</span>弱，<span class="math inline">\(\lambda\)</span>强；</p>
+<p>重物质多数电子强束缚：<span class="math inline">\(\lambda_{0}\)</span>强，<span class="math inline">\(\lambda\)</span>弱.</p>
+<p>(对于长波长的可见光，<span class="math inline">\(Compton\)</span>效应不明显)</p></li>
+<li><p>原子的非弹性散射：光子吸收与辐射</p></li>
+</ul>
+<h1 id="与原子交换角动量">与原子交换角动量</h1>
+<h2 id="角动量量子化">角动量量子化</h2>
+<p><span class="math display">\[\begin{cases}
+            \text{力}\quad \frac{d \vec{p}}{d t}=\vec{F} \\
+            \text{力矩}\quad \frac{d \vec{L}}{d t}=\vec{r} \times
+\vec{F}=\vec{M}
+        \end{cases}
+    \nonumber\]</span> <span class="math inline">\(\Rightarrow\)</span>
+原子磁矩(运动点电荷)： <span class="math display">\[\vec{\mu}=\frac{1}{2} q \vec{r} \times \vec{v}
+\quad \vec{\mu}=\frac{q}{2 m} \vec{L}
+        \nonumber\]</span> 均匀磁场： <span class="math display">\[\begin{gathered}
+            \frac{d \vec{L}}{d t}=\vec{r} \times
+\vec{F}=\vec{M}=\vec{\mu} \times \vec{B} \\
+            \frac{d \vec{\mu}}{d t}=\frac{q}{2 m} \frac{d \vec{L}}{d
+t}=-\frac{q}{2 m}\vec{\mu} \times \vec{B}=-\frac{q}{2 m} \vec{B} \times
+\vec{\mu}=\vec{\omega}\times \vec{\mu}
+        \end{gathered}
+    \nonumber\]</span></p>
+<p>磁场的作用是让磁矩围绕磁场方向转动：拉莫尔进动</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/13.jpg" alt="施特恩-盖拉赫实验，1921">
+<figcaption aria-hidden="true">施特恩<span class="math inline">\(-\)</span>盖拉赫实验，1921</figcaption>
+</figure>
+<p>非均匀磁场中，原子发生偏转，可用于测量原子磁矩 <span class="math display">\[S=\frac{1}{2} a t^{2}=\frac{1}{2}
+\frac{F}{m}\left(\frac{L}{v}\right)^{2}
+    \nonumber\]</span> 观测到的斑迹为分立的沉积线，故<span class="math inline">\(F=\mu_{z}\frac{db}{dz}\)</span>分立，<span class="math inline">\(\mu_{z}\)</span>分立</p>
+<p><span class="math inline">\(\Rightarrow\)</span>角动量空间量子化</p>
+<h2 id="塞曼效应">塞曼效应</h2>
+<ul>
+<li><p>原子能级无外场相互作用时的能量 <span class="math inline">\(E_{0}\)</span></p>
+<p>加上磁场后，原子能量变为 <span class="math inline">\(\quad
+E_{0}+W(m)=E(m)\)</span></p>
+<p><span class="math inline">\(\Rightarrow\)</span>能级分裂为若干塞曼子能级.</p></li>
+<li><p>塞曼效应：1896年，荷兰物理学家塞曼发现，光源在磁场中谱线会分裂.</p>
+<ul>
+<li><p>正常塞曼效应</p>
+<p>光源放在磁场中，一条谱线分裂成等间隔的三条谱线.</p></li>
+<li><p>反常塞曼效应</p>
+<p>1897年，普雷斯顿发现，在很多情况下，一条谱线分裂的条数并不是三条，间隔也不尽相同.</p></li>
+<li><p>对塞曼效应的解释</p>
+<p>经典物理解释了正常<span class="math inline">\(Zeeman\)</span>效应，但解释不了反常<span class="math inline">\(Zeeman\)</span>效应；</p>
+<p>电子具有固有的角动量和磁矩，并因此产生了反常<span class="math inline">\(Zeeman\)</span>效应.</p></li>
+</ul></li>
+</ul>
+<h2 id="辐射的角动量">辐射的角动量</h2>
+<ul>
+<li><p>产生圆偏振：</p>
+<p>转动方向：快轴扫过包含入射线偏振的象限，转向慢轴的方向.</p>
+<p>分解方向：使慢轴转向快轴的旋转方向，并扫过所产生的线偏振的象限.</p>
+<ul>
+<li><p>左旋圆偏振波： <span class="math display">\[\begin{gathered}
+                E_{x}=a \cos (\omega t+\varphi) \\
+                E_{y}=+a \sin (\omega t+\varphi)
+                =a \cos (\omega t+\varphi-\pi / 2)
+            \end{gathered}
+            \nonumber\]</span></p></li>
+<li><p>右旋圆偏振波： <span class="math display">\[\begin{gathered}
+                E_{x}=a \cos (\omega t+\varphi) \\
+                E_{y}=-a \sin (\omega t+\varphi)
+                =a \cos (\omega t+\varphi+\pi / 2)
+            \end{gathered}
+            \nonumber\]</span></p></li>
+</ul></li>
+<li><p>一个圆偏振波在传播过程中透过晶体薄片时会有力作用在薄片上，这个力趋向于使薄片围绕垂直于它自身平面波的传播方向旋转.晶片角动量的变化：
+<span class="math display">\[\begin{gathered}
+            \delta L_{\text {z波 }}=-\delta L_{\text {z晶 }}=-M_{z}
+\delta t\\
+            \left|\delta L_{\text {z波 }}\right|=\left|M_{z} \delta
+t\right|=|P \delta t / \omega|=|\delta W / \omega|
+        \end{gathered}
+        \nonumber\]</span></p></li>
+<li><p>解释</p>
+<ul>
+<li><p>线偏振波没有角动量</p></li>
+<li><p>左旋圆偏振波除了携带能量<span class="math inline">\(W\)</span>外，同时具有正角动量<span class="math inline">\(L_{z}=+W/\omega\)</span></p></li>
+<li><p>右旋圆偏振波除了携带能量<span class="math inline">\(W\)</span>外，同时具有负角动量<span class="math inline">\(L_{z}=-W/\omega\)</span></p></li>
+</ul>
+<p><span class="math inline">\(\Rightarrow\)</span>一个圆偏振的光子输运的能量为
+<span class="math display">\[W=h\nu =\hbar \omega
+    \nonumber\]</span> 同时携带的角动量为 <span class="math display">\[L_{z}=W/\omega =\hbar
+    \nonumber\]</span></p></li>
+</ul>
+<h1 id="光子相干性与电子相干性">光子相干性与电子相干性</h1>
+<h2 id="光波的相干性">光波的相干性</h2>
+<p>相干性：广义上用于表征两个正弦变化的物理量之间的相位关系，由电场矢量衡量：
+<span class="math display">\[E(x， y， z， t)=E(\vec{r}，
+t)=\varepsilon_{0} \cos \left(\vec{k}_{0} \cdot \vec{r}-\omega_{0}
+t-\varphi\right)
+    \nonumber\]</span></p>
+<p><span class="math inline">\(\varepsilon_{0}\)</span> 振幅<span class="math inline">\(\omega_{0}=2\pi \nu_{0}\)</span> 圆频率 <span class="math inline">\(\vec{k}_{0}\)</span> 波矢量 <span class="math display">\[\delta \varphi=\varphi\left(\vec{r}_{1}，
+t_{1}\right)-\varphi\left(\vec{r}_{2}， t_{2}\right)
+    \nonumber\]</span> 若<span class="math inline">\(\delta\)</span>小于某小量<span class="math inline">\((1\ rad)\)</span>，则说在<span class="math inline">\(P_{1}\)</span>与<span class="math inline">\(P_{2}\)</span>点和<span class="math inline">\(t_{1}\)</span>与<span class="math inline">\(t_{2}\)</span>时刻上波是相干的.</p>
+<ul>
+<li><p>时间相干性</p>
+<p>同一地点<span class="math inline">\(P\)</span>上，在不同时刻<span class="math inline">\(t_{1}\)</span>与<span class="math inline">\(t_{2}\)</span>测量电场 <span class="math inline">\(E(P，t_{1})\)</span>和<span class="math inline">\(E(P，t_{2})\)</span>，得到二者之间的相干性.</p></li>
+<li><p>空间相干性</p>
+<p>同一时刻<span class="math inline">\(t\)</span>上，在不同地点<span class="math inline">\(P\)</span>与<span class="math inline">\(Q\)</span>测量电场 <span class="math inline">\(E(P，t)\)</span>和<span class="math inline">\(E(Q，t)\)</span>，得到二者之间的相干性.</p>
+<p>处在传播轴上的两个点<span class="math inline">\(P_{1}\)</span>与<span class="math inline">\(P_{2}\)</span>之间的相干性可归结为其中一个点上的时间相干性.</p></li>
+</ul>
+<h2 id="相干的相关概念">相干的相关概念</h2>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/14.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<ul>
+<li><p>相干时间</p>
+<p>相位变化到绝对值为<span class="math inline">\(1rad\)</span>时平均所需的时间<span class="math inline">\(T_{c}\)</span>. <span class="math display">\[\left|t^{\prime}-t\right|&lt;T_{c} \quad
+\Rightarrow \quad \varphi\left(t^{\prime}\right) \approx \varphi(t)
+        \nonumber\]</span></p></li>
+<li><p>相干长度</p>
+<p>平行于传播方向，由相干时间定义. <span class="math display">\[L_{c}=cT_{c}
+        \nonumber\]</span></p></li>
+<li><p>相干宽度</p>
+<p>沿传播方向<span class="math inline">\(O_{z}\)</span>轴，由一些与之成小角度的子波近似有相同相位，可在<span class="math inline">\(x\)</span>维度上定义相干宽度<span class="math inline">\(a_{c}\)</span>，用于表征波平面上的有效宽度： <span class="math display">\[a_{c} \Delta k_{x} \approx 1 rad
+        \nonumber\]</span></p></li>
+</ul>
+<h2 id="波与光子">波与光子</h2>
+<ul>
+<li><p>一列波可以描绘成以频率<span class="math inline">\(\nu\)</span>在空间传播的交变电磁场，与原子相互作用中产生大小为<span class="math inline">\(h\nu\)</span>的能量交换.当波被封闭在一个腔中时，引入光子数目<span class="math inline">\(N_{c}\)</span>，则腔中储存电磁能量： <span class="math display">\[W=h\nu N_{c}
+        \nonumber\]</span></p></li>
+<li><p>平均光子流</p>
+<p>设截面为<span class="math inline">\(S\)</span>的光束输送功率为<span class="math inline">\(P\)</span>，平均能量密度为<span class="math inline">\(u\)</span>，可由波的电场<span class="math inline">\(E\)</span>与磁场<span class="math inline">\(B\)</span>计算，则： <span class="math display">\[\begin{gathered}
+            P=Scu=SDh\nu \\
+            \Rightarrow \ D=P/Sh\nu=(\lambda/h)u \\
+            \Rightarrow \ D(t)=\frac{\lambda}{h}\varepsilon_{0}E^{2}(t)
+        \end{gathered}
+    \nonumber\]</span></p></li>
+<li><p>应用：</p>
+<ul>
+<li><p>接收无线电波</p></li>
+<li><p>观察微弱光源：计算远大于光周期时间的平均光子流.</p></li>
+<li><p>光电子计数：一个光电子通过光电倍增管后，会在末级电级上产生百万级数量的光子，利用示波器可观察产生的电脉冲信号，从而计算入射光子数.</p>
+<p>(考虑量子效率：在某一特定波长下单位时间内产生的平均光电子数与入射光子数之比，描述光电器件光电转换能力)</p></li>
+</ul></li>
+<li><p>光子自相干</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/16.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>平均每秒30个光电子，量子效率<span class="math inline">\(10\%\)</span>，平均光子流每秒300个，相干区总光子流的数量级约为每秒30000个.</p>
+<p><span class="math display">\[\begin{cases}
+        \text{光子平均时间间隔}\quad \delta t\approx 3\times
+10^{-5}s=30\mu s \\
+        \text{光子通过实验装置所需时间}\quad L/c \approx 5\times
+10^{-9}s=5ns
+    \end{cases}
+    \nonumber\]</span> <span class="math inline">\(\Rightarrow\)</span>实验装置在绝大部分时间似乎完全是空的.</p>
+<p>假设一列波包含一个光子的能量，则这个唯一的光子就能在相干时间内相互作用.光源相干时间为<span class="math inline">\(T_{c}=0.3ns\)</span>，远小于两列波的时间间隔<span class="math inline">\(30\mu s\)</span>，故两个光子不可能发生干涉.</p>
+<p><span class="math inline">\(\Rightarrow\)</span>单个光子与自身干涉：</p>
+<p>决定每个光子传播的波分解为通过<span class="math inline">\(S_{1}\)</span>或<span class="math inline">\(S_{2}\)</span>缝的两列波<span class="math inline">\(E_{1}\)</span>和<span class="math inline">\(E_{2}\)</span>，然 后又以<span class="math inline">\((E_{1}+E_{2})\)</span>的形势重新组合成为一列波，形成干涉条纹.</p>
+<p>(单个光子同时通过两个狭缝，人们不可能像追踪一个物质粒子那样追踪一个光子的轨迹)</p></li>
+</ul>
+<h2 id="德布罗意波">德布罗意波</h2>
+<ul>
+<li><p>德布罗意(1923)：假定与任何粒子相联系的"相波"，在空间任何点与粒子同相位."相波"的频率与速度由粒子的能量和速度所决定.<span class="math inline">\(\Rightarrow\)</span>实物粒子蕴含波动性. <span class="math display">\[\text{德布罗意波长公式}\quad \lambda=h/p
+        \nonumber\]</span></p></li>
+<li><p>物质波的实验验证</p>
+<ul>
+<li><p>戴维孙-革末电子束对晶体薄膜散射实验(1927年)，观测到电子衍射现象</p></li>
+<li><p>电子的单缝，双缝，三缝和四缝衍射实验（约恩逊，1961），证实了质子，中子和原子等实物粒子都具有波动性，并满足德布罗意关系.</p></li>
+</ul></li>
+</ul>
+<h1 id="波粒二象性">波粒二象性</h1>
+<h2 id="矩阵力学与波动力学">矩阵力学与波动力学</h2>
+<ul>
+<li><p>海森堡，玻恩，约尔丹：波动力学</p>
+<p>无法确定轨道的绝对能级，但能精确检测能极差.基于这一可观测的物理量，创立了一种新算法，从而精确推演出氢原子量子化的轨道能级与辐射频率.</p></li>
+<li><p>狄拉克：发现了经典力学中泊松括号与海森堡提出的矩阵力学规则的相似之处，并把相对论引进了量子力学，发展出了涵盖波动力学与矩阵力学的广义理论，建立了相对论形式的薛定谔方程，也就是著名的狄拉克方程.</p></li>
+<li><p>薛定谔：在德布罗意思想的基础上，提出氢原子中电子所遵循的波动方程(薛定谔方程)，并建立了以此为基础的波动力学和量子力学的近似方法.</p>
+<p>薛定谔方程：描述低速的微观粒子在外力场中运动的波动微分方程.</p></li>
+</ul>
+<h2 id="光的量子性与马吕斯定律">光的量子性与马吕斯定律</h2>
+<ul>
+<li><p>经典光场的马吕斯定律</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/17.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>通过偏振片的光强与入射光强的关系： <span class="math display">\[\begin{gathered}
+        I=|E^{2}| \Rightarrow I&#39;=|E&#39;^{2}|=E^{2}\cos ^{2}\alpha
+\\
+        I_{T}=I_{0}\cos ^{2}\alpha
+    \end{gathered}
+    \nonumber\]</span></p>
+<p>通过的光子数与初始光子数的关系： <span class="math display">\[n_{T}=n_{0}\cos ^{2} \alpha
+    \nonumber\]</span></p></li>
+<li><p>态矢量与马吕斯定律一般形式</p>
+<p>单个光子经过偏振片时，要么作为一个整体通过，要么完全不通过.则马吕斯定律的描述应从光强变为通过概率.</p>
+<p>为了描述具有特定偏振方向的单个光子，需要引入态矢量： <span class="math display">\[\hat{e}_{\alpha}=\cos \alpha \hat{e}_{H}+\sin
+\alpha \hat{e}_{V}
+        \nonumber\]</span> 其中， <span class="math display">\[\begin{split}
+        \hat{e}_{H}\cdot \hat{e}_{H}=1 \quad \hat{e}_{V}\cdot
+\hat{e}_{V}=1 \quad \hat{e}_{H} \cdot \hat{e}_{V}=0 \\
+        \hat{e}_{\alpha} \cdot \hat{e}_{\alpha}=1 \quad \hat{e}_{\alpha}
+\cdot \hat{e}_{H}= \cos \alpha \quad \hat{e}_{\alpha} \cdot
+\hat{e}_{V}=\sin \alpha
+    \end{split}
+    \nonumber\]</span></p>
+<p>马吕斯定律一般形式： <span class="math display">\[{I}_{T}=|\overrightarrow{ {n}} \cdot
+\overrightarrow{ {E}}|^{2}={I}_{0} \cos ^{2}({\alpha}-{\phi})
+    \nonumber\]</span></p></li>
+<li><p>狄拉克符号</p>
+<p>态矢量可被重新描述为： <span class="math display">\[|\alpha\rangle=\cos \alpha|H\rangle+\sin
+\alpha|V\rangle
+        \nonumber\]</span> 称为右矢.左矢可表示为<span class="math inline">\(\langle \phi |\)</span>的形式.</p>
+<p><span class="math inline">\(\langle \phi||\alpha\rangle=\langle \phi
+| \alpha\rangle\)</span>称作矢量的点积，表示<span class="math inline">\(|\alpha\rangle\)</span>态在<span class="math inline">\(|\phi\rangle\)</span>方向的投影，并等价于处于<span class="math inline">\(|\alpha\rangle\)</span>态的光子在<span class="math inline">\(|\phi\rangle\)</span>方向被观察到的概率幅.</p>
+<p>矢量点积有以下特殊关系： <span class="math display">\[\begin{split}
+        \langle \alpha | \alpha\rangle=1
+         \quad \langle \alpha | H\rangle=\cos \alpha
+          \quad \langle \alpha | V\rangle=\sin \alpha \\
+        \langle H | H\rangle=1
+         \quad \langle V | V\rangle=1
+          \quad \langle H | V \rangle=0
+    \end{split}
+    \nonumber\]</span></p></li>
+<li><p>单光子马吕斯定律</p>
+<p>沿<span class="math inline">\(\phi\)</span>方向偏振的偏振片可表示为：
+<span class="math display">\[|\phi\rangle=\cos \phi|H\rangle+\sin
+\phi|V\rangle
+        \nonumber\]</span> 处于<span class="math inline">\(|\alpha\rangle\)</span>态的光子通过处于<span class="math inline">\(|\phi\rangle\)</span>态的偏振片的概率幅为 <span class="math display">\[\langle\phi \mid \alpha\rangle=(\cos
+\phi\langle{H}|+\sin \phi\langle{V}|)(\cos \alpha|{H}\rangle+\sin
+\alpha|{V}\rangle)=\cos ({\alpha}-{\phi})
+        \nonumber\]</span> 光子通过偏振片的概率，即单光子马吕斯定律：
+<span class="math display">\[P_{\alpha}=|\langle \phi |
+\alpha\rangle|^{2}=\cos ^{2}(\alpha-\phi)
+        \nonumber\]</span></p></li>
+</ul>
+<h2 id="量子力学基本原则">量子力学基本原则</h2>
+<ul>
+<li><p>分束器(PBS)：当光束与镜面成<span class="math inline">\(45^{\circ}\)</span>入射时，<span class="math inline">\(50\%\)</span>的光线反射，<span class="math inline">\(50\%\)</span>透射.</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/18.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p><span class="math display">\[\begin{gathered}
+        \begin{cases}
+            b_{1}=r_{1}a_{1}+t_{2}a_{2}\\
+            b_{2}=t_{1}a_{1}+r_{2}a_{2}
+        \end{cases}
+        \\
+        |t_{1}|^{2}+|r_{1}|^{2}=|t_{2}|^{2}+|r_{2}|^{2}=1\\
+        \Rightarrow|b_{1}|^{2}+|b_{2}|^{2}=|a_{1}|^{2}+|a_{2}|^{2}
+    \end{gathered}
+\nonumber\]</span> 不相符实验：</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/19.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>如果每次射到分束器上的只有一个光子，则：</p>
+<p><span class="math inline">\(PM_{r}\)</span>和<span class="math inline">\(PM_{t}\)</span>每次只有其中一个有记录光子到达的计数显示.</p></li>
+<li><p>量子力学的第一个基本原则</p>
+<p>一个概率幅乘以它的共轭复数，即为光子被探测到的概率.</p>
+<p>即：一个事件发生的概率为<span class="math inline">\(\quad
+P=Z^{\ast}Z=|Z|^{2}\)</span>.</p>
+<p>设想作为光源的一个激光放置在光电倍增管前方距离为<span class="math inline">\(x\)</span>处，有 <span class="math display">\[\begin{gathered}
+            \begin{cases}
+                z=x+i y=r \cos \phi+i r \sin \phi=r e^{i \phi} \\
+                z^{*}=r \cos \phi-i r \sin \phi=r e^{-i \phi}
+            \end{cases}\\
+        |Z|^{2}=Z^{\ast}Z=r^{2}
+        \end{gathered}
+\nonumber\]</span> 若光源放置在光电倍增管前方距离为<span class="math inline">\(x\)</span>处，则探测到光子的概率为<span class="math inline">\(100\%\)</span>，即<span class="math inline">\(Z^{\ast}Z=1\)</span>.</p></li>
+<li><p>量子力学的第二个基本原则</p>
+<p>假如一个过程可以看成是分成几步发生的话，要得到这个过程的概率幅，只需把过程中的每一步的概率幅相乘.</p>
+<p>即：总概率幅<span class="math inline">\(\
+Z=Z_{a}Z_{b}\dots\)</span>.</p></li>
+<li><p>量子力学的第三个基本原则：态叠加原理</p>
+<p>假如一个事件的发生可以通过多种途径的话，我们就把所有途径的概率幅加在一起.
+即：总概率幅<span class="math inline">\(\
+Z=Z_{a}+Z_{b}\)</span>.</p></li>
+</ul>
+<h2 id="单光子干涉与延迟选择实验">单光子干涉与延迟选择实验</h2>
+<ul>
+<li><figure>
+<img src="/2023/05/10/002physicsnoteyk2/20.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>无论光子是从<span class="math inline">\(A\)</span>到达<span class="math inline">\(B\)</span>或者从<span class="math inline">\(A\)</span>到达<span class="math inline">\(C\)</span>，到达光电管<span class="math inline">\(PM_{1}\)</span>和<span class="math inline">\(PM_{2}\)</span>的概率必定各是<span class="math inline">\(50\%\)</span>.</p></li>
+<li><p>移动平面镜<span class="math inline">\(B\)</span>的位置，改变光子通过其中一路<span class="math inline">\((ABD)\)</span>的长度，每次移动<span class="math inline">\(\lambda/25\)</span>(<span class="math inline">\(\lambda\)</span>为光子波长).</p>
+<p>计数时间增大，光子出现的概率逐渐明显.</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/21.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p><span class="math display">\[\begin{gathered}
+            z_{A B
+D}=\frac{1}{\sqrt{2}}(-1)\left(\frac{-1}{\sqrt{2}}\right) e^{i k
+d_{1}}=\frac{1}{2} e^{i k d_{1}} \\
+            z_{A B D}^{*} z_{A B D}=1 / 4 \\
+            z_{A C
+D}=\frac{1}{\sqrt{2}}(-1)\left(\frac{1}{\sqrt{2}}\right) e^{i k
+d_{2}}=\frac{1}{2} e^{i k d_{2}} \\
+            z_{A C D}^{*} z_{A C D}=1 / 4
+        \end{gathered}
+        \nonumber\]</span> 光子被<span class="math inline">\(PM_{1}\)</span>探测到的概率仍为<span class="math inline">\(50\%\)</span>，与平面镜<span class="math inline">\(B\)</span>位置无关.</p></li>
+<li><p>延迟选择实验(惠勒)</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/22.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>光子在不相符实验中表现出粒子性，在单光子干涉实验中表现出波动性；两个实验的唯一区别在于是否包括第二个<span class="math inline">\(PBS\)</span>，如果在光子进入干涉仪后再决定这一选择，那么光子通过第一个<span class="math inline">\(PBS\)</span>时，不可能得知将会进行的是哪个实验.</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/23.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>"任何一种基本量子现象只在其被记录之后才是一种现象."------玻尔</p>
+<p>是否存在<span class="math inline">\(PBS\)</span>这一选项是在光子上路之前还是途中作出决定的在量子实验中没有区别.我们不能改变过去发生的事实，但可以延迟决定过去"应当"怎样发生.</p></li>
+</ul>
+<h2 id="电子波函数理论">电子波函数理论</h2>
+<p>量子力学的核心基本问题：如何将电子(其他有质量的粒子)的波动性和粒子性协调统一到一起？</p>
+<ul>
+<li><p>存在于有限空间中的局域性粒子： <span class="math display">\[\begin{gathered}
+            \text{德布罗意波长}\quad \lambda=\frac{h}{mV} \\
+            \text{波函数}\quad \Psi(x，t)=A\sin (kx-\nu t)
+        \end{gathered}
+        \nonumber\]</span> 其中，波矢<span class="math inline">\(k=2\pi
+/\lambda\)</span>，频率<span class="math inline">\(\nu
+=ck\)</span>.</p></li>
+<li><p>波函数分布于整个空间中，一个局域的粒子可以描述为多个不同波长的波的叠加.
+<span class="math display">\[\begin{gathered}
+                \begin{cases}
+                    \Psi_{1}(x)=A \sin ((k+\Delta k) x)\\
+                    \Psi_{2}(x)=A \sin ((k-\Delta k) x)
+                \end{cases}\\
+                \begin{aligned}
+                    \Psi(x) &amp;=\Psi_{1}(x)+\Psi_{2}(x) \\
+                    &amp;=A \sin ((k+\Delta k) x)+A \sin ((k-\Delta k)
+x) \\
+                    &amp;=2 A \sin (k x) \cos (\Delta k x)
+                \end{aligned}
+            \end{gathered}
+        \nonumber\]</span>
+从而，在很小范围内的单个电子(或任意粒子)，可由一系列波长连续分布的波所叠加成的波包描述.</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/24.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure></li>
+<li><p>中心波长<span class="math inline">\(k\)</span>，波长范围<span class="math inline">\(k_{0}-(\Delta k/2)\)</span>到<span class="math inline">\(k_{0}+(\Delta k/2)\)</span>，平均波数为<span class="math inline">\(k_{0}\)</span>，数目为无限大的一系列波所构成的波包，局域在<span class="math inline">\(\Delta x=\pi /\Delta
+k\)</span>，并对应着一个动量为<span class="math inline">\(p_{0}=\hbar
+k_{0}\)</span>的粒子.</p></li>
+</ul>
+<h2 id="电子双缝干涉">电子双缝干涉</h2>
+<ul>
+<li><p>在电子双缝干涉实验中，测量得知电子从哪个缝穿过，则干涉条纹消失.</p>
+<p><span class="math inline">\(\Rightarrow\)</span>坍缩(collapse)：
+观测前，电子的概率在空间中展开，表现出波动性；观测时，电子按照概率分布随机作出一个选择，并以小点的形式出现在感光屏的某处，表现出粒子性.</p></li>
+<li><p>用光子和透过狭缝的电子作用，通过在不同探测器记录散射的光子来确定电子的路径.</p>
+<p>人们不知道电子的路径，屏幕上干涉条纹出现；人们通过测量知道电子的路径时，干涉条纹
+消失.可见，人们的测量行为会影响(改变)测量的结果.</p></li>
+<li><p>玻色-爱因斯坦凝聚</p></li>
+</ul>
+<h1 id="哥本哈根解释">哥本哈根解释</h1>
+<h2 id="哥本哈根解释的三大支柱">哥本哈根解释的三大支柱</h2>
+<ul>
+<li><p>波函数的统计解释：</p>
+<p>微观粒子具有波动性，用物质波波函数描述微观粒子状态.</p>
+<ul>
+<li><p>自由粒子的波函数：沿<span class="math inline">\(x\)</span>轴正方向运动，能量<span class="math inline">\(E\)</span>和动量<span class="math inline">\(p\)</span>的自由 粒子.物质波<span class="math inline">\(\nu\)</span>，<span class="math inline">\(\lambda\)</span>不随时间变化，其物质波是单色平面波，波函数
+<span class="math display">\[\Psi(x， t)=\Psi_{0} {e}^{-i 2 \pi\left(v
+t-\frac{x}{\lambda}\right)}=\Psi_{0} {e}^{-\frac{i}{\hbar}(E t-p x)}
+            \nonumber\]</span> 复振幅<span class="math inline">\(\Psi_{0} {e}^{\frac{i}{\hbar}p
+x}\)</span>随时间变化<span class="math inline">\({e}^{-\frac{i}{\hbar}E
+t}\)</span>.</p></li>
+<li><p>波函数的物理意义：</p>
+<p>波函数描述的是电子在空间的分布状态.</p></li>
+<li><p>波函数的统计解释(玻恩，1926)：</p>
+<p>波函数<span class="math inline">\(\Psi(x，y，z，t)\)</span>可看作"概率云".波函数模的平方代表某时刻
+<span class="math inline">\(t\)</span> 在空间某点<span class="math inline">\((x， y， z)\)</span>
+附近单位体积内发现粒子的概率，即 <span class="math inline">\(|\Psi|^{2}\)</span>代表概率密度.</p>
+<p>(决定论与概率论)</p></li>
+</ul></li>
+<li><p>海森堡不确定性原理(1927)</p>
+<ul>
+<li><p>动量---坐标不确定关系</p>
+<p>微观粒子的位置坐标<span class="math inline">\(x\)</span>
+，动量分量<span class="math inline">\(p_{x}\)</span>
+不能同时具有确定的值： <span class="math display">\[\Delta x \Delta
+p_{x}\geq \frac{h}{2}
+            \nonumber\]</span></p></li>
+<li><p>能量---时间不确定关系</p>
+<p>反映了原子能级宽度<span class="math inline">\(\Delta E\)</span>
+和原子在该能级的平均寿命 <span class="math inline">\(\Delta t\)</span>
+之间的关系： <span class="math display">\[\Delta E \Delta t \geq
+\frac{\hbar}{2}
+            \nonumber\]</span></p></li>
+<li><p>不确定性的根本原因：波粒二象性.</p>
+<p><span class="math inline">\(\Rightarrow\)</span>
+不确定性仅在微观条件下成立，宏观不确定关系可忽略.</p></li>
+</ul></li>
+<li><p>互补原理</p>
+<p>一个电子既是粒子，同时又是个波.不能用同一个实验去测量物体所有的性质.当我们不知道具体路径信息时，电子或光子表现波动性，而当我们知道了具体路径信息后，它们表现为粒子性.</p></li>
+<li><p>补充：费曼路径积分</p>
+<p>费曼于40年代发展了用路径积分表达量子振幅的方法，并于1948年提出量子电动力学新的理论形式，计算方法和重正化方法，从而避免了量子电动力学中的发散困难.</p></li>
+</ul>
+<h2 id="量子力学的其他诠释">量子力学的其他诠释</h2>
+<ul>
+<li><p>爱因斯坦光箱实验：反驳不确定性原理<span class="math inline">\(\rightarrow\)</span>失败.</p></li>
+<li><p>EPR佯谬(1935)：《量子力学对物理实在的描述可能是完备的吗》</p>
+<p>EPR：如果自旋方向在观测的那一刻才决定，则A与B必须同时做出反应，不管其间相距多远.</p>
+<p>哥本哈根：在观测前"现实"中并不存在两个自旋的粒子，自旋只有和观测联系起来才有意义，在那之前两个粒子只能看成"一个整体".</p></li>
+<li><p>冯<span class="math inline">\(\cdot\)</span>诺依曼：无限复归</p>
+<p>惠勒：参与性宇宙</p></li>
+<li><p>多世界解释：休<span class="math inline">\(\cdot\)</span>艾弗雷特三世</p>
+<ul>
+<li><p>"平行宇宙"：高维"母宇宙"在三维世界投影的"子宇宙"</p></li>
+<li><p>退相干理论</p></li>
+<li><p>量子永生</p></li>
+</ul></li>
+</ul>
+<h1 id="量子叠加与量子纠缠">量子叠加与量子纠缠</h1>
+<h2 id="相干叠加态">相干叠加态</h2>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/25.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p><span class="math display">\[\begin{aligned}
+        &amp;|+\rangle=\frac{1}{\sqrt{2}}(|{V}\rangle+|{H}\rangle) \\
+        &amp;|-\rangle=\frac{1}{\sqrt{2}}(|{V}\rangle-|{H}\rangle) \\
+        &amp;|{V}\rangle=\frac{1}{\sqrt{2}}(|+\rangle+|-\rangle) \\
+        &amp;|{H}\rangle=\frac{1}{\sqrt{2}}(|+\rangle-|-\rangle)
+    \end{aligned}
+\nonumber\]</span></p>
+<p>在<span class="math inline">\((H，V)\)</span>基组下测量光子偏振，输出为： <span class="math display">\[|a\rangle=\cos
+\alpha|H\rangle+\sin\alpha|V\rangle
+    \nonumber\]</span></p>
+<p>在<span class="math inline">\((+，-)\)</span>基组下测量光子偏振，输出为： <span class="math display">\[|a\rangle=\cos \beta|+\rangle+\sin\beta|-\rangle
+    \nonumber\]</span> <span class="math inline">\(\Rightarrow\)</span>观测装置决定实验结果.</p>
+<p>(例：级联施特恩格拉赫实验)</p>
+<h2 id="量子纠缠与贝尔态">量子纠缠与贝尔态</h2>
+<ul>
+<li><p>量子纠缠：两个或多个粒子经过短暂耦合之后，不论它们相隔多远，单独搅扰其中任意一个，将不可避免地影响到其他粒子.</p></li>
+<li><p>制备光子<span class="math inline">\(A，B\)</span>的量子态： <span class="math display">\[\begin{aligned}
+            |\psi_{AB}\rangle&amp;=\frac{1}{\sqrt{2}}(|{H_{A}}\rangle|{V_{B}}\rangle+|{V_{A}}\rangle|{H_{B}}\rangle)\\
+            &amp;=\frac{1}{\sqrt{2}}\left[\left|+{
+}_{A}\right\rangle\left(\left|{V}_{B}\right\rangle+\left|{H}_{B}\right\rangle\right)+\left|-_{A}\right\rangle\left(\left|{H}_{B}\right\rangle-\left|{V}_{B}\right\rangle\right)\right]
+        \end{aligned}
+        \nonumber\]</span> 那么， <span class="math display">\[\begin{aligned}
+        &amp;\left\langle+_{A} \mid \psi_{A
+B}\right\rangle=\frac{1}{\sqrt{2}}\left(\left|V_{B}\right\rangle+\left|H_{B}\right\rangle\right)=\left|+{
+}_{B}\right\rangle \\
+        &amp;\left\langle-_{A} \mid \psi_{A
+B}\right\rangle=\frac{1}{\sqrt{2}}\left(\left|H_{B}\right\rangle-\left|V_{B}\right\rangle\right)=-\left|-{
+}_{B}\right\rangle
+    \end{aligned}
+\nonumber\]</span></p>
+<ul>
+<li><p>分离态：可以写成两个光子独立状态的乘积 <span class="math display">\[|\psi_{AB}\rangle=|\psi_{A}\rangle|\psi_{B}\rangle
+        \nonumber\]</span></p></li>
+<li><p>纠缠态：无法写成两个光子独立状态的乘积 <span class="math display">\[|\psi_{AB}\rangle\neq|\psi_{A}\rangle|\psi_{B}\rangle
+        \nonumber\]</span></p></li>
+</ul></li>
+<li><p>对于双粒子系统，假设粒子1，2都有量子态<span class="math inline">\(|0\rangle\)</span>，<span class="math inline">\(|1\rangle\)</span>，其综合的量子态为： <span class="math display">\[|\psi_{12}\rangle=c_{00}|0_{1}，0_{2}\rangle+c_{01}|0_{1}，1_{2}\rangle+c_{10}|1_{1}，0_{2}\rangle+c_{11}|1_{1}，1_{2}\rangle
+        \nonumber\]</span> 定义纠缠的度量<span class="math inline">\(concurrence\)</span>为： <span class="math display">\[C=2|c_{00}c_{11}-c_{01}c_{10}|
+    \qquad 0\leq C\leq 1
+    \nonumber\]</span> 当<span class="math inline">\(C=0\)</span>时，两个粒子是不纠缠的；<span class="math inline">\(C=1\)</span>时，两粒子最大纠缠，称为贝尔基态(贝尔态).
+一般的纠缠态都可以用贝尔态的线性叠加表示. <span class="math display">\[\begin{aligned}
+        &amp;\left|B_{00}(1，2)\right\rangle=\frac{1}{\sqrt{2}}\left(\left|0_{1}，
+0_{2}\right\rangle+\left|1_{1}， 1_{2}\right\rangle\right) \\
+        &amp;\left|B_{01}(1，2)\right\rangle=\frac{1}{\sqrt{2}}\left(\left|0_{1}，
+1_{2}\right\rangle+\left|1_{1}， 0_{2}\right\rangle\right) \\
+        &amp;\left|B_{10}(1，2)\right\rangle=\frac{1}{\sqrt{2}}\left(\left|0_{1}，
+0_{2}\right\rangle-\left|1_{1}， 1_{2}\right\rangle\right) \\
+        &amp;\left|B_{11}(1，2)\right\rangle=\frac{1}{\sqrt{2}}\left(\left|0_{1}，
+1_{2}\right\rangle-\left|1_{1}， 0_{2}\right\rangle\right)
+    \end{aligned}
+\nonumber\]</span> 四个贝尔基底相互正交.</p></li>
+</ul>
+<h2 id="量子隐形传态">量子隐形传态</h2>
+<ul>
+<li><p>制备纠缠态： 制备相互纠缠的两个粒子B，C，分别发送给Alice和Bob.
+<span class="math display">\[|B_{00}(B，C)\rangle=\frac{1}{\sqrt{2}}[|0_{B}，0_{C}\rangle+|1_{B}，1_{C}\rangle]
+        \nonumber\]</span> 同时考虑Alice手中的粒子<span class="math inline">\(A：|\psi(A)\rangle=c_{0}|0\rangle+c_{1}|1\rangle\)</span>，则有：
+<span class="math display">\[|\psi(A，B，C)\rangle=\frac{1}{\sqrt{2}}[c_{0}(|0_{A}，0_{B}，0_{C}\rangle+|0_{A}，1_{B}，1_{C}\rangle)+c_{1}(|1_{A}，0_{B}，0_{C}\rangle+|1_{A}，1_{B}，1_{C}\rangle)]
+    \nonumber\]</span> <span class="math display">\[\begin{aligned}
+        |\psi(A， B， C)\rangle=&amp; \frac{1}{2}\left[\left|B_{00}(A，
+B)\right\rangle\left(c_{0}\left|0_{C}\right\rangle+c_{1}\left|1_{C}\right\rangle\right)\right.\\
+        &amp;+\left|B_{01}(A，
+B)\right\rangle\left(c_{0}\left|1_{C}\right\rangle+c_{1}\left|0_{C}\right\rangle\right)
+\\
+        &amp;+\left|B_{10}(A，
+B)\right\rangle\left(c_{0}\left|0_{C}\right\rangle-c_{1}\left|1_{C}\right\rangle\right)
+\\
+        &amp;\left.+\left|B_{11}(A，
+B)\right\rangle\left(c_{0}\left|1_{C}\right\rangle-c_{1}\left|0_{C}\right\rangle\right)\right]
+    \end{aligned}
+\nonumber\]</span></p></li>
+<li><p>Alice用贝尔基组对A，B进行联合测量，并通过经典信道，如电话等，告知Bob她所测量的基组，Bob便可计算C粒子状态.对于每一个贝尔基组，需进行波幅和相位的转换才可得到结果.
+<span class="math display">\[\begin{gathered}
+            \left|{B}_{00}({A}， {B})\right\rangle \rightarrow
+{c}_{0}\left|0_{c}\right\rangle+{c}_{1}\left|1_{c}\right\rangle \\
+            \left|{B}_{01}({A}， {B})\right\rangle \rightarrow
+{c}_{0}\left|1_{c}\right\rangle+{c}_{1}\left|0_{c}\right\rangle
+\stackrel{\text{幅度}}{\longrightarrow}{c}_{0}\left|0_{c}\right\rangle+{c}_{1}\left|1_{c}\right\rangle\\
+            \left|{B}_{10}({A}， {B})\right\rangle  \rightarrow
+{c}_{0}\left|0_{c}\right\rangle-{c}_{1}\left|1_{c}\right\rangle
+\stackrel{\text{相位}}{\longrightarrow}{c}_{0}\left|0_{c}\right\rangle+{c}_{1}\left|1_{c}\right\rangle\\
+            \left|{B}_{11}({A}， {B})\right\rangle  \rightarrow
+{c}_{0}\left|1_{c}\right\rangle-{c}_{1}\left|0_{c}\right\rangle\stackrel{\text{幅度+相位}}{\longrightarrow}{c}_{0}\left|0_{c}\right\rangle+{c}_{1}\left|1_{c}\right\rangle
+        \end{gathered}
+    \nonumber\]</span></p></li>
+<li><p>注意：</p>
+<ul>
+<li><p>在隐形传态过程中使用的重要资源是量子纠缠，但传送信息的过程不能超过光速.</p></li>
+<li><p>粒子A和C具有相同的状态.在传送过程中，这一状态相当于在Alice端被破坏，然后在Bob端被重新创建.</p></li>
+</ul></li>
+</ul>
+<h2 id="量子复制">量子复制</h2>
+<ul>
+<li><p>在不破坏原始状态的情况下，如果我们能制造出一个未知量子态的完美拷贝或克隆，那么我们就可以实现比光速更快的超光速通信.根据爱因斯坦的相对论，任何信息的传输速度都不可能超过光速.因而，这种完美克隆不可能实现.</p></li>
+<li><p>不可克隆定理</p>
+<p>假设<span class="math inline">\(Cloning\
+Machine\)</span>被定义为幺正变换：<span class="math inline">\(U(|\phi\rangle|0\rangle)=|\phi\rangle|\phi\rangle\)</span>；</p>
+<p>对任意<span class="math inline">\(|\phi\rangle\in
+H\)</span>，存在归一化条件：<span class="math inline">\(|\phi\rangle=a|0\rangle+b|1\rangle\)</span>，其中<span class="math inline">\(|a|^{2}+|b|^{2}=1\)</span>，则 <span class="math display">\[\begin{aligned}
+            {U}|\phi\rangle|0\rangle&amp;=
+{U}({a}|0\rangle+{b}|{1}\rangle)|0\rangle \\
+            &amp;={aU}|{0}\rangle|{0}\rangle+{b U}|{1}\rangle|0\rangle
+\\
+            &amp;={a}|0\rangle|{0}\rangle+{b}|{1}\rangle|{1}\rangle
+        \end{aligned}
+    \nonumber\]</span> 根据<span class="math inline">\(Cloning\
+Machine\)</span>定义，又有 <span class="math display">\[\begin{aligned}
+        {U}|\phi\rangle|0\rangle&amp;=|\phi\rangle|\phi\rangle \\
+        &amp;=(a|0\rangle+b|1\rangle)(a|0\rangle+b|1\rangle)\\
+        &amp;=a^{2}|0\rangle|0\rangle+b^{2}|1\rangle|1\rangle+ab|0\rangle|1\rangle+ab|1\rangle|0\rangle
+    \end{aligned}
+\nonumber\]</span> 两式互不相同，矛盾，因而量子无法被完美克隆.</p></li>
+<li><p>保真度：<span class="math inline">\(F=|\langle
+\phi|\psi\rangle|^{2}\)</span></p>
+<p>保真度是用于衡量量子态复制好坏的标准，若想将状态<span class="math inline">\(|0\rangle\)</span>复制到另一个状态<span class="math inline">\(|\phi\rangle\)</span>上，则</p>
+<p><span class="math inline">\(F=|\langle \phi|0\rangle|^{2}=|\langle
+0|0\rangle|^{2}=1\)</span>为完美复制；</p>
+<p><span class="math inline">\(F=|\langle \phi|0\rangle|^{2}=|\langle
+1|0\rangle|^{2}=0\)</span>质量最差；</p>
+<p>一般情况下，<span class="math inline">\(|\phi\rangle=\cos\theta|0\rangle+\sin
+\theta|1\rangle\)</span>.此时<span class="math inline">\(F=|\langle
+\phi|0\rangle|^{2}=\cos^{2}\theta\)</span></p></li>
+<li><p>最高保真度的复制</p>
+<p>考虑将系统1的状态复制到系统2，我们添加一个辅助系统3，初态为<span class="math inline">\(|0_{3}\rangle\)</span>，则系统具有初态： <span class="math display">\[|\Phi_{123}\rangle=|\phi_{1}\rangle|0_{2}\rangle|0_{3}\rangle
+        \nonumber\]</span> 那么，保真度最高的复制为以下变换： <span class="math display">\[\begin{aligned}
+        &amp;U_{\text {copy
+}}\left|0_{1}\right\rangle\left|0_{2}\right\rangle\left|0_{3}\right\rangle=\sqrt{\frac{2}{3}}\left|0_{1}\right\rangle\left|0_{2}\right\rangle\left|0_{3}\right\rangle-\frac{1}{\sqrt{6}}\left(\left|0_{1}\right\rangle\left|1_{2}\right\rangle\left|1_{3}\right\rangle+\left|1_{1}\right\rangle\left|0_{2}\right\rangle\left|1_{3}\right\rangle\right)，
+\\
+        &amp;U_{\text {copy
+}}\left|1_{1}\right\rangle\left|0_{2}\right\rangle\left|0_{3}\right\rangle=-\sqrt{\frac{2}{3}}\left|1_{1}\right\rangle\left|1_{2}\right\rangle\left|1_{3}\right\rangle+\frac{1}{\sqrt{6}}\left(\left|0_{1}\right\rangle\left|1_{2}\right\rangle\left|0_{3}\right\rangle+\left|1_{1}\right\rangle\left|0_{2}\right\rangle\left|0_{3}\right\rangle\right)
+.
+    \end{aligned}
+\nonumber\]</span> 经过变换，系统1被复制为 <span class="math display">\[|\Psi_{123}\rangle=\sqrt{\frac{2}{3}}(\cos
+\theta|000\rangle-\sin \theta|111\rangle)-\frac{\cos
+\theta}{\sqrt{6}}(|011\rangle+|101\rangle)+\frac{\sin
+\theta}{\sqrt{6}}(|010\rangle+|100\rangle)
+    \nonumber\]</span></p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/27.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>保真度为<span class="math inline">\(F=\frac{1}{6}+\frac{2}{3}=\frac{5}{6}\)</span>.</p></li>
+</ul>
+<h1 id="贝尔定理">贝尔定理</h1>
+<ul>
+<li><p>隐变量理论(德布罗意)</p>
+<p>量子效应表面的随机涨落实则是由一些人类尚不知晓的隐形变量与已知变量相互作用共同铸就的.我们无法预测单独一个粒子的运动趋势，是由于我们的理论或实验水平还不够，无法感知到这些隐变量.</p></li>
+<li><p>(A，B)的相关性</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/28.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<ul>
+<li><p>(A+，B-)的相关性为1</p></li>
+<li><p>(A+，B+)的相关性为-1</p></li>
+<li><p>若B和A取值完全无关，则相关性为0</p></li>
+</ul></li>
+<li><p>解法一，</p>
+<p>在不同方向测量A，B两粒子的自旋： <span class="math display">\[\left(\begin{array}{ccccccc}
+            A x &amp; A y &amp; A z &amp; B x &amp; B y &amp; B z &amp;
+\begin{array}{c}
+                \text { 出现 } \\
+                \text { 概率 }
+            \end{array} \\
+            + &amp; + &amp; + &amp; - &amp; - &amp; - &amp; N_{1} \\
+            + &amp; + &amp; - &amp; - &amp; - &amp; + &amp; N_{2} \\
+            + &amp; - &amp; + &amp; - &amp; + &amp; - &amp; N_{3} \\
+            + &amp; - &amp; - &amp; - &amp; + &amp; + &amp; N_{4} \\
+            - &amp; + &amp; + &amp; + &amp; - &amp; - &amp; N_{5} \\
+            - &amp; + &amp; - &amp; + &amp; - &amp; + &amp; N_{6} \\
+            - &amp; - &amp; + &amp; + &amp; + &amp; - &amp; N_{7} \\
+            - &amp; - &amp; - &amp; + &amp; + &amp; + &amp; N_{8}
+        \end{array}\right)
+    \nonumber\]</span> 表中<span class="math inline">\(N_{1}+N_{2}+\dots+N_{8}=1\)</span>.</p>
+<p>用<span class="math inline">\(P_{xy}\)</span>表示<span class="math inline">\((A_{x}+，B_{y}+)\)</span>的概率，则<span class="math inline">\(P_{xy}=-N_{1}-N_{2}+N_{3}+N_{4}+N_{5}+N_{6}-N_{7}-N_{8}\)</span>，其余类比可得.</p>
+<p>结合表格与三角不等式，可得贝尔不等式： <span class="math display">\[|P_{xz}-P_{zy}|\leq1+P_{xy}
+    \nonumber\]</span></p></li>
+<li><p>解法二，</p>
+<p>制备两个相互纠缠的光子，并分别用两个偏光板检测.</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/29.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>假设粒子可以选择两个不同方向：</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/30.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>可得贝尔不等式： <span class="math display">\[\frac{p_{12}\left(a_{1}，
+b_{1}\right)-p_{12}\left(a_{1}， b_{2}\right)+p_{12}\left(a_{2}，
+b_{1}\right)+p_{12}\left(a_{2}，
+b_{2}\right)}{p_{1}\left(a_{2}\right)+p_{2}\left(b_{1}\right)} \leq 1
+    \nonumber\]</span> 考虑几何规律，<span class="math inline">\(p_{12}(a，b)=p_{12}(\theta)\)</span>，贝尔不等式可简化为
+<span class="math display">\[S(\theta)=\frac{3p_{12}(\theta)-p_{12}(3\theta)}{p_{1}+p_{2}}\leq
+1
+    \nonumber\]</span></p></li>
+<li><p>如果世界的本质是经典的，满足：</p>
+<ul>
+<li><p>局域性：没有超光速信号的传播</p></li>
+<li><p>实在性：存在一个独立于我们观察的外部世界</p></li>
+</ul>
+<p>那么，任取三个方向观测A和B的自旋，他们所表现出来的相关度必定要受限于贝尔不等式之内.</p></li>
+<li><p>在量子论中，A和B在相隔非常遥远的情况下，在不同方向上仍表现出很高的相关度，以至于贝尔不等式不成立.这说明，局域性和实在性在量子力学中是不共存的.</p></li>
+</ul>
+<h1 id="物质结构">物质结构</h1>
+<h2 id="分子结构">分子结构</h2>
+<ul>
+<li><p>离子键<span class="math inline">\(\rightarrow\)</span>离子晶体</p>
+<p>正负离子由于库仑引力而相互接近，距离为<span class="math inline">\(r_{0}\)</span>时，体系能量最低，形成稳定分子.</p></li>
+<li><p>金属键<span class="math inline">\(\rightarrow\)</span>金属晶体</p>
+<p>金属阳离子嵌镶在电子云中，并依靠静电作用而相互结合，称为金属键.</p></li>
+<li><p>共价键<span class="math inline">\(\rightarrow\)</span>分子晶体</p>
+<p>原子相互接近时轨道重叠（即波函数叠加），原子间通过共用自旋相反的电子对使能量降低而成键.</p>
+<p>共价键具有饱和性和方向性.</p>
+<p>成键轨道，反键轨道.</p></li>
+</ul>
+<h2 id="固体电子理论">固体电子理论</h2>
+<ul>
+<li><p>经典自由电子理论</p>
+<p>量子自由电子理论：自由电子的能量必须符合量子化的不连续性.</p></li>
+<li><p>能带理论：单电子近似的理论，求出的电子能量状态是由导带和禁带相间组成的能带.
+能带论是用量子力学研究固体中电子的运动规律，定性阐明了晶体中电子运动的普遍性的特点.</p></li>
+<li><ul>
+<li><p>原子的外层电子（在高能级）
+势垒穿透概率较大，电子可以在整个固体中运动，称为共有化电子.原子的内层电子与原子核结合较紧，一般不是共有化电子，称为离子实.</p></li>
+<li><p>电子在运动过程中受到晶格中原子周期势场的作用.</p></li>
+<li><p>电子的运动有隧道效应.</p></li>
+</ul></li>
+<li><p>能带</p>
+<p>原子间相互作用导致孤立原子能级发生分裂，N个原子组成一体，原有能级会分裂为N条彼此靠近的能级，合称能带.能带的宽度记作<span class="math inline">\(\Delta E\)</span>，由<span class="math inline">\(eV\)</span>量级衡量.</p>
+<p>一般规律：</p>
+<ul>
+<li><p>电子越靠外层，能带越宽，<span class="math inline">\(\Delta
+E\)</span>越大</p></li>
+<li><p>点阵间距越小，能带越宽，<span class="math inline">\(\Delta
+E\)</span>越大.</p></li>
+<li><p>两个能带有可能重叠.</p></li>
+</ul></li>
+<li><p>能带中的电子排布</p>
+<ul>
+<li><p>服从能量最小原理</p></li>
+<li><p>服从泡里不相容原理</p></li>
+<li><p>孤立原子的一个能级 <span class="math inline">\(E_{nl}\)</span>
+，它最多能容纳 <span class="math inline">\(2 (2l
++1)\)</span>个电子.这一能级分裂成由 <span class="math inline">\(N\)</span>个能级组成的能带，一个能带最多能容纳<span class="math inline">\(2 (2l+1) N\)</span>个电子.</p></li>
+</ul></li>
+<li><p>能带占据情况(满带/空带/禁带)</p>
+<p>价带：半导体或绝缘体中，在<span class="math inline">\(0K\)</span>时能被电子占满的最高能带.</p>
+<p>导带：固体结构内自由运动的电子所具有的能量范围.对于半导体，导带中的电子是由它下面的一个能带（即价带）中的电子（价电子）跃迁形成的.</p></li>
+</ul>
+<h2 id="半导体">半导体</h2>
+<ul>
+<li><p>固体导电性能不同，是因为能带结构不同.满带中的电子不导电；不满带中的电子才参与导电.</p>
+<ul>
+<li><p>导体</p>
+<p>在外电场的作用下，大量共有化电子很易获得能量，从低能级跃迁到高能级，定向流动形成电流.</p></li>
+<li><p>绝缘体</p>
+<p>满带与空带间有一个较宽的禁带，共有化电子很难从低能级（满带）跃迁到高能级（空带）上去.</p></li>
+<li><p>半导体</p>
+<p>满带与空带之间也是禁带，但是禁带很窄.当外电场非常强时，共有化电子还能越过禁带跃迁到空带中，称为半导体的击穿(绝缘体也存在该现象).温度是影响半导体性能的一个重要的外部因素.</p></li>
+</ul></li>
+<li><p>本征半导体：完全纯净的，结构完整的半导体晶体.形成共价键后每个原子构成最外层电子是八个的稳定结构，常见为<span class="math inline">\(Si\)</span>，<span class="math inline">\(Ge\)</span>等四价元素.</p>
+<p>导电机理：</p>
+<p>共价键中的两个电子被紧紧束缚在共价键中，称为束缚电子，常温下束缚电子很难脱离共价键成为自由电子，因此本征半导体中的自由电子很少，导电能力很弱.</p>
+<ul>
+<li><p>在绝对0度<span class="math inline">\(（T=0K）\)</span>和没有外界激发时，价电子完全被共价键束缚着，本征半导体中没有可以运动的带电粒子（载流子），它的导电能力为
+0，相当于绝缘体.</p></li>
+<li><p>在常温下，由于热激发，使一些价电子获得足够的能量而脱离共价键的束缚，成为自由电子，同时共价键上留下一个空位，称为空穴.</p></li>
+<li><p>本征半导体中电流包括自由电子移动产生的电流和空穴移动产生的电流，导电能力取决于载流子的浓度.温度越高，载流子的浓度越高，本征半导体的导电能力越强.</p></li>
+</ul></li>
+<li><p>N型半导体：四价的本征半导体<span class="math inline">\(Si\)</span>，<span class="math inline">\(Ge\)</span>等，掺入少量五价的杂质元素（<span class="math inline">\(P，As\)</span>等）形成电子型半导体，称N
+型半导体.</p>
+<p>掺杂后，多余电子的能级在禁带中紧靠空带处， <span class="math inline">\(\Delta E_{D}\)</span>在<span class="math inline">\(10-2eV\)</span>数量级，极易形成电子导电.该能级称作施主(donor)能级.</p>
+<p>由施主原子提供的电子，浓度与施主原子相同，远大于本征半导体中载流子浓度.所以，自由电子浓度远大于空穴浓度.故自由电子称为多数载流子（多子），空穴称为少数载流子（少子）.</p></li>
+<li><p>P型半导体：四价的本征半导体<span class="math inline">\(Si\)</span>，<span class="math inline">\(Ge\)</span>等，掺入少量三价的杂质元素（<span class="math inline">\(B，Ga，In\)</span>等）形成空穴型半导体，称P型半导体.</p>
+<p>掺杂后，多余的空穴的能级在禁带中紧靠满带处，<span class="math inline">\(\Delta E_{D}\)</span>在<span class="math inline">\(10-2eV\)</span>数量级，极易产生空穴导电.该能级称受主（acceptor）能级.</p>
+<p>P型半导体中，空穴是多子，电子是少子.</p></li>
+<li><p>P-N结</p>
+<p>将P型半导体与N型半导体制作在同一块半导体（通常是硅或锗）基片上，在它们的交界面就形成空间电荷区称为P-N结.PN结具有单向导电性，是电子技术中许多器件所利用的特性，如半导体二极管.</p>
+<p>在P型半导体和N型半导体结合后，由于N区内自由电子，而P区内空穴为多子，在它们的交界处就出现了电子和空穴的浓度差，使得一些电子从N区向P区扩散，从而P区一边失去空穴，留下了带负电的杂质离子，N区一边失去电子，留下了带正电的杂质离子，在P和N区交界面附近形成了内电场，其方向是从带正电的N区指向带负电的P区.</p>
+<p>或者说，由于P区能量高，N区能量低，使得电流具有方向性.</p>
+<figure>
+<img src="/2023/05/10/002physicsnoteyk2/31.jpg" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure>
+<ul>
+<li><p>反向偏置，反向电压使内电场增强.</p></li>
+<li><p>正向偏置，正向电压使内电场削弱.</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Octdafu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2023/05/10/002physicsnoteyk2/" title="近代物理基础笔记整理">http://example.com/2023/05/10/002physicsnoteyk2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/10/001helloworld/" rel="prev" title="Hello World!">
+      <i class="fa fa-chevron-left"></i> Hello World!
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/05/10/003mathnoted1s/" rel="next" title="线性代数笔记整理">
+      线性代数笔记整理 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="nav-number">1.</span> <span class="nav-text">光的本质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E5%B0%84%E4%B8%8E%E6%8A%98%E5%B0%84"><span class="nav-number">1.1.</span> <span class="nav-text">反射与折射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B2%92%E5%AD%90or%E6%B3%A2"><span class="nav-number">1.2.</span> <span class="nav-text">粒子\(or\)波</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%AD%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA"><span class="nav-number">2.</span> <span class="nav-text">狭义相对论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A6%E7%9A%84%E7%9B%B8%E5%AF%B9%E6%80%A7%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">经典力学的相对性原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8B%AD%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%9F%BA%E6%9C%AC%E5%81%87%E8%AE%BE"><span class="nav-number">2.2.</span> <span class="nav-text">狭义相对论的两个基本假设</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8B%AD%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA%E7%9A%84%E6%97%B6%E7%A9%BA%E8%A7%82"><span class="nav-number">2.3.</span> <span class="nav-text">狭义相对论的时空观</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8F%98%E6%8D%A2"><span class="nav-number">2.4.</span> <span class="nav-text">洛伦兹变换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA"><span class="nav-number">3.</span> <span class="nav-text">广义相对论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E6%80%A7%E5%8E%9F%E7%90%86%E5%92%8C%E7%AD%89%E6%95%88%E5%8E%9F%E7%90%86"><span class="nav-number">3.1.</span> <span class="nav-text">广义相对性原理和等效原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA%E7%9A%84%E5%87%A0%E4%B8%AA%E7%BB%93%E8%AE%BA"><span class="nav-number">3.2.</span> <span class="nav-text">广义相对论的几个结论</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E5%AD%90%E7%BB%93%E6%9E%84"><span class="nav-number">4.</span> <span class="nav-text">原子结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%AD%90%E6%97%A9%E6%9C%9F%E8%AE%A4%E8%AF%86"><span class="nav-number">4.1.</span> <span class="nav-text">原子早期认识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%A2%E7%91%9F%E7%A6%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text">卢瑟福模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%BE%E5%B0%84%E6%80%A7%E5%85%83%E7%B4%A0%E7%9A%84%E8%A1%B0%E5%8F%98"><span class="nav-number">4.3.</span> <span class="nav-text">放射性元素的衰变</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%BB%91%E4%BD%93%E8%BE%90%E5%B0%84%E4%B8%8E%E5%85%89%E7%94%B5%E6%95%88%E5%BA%94"><span class="nav-number">5.</span> <span class="nav-text">黑体辐射与光电效应</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%91%E4%BD%93%E8%BE%90%E5%B0%84"><span class="nav-number">5.1.</span> <span class="nav-text">黑体辐射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%95%88%E5%BA%94"><span class="nav-number">5.2.</span> <span class="nav-text">光电效应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BA%E4%BD%93%E6%AF%94%E7%83%AD"><span class="nav-number">5.3.</span> <span class="nav-text">固体比热</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B0%A2%E5%8E%9F%E5%AD%90%E5%85%89%E8%B0%B1%E4%B8%8E%E7%8E%BB%E5%B0%94%E6%A8%A1%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text">氢原子光谱与玻尔模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E8%B0%B1%E6%B0%A2%E5%8E%9F%E5%AD%90%E5%85%89%E8%B0%B1"><span class="nav-number">6.1.</span> <span class="nav-text">光谱，氢原子光谱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%BB%E5%B0%94%E7%9A%84%E8%BD%A8%E9%81%93%E8%83%BD%E7%BA%A7%E7%90%86%E8%AE%BA"><span class="nav-number">6.2.</span> <span class="nav-text">玻尔的轨道能级理论</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E5%AD%90%E8%92%B8%E6%B0%94%E7%9A%84%E7%94%B5%E5%AD%90%E6%BF%80%E5%8F%91"><span class="nav-number">7.</span> <span class="nav-text">原子蒸气的电子激发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E7%A6%BB%E5%8A%BF"><span class="nav-number">7.1.</span> <span class="nav-text">电离势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E5%8F%91%E5%8A%BF"><span class="nav-number">7.2.</span> <span class="nav-text">激发势</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E5%AD%90%E7%9A%84%E5%8A%A8%E9%87%8F"><span class="nav-number">8.</span> <span class="nav-text">光子的动量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%90%E5%B0%84%E5%8E%8B%E5%BC%BA%E5%88%B0%E5%85%89%E5%AD%90%E5%8A%A8%E9%87%8F"><span class="nav-number">8.1.</span> <span class="nav-text">辐射压强到光子动量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%B7%E6%99%AE%E9%A1%BF%E6%95%88%E5%BA%94"><span class="nav-number">8.2.</span> <span class="nav-text">康普顿效应</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8E%E5%8E%9F%E5%AD%90%E4%BA%A4%E6%8D%A2%E8%A7%92%E5%8A%A8%E9%87%8F"><span class="nav-number">9.</span> <span class="nav-text">与原子交换角动量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%92%E5%8A%A8%E9%87%8F%E9%87%8F%E5%AD%90%E5%8C%96"><span class="nav-number">9.1.</span> <span class="nav-text">角动量量子化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A1%9E%E6%9B%BC%E6%95%88%E5%BA%94"><span class="nav-number">9.2.</span> <span class="nav-text">塞曼效应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%90%E5%B0%84%E7%9A%84%E8%A7%92%E5%8A%A8%E9%87%8F"><span class="nav-number">9.3.</span> <span class="nav-text">辐射的角动量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E5%AD%90%E7%9B%B8%E5%B9%B2%E6%80%A7%E4%B8%8E%E7%94%B5%E5%AD%90%E7%9B%B8%E5%B9%B2%E6%80%A7"><span class="nav-number">10.</span> <span class="nav-text">光子相干性与电子相干性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E6%B3%A2%E7%9A%84%E7%9B%B8%E5%B9%B2%E6%80%A7"><span class="nav-number">10.1.</span> <span class="nav-text">光波的相干性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%B9%B2%E7%9A%84%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="nav-number">10.2.</span> <span class="nav-text">相干的相关概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A2%E4%B8%8E%E5%85%89%E5%AD%90"><span class="nav-number">10.3.</span> <span class="nav-text">波与光子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%B7%E5%B8%83%E7%BD%97%E6%84%8F%E6%B3%A2"><span class="nav-number">10.4.</span> <span class="nav-text">德布罗意波</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7"><span class="nav-number">11.</span> <span class="nav-text">波粒二象性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E5%8A%9B%E5%AD%A6%E4%B8%8E%E6%B3%A2%E5%8A%A8%E5%8A%9B%E5%AD%A6"><span class="nav-number">11.1.</span> <span class="nav-text">矩阵力学与波动力学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%9A%84%E9%87%8F%E5%AD%90%E6%80%A7%E4%B8%8E%E9%A9%AC%E5%90%95%E6%96%AF%E5%AE%9A%E5%BE%8B"><span class="nav-number">11.2.</span> <span class="nav-text">光的量子性与马吕斯定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99"><span class="nav-number">11.3.</span> <span class="nav-text">量子力学基本原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%85%89%E5%AD%90%E5%B9%B2%E6%B6%89%E4%B8%8E%E5%BB%B6%E8%BF%9F%E9%80%89%E6%8B%A9%E5%AE%9E%E9%AA%8C"><span class="nav-number">11.4.</span> <span class="nav-text">单光子干涉与延迟选择实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E6%B3%A2%E5%87%BD%E6%95%B0%E7%90%86%E8%AE%BA"><span class="nav-number">11.5.</span> <span class="nav-text">电子波函数理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E5%8F%8C%E7%BC%9D%E5%B9%B2%E6%B6%89"><span class="nav-number">11.6.</span> <span class="nav-text">电子双缝干涉</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%93%A5%E6%9C%AC%E5%93%88%E6%A0%B9%E8%A7%A3%E9%87%8A"><span class="nav-number">12.</span> <span class="nav-text">哥本哈根解释</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%A5%E6%9C%AC%E5%93%88%E6%A0%B9%E8%A7%A3%E9%87%8A%E7%9A%84%E4%B8%89%E5%A4%A7%E6%94%AF%E6%9F%B1"><span class="nav-number">12.1.</span> <span class="nav-text">哥本哈根解释的三大支柱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E5%85%B6%E4%BB%96%E8%AF%A0%E9%87%8A"><span class="nav-number">12.2.</span> <span class="nav-text">量子力学的其他诠释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%8F%E5%AD%90%E5%8F%A0%E5%8A%A0%E4%B8%8E%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0"><span class="nav-number">13.</span> <span class="nav-text">量子叠加与量子纠缠</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%B9%B2%E5%8F%A0%E5%8A%A0%E6%80%81"><span class="nav-number">13.1.</span> <span class="nav-text">相干叠加态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E4%B8%8E%E8%B4%9D%E5%B0%94%E6%80%81"><span class="nav-number">13.2.</span> <span class="nav-text">量子纠缠与贝尔态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8F%E5%AD%90%E9%9A%90%E5%BD%A2%E4%BC%A0%E6%80%81"><span class="nav-number">13.3.</span> <span class="nav-text">量子隐形传态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8F%E5%AD%90%E5%A4%8D%E5%88%B6"><span class="nav-number">13.4.</span> <span class="nav-text">量子复制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%9D%E5%B0%94%E5%AE%9A%E7%90%86"><span class="nav-number">14.</span> <span class="nav-text">贝尔定理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E8%B4%A8%E7%BB%93%E6%9E%84"><span class="nav-number">15.</span> <span class="nav-text">物质结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%AD%90%E7%BB%93%E6%9E%84"><span class="nav-number">15.1.</span> <span class="nav-text">分子结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BA%E4%BD%93%E7%94%B5%E5%AD%90%E7%90%86%E8%AE%BA"><span class="nav-number">15.2.</span> <span class="nav-text">固体电子理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8A%E5%AF%BC%E4%BD%93"><span class="nav-number">15.3.</span> <span class="nav-text">半导体</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Octdafu"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Octdafu</p>
+  <div class="site-description" itemprop="description">感谢永远有歌 把心境道破</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:2261010339wgh@gmail.com" title="E-Mail → mailto:2261010339wgh@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/Oct_dafu" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;Oct_dafu" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2023.5 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Octdafu</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">85k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:18</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset);
+            clearInterval(int);
+        }
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据
+            clearInterval(int); // 停止检测
+        }
+    }
+
+});
+</script>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'hXn3FA9jjp4CU0lh2y43UI7h-gzGzoHsz',
+      appKey     : '8dmdFb0fQUJzGJp8Wgd5i9y1',
+      placeholder: "Just go go",
+      avatar     : 'monsterid',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
