@@ -260,14 +260,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.9k</span>
+              <span>3.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -281,30 +281,23 @@
       
         <p>更完服务器的硬件配置后，来更一期软件配置教学。</p>
 <span id="more"></span>
-<h1 id="写在前面的"><a class="markdownIt-Anchor" href="#写在前面的"></a> 写在前面的</h1>
+<h1 id="写在前面的">写在前面的</h1>
 <p>首先，因为懒，加上之前没来得及截图，这可能会是一篇没有图片的教程……在此向读者道歉，虽然预计没有多少读者。</p>
 <p>在安装过程中，我遇到了各种各样的问题，甚至没有完成全部部署就放假回家了，开学回来才基本完工，希望和我一样的linux小白可以不要气馁，多看教程多尝试，甚至可以重装系统解决问题等。</p>
 <p>网络上有许多教程，我也是参考着部署和编写这篇不怎么靠谱的教程的。不过，对于比较新的Ubuntu23.4系统，并没有特别完整的教程，所以也希望这篇文章能起到一点点作用吧！</p>
-<h1 id="ubuntu系统安装"><a class="markdownIt-Anchor" href="#ubuntu系统安装"></a> Ubuntu系统安装</h1>
-<h2 id="启动盘制作"><a class="markdownIt-Anchor" href="#启动盘制作"></a> 启动盘制作</h2>
-<ol>
+<h1 id="ubuntu系统安装">Ubuntu系统安装</h1>
+<h2 id="启动盘制作">启动盘制作</h2>
+<ol type="1">
 <li>在官网或镜像站下载Ubuntu操作系统，我使用的是Ubuntu23.4。</li>
 <li>找一个合适的U盘并格式化，导入下载好的操作系统文件，这步推荐使用UltraISO完成。</li>
 <li>我使用自己组装的电脑作为服务器，因此不介绍虚拟机相关内容。</li>
 </ol>
-<h2 id="系统安装"><a class="markdownIt-Anchor" href="#系统安装"></a> 系统安装</h2>
-<ol>
-<li>
-<p>插入启动盘，根据主板型号对应按键进入BIOS或启动引导，以微星主板为例，按F11进入启动引导。</p>
-</li>
-<li>
-<p>选择启动盘安装，在安装过程中请选择English以避免bug，开机后可调回合适的语言。</p>
-</li>
-<li>
-<p>普通安装或最小化安装请根据个人需求，其余地区、账户等也请按需安装。</p>
-</li>
-<li>
-<p>较为重点的是分区设置，请尽可能将系统安装在固态硬盘中，我个人使用1块256GB的固态盘和1块4T的机械盘，这里给出我的分区方案作为参考：</p>
+<h2 id="系统安装">系统安装</h2>
+<ol type="1">
+<li><p>插入启动盘，根据主板型号对应按键进入BIOS或启动引导，以微星主板为例，按F11进入启动引导。</p></li>
+<li><p>选择启动盘安装，在安装过程中请选择English以避免bug，开机后可调回合适的语言。</p></li>
+<li><p>普通安装或最小化安装请根据个人需求，其余地区、账户等也请按需安装。</p></li>
+<li><p>较为重点的是分区设置，请尽可能将系统安装在固态硬盘中，我个人使用1块256GB的固态盘和1块4T的机械盘，这里给出我的分区方案作为参考：</p>
 <ul>
 <li>EFI引导（U盘启动项）
 <ul>
@@ -312,16 +305,14 @@
 <li>分区类型： 逻辑分区</li>
 <li>分区位置：空间起始位置</li>
 <li>用于：EFI系统分区</li>
-</ul>
-</li>
+</ul></li>
 <li>SWAP（虚拟内存）
 <ul>
 <li>大小：32768mb</li>
 <li>分区类型： 主分区</li>
 <li>分区位置：空间起始位置</li>
 <li>用于：交换空间</li>
-</ul>
-</li>
+</ul></li>
 <li>/挂载点（系统文件）
 <ul>
 <li>大小：228351mb（这块盘的所有剩余空间）</li>
@@ -329,8 +320,7 @@
 <li>分区位置：空间起始位置</li>
 <li>用于：Ext4日志文件系统</li>
 <li>挂载点：/</li>
-</ul>
-</li>
+</ul></li>
 <li>/usr挂载点（应用程序安装）
 <ul>
 <li>大小：307200mb</li>
@@ -338,8 +328,7 @@
 <li>分区位置：空间起始位置</li>
 <li>用于：Ext4日志文件系统</li>
 <li>挂载点：/usr</li>
-</ul>
-</li>
+</ul></li>
 <li>/home挂载点（文件存放）
 <ul>
 <li>大小：3887104mb（这块盘的所有剩余空间）</li>
@@ -347,70 +336,76 @@
 <li>分区位置：空间起始位置</li>
 <li>用于：Ext4日志文件系统</li>
 <li>挂载点：/home</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="系统设置"><a class="markdownIt-Anchor" href="#系统设置"></a> 系统设置</h2>
+<h2 id="系统设置">系统设置</h2>
 <p>这块其实与主线内容无关，只简单讲一两条相关内容。</p>
-<ol>
-<li>
-<p>将下载来源添加靠谱的国内镜像源，如阿里云，各大高校镜像站等。</p>
-</li>
-<li>
-<p>检查snap是否可用，虽然下载速度慢些，但snap的确方便。</p>
-</li>
-<li>
-<p>检查系统更新，免得后续部署一半时还要重启。</p>
-</li>
+<ol type="1">
+<li><p>将下载来源添加靠谱的国内镜像源，如阿里云，各大高校镜像站等。</p></li>
+<li><p>检查snap是否可用，虽然下载速度慢些，但snap的确方便。</p></li>
+<li><p>检查系统更新，免得后续部署一半时还要重启。</p></li>
+</ol></li>
 </ol>
-</li>
-</ol>
-<h1 id="nextcloud部署"><a class="markdownIt-Anchor" href="#nextcloud部署"></a> Nextcloud部署</h1>
+<h1 id="nextcloud部署">Nextcloud部署</h1>
 <p>我主要参考了<a target="_blank" rel="noopener" href="https://blog.csdn.net/SEIKI_/article/details/122560955">Nextcloud在Ubuntu21.10版本Apache环境下手动安装流程以及文件上传大小限制修改-CSDN博客</a>等教程进行部署，由于版本不同，也会有部分不同的步骤。</p>
-<h2 id="数据库建立"><a class="markdownIt-Anchor" href="#数据库建立"></a> 数据库建立</h2>
-<p>我使用Apache2和MariaDB部署nextcloud的数据库，可以通过sudo apt-get install apache2和sudo apt-get install mariadb-server mariadb-client安装。</p>
+<h2 id="数据库建立">数据库建立</h2>
+<p>我使用Apache2和MariaDB部署nextcloud的数据库，可以通过sudo apt-get
+install apache2和sudo apt-get install mariadb-server
+mariadb-client安装。</p>
 <p>使用sudo mysql -u root -p命令进入MySQL数据库，并进行初始化：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER &#x27;输入用户名&#x27;@&#x27;%&#x27; IDENTIFIED BY &#x27;输入密码&#x27;</span><br><span class="line">CREATE DATABASE 数据库名</span><br><span class="line">GRANT ALL PRIVILEGES ON 数据库名.* TO &#x27;输入用户名&#x27;@&#x27;%&#x27; IDENTIFIED BY &#x27;输入密码&#x27;</span><br><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
-<h2 id="php模块安装"><a class="markdownIt-Anchor" href="#php模块安装"></a> PHP模块安装</h2>
+<h2 id="php模块安装">PHP模块安装</h2>
 <p>请一定注意的是，如果你的Ubuntu系统版本与参考的教程不一致，绝对不要参考该教程的版本安装PHP。安装时务必确认Ubuntu与PHP版本对应！</p>
-<p>我参考教程的原作者所使用的下载源应该依旧可用，请替换下列命令中的&quot;7.2&quot;至你需要的版本进行安装：</p>
+<p>我参考教程的原作者所使用的下载源应该依旧可用，请替换下列命令中的"7.2"至你需要的版本进行安装：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get -y install python-software-properties</span><br><span class="line">sudo add-apt-repository ppa:ondrej/php</span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line">sudo apt-get -y install php7.2</span><br><span class="line">sudo apt-get install -y apache2 mariadb-server libapache2-mod-php7.2 -y </span><br><span class="line">sudo apt-get install -y php7.2-gd php7.2-json php7.2-mysql php7.2-curl php7.2-mbstring -y</span><br><span class="line">sudo apt-get install -y php7.2-intl php-mcrypt php-imagick php7.2-xml php7.2-zip</span><br></pre></td></tr></table></figure>
-<p>安装后，使用service apache2 restart命令重启，并在/var/www/html/目录下新建.php文件进行测试。</p>
-<p>使用sudo apt-get install phpmyadmin -y安装phpMyAdmin，选择Apache2安装，并在/var/www/html目录建立快捷方式。使用sudo a2enmod rewrite启用模块后，重启php-fpm和apache2服务。在浏览器访问localhost/phpmyadmin以进行测试。</p>
+<p>安装后，使用service apache2
+restart命令重启，并在/var/www/html/目录下新建.php文件进行测试。</p>
+<p>使用sudo apt-get install phpmyadmin
+-y安装phpMyAdmin，选择Apache2安装，并在/var/www/html目录建立快捷方式。使用sudo
+a2enmod
+rewrite启用模块后，重启php-fpm和apache2服务。在浏览器访问localhost/phpmyadmin以进行测试。</p>
 <p>打开/etc/apache2/apache2.conf，在末尾添加：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AddType application/x-httpd-php .php .htm .html</span><br><span class="line">AddDefaultCharset UTF-8</span><br></pre></td></tr></table></figure>
 <p>并重启apache2服务。</p>
-<h2 id="nextcloud配置"><a class="markdownIt-Anchor" href="#nextcloud配置"></a> Nextcloud配置</h2>
-<p>在/var/www/html目录使用sudo wget <a target="_blank" rel="noopener" href="https://download.nextcloud.com/server/releases/nextcloud-xx.xx.zip%E4%B8%8B%E8%BD%BDnextcloud(%E4%BB%8D%E9%9C%80%E4%B8%A5%E6%A0%BC%E6%B3%A8%E6%84%8F%E7%89%88%E6%9C%AC%E5%AF%B9%E5%BA%94)%EF%BC%8C%E8%A7%A3%E5%8E%8B%E5%B9%B6%E4%BF%AE%E6%94%B9%E8%AF%BB%E5%86%99%E6%9D%83%E9%99%90">https://download.nextcloud.com/server/releases/nextcloud-xx.xx.zip下载nextcloud(仍需严格注意版本对应)，解压并修改读写权限</a>(chmod 777)，通过之前数据库建立的账户及密码访问。</p>
+<h2 id="nextcloud配置">Nextcloud配置</h2>
+<p>在/var/www/html目录使用sudo wget
+https://download.nextcloud.com/server/releases/nextcloud-xx.xx.zip下载nextcloud(仍需严格注意版本对应)，解压并修改读写权限(chmod
+777)，通过之前数据库建立的账户及密码访问。</p>
 <p>修改/etc/php/7.2/apache2中的php.ini配置文件：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">max_execution_time = -1</span><br><span class="line">post_max_size = 10800M</span><br><span class="line">upload_max_filesize = 10240M</span><br></pre></td></tr></table></figure>
 <p>并重启php服务。</p>
-<p>进入Nextcloud后，进行个人信息和管理员密码等设置。通过官网及Google Play等在windows、安卓设备安装应用程序并使用。</p>
-<h1 id="cpolar局域网穿透"><a class="markdownIt-Anchor" href="#cpolar局域网穿透"></a> Cpolar局域网穿透</h1>
-<h2 id="注册与域名准备"><a class="markdownIt-Anchor" href="#注册与域名准备"></a> 注册与域名准备</h2>
-<p>为保证私有云盘长期稳定访问，可以考虑氪金升级用户组，我选择了支持自定义域名的用户组，一年约150元。在cpolar官网(<a target="_blank" rel="noopener" href="https://www.cpolar.com/">cpolar - 安全的内网穿透工具</a>)注册后，请选择预留，并在保留自定义域名选项，选择一个非中国的地区(国内域名需要核验资质)，并填入准备好的域名，描述任意填写即可。</p>
+<p>进入Nextcloud后，进行个人信息和管理员密码等设置。通过官网及Google
+Play等在windows、安卓设备安装应用程序并使用。</p>
+<h1 id="cpolar局域网穿透">Cpolar局域网穿透</h1>
+<h2 id="注册与域名准备">注册与域名准备</h2>
+<p>为保证私有云盘长期稳定访问，可以考虑氪金升级用户组，我选择了支持自定义域名的用户组，一年约150元。在cpolar官网(<a target="_blank" rel="noopener" href="https://www.cpolar.com/">cpolar -
+安全的内网穿透工具</a>)注册后，请选择预留，并在保留自定义域名选项，选择一个非中国的地区(国内域名需要核验资质)，并填入准备好的域名，描述任意填写即可。</p>
 <p>我的域名是在阿里云购买的，这里请进入控制台，选择域名解析，将cpolar生成的CNAME配置填入。</p>
 <p>这一步可以参考cpolar的官方文档进行操作。</p>
-<h2 id="客户端安装配置"><a class="markdownIt-Anchor" href="#客户端安装配置"></a> 客户端安装配置</h2>
-<p>在Ubuntu系统下，使用官方提供的链接(curl -L <a target="_blank" rel="noopener" href="https://www.cpolar.com/static/downloads/install-release-cpolar.sh">https://www.cpolar.com/static/downloads/install-release-cpolar.sh</a> | sudo bash)即可下载。当然，在此之前请自行apt下载curl。多提一句，这里我遇到一个bug，需要不提供用户权限即输入上述链接，回车后再行提供sudo权限才能正常下载。</p>
-<p>通过cpolar version命令确认是否下载成功，成功后添加自启动服务(sudo systemctl enable cpolar)并启动cpolar(sudo systemctl start cpolar)。在cpolar官网的验证选项，复制指令并为cpolar添加authtoken，以进行后续操作。</p>
-<p>输入&quot;服务器ip:9200&quot;或&quot;localhost:9200&quot;进入cpolar控制台，为准备好的域名添加隧道，细节同样可参考官网教程。接下来</p>
-<h2 id="nextcloud设置"><a class="markdownIt-Anchor" href="#nextcloud设置"></a> Nextcloud设置</h2>
+<h2 id="客户端安装配置">客户端安装配置</h2>
+<p>在Ubuntu系统下，使用官方提供的链接(curl -L
+https://www.cpolar.com/static/downloads/install-release-cpolar.sh | sudo
+bash)即可下载。当然，在此之前请自行apt下载curl。多提一句，这里我遇到一个bug，需要不提供用户权限即输入上述链接，回车后再行提供sudo权限才能正常下载。</p>
+<p>通过cpolar version命令确认是否下载成功，成功后添加自启动服务(sudo
+systemctl enable cpolar)并启动cpolar(sudo systemctl start
+cpolar)。在cpolar官网的验证选项，复制指令并为cpolar添加authtoken，以进行后续操作。</p>
+<p>输入"服务器ip:9200"或"localhost:9200"进入cpolar控制台，为准备好的域名添加隧道，细节同样可参考官网教程。接下来</p>
+<h2 id="nextcloud设置">Nextcloud设置</h2>
 <p>这时，输入上面添加的域名/nextcloud，可能无法正常进入，这是由于nextcloud没有认可该域名的安全性。从/var/www/html/nextcloud/config中找到config.php文件，并参照config.sample.php，修改trusted-domains的值，并保存修改。这时，应该可以正常进入nextcloud，并在公网访问服务器了。当然，速度会比局域网下慢一些，不过比起非会员的百度网盘还是好的多……</p>
-<h1 id="emby媒体服务器"><a class="markdownIt-Anchor" href="#emby媒体服务器"></a> Emby媒体服务器</h1>
-<h2 id="下载安装"><a class="markdownIt-Anchor" href="#下载安装"></a> 下载安装</h2>
-<ol>
+<h1 id="emby媒体服务器">Emby媒体服务器</h1>
+<h2 id="下载安装">下载安装</h2>
+<ol type="1">
 <li>在服务器端，直接在emby官网下载安装包或使用apt命令下载均可。</li>
 <li>输入http://localhost:8096以访问网站。</li>
 <li>在PC端同样下载安装，新建用户账户，并在局域网下使用服务器IP+8096端口访问。</li>
 </ol>
-<h2 id="媒体库建立"><a class="markdownIt-Anchor" href="#媒体库建立"></a> 媒体库建立</h2>
-<ol>
+<h2 id="媒体库建立">媒体库建立</h2>
+<ol type="1">
 <li>创建管理员账户，并添加用户账户。</li>
 <li>登录web界面，在媒体库选项创建新的媒体库，并添加文件夹链接。</li>
 <li>还可手动添加标签并整理优化等，这里只介绍基础部分。</li>
 </ol>
-<h1 id="前景展望"><a class="markdownIt-Anchor" href="#前景展望"></a> 前景展望</h1>
+<h1 id="前景展望">前景展望</h1>
 <p>由于分到了工位，有可能会把服务器搬到工位使用，那就必须部署局域网穿透，如有需要也可能会加装windows双系统……(局域网穿透已经部署，不过双系统是暂时不考虑了)</p>
 <p>由于这个服务器的CPU、显卡还算勉强能用，后续可能会用于渲染建模、动画等。(常用建模、渲染软件基本不支持Linux，目前只有blender较为合适，无奈不一定来得及学)</p>
 
@@ -511,7 +506,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text"> 写在前面的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text"> Ubuntu系统安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C"><span class="nav-number">2.1.</span> <span class="nav-text"> 启动盘制作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="nav-number">2.2.</span> <span class="nav-text"> 系统安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.3.</span> <span class="nav-text"> 系统设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nextcloud%E9%83%A8%E7%BD%B2"><span class="nav-number">3.</span> <span class="nav-text"> Nextcloud部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BB%BA%E7%AB%8B"><span class="nav-number">3.1.</span> <span class="nav-text"> 数据库建立</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85"><span class="nav-number">3.2.</span> <span class="nav-text"> PHP模块安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nextcloud%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.</span> <span class="nav-text"> Nextcloud配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cpolar%E5%B1%80%E5%9F%9F%E7%BD%91%E7%A9%BF%E9%80%8F"><span class="nav-number">4.</span> <span class="nav-text"> Cpolar局域网穿透</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%9F%9F%E5%90%8D%E5%87%86%E5%A4%87"><span class="nav-number">4.1.</span> <span class="nav-text"> 注册与域名准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE"><span class="nav-number">4.2.</span> <span class="nav-text"> 客户端安装配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nextcloud%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.3.</span> <span class="nav-text"> Nextcloud设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#emby%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">5.</span> <span class="nav-text"> Emby媒体服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="nav-number">5.1.</span> <span class="nav-text"> 下载安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AA%92%E4%BD%93%E5%BA%93%E5%BB%BA%E7%AB%8B"><span class="nav-number">5.2.</span> <span class="nav-text"> 媒体库建立</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E6%99%AF%E5%B1%95%E6%9C%9B"><span class="nav-number">6.</span> <span class="nav-text"> 前景展望</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">写在前面的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">Ubuntu系统安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C"><span class="nav-number">2.1.</span> <span class="nav-text">启动盘制作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="nav-number">2.2.</span> <span class="nav-text">系统安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.3.</span> <span class="nav-text">系统设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nextcloud%E9%83%A8%E7%BD%B2"><span class="nav-number">3.</span> <span class="nav-text">Nextcloud部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BB%BA%E7%AB%8B"><span class="nav-number">3.1.</span> <span class="nav-text">数据库建立</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85"><span class="nav-number">3.2.</span> <span class="nav-text">PHP模块安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nextcloud%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.</span> <span class="nav-text">Nextcloud配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cpolar%E5%B1%80%E5%9F%9F%E7%BD%91%E7%A9%BF%E9%80%8F"><span class="nav-number">4.</span> <span class="nav-text">Cpolar局域网穿透</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%9F%9F%E5%90%8D%E5%87%86%E5%A4%87"><span class="nav-number">4.1.</span> <span class="nav-text">注册与域名准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE"><span class="nav-number">4.2.</span> <span class="nav-text">客户端安装配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nextcloud%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.3.</span> <span class="nav-text">Nextcloud设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#emby%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">5.</span> <span class="nav-text">Emby媒体服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="nav-number">5.1.</span> <span class="nav-text">下载安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AA%92%E4%BD%93%E5%BA%93%E5%BB%BA%E7%AB%8B"><span class="nav-number">5.2.</span> <span class="nav-text">媒体库建立</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E6%99%AF%E5%B1%95%E6%9C%9B"><span class="nav-number">6.</span> <span class="nav-text">前景展望</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -578,12 +573,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">100k</span>
+    <span title="站点总字数">94k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:31</span>
+    <span title="站点阅读时长">1:26</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
