@@ -292,81 +292,79 @@
       
         <p>Foobar2000是当前主流的Hifi本地音乐播放器，拥有强大的功能，并支持绝大多数主流音乐格式，这篇文章将简要介绍一些Foobar2000基础配置。注意，本篇文章不涉及理论，仅考虑功能。当然，欢迎各位路过的大佬传授经验，提供建议，也欢迎小白提问，我会尽力解答。</p>
 <span id="more"></span>
-<h2 id="ui与界面">UI与界面</h2>
-<p>首先，Foobar2000的下载完全免费，对于下载和安装我就不再赘述。</p>
-<h3 id="ui整合包">UI整合包</h3>
-<p>对于一般人，自己设计制作Foobar2000的UI界面难度过大，也不能满足全方面的使用要求。因此，我推荐使用大佬们制作的UI整合包，下载这些整合包时，一般自带Foobar2000的本体，所以可以不必另行安装本体。这些整合包中，我个人比较推荐Foobox，也可以选择Foobaka、FlatLite等使用。这是我的Foobox整合包界面，可以感受一下是否符合自己的审美。</p>
-<p><img src="/2023/05/10/004foobar2000/1.jpg"></p>
-<h3 id="foobox设置">Foobox设置</h3>
-<p>选择设置，并进入Foobox设置，可以在不改变基本结构的基础上，自定义Foobar2000（后文简称fb2k）的界面。</p>
-<p><img src="/2023/05/10/004foobar2000/2.jpg"></p>
+<h2 id="UI与界面"><a href="#UI与界面" class="headerlink" title="UI与界面"></a>UI与界面</h2><p>首先，Foobar2000的下载完全免费，对于下载和安装我就不再赘述。</p>
+<h3 id="UI整合包"><a href="#UI整合包" class="headerlink" title="UI整合包"></a>UI整合包</h3><p>对于一般人，自己设计制作Foobar2000的UI界面难度过大，也不能满足全方面的使用要求。因此，我推荐使用大佬们制作的UI整合包，下载这些整合包时，一般自带Foobar2000的本体，所以可以不必另行安装本体。这些整合包中，我个人比较推荐Foobox，也可以选择Foobaka、FlatLite等使用。这是我的Foobox整合包界面，可以感受一下是否符合自己的审美。</p>
+<p><img src="/2023/05/10/004foobar2000/1.jpg" alt=" "></p>
+<h3 id="Foobox设置"><a href="#Foobox设置" class="headerlink" title="Foobox设置"></a>Foobox设置</h3><p>选择设置，并进入Foobox设置，可以在不改变基本结构的基础上，自定义Foobar2000（后文简称fb2k）的界面。</p>
+<p><img src="/2023/05/10/004foobar2000/2.jpg" alt=" "></p>
 <p>这些设置都简单易懂，比较值得一提的是列设置，通过开启/关闭列，可以改变播放界面展示的歌曲信息。</p>
-<h2 id="foobar2000的基础配置">Foobar2000的基础配置</h2>
-<p>接下来，让我们进入fb2k软件的原生配置环节。通过foobox设置中转入，或右上角菜单栏，可以进入设置选项。提示，fb2k最好开启音频独占使用。</p>
-<h3 id="播放与dsp管理器">播放与DSP管理器</h3>
-<ul>
+<h2 id="Foobar2000的基础配置"><a href="#Foobar2000的基础配置" class="headerlink" title="Foobar2000的基础配置"></a>Foobar2000的基础配置</h2><p>接下来，让我们进入fb2k软件的原生配置环节。通过foobox设置中转入，或右上角菜单栏，可以进入设置选项。提示，fb2k最好开启音频独占使用。</p>
+<h3 id="播放与DSP管理器"><a href="#播放与DSP管理器" class="headerlink" title="播放与DSP管理器"></a>播放与DSP管理器</h3><ul>
 <li><p>播放增益：简单来讲就是播放音量与原始音量的差值</p>
 <ul>
 <li>源模式：专辑</li>
 <li>处理：应用增益并根据峰值阻止谐波失真</li>
-</ul></li>
+</ul>
+</li>
 <li><p>DSP管理器：提供各类小工具</p>
 <ul>
-<li><p>高级限幅器、硬-6dB限幅器：可以减少杂音干扰，推荐开启</p></li>
-<li><p>重采样：个人认为，这东西并不是开的越高越好，要看解码器水平与音频质量，在保证不出杂音的情况下，尽可能开高。如果有解码器的朋友，记得在解码驱动程序中同时调节，保持与fb2k中采样率的一致。</p></li>
-<li><p>立体声、声道、上混等：我没用过，各位可以看心情试试</p></li>
-<li><p>交叉渐变器：听起来很牛，其实只是音乐淡入淡出</p></li>
-<li><p>跳过静音区域：字面意思</p></li>
-<li><p>均衡器：调节EQ曲线，个人喜欢原汁原味，但是据说有些耳机调了有奇效</p></li>
-</ul></li>
+<li><p>高级限幅器、硬-6dB限幅器：可以减少杂音干扰，推荐开启</p>
+</li>
+<li><p>重采样：个人认为，这东西并不是开的越高越好，要看解码器水平与音频质量，在保证不出杂音的情况下，尽可能开高。如果有解码器的朋友，记得在解码驱动程序中同时调节，保持与fb2k中采样率的一致。</p>
+</li>
+<li><p>立体声、声道、上混等：我没用过，各位可以看心情试试</p>
+</li>
+<li><p>交叉渐变器：听起来很牛，其实只是音乐淡入淡出</p>
+</li>
+<li><p>跳过静音区域：字面意思</p>
+</li>
+<li><p>均衡器：调节EQ曲线，个人喜欢原汁原味，但是据说有些耳机调了有奇效</p>
+</li>
 </ul>
-<h3 id="解码与输出">解码与输出</h3>
-<ul>
-<li><p>解码：没什么要调的，勾选即可</p></li>
+</li>
+</ul>
+<h3 id="解码与输出"><a href="#解码与输出" class="headerlink" title="解码与输出"></a>解码与输出</h3><ul>
+<li><p>解码：没什么要调的，勾选即可</p>
+</li>
 <li><p>输出：放张图看看</p>
-<p><img src="/2023/05/10/004foobar2000/3.jpg"></p>
+<p><img src="/2023/05/10/004foobar2000/3.jpg" alt=" "></p>
 <ul>
 <li>设备：没有解码耳放的朋友，可以选择wasapi播放，比默认略好一些；有解码耳放的朋友，可以选择asio+dsd输出（asio也可以，这里仅以自己的配置进行说明）。</li>
 <li>缓冲长度：基本保持默认即可。</li>
 <li>输出格式：声卡/解码耳放支持的最高位数。</li>
-</ul></li>
-<li><p>asio+dsd：默认即可。</p></li>
 </ul>
-<h2 id="工具">工具</h2>
-<h3 id="dsd处理器">DSD处理器</h3>
-<p><img src="/2023/05/10/004foobar2000/4.jpg"></p>
+</li>
+<li><p>asio+dsd：默认即可。</p>
+</li>
+</ul>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="DSD处理器"><a href="#DSD处理器" class="headerlink" title="DSD处理器"></a>DSD处理器</h3><p><img src="/2023/05/10/004foobar2000/4.jpg" alt=" "></p>
 <p>SDM类型选择A，采样选择8×即可。输出一栏的调节俗称升频功能，需参考解码器最大支持的码率调节。升频和上文提及的重采样类似，不求极致，但求合适。由于我在解码器中已经设置了升频，因此软件中没有重复设置。</p>
-<h3 id="eslyric">ESLyric</h3>
-<ul>
+<h3 id="ESLyric"><a href="#ESLyric" class="headerlink" title="ESLyric"></a>ESLyric</h3><ul>
 <li><p>主选单：搜索按如图设置即可，是否启用桌面歌词看个人喜好</p>
-<p><img src="/2023/05/10/004foobar2000/5.jpg"></p></li>
-<li><p>歌词选项：关联全选，其余基本默认即可，保存格式为UTF-8</p></li>
+<p><img src="/2023/05/10/004foobar2000/5.jpg" alt=" "></p>
+</li>
+<li><p>歌词选项：关联全选，其余基本默认即可，保存格式为UTF-8</p>
+</li>
 <li><p>桌面歌词：按个人喜好配置即可，分享一下我的配置：</p>
-<p><img src="/2023/05/10/004foobar2000/6.jpg"></p></li>
-<li><p>高级选项：保持默认即可</p></li>
+<p><img src="/2023/05/10/004foobar2000/6.jpg" alt=" "></p>
+</li>
+<li><p>高级选项：保持默认即可</p>
+</li>
 </ul>
-<h3 id="sacd">SACD</h3>
-<p>输出类型选择DSD，转换选择多级64fp，使用DSD处理器。声道优先看个人喜好，我选择无。剩下的直接上图看吧：</p>
-<p><img src="/2023/05/10/004foobar2000/7.jpg"></p>
-<h3 id="播放增益扫描器">播放增益扫描器</h3>
-<p>印象中基本无需更改，如图设置即可：</p>
-<p><img src="/2023/05/10/004foobar2000/8.jpg"></p>
+<h3 id="SACD"><a href="#SACD" class="headerlink" title="SACD"></a>SACD</h3><p>输出类型选择DSD，转换选择多级64fp，使用DSD处理器。声道优先看个人喜好，我选择无。剩下的直接上图看吧：</p>
+<p><img src="/2023/05/10/004foobar2000/7.jpg" alt=" "></p>
+<h3 id="播放增益扫描器"><a href="#播放增益扫描器" class="headerlink" title="播放增益扫描器"></a>播放增益扫描器</h3><p>印象中基本无需更改，如图设置即可：</p>
+<p><img src="/2023/05/10/004foobar2000/8.jpg" alt=" "></p>
 <p>其余项目印象中不需要什么调整，就不多讲了。</p>
-<h2 id="杂项设置">杂项设置</h2>
-<h3 id="快捷键">快捷键</h3>
-<p>可以自行添加、移除快捷键；通过点击按键栏，再用键盘指定键位的方式修改；对于暂停，下一首等常用按键，推荐勾选全局设置。</p>
-<p><img src="/2023/05/10/004foobar2000/9.jpg"></p>
-<h3 id="媒体库-可视化">媒体库 &amp; 可视化</h3>
-<p>请设置为自己音乐所在的文件目录，以便fb2k统计播放数据。</p>
+<h2 id="杂项设置"><a href="#杂项设置" class="headerlink" title="杂项设置"></a>杂项设置</h2><h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p>可以自行添加、移除快捷键；通过点击按键栏，再用键盘指定键位的方式修改；对于暂停，下一首等常用按键，推荐勾选全局设置。</p>
+<p><img src="/2023/05/10/004foobar2000/9.jpg" alt=" "></p>
+<h3 id="媒体库-amp-可视化"><a href="#媒体库-amp-可视化" class="headerlink" title="媒体库 &amp; 可视化"></a>媒体库 &amp; 可视化</h3><p>请设置为自己音乐所在的文件目录，以便fb2k统计播放数据。</p>
 <p>可视化保持默认即可（还有一个对大多数人可有可无的网络设置也是）。</p>
 <p>这两项设置其实毫无关系，只是因为都只有一句话，就放在一起了。</p>
-<h3 id="外壳交互">外壳交互</h3>
-<p>设置如图，另外，可以在系统设置中，将主流音频格式默认关联到fb2k。</p>
-<p><img src="/2023/05/10/004foobar2000/10.jpg"></p>
-<h3 id="显示">显示</h3>
-<p>这一部分主要可以个性化设置的是主窗口栏，这依然是一个看个人喜好的设置，不妨自行调整测试，得出最适合自己的配置方案。</p>
-<h3 id="组件与高级">组件与高级</h3>
-<p>因为这是一篇基础教程，所以这两项并不会涉及，有兴趣请自行深入研究。另外，对于一般的UI整合包，必要的组件已经预安装完成，如果您使用原版fb2k，并且发现我上面提到的一些设置选项不存在，就需要安装对应的组合包了。</p>
+<h3 id="外壳交互"><a href="#外壳交互" class="headerlink" title="外壳交互"></a>外壳交互</h3><p>设置如图，另外，可以在系统设置中，将主流音频格式默认关联到fb2k。</p>
+<p><img src="/2023/05/10/004foobar2000/10.jpg" alt=" "></p>
+<h3 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h3><p>这一部分主要可以个性化设置的是主窗口栏，这依然是一个看个人喜好的设置，不妨自行调整测试，得出最适合自己的配置方案。</p>
+<h3 id="组件与高级"><a href="#组件与高级" class="headerlink" title="组件与高级"></a>组件与高级</h3><p>因为这是一篇基础教程，所以这两项并不会涉及，有兴趣请自行深入研究。另外，对于一般的UI整合包，必要的组件已经预安装完成，如果您使用原版fb2k，并且发现我上面提到的一些设置选项不存在，就需要安装对应的组合包了。</p>
 <p>最后想说，我本人并不专业，按照这个配置，可能无法达到最完美的播放效果。感谢各位的阅读，也欢迎各位提出自己的建议，指出我的错误！</p>
 
     </div>
@@ -466,7 +464,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ui%E4%B8%8E%E7%95%8C%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">UI与界面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ui%E6%95%B4%E5%90%88%E5%8C%85"><span class="nav-number">1.1.</span> <span class="nav-text">UI整合包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#foobox%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">Foobox设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#foobar2000%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">Foobar2000的基础配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%92%AD%E6%94%BE%E4%B8%8Edsp%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-number">2.1.</span> <span class="nav-text">播放与DSP管理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%A0%81%E4%B8%8E%E8%BE%93%E5%87%BA"><span class="nav-number">2.2.</span> <span class="nav-text">解码与输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-number">3.</span> <span class="nav-text">工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dsd%E5%A4%84%E7%90%86%E5%99%A8"><span class="nav-number">3.1.</span> <span class="nav-text">DSD处理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eslyric"><span class="nav-number">3.2.</span> <span class="nav-text">ESLyric</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sacd"><span class="nav-number">3.3.</span> <span class="nav-text">SACD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%92%AD%E6%94%BE%E5%A2%9E%E7%9B%8A%E6%89%AB%E6%8F%8F%E5%99%A8"><span class="nav-number">3.4.</span> <span class="nav-text">播放增益扫描器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%82%E9%A1%B9%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">杂项设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">4.1.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AA%92%E4%BD%93%E5%BA%93-%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-number">4.2.</span> <span class="nav-text">媒体库 &amp; 可视化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E5%A3%B3%E4%BA%A4%E4%BA%92"><span class="nav-number">4.3.</span> <span class="nav-text">外壳交互</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA"><span class="nav-number">4.4.</span> <span class="nav-text">显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E7%BA%A7"><span class="nav-number">4.5.</span> <span class="nav-text">组件与高级</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#UI%E4%B8%8E%E7%95%8C%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">UI与界面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UI%E6%95%B4%E5%90%88%E5%8C%85"><span class="nav-number">1.1.</span> <span class="nav-text">UI整合包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Foobox%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">Foobox设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Foobar2000%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">Foobar2000的基础配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%92%AD%E6%94%BE%E4%B8%8EDSP%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-number">2.1.</span> <span class="nav-text">播放与DSP管理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%A0%81%E4%B8%8E%E8%BE%93%E5%87%BA"><span class="nav-number">2.2.</span> <span class="nav-text">解码与输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-number">3.</span> <span class="nav-text">工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DSD%E5%A4%84%E7%90%86%E5%99%A8"><span class="nav-number">3.1.</span> <span class="nav-text">DSD处理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ESLyric"><span class="nav-number">3.2.</span> <span class="nav-text">ESLyric</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SACD"><span class="nav-number">3.3.</span> <span class="nav-text">SACD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%92%AD%E6%94%BE%E5%A2%9E%E7%9B%8A%E6%89%AB%E6%8F%8F%E5%99%A8"><span class="nav-number">3.4.</span> <span class="nav-text">播放增益扫描器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%82%E9%A1%B9%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">杂项设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">4.1.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AA%92%E4%BD%93%E5%BA%93-amp-%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-number">4.2.</span> <span class="nav-text">媒体库 &amp; 可视化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E5%A3%B3%E4%BA%A4%E4%BA%92"><span class="nav-number">4.3.</span> <span class="nav-text">外壳交互</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA"><span class="nav-number">4.4.</span> <span class="nav-text">显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E7%BA%A7"><span class="nav-number">4.5.</span> <span class="nav-text">组件与高级</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -482,14 +480,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -533,12 +531,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">103k</span>
+    <span title="站点总字数">115k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:34</span>
+    <span title="站点阅读时长">1:45</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
