@@ -12,102 +12,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Foobar2000配置教程</title>
-    <url>/2023/05/10/004foobar2000/</url>
-    <content><![CDATA[<p>Foobar2000是当前主流的Hifi本地音乐播放器，拥有强大的功能，并支持绝大多数主流音乐格式，这篇文章将简要介绍一些Foobar2000基础配置。注意，本篇文章不涉及理论，仅考虑功能。当然，欢迎各位路过的大佬传授经验，提供建议，也欢迎小白提问，我会尽力解答。</p>
-<span id="more"></span>
-<h2 id="ui与界面">UI与界面</h2>
-<p>首先，Foobar2000的下载完全免费，对于下载和安装我就不再赘述。</p>
-<h3 id="ui整合包">UI整合包</h3>
-<p>对于一般人，自己设计制作Foobar2000的UI界面难度过大，也不能满足全方面的使用要求。因此，我推荐使用大佬们制作的UI整合包，下载这些整合包时，一般自带Foobar2000的本体，所以可以不必另行安装本体。这些整合包中，我个人比较推荐Foobox，也可以选择Foobaka、FlatLite等使用。这是我的Foobox整合包界面，可以感受一下是否符合自己的审美。</p>
-<p><img src="/2023/05/10/004foobar2000/1.jpg"></p>
-<h3 id="foobox设置">Foobox设置</h3>
-<p>选择设置，并进入Foobox设置，可以在不改变基本结构的基础上，自定义Foobar2000（后文简称fb2k）的界面。</p>
-<p><img src="/2023/05/10/004foobar2000/2.jpg"></p>
-<p>这些设置都简单易懂，比较值得一提的是列设置，通过开启/关闭列，可以改变播放界面展示的歌曲信息。</p>
-<h2 id="foobar2000的基础配置">Foobar2000的基础配置</h2>
-<p>接下来，让我们进入fb2k软件的原生配置环节。通过foobox设置中转入，或右上角菜单栏，可以进入设置选项。提示，fb2k最好开启音频独占使用。</p>
-<h3 id="播放与dsp管理器">播放与DSP管理器</h3>
-<ul>
-<li><p>播放增益：简单来讲就是播放音量与原始音量的差值</p>
-<ul>
-<li>源模式：专辑</li>
-<li>处理：应用增益并根据峰值阻止谐波失真</li>
-</ul></li>
-<li><p>DSP管理器：提供各类小工具</p>
-<ul>
-<li><p>高级限幅器、硬-6dB限幅器：可以减少杂音干扰，推荐开启</p></li>
-<li><p>重采样：个人认为，这东西并不是开的越高越好，要看解码器水平与音频质量，在保证不出杂音的情况下，尽可能开高。如果有解码器的朋友，记得在解码驱动程序中同时调节，保持与fb2k中采样率的一致。</p></li>
-<li><p>立体声、声道、上混等：我没用过，各位可以看心情试试</p></li>
-<li><p>交叉渐变器：听起来很牛，其实只是音乐淡入淡出</p></li>
-<li><p>跳过静音区域：字面意思</p></li>
-<li><p>均衡器：调节EQ曲线，个人喜欢原汁原味，但是据说有些耳机调了有奇效</p></li>
-</ul></li>
-</ul>
-<h3 id="解码与输出">解码与输出</h3>
-<ul>
-<li><p>解码：没什么要调的，勾选即可</p></li>
-<li><p>输出：放张图看看</p>
-<p><img src="/2023/05/10/004foobar2000/3.jpg"></p>
-<ul>
-<li>设备：没有解码耳放的朋友，可以选择wasapi播放，比默认略好一些；有解码耳放的朋友，可以选择asio+dsd输出（asio也可以，这里仅以自己的配置进行说明）。</li>
-<li>缓冲长度：基本保持默认即可。</li>
-<li>输出格式：声卡/解码耳放支持的最高位数。</li>
-</ul></li>
-<li><p>asio+dsd：默认即可。</p></li>
-</ul>
-<h2 id="工具">工具</h2>
-<h3 id="dsd处理器">DSD处理器</h3>
-<p><img src="/2023/05/10/004foobar2000/4.jpg"></p>
-<p>SDM类型选择A，采样选择8×即可。输出一栏的调节俗称升频功能，需参考解码器最大支持的码率调节。升频和上文提及的重采样类似，不求极致，但求合适。由于我在解码器中已经设置了升频，因此软件中没有重复设置。</p>
-<h3 id="eslyric">ESLyric</h3>
-<ul>
-<li><p>主选单：搜索按如图设置即可，是否启用桌面歌词看个人喜好</p>
-<p><img src="/2023/05/10/004foobar2000/5.jpg"></p></li>
-<li><p>歌词选项：关联全选，其余基本默认即可，保存格式为UTF-8</p></li>
-<li><p>桌面歌词：按个人喜好配置即可，分享一下我的配置：</p>
-<p><img src="/2023/05/10/004foobar2000/6.jpg"></p></li>
-<li><p>高级选项：保持默认即可</p></li>
-</ul>
-<h3 id="sacd">SACD</h3>
-<p>输出类型选择DSD，转换选择多级64fp，使用DSD处理器。声道优先看个人喜好，我选择无。剩下的直接上图看吧：</p>
-<p><img src="/2023/05/10/004foobar2000/7.jpg"></p>
-<h3 id="播放增益扫描器">播放增益扫描器</h3>
-<p>印象中基本无需更改，如图设置即可：</p>
-<p><img src="/2023/05/10/004foobar2000/8.jpg"></p>
-<p>其余项目印象中不需要什么调整，就不多讲了。</p>
-<h2 id="杂项设置">杂项设置</h2>
-<h3 id="快捷键">快捷键</h3>
-<p>可以自行添加、移除快捷键；通过点击按键栏，再用键盘指定键位的方式修改；对于暂停，下一首等常用按键，推荐勾选全局设置。</p>
-<p><img src="/2023/05/10/004foobar2000/9.jpg"></p>
-<h3 id="媒体库-可视化">媒体库 &amp; 可视化</h3>
-<p>请设置为自己音乐所在的文件目录，以便fb2k统计播放数据。</p>
-<p>可视化保持默认即可（还有一个对大多数人可有可无的网络设置也是）。</p>
-<p>这两项设置其实毫无关系，只是因为都只有一句话，就放在一起了。</p>
-<h3 id="外壳交互">外壳交互</h3>
-<p>设置如图，另外，可以在系统设置中，将主流音频格式默认关联到fb2k。</p>
-<p><img src="/2023/05/10/004foobar2000/10.jpg"></p>
-<h3 id="显示">显示</h3>
-<p>这一部分主要可以个性化设置的是主窗口栏，这依然是一个看个人喜好的设置，不妨自行调整测试，得出最适合自己的配置方案。</p>
-<h3 id="组件与高级">组件与高级</h3>
-<p>因为这是一篇基础教程，所以这两项并不会涉及，有兴趣请自行深入研究。另外，对于一般的UI整合包，必要的组件已经预安装完成，如果您使用原版fb2k，并且发现我上面提到的一些设置选项不存在，就需要安装对应的组合包了。</p>
-<p>最后想说，我本人并不专业，按照这个配置，可能无法达到最完美的播放效果。感谢各位的阅读，也欢迎各位提出自己的建议，指出我的错误！</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Sigil制作epub电子书入门</title>
-    <url>/2023/05/10/005sigilepub/</url>
-    <content><![CDATA[<p>开坑待填</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-  </entry>
-  <entry>
     <title>线性代数笔记整理</title>
     <url>/2023/05/10/003mathnoted1s/</url>
     <content><![CDATA[<p>大一上学期，自己用Latex整理的线性代数笔记，欢迎各位浏览学习。</p>
@@ -1001,314 +905,99 @@ n\)</span>. </p></li>
       </categories>
   </entry>
   <entry>
-    <title>宫越县交通综合概要</title>
-    <url>/2023/05/15/008csl-miakoshi-02/</url>
-    <content><![CDATA[<p>城市天际线：宫越县交通相关内容。</p>
-<p>更新坏档了，这篇以后估计更新不能了（哭）</p>
+    <title>Foobar2000配置教程</title>
+    <url>/2023/05/10/004foobar2000/</url>
+    <content><![CDATA[<p>Foobar2000是当前主流的Hifi本地音乐播放器，拥有强大的功能，并支持绝大多数主流音乐格式，这篇文章将简要介绍一些Foobar2000基础配置。注意，本篇文章不涉及理论，仅考虑功能。当然，欢迎各位路过的大佬传授经验，提供建议，也欢迎小白提问，我会尽力解答。</p>
 <span id="more"></span>
-<h2 id="铁道">铁道</h2>
-<h3 id="jr九州">JR九州</h3>
-<h4 id="新幹線">新幹線</h4>
-<p>東九州新幹線</p>
-<h4 id="在来線">在来線</h4>
+<h2 id="ui与界面">UI与界面</h2>
+<p>首先，Foobar2000的下载完全免费，对于下载和安装我就不再赘述。</p>
+<h3 id="ui整合包">UI整合包</h3>
+<p>对于一般人，自己设计制作Foobar2000的UI界面难度过大，也不能满足全方面的使用要求。因此，我推荐使用大佬们制作的UI整合包，下载这些整合包时，一般自带Foobar2000的本体，所以可以不必另行安装本体。这些整合包中，我个人比较推荐Foobox，也可以选择Foobaka、FlatLite等使用。这是我的Foobox整合包界面，可以感受一下是否符合自己的审美。</p>
+<p><img src="/2023/05/10/004foobar2000/1.jpg"></p>
+<h3 id="foobox设置">Foobox设置</h3>
+<p>选择设置，并进入Foobox设置，可以在不改变基本结构的基础上，自定义Foobar2000（后文简称fb2k）的界面。</p>
+<p><img src="/2023/05/10/004foobar2000/2.jpg"></p>
+<p>这些设置都简单易懂，比较值得一提的是列设置，通过开启/关闭列，可以改变播放界面展示的歌曲信息。</p>
+<h2 id="foobar2000的基础配置">Foobar2000的基础配置</h2>
+<p>接下来，让我们进入fb2k软件的原生配置环节。通过foobox设置中转入，或右上角菜单栏，可以进入设置选项。提示，fb2k最好开启音频独占使用。</p>
+<h3 id="播放与dsp管理器">播放与DSP管理器</h3>
 <ul>
-<li>杉橋線</li>
-</ul>
-<h3 id="私鉄">私鉄</h3>
+<li><p>播放增益：简单来讲就是播放音量与原始音量的差值</p>
 <ul>
-<li>浦山电铁</li>
-</ul>
-<h2 id="ケーブルカー"><em>ケーブルカー</em></h2>
+<li>源模式：专辑</li>
+<li>处理：应用增益并根据峰值阻止谐波失真</li>
+</ul></li>
+<li><p>DSP管理器：提供各类小工具</p>
 <ul>
-<li>白屋ロープウェイ</li>
+<li><p>高级限幅器、硬-6dB限幅器：可以减少杂音干扰，推荐开启</p></li>
+<li><p>重采样：个人认为，这东西并不是开的越高越好，要看解码器水平与音频质量，在保证不出杂音的情况下，尽可能开高。如果有解码器的朋友，记得在解码驱动程序中同时调节，保持与fb2k中采样率的一致。</p></li>
+<li><p>立体声、声道、上混等：我没用过，各位可以看心情试试</p></li>
+<li><p>交叉渐变器：听起来很牛，其实只是音乐淡入淡出</p></li>
+<li><p>跳过静音区域：字面意思</p></li>
+<li><p>均衡器：调节EQ曲线，个人喜欢原汁原味，但是据说有些耳机调了有奇效</p></li>
+</ul></li>
 </ul>
-<h2 id="空港">空港</h2>
-<p>宮越国際空港</p>
-<h2 id="海港">海港</h2>
-<h2 id="自動車道">自動車道</h2>
-<h3 id="道路">道路</h3>
+<h3 id="解码与输出">解码与输出</h3>
 <ul>
-<li>宮越自動車道</li>
-</ul>
-<h3 id="jct">JCT</h3>
+<li><p>解码：没什么要调的，勾选即可</p></li>
+<li><p>输出：放张图看看</p>
+<p><img src="/2023/05/10/004foobar2000/3.jpg"></p>
 <ul>
-<li>南滝JCT</li>
-<li>白川JCT</li>
-<li>空港JCT</li>
-<li>箱沢JCT</li>
-<li>茂野JCT</li>
-<li>宇沢JCT</li>
+<li>设备：没有解码耳放的朋友，可以选择wasapi播放，比默认略好一些；有解码耳放的朋友，可以选择asio+dsd输出（asio也可以，这里仅以自己的配置进行说明）。</li>
+<li>缓冲长度：基本保持默认即可。</li>
+<li>输出格式：声卡/解码耳放支持的最高位数。</li>
+</ul></li>
+<li><p>asio+dsd：默认即可。</p></li>
 </ul>
-<h3 id="ic">IC</h3>
+<h2 id="工具">工具</h2>
+<h3 id="dsd处理器">DSD处理器</h3>
+<p><img src="/2023/05/10/004foobar2000/4.jpg"></p>
+<p>SDM类型选择A，采样选择8×即可。输出一栏的调节俗称升频功能，需参考解码器最大支持的码率调节。升频和上文提及的重采样类似，不求极致，但求合适。由于我在解码器中已经设置了升频，因此软件中没有重复设置。</p>
+<h3 id="eslyric">ESLyric</h3>
 <ul>
-<li><p>杉橋IC</p></li>
-<li><p>浦山IC</p></li>
+<li><p>主选单：搜索按如图设置即可，是否启用桌面歌词看个人喜好</p>
+<p><img src="/2023/05/10/004foobar2000/5.jpg"></p></li>
+<li><p>歌词选项：关联全选，其余基本默认即可，保存格式为UTF-8</p></li>
+<li><p>桌面歌词：按个人喜好配置即可，分享一下我的配置：</p>
+<p><img src="/2023/05/10/004foobar2000/6.jpg"></p></li>
+<li><p>高级选项：保持默认即可</p></li>
 </ul>
+<h3 id="sacd">SACD</h3>
+<p>输出类型选择DSD，转换选择多级64fp，使用DSD处理器。声道优先看个人喜好，我选择无。剩下的直接上图看吧：</p>
+<p><img src="/2023/05/10/004foobar2000/7.jpg"></p>
+<h3 id="播放增益扫描器">播放增益扫描器</h3>
+<p>印象中基本无需更改，如图设置即可：</p>
+<p><img src="/2023/05/10/004foobar2000/8.jpg"></p>
+<p>其余项目印象中不需要什么调整，就不多讲了。</p>
+<h2 id="杂项设置">杂项设置</h2>
+<h3 id="快捷键">快捷键</h3>
+<p>可以自行添加、移除快捷键；通过点击按键栏，再用键盘指定键位的方式修改；对于暂停，下一首等常用按键，推荐勾选全局设置。</p>
+<p><img src="/2023/05/10/004foobar2000/9.jpg"></p>
+<h3 id="媒体库-可视化">媒体库 &amp; 可视化</h3>
+<p>请设置为自己音乐所在的文件目录，以便fb2k统计播放数据。</p>
+<p>可视化保持默认即可（还有一个对大多数人可有可无的网络设置也是）。</p>
+<p>这两项设置其实毫无关系，只是因为都只有一句话，就放在一起了。</p>
+<h3 id="外壳交互">外壳交互</h3>
+<p>设置如图，另外，可以在系统设置中，将主流音频格式默认关联到fb2k。</p>
+<p><img src="/2023/05/10/004foobar2000/10.jpg"></p>
+<h3 id="显示">显示</h3>
+<p>这一部分主要可以个性化设置的是主窗口栏，这依然是一个看个人喜好的设置，不妨自行调整测试，得出最适合自己的配置方案。</p>
+<h3 id="组件与高级">组件与高级</h3>
+<p>因为这是一篇基础教程，所以这两项并不会涉及，有兴趣请自行深入研究。另外，对于一般的UI整合包，必要的组件已经预安装完成，如果您使用原版fb2k，并且发现我上面提到的一些设置选项不存在，就需要安装对应的组合包了。</p>
+<p>最后想说，我本人并不专业，按照这个配置，可能无法达到最完美的播放效果。感谢各位的阅读，也欢迎各位提出自己的建议，指出我的错误！</p>
 ]]></content>
       <categories>
-        <category>娱乐</category>
-        <category>游戏</category>
+        <category>教程</category>
       </categories>
   </entry>
   <entry>
-    <title>宫越县背景设定及简介</title>
-    <url>/2023/05/15/007csl-miakoshi-01/</url>
-    <content><![CDATA[<p>城市天际线：宫越县相关设定资料，格式参考百度百科，历史背景等实在脑补不出来，以及受游戏限制，有诸多不合理的地方，内容已基本更新完成，后续会加入更多配图。</p>
+    <title>Sigil制作epub电子书入门</title>
+    <url>/2023/05/10/005sigilepub/</url>
+    <content><![CDATA[<p>开坑待填</p>
 <span id="more"></span>
-<h1 id="概要">概要</h1>
-<p>宫越县位于九州岛东南部，总面积1765.3平方公里（游戏中限于地图大小，实际约为设定的十分之一），下辖9市、5町、9村。另有1岛屿部支厅，县厅驻宫越市，是九州地区第三大都市，九州南部中心城市。宫越县总人口约158万人，2022年经济总量达7万亿日元，人均GDP约3.6万美元。宫越县主要产业以高新技术与服务业为主。</p>
-<p>宫越县内设有宫越大学、宫越文学院大学、羽贺大学等一流国公立大学。</p>
-<p>宫越县北部有高山阻隔，中心有天然良港，兴起于江户时代，主城宫越城原位于今羽贺市一带，随港口开发，发展中心逐渐转移至今天的宫越市。</p>
-<table>
-<tr>
-<td style="text-align:center;">
-中文名
-
-</td><td style="text-align:center;">
-宫越县
-
-</td><td style="text-align:center;">
-气候条件
-
-</td><td style="text-align:center;">
-亚热带海洋性季风气候
-
-</td></tr>
-<tr>
-<td style="text-align:center;">
-外文名
-</td>
-<td style="text-align:center;">
-宫越県
-</td>
-<td style="text-align:center;">
-人口数量
-</td>
-<td style="text-align:center;">
-约108万
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-行政区类别
-</td>
-<td style="text-align:center;">
-一级行政区
-</td>
-<td style="text-align:center;">
-机 场
-</td>
-<td style="text-align:center;">
-宮越国际空港
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-所属地区
-</td>
-<td style="text-align:center;">
-日本九州
-</td>
-<td style="text-align:center;">
-车牌代码
-</td>
-<td style="text-align:center;">
-宫越
-</td>
-</tr>
-</table>
-<h1 id="历史沿革">历史沿革</h1>
-<p>宫越县处于平行世界中的日本，史前时代发展未知。江户时代，宫越县首次被纳入萨摩藩国管辖，并在今羽贺市建造了宫越城。1871年，明治维新后，宫越地区设羽贺县与宫越县。由于宫越邻近天然良港越后湾，于1882年成为了九州对外开放的口岸，得到了极大发展。1893年，宫越县与羽贺县合并为新的宫越县，辖区范围自此确定。1902年，由熊本开往宫越的铁路开通，极大促进了宫越港的发展。1958年，由于临近地区煤矿产业受石油工业的冲击，宫越市成为了九州南部最大都市。1962年，宫越机场投入使用。2013年，东九州新干线开通，宫越的交通枢纽地位进一步得到巩固。</p>
-<h1 id="行政区划">行政区划</h1>
-<p>宫越县辖有9市、5町、9村、1个岛屿部支厅，共24市町村，全县按经济、文化、历史分为羽贺、越中、丹波三个地区，羽贺地区是宫越县最大都市圈所在地，拥有两大政令指定都市，包括：宮越市（下辖港区、増田区、宇沢区、川瀬区、南浜区）、羽賀市（下辖羽賀区、西区、東区）、吉田市、須間市、石見町、高森村。越中地区是宫越县的粮仓，中心城市是浦山市，包括：浦山市、浅井市、佐岡市、富田市、杉橋町、愛濃町、白屋岳村、白鳥村、南滝村、木津村。丹波地区是宫越机场所在地，包括：関原市、玉崎町、茂野町、森戸村、箱沢村、丹波村、松島支厅。</p>
-<figure>
-<table>
-<thead>
-<tr>
-<th colspan="7" style="text-align:center;">
-宮越県(県庁の所在地：宮越市)
-</th></tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="3" style="text-align:center;">
-市
-</td>
-<td style="text-align:center;">
-政令指定都市
-</td>
-<td style="text-align:center;">
-宮越
-</td>
-<td style="text-align:center;">
-羽賀
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-</tr>
-<tr>
-<td rowspan="2" style="text-align:center;">
-一般市
-</td>
-<td style="text-align:center;">
-関原
-</td>
-<td style="text-align:center;">
-浦山
-</td>
-<td style="text-align:center;">
-浅井
-</td>
-<td style="text-align:center;">
-佐岡
-</td>
-<td style="text-align:center;">
-吉田
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-富田
-</td>
-<td style="text-align:center;">
-須間
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-</tr>
-<tr>
-<td colspan="2" style="text-align:center;">
-町
-</td>
-<td style="text-align:center;">
-茂野
-</td>
-<td style="text-align:center;">
-玉崎
-</td>
-<td style="text-align:center;">
-杉橋
-</td>
-<td style="text-align:center;">
-愛濃
-</td>
-<td style="text-align:center;">
-石見
-</td>
-</tr>
-<tr>
-<td colspan="2" rowspan="2" style="text-align:center;">
-村
-</td>
-<td style="text-align:center;">
-木津
-</td>
-<td style="text-align:center;">
-高森
-</td>
-<td style="text-align:center;">
-白屋岳
-</td>
-<td style="text-align:center;">
-奈砦
-</td>
-<td style="text-align:center;">
-森戸
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-白鳥
-</td>
-<td style="text-align:center;">
-丹波
-</td>
-<td style="text-align:center;">
-箱沢
-</td>
-<td style="text-align:center;">
-南滝
-</td>
-<td>
- 
-</td>
-</tr>
-<tr>
-<td colspan="2" style="text-align:center;">
-島嶼部
-</td>
-<td style="text-align:center;">
-松島支厅
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-</tr>
-</tbody>
-</table>
-</figure>
-<h1 id="地理环境">地理环境</h1>
-<h2 id="地形">地形</h2>
-<p>宫越县的中心为天然深水港越后湾，西、北、东三面依次有白津山脉、越中山脉、羽前山脉及箱崎山脉，并将越后湾北侧划分为佐冈谷地、越后平原和羽贺平原。白津山脉延伸形成南津半岛，其西侧是爱浓平原，箱崎山脉东侧为丹前平原。越后湾南侧是丹波半岛，以低矮丘陵为主，称丹后丘陵。丹波半岛与西北侧陆地间由丹贺海峡阻隔。在丹波半岛东南方向，分布有松岛诸岛，在松岛诸岛与丹波半岛间是奈波湾。宫越县的中心为越后平原和羽贺平原。</p>
-<p><img src="/2023/05/15/007csl-miakoshi-01/terrain.png"></p>
-<h2 id="水文">水文</h2>
-<p>宫越县内三条主要河流为白津、宇前川和东防川，均注入越后湾；此外，还有浓川、箱泽等小型河流。比较特殊的是，宇前川和东防川都在入海前分流，并形成了川濑岛与吉田岛。</p>
-<h2 id="气候">气候</h2>
-<p>川越县整体属亚热带海洋性季风气候，较为温暖，年平均气温约17.6℃，1月平均气温约7-8℃，8月平均气温约27-30℃。平原地区年降水量约1,700至1,900毫米，部分山地的年降水量可达近3,000毫米。</p>
-<h1 id="人口">人口</h1>
-<p>2022年，宫越县总人口约158万，人口增长率约为0.1%。县厅驻地宫越市人口达79万，年增长率高达3.2%，是九州南部最具活力的都市。</p>
-<h1 id="经济">经济</h1>
-<p>2022年度，宫越县县内生产总值达76273.26亿日元，其中第一产业占比3.5%、第二产业占比36.1%、第三产业占比60.4%。</p>
-<h2 id="第一产业">第一产业</h2>
-<p>2022年，宫越县第一产业总产值约为2669.7亿日元，是九州地区的农业大县。宫越县第一产业主要以集中型机械化农业与渔业为主，主要产物为越后粳米和青蟹等，被誉为“九州稻城“。</p>
-<h2 id="第二产业">第二产业</h2>
-<p>2022年，宫越县第二产业总产值约为27534.3亿日元，以能源产业和高端制造为主。杉桥核电站作为西日本地区第二大的核电站，为九州岛乃至周边地区输送大量电力。宫越同时是九州地区高新产业的中心，高端制造行业发展迅速，结合信息化管理，产品得以向全世界出口。</p>
-<h2 id="第三产业">第三产业</h2>
-<p>宫越县第三产业发达，2022年总产值约为46068.9亿日元。宫越县拥有南九州银行、羽贺银行等地方银行，以及多家互联网龙头企业。宫越县因其美丽的海岸线与发达的交通，年吸引游客近2亿人次，带来了大量游客消费。</p>
-<h1 id="交通状况">交通状况</h1>
-<p>详见<a href="http://octdafu.com/2023/05/15/008csl-miakoshi-02/">宫越县交通综合概要
-| Down the Rabbit Hole (octdafu.com)</a></p>
-<h1 id="社会事业">社会事业</h1>
-<h2 id="文化事业">文化事业</h2>
-<p>宫越县有图书馆28家，体育设施62处，主要报纸为《羽贺新闻》、《越后新闻》，有宫越电台及宫越电视台、羽贺电视台。</p>
-<h2 id="教育事业">教育事业</h2>
-<p>宫越县有小学305所，初中181所，高中91所，高等院校12所，主要大学为：</p>
-<ul>
-<li><p>国立：宫越大学、宫越文学院大学、羽贺大学</p>
-<p><img src="/2023/05/15/007csl-miakoshi-01/university.jpg"></p></li>
-<li><p>公立：宫越教育大学、羽贺工业大学</p></li>
-<li><p>专科：宇前川短期大学、浦山女子短期大学、丹后短期大学</p></li>
-<li><p>私立：宇泽药科大学、宫越女子大学、南九州情报大学、松岛海事大学</p></li>
-</ul>
-<h2 id="医疗卫生">医疗卫生</h2>
-<p>宫越县有医院、诊所共1521所。</p>
 ]]></content>
       <categories>
-        <category>娱乐</category>
-        <category>游戏</category>
+        <category>教程</category>
       </categories>
   </entry>
   <entry>
@@ -2756,6 +2445,317 @@ E\)</span>越大.</p></li>
       </categories>
   </entry>
   <entry>
+    <title>宫越县背景设定及简介</title>
+    <url>/2023/05/15/007csl-miakoshi-01/</url>
+    <content><![CDATA[<p>城市天际线：宫越县相关设定资料，格式参考百度百科，历史背景等实在脑补不出来，以及受游戏限制，有诸多不合理的地方，内容已基本更新完成，后续会加入更多配图。</p>
+<span id="more"></span>
+<h1 id="概要">概要</h1>
+<p>宫越县位于九州岛东南部，总面积1765.3平方公里（游戏中限于地图大小，实际约为设定的十分之一），下辖9市、5町、9村。另有1岛屿部支厅，县厅驻宫越市，是九州地区第三大都市，九州南部中心城市。宫越县总人口约158万人，2022年经济总量达7万亿日元，人均GDP约3.6万美元。宫越县主要产业以高新技术与服务业为主。</p>
+<p>宫越县内设有宫越大学、宫越文学院大学、羽贺大学等一流国公立大学。</p>
+<p>宫越县北部有高山阻隔，中心有天然良港，兴起于江户时代，主城宫越城原位于今羽贺市一带，随港口开发，发展中心逐渐转移至今天的宫越市。</p>
+<table>
+<tr>
+<td style="text-align:center;">
+中文名
+
+</td><td style="text-align:center;">
+宫越县
+
+</td><td style="text-align:center;">
+气候条件
+
+</td><td style="text-align:center;">
+亚热带海洋性季风气候
+
+</td></tr>
+<tr>
+<td style="text-align:center;">
+外文名
+</td>
+<td style="text-align:center;">
+宫越県
+</td>
+<td style="text-align:center;">
+人口数量
+</td>
+<td style="text-align:center;">
+约108万
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+行政区类别
+</td>
+<td style="text-align:center;">
+一级行政区
+</td>
+<td style="text-align:center;">
+机 场
+</td>
+<td style="text-align:center;">
+宮越国际空港
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+所属地区
+</td>
+<td style="text-align:center;">
+日本九州
+</td>
+<td style="text-align:center;">
+车牌代码
+</td>
+<td style="text-align:center;">
+宫越
+</td>
+</tr>
+</table>
+<h1 id="历史沿革">历史沿革</h1>
+<p>宫越县处于平行世界中的日本，史前时代发展未知。江户时代，宫越县首次被纳入萨摩藩国管辖，并在今羽贺市建造了宫越城。1871年，明治维新后，宫越地区设羽贺县与宫越县。由于宫越邻近天然良港越后湾，于1882年成为了九州对外开放的口岸，得到了极大发展。1893年，宫越县与羽贺县合并为新的宫越县，辖区范围自此确定。1902年，由熊本开往宫越的铁路开通，极大促进了宫越港的发展。1958年，由于临近地区煤矿产业受石油工业的冲击，宫越市成为了九州南部最大都市。1962年，宫越机场投入使用。2013年，东九州新干线开通，宫越的交通枢纽地位进一步得到巩固。</p>
+<h1 id="行政区划">行政区划</h1>
+<p>宫越县辖有9市、5町、9村、1个岛屿部支厅，共24市町村，全县按经济、文化、历史分为羽贺、越中、丹波三个地区，羽贺地区是宫越县最大都市圈所在地，拥有两大政令指定都市，包括：宮越市（下辖港区、増田区、宇沢区、川瀬区、南浜区）、羽賀市（下辖羽賀区、西区、東区）、吉田市、須間市、石見町、高森村。越中地区是宫越县的粮仓，中心城市是浦山市，包括：浦山市、浅井市、佐岡市、富田市、杉橋町、愛濃町、白屋岳村、白鳥村、南滝村、木津村。丹波地区是宫越机场所在地，包括：関原市、玉崎町、茂野町、森戸村、箱沢村、丹波村、松島支厅。</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th colspan="7" style="text-align:center;">
+宮越県(県庁の所在地：宮越市)
+</th></tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3" style="text-align:center;">
+市
+</td>
+<td style="text-align:center;">
+政令指定都市
+</td>
+<td style="text-align:center;">
+宮越
+</td>
+<td style="text-align:center;">
+羽賀
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align:center;">
+一般市
+</td>
+<td style="text-align:center;">
+関原
+</td>
+<td style="text-align:center;">
+浦山
+</td>
+<td style="text-align:center;">
+浅井
+</td>
+<td style="text-align:center;">
+佐岡
+</td>
+<td style="text-align:center;">
+吉田
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+富田
+</td>
+<td style="text-align:center;">
+須間
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center;">
+町
+</td>
+<td style="text-align:center;">
+茂野
+</td>
+<td style="text-align:center;">
+玉崎
+</td>
+<td style="text-align:center;">
+杉橋
+</td>
+<td style="text-align:center;">
+愛濃
+</td>
+<td style="text-align:center;">
+石見
+</td>
+</tr>
+<tr>
+<td colspan="2" rowspan="2" style="text-align:center;">
+村
+</td>
+<td style="text-align:center;">
+木津
+</td>
+<td style="text-align:center;">
+高森
+</td>
+<td style="text-align:center;">
+白屋岳
+</td>
+<td style="text-align:center;">
+奈砦
+</td>
+<td style="text-align:center;">
+森戸
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+白鳥
+</td>
+<td style="text-align:center;">
+丹波
+</td>
+<td style="text-align:center;">
+箱沢
+</td>
+<td style="text-align:center;">
+南滝
+</td>
+<td>
+ 
+</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center;">
+島嶼部
+</td>
+<td style="text-align:center;">
+松島支厅
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<h1 id="地理环境">地理环境</h1>
+<h2 id="地形">地形</h2>
+<p>宫越县的中心为天然深水港越后湾，西、北、东三面依次有白津山脉、越中山脉、羽前山脉及箱崎山脉，并将越后湾北侧划分为佐冈谷地、越后平原和羽贺平原。白津山脉延伸形成南津半岛，其西侧是爱浓平原，箱崎山脉东侧为丹前平原。越后湾南侧是丹波半岛，以低矮丘陵为主，称丹后丘陵。丹波半岛与西北侧陆地间由丹贺海峡阻隔。在丹波半岛东南方向，分布有松岛诸岛，在松岛诸岛与丹波半岛间是奈波湾。宫越县的中心为越后平原和羽贺平原。</p>
+<p><img src="/2023/05/15/007csl-miakoshi-01/terrain.png"></p>
+<h2 id="水文">水文</h2>
+<p>宫越县内三条主要河流为白津、宇前川和东防川，均注入越后湾；此外，还有浓川、箱泽等小型河流。比较特殊的是，宇前川和东防川都在入海前分流，并形成了川濑岛与吉田岛。</p>
+<h2 id="气候">气候</h2>
+<p>川越县整体属亚热带海洋性季风气候，较为温暖，年平均气温约17.6℃，1月平均气温约7-8℃，8月平均气温约27-30℃。平原地区年降水量约1,700至1,900毫米，部分山地的年降水量可达近3,000毫米。</p>
+<h1 id="人口">人口</h1>
+<p>2022年，宫越县总人口约158万，人口增长率约为0.1%。县厅驻地宫越市人口达79万，年增长率高达3.2%，是九州南部最具活力的都市。</p>
+<h1 id="经济">经济</h1>
+<p>2022年度，宫越县县内生产总值达76273.26亿日元，其中第一产业占比3.5%、第二产业占比36.1%、第三产业占比60.4%。</p>
+<h2 id="第一产业">第一产业</h2>
+<p>2022年，宫越县第一产业总产值约为2669.7亿日元，是九州地区的农业大县。宫越县第一产业主要以集中型机械化农业与渔业为主，主要产物为越后粳米和青蟹等，被誉为“九州稻城“。</p>
+<h2 id="第二产业">第二产业</h2>
+<p>2022年，宫越县第二产业总产值约为27534.3亿日元，以能源产业和高端制造为主。杉桥核电站作为西日本地区第二大的核电站，为九州岛乃至周边地区输送大量电力。宫越同时是九州地区高新产业的中心，高端制造行业发展迅速，结合信息化管理，产品得以向全世界出口。</p>
+<h2 id="第三产业">第三产业</h2>
+<p>宫越县第三产业发达，2022年总产值约为46068.9亿日元。宫越县拥有南九州银行、羽贺银行等地方银行，以及多家互联网龙头企业。宫越县因其美丽的海岸线与发达的交通，年吸引游客近2亿人次，带来了大量游客消费。</p>
+<h1 id="交通状况">交通状况</h1>
+<p>详见<a href="http://octdafu.com/2023/05/15/008csl-miakoshi-02/">宫越县交通综合概要
+| Down the Rabbit Hole (octdafu.com)</a></p>
+<h1 id="社会事业">社会事业</h1>
+<h2 id="文化事业">文化事业</h2>
+<p>宫越县有图书馆28家，体育设施62处，主要报纸为《羽贺新闻》、《越后新闻》，有宫越电台及宫越电视台、羽贺电视台。</p>
+<h2 id="教育事业">教育事业</h2>
+<p>宫越县有小学305所，初中181所，高中91所，高等院校12所，主要大学为：</p>
+<ul>
+<li><p>国立：宫越大学、宫越文学院大学、羽贺大学</p>
+<p><img src="/2023/05/15/007csl-miakoshi-01/university.jpg"></p></li>
+<li><p>公立：宫越教育大学、羽贺工业大学</p></li>
+<li><p>专科：宇前川短期大学、浦山女子短期大学、丹后短期大学</p></li>
+<li><p>私立：宇泽药科大学、宫越女子大学、南九州情报大学、松岛海事大学</p></li>
+</ul>
+<h2 id="医疗卫生">医疗卫生</h2>
+<p>宫越县有医院、诊所共1521所。</p>
+]]></content>
+      <categories>
+        <category>娱乐</category>
+        <category>游戏</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>宫越县交通综合概要</title>
+    <url>/2023/05/15/008csl-miakoshi-02/</url>
+    <content><![CDATA[<p>城市天际线：宫越县交通相关内容。</p>
+<p>更新坏档了，这篇以后估计更新不能了（哭）</p>
+<span id="more"></span>
+<h2 id="铁道">铁道</h2>
+<h3 id="jr九州">JR九州</h3>
+<h4 id="新幹線">新幹線</h4>
+<p>東九州新幹線</p>
+<h4 id="在来線">在来線</h4>
+<ul>
+<li>杉橋線</li>
+</ul>
+<h3 id="私鉄">私鉄</h3>
+<ul>
+<li>浦山电铁</li>
+</ul>
+<h2 id="ケーブルカー"><em>ケーブルカー</em></h2>
+<ul>
+<li>白屋ロープウェイ</li>
+</ul>
+<h2 id="空港">空港</h2>
+<p>宮越国際空港</p>
+<h2 id="海港">海港</h2>
+<h2 id="自動車道">自動車道</h2>
+<h3 id="道路">道路</h3>
+<ul>
+<li>宮越自動車道</li>
+</ul>
+<h3 id="jct">JCT</h3>
+<ul>
+<li>南滝JCT</li>
+<li>白川JCT</li>
+<li>空港JCT</li>
+<li>箱沢JCT</li>
+<li>茂野JCT</li>
+<li>宇沢JCT</li>
+</ul>
+<h3 id="ic">IC</h3>
+<ul>
+<li><p>杉橋IC</p></li>
+<li><p>浦山IC</p></li>
+</ul>
+]]></content>
+      <categories>
+        <category>娱乐</category>
+        <category>游戏</category>
+      </categories>
+  </entry>
+  <entry>
     <title>日式城市命名思路</title>
     <url>/2023/05/17/009pyrandomname/</url>
     <content><![CDATA[<p>最近在天际线中建造日式城市时，经常需要为城市中的行政区划和轨道线路等命名，那么如何创作出合适的日式城市名称呢？</p>
@@ -2771,313 +2771,6 @@ E\)</span>越大.</p></li>
 ]]></content>
       <categories>
         <category>教程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>个人服务器配置简介</title>
-    <url>/2023/08/15/012server/</url>
-    <content><![CDATA[<p>期末周、小学期、军训、旅游、实习堆在一起……很久没更新了，今天简单更新一篇小学期自己装服务器的大概情况吧。</p>
-<span id="more"></span>
-<h1 id="起因">起因</h1>
-<p>最初也是最必要的问题，为什么要装服务器？云服务器的价格其实并不算贵，也可以满足大部分个人用户的需求。对我来讲，主要有这几大原因：</p>
-<ol type="1">
-<li>个人服务器可以有更多操作空间，更多的可玩性，扩充我的知识面。</li>
-<li>只拆过机，没装过机，低成本试一试，正好小学期也能有点事情做。</li>
-<li>宿舍尚有空座与闲置的网络接口，并且不会断电。</li>
-</ol>
-<h1 id="配置">配置</h1>
-<p>由于第一次装机，配件都是淘宝上买的，以全新为主。</p>
-<table>
-<tr>
-<td style="text-align:center;">
-主板
-
-</td><td style="text-align:center;">
-微星 PRO H610M
-
-</td><td style="text-align:center;">
-CPU
-
-</td><td style="text-align:center;">
-i3 12100F 散片
-
-</td></tr>
-<tr>
-<td style="text-align:center;">
-散热
-</td>
-<td style="text-align:center;">
-利民 AX120R
-</td>
-<td style="text-align:center;">
-显卡
-</td>
-<td style="text-align:center;">
-蓝宝石 RX580 8G
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-内存
-</td>
-<td style="text-align:center;">
-金士顿 DDR4 8G*2
-</td>
-<td style="text-align:center;">
-硬盘
-</td>
-<td style="text-align:center;">
-sk900 固态 128G + 希捷绿盘 机械 4T
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-电源
-</td>
-<td style="text-align:center;">
-长城铜牌 P500 全出线 500W
-</td>
-<td style="text-align:center;">
-UPS
-</td>
-<td style="text-align:center;">
-雷迪斯 H1000M 600W
-</td>
-</tr>
-</table>
-<p>系统方面。选择了Ubuntu 22.04。</p>
-<h1 id="用途">用途</h1>
-<ol type="1">
-<li>勿忘初心，搭网站这类是必须的</li>
-<li>Ubuntu系统不仅对服务器搭建较为友好，同时也可以接触一下Linux操作</li>
-<li>准备将玩过的游戏，喜欢的音乐以及其他资料在服务器中储存，并使用nextcloud进行云端共享</li>
-<li>网络条件允许的话，可以试着搭建宿舍简易影音服务站</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>浅谈实习经历</title>
-    <url>/2023/08/15/013xcmgwork/</url>
-    <content><![CDATA[<p>专业要求实习20天，前几天去实习了一周水一水，稍微聊聊吧。</p>
-<span id="more"></span>
-<h1 id="我想说的话">我想说的话</h1>
-<p>我做了什么其实并不是最重要的，这些和我在实习报告中写的差不多，无非把时间从一周扩到了一个月而已。因此，我只想讲讲我对这个实习本身，以及我对于企业和工作的浅薄看法。</p>
-<p>首先，我想明确一点，在我未来发展方向中，不会存在留校、考公这类选择，因此，除去创业，企业基本成了我最主要的去向。显然，学校和企业间有着巨大的区别。</p>
-<p>从简单又不怎么靠谱的一点讲起，在学校上学，即使一天安排满了课，我只吃一顿饭都不会有什么影响；但是实习这几天，我每天三餐不仅要吃，还吃的很多。这说明：听课、做作业的劳动强度要远远低于任务驱动的企业实际工作，即使两者都是脑力劳动。这导致很多学生毕业后会出现较大的不适应。</p>
-<p>另外，在学校上课时，即使不认真听课，也没有强制力制止你；但是在企业，上班摸鱼直接面对着扣工资等严厉惩罚。一方面，这的确有利于效率提高——至少我这几天的效率要高了一些。但是另一方面，每周的996，加上这种精神高压，很容易加剧人的劳累，这与所谓高考、考研等似乎不相上下。</p>
-<p>不过，我们也要时刻记住，企业并不如大学单纯。观察前辈的工作，我发现，很多时候，各种请示、电话、等候浪费了大量的时间，导致了各类并不很有意义的交流，然而这就是绝大多数企业日常的一环。不同于大学内部只有同学、老师的简单关系，领导、同事、下属，在企业内除了提供必要帮助外，也成了一种桎梏。</p>
-<p>上面几段我所写的，都表明了大学与企业的差异。因此，在大学阶段提前进行实习，熟悉职场环境，对毕业后适应工作大有裨益，而这恰恰是多数学校所欠缺的。我所在的学校姑且还算不错，但真正去实习，而非走马观花的参观的专业，依然寥寥无几。虽然大一就实习或许早了一些，时间也显得稍长，但我还是很感谢这次机会，让我认清了一些事，可以在未来发展面上看到更加现实的道路。</p>
-<h1 id="写在官方的话">写在官方的话</h1>
-<p>最后附上准备交给学校的实习报告，有兴趣也可以看看。</p>
-<h2 id="实习目的及计划">实习目的及计划</h2>
-<p>在本次实习中，我希望结合大一所学的知识，进入生产制造企业实习。在能力上，我希望能够学习产品加工的工艺及流程，同时练习提高自己平面制图与三维建模的水平等；在思维上，我希望能够了解企业日常工作程序及企业文化，提高自身协作交流能力，为日后在企业继续更深入的实习、工作做准备。</p>
-<p>本次实习，我计划到**有限公司的工艺技术部实习，主要工作包括调查研究企业的文化与价值观念，参观或动手操作加工设备，协助进行绘图或建模等。</p>
-<h2 id="实习期完成任务">实习期完成任务</h2>
-<ol type="1">
-<li><p>干了些什么？</p>
-<p>本次实习共历时四周，计20工作日，所在部门为**有限公司工艺技术部，并分配至起重机臂班组。</p></li>
-</ol>
-<ul>
-<li>在第一周，我熟悉了工作环境，通过了安全教育考试，对企业的价值观、发展观等进行了调查，并协助了一些简单的文件操作。</li>
-<li>在第二周，我主要在车间进行参观（因企业车间实操培训时间过长所限，无法实际操作），并协助师傅对新型起重机臂的各类结构数据进行测量计算，以备后续改进使用。</li>
-<li>在第三周，我利用AutoCAD，计算并绘制了几种型号起重机各级起重臂上下盖板折弯的工艺附图，并制作了对应的焊接操作指导书。</li>
-<li>在第四周，我在进行了公司的Pro/E基础考查后，利用该软件协助进行了起重机臂的三维建模，主要负责滑轮支架、折弯钣金件等的建模与小型结构装配。</li>
-</ul>
-<ol start="2" type="1">
-<li>学到什么？</li>
-</ol>
-<ul>
-<li>在第一周，通过交流调查等，学习了企业工作的注意事项、工作流程，进行了企业、部门、班组的三级安全教育，学习了解了安全在制造企业中的地位及相关注意事项，在初步简单工作中学习了部门各项文件的要求及格式等。</li>
-<li>在第二周，我在车间学到了中小型起重机（单缸拉索式）与中大型起重机（双缸插销式）的不同工作原理及制造流程。学习了起重机臂型号读取与数据测算，掌握了相关测量工具的使用方法。</li>
-<li>在第三周，我学习了公司的焊接工艺要求及不同型号机臂的精度要求、计算方法，了解了工艺附图及焊接操作指导书的格式，以及实际生产中的应用。</li>
-<li>在第四周，我接受了部门的Pro/E基础教学，并通过实际案例，掌握了Pro/E中草图绘制，三维建模，钣金件弯折及多个零件的装配组合等操作。</li>
-</ul>
-<ol start="3" type="1">
-<li>听到和见到的</li>
-</ol>
-<ul>
-<li>在第一周，我听到了不同员工、领导对公司工作模式、价值观及未来发展的理解，见到了实际的职场环境与工作流程。</li>
-<li>在第二周，我在车间见到了中大型起重机下料、焊接、装配、喷漆等工序的全流程，听到了一线工人在生产中的注意事项及心得体会。</li>
-<li>在第三周，我听到了部门前辈对新型起重臂改进方案的讨论，见到了几次方案试制的产品及最终确定的成品。</li>
-<li>在第四周，我见到了协助进行建模的机臂的整体结构等。</li>
-</ul>
-<h2 id="实习收获和体会">实习收获和体会</h2>
-<ol type="1">
-<li>通过与部门领导、员工交流，深入理解了部门的精神，懂得了尽己所能完成应尽的职责，学会交流合作，才能成大事。校园与企业有着很大的区别，我在这里得以发现实践的重要性，认识到生产安全的最高地位。</li>
-<li>通过了解大型机械制造流程，加深了对工业设计师职责的认识，对于各项工艺流程都应当有较为明确的了解与规划，并能仔细发现问题，提出合适的解决、改进办法。</li>
-<li>在产品制造销售中，创新性与安全性都是重中之重，没有创新就无法给企业、市场带来活力，促进技术进步，提高产品核心竞争力；没有安全性就无法保证产品的稳定使用，无法在实际生产生活中发挥产品的作用。因此，产品制造上游的开发与下游的测试应当相互促进彼此完善，这也是工业设计师所发挥的重要作用之一。</li>
-<li>不同的公司在实际设计中很可能使用不同的软件，这次实习期间的部分软件也是我从未接触过的，但是各类建模软件往往有相同之处，掌握核心思想后，通过实际操作练习，即可较为顺利的学习运用。</li>
-</ol>
-<h2 id="实习过程中自己的不足之处">实习过程中自己的不足之处</h2>
-<ol type="1">
-<li>由于是第一次实习，我较为缺乏经验，因此在实习之初不够自信，不敢加入部门的交流讨论等；但随着经历不断丰富，我在实习后期能够更为积极主动的参与工作和讨论，在以后的实习中，应该继续提高交流合作能力，发挥自身作用。</li>
-<li>缺少作为工业设计师的宏观认识，在生产中往往只能针对产品的部分环节进行思考，没有考虑制造流程及产品的全貌；在学习和日常中，应该多多丰富充实自己的认知，从而在整体上规划设计产品及工艺等。</li>
-<li>在工作中较为循规蹈矩，以完成分配的任务为主，很少能提出创造性的意见；这与设计思维的缺乏息息相关，应该多观察，多思考，发现每一处值得改进的地方，发掘每一个适于创新的想法。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>杂记</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Octrans</title>
-    <url>/2023/05/21/011Octrans/</url>
-    <content><![CDATA[<p>Octrans是一款基于百度api的翻译软件，由本人自制，功能一般，bug也很多，欢迎各位指正！</p>
-<span id="more"></span>
-<p>当前版本：V2.1</p>
-<p>下载地址：https://pan.baidu.com/s/1N8ADTEyUZFUs2NYZceDkmA</p>
-<p>提取码：hgqq</p>
-<h1 id="说明">说明</h1>
-<h2 id="v1.0">V1.0</h2>
-<ul>
-<li>使用PyQt5编写了简单的图形界面</li>
-<li>可以选择翻译使用的语言与系统语言</li>
-<li>实现单行文字的翻译</li>
-</ul>
-<h2 id="v2.0">V2.0</h2>
-<ul>
-<li><p>通过在输入栏打入多行文字或导入txt文件进行翻译</p></li>
-<li><p>可以将翻译结果导出到txt文件</p></li>
-</ul>
-<h2 id="v2.1">V2.1</h2>
-<ul>
-<li>优化了系统语言设置</li>
-<li>为文件的保存和读取设置了快捷键</li>
-</ul>
-<h2 id="v2.2">V2.2</h2>
-<ul>
-<li>将应用程序进一步封装，并隐藏了控制台</li>
-<li>修改了版本显示错误</li>
-</ul>
-<h1 id="源码">源码</h1>
-<h2 id="ui部分">UI部分</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtCore, QtGui, QtWidgets</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">cndic=&#123;</span><br><span class="line">            <span class="string">&quot;汉语&quot;</span>:<span class="string">&#x27;zh&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;英语&quot;</span>:<span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;粤语&quot;</span>:<span class="string">&#x27;yue&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;文言文&quot;</span>:<span class="string">&#x27;wyw&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;法语&quot;</span>:<span class="string">&#x27;fra&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;德语&quot;</span>:<span class="string">&#x27;de&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;日语&quot;</span>:<span class="string">&#x27;jp&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;韩语&quot;</span>:<span class="string">&#x27;kor&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;西班牙语&quot;</span>:<span class="string">&#x27;spa&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;葡萄牙语&quot;</span>:<span class="string">&#x27;pt&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;意大利语&quot;</span>:<span class="string">&#x27;it&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;阿拉伯语&quot;</span>:<span class="string">&#x27;ara&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">endic=&#123;</span><br><span class="line">            <span class="string">&quot;Mandarin&quot;</span>:<span class="string">&#x27;zh&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;English&quot;</span>:<span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Cantonese&quot;</span>:<span class="string">&#x27;yue&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Classical Chinese&quot;</span>:<span class="string">&#x27;wyw&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;French&quot;</span>:<span class="string">&#x27;fra&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;German&quot;</span>:<span class="string">&#x27;de&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Japanese&quot;</span>:<span class="string">&#x27;jp&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Korean&quot;</span>:<span class="string">&#x27;kor&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Spanish&quot;</span>:<span class="string">&#x27;spa&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Portuguese&quot;</span>:<span class="string">&#x27;pt&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Italian&quot;</span>:<span class="string">&#x27;it&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Arabic&quot;</span>:<span class="string">&#x27;ara&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">ch_intro=<span class="string">&quot;欢迎使用Octrans！这是一个基于百度api的简易翻译器，支持多种语言的翻译，感谢您的使用和支持！&quot;</span></span><br><span class="line">en_intro=<span class="string">&quot;Welcome to Octrans! This is a simle translator based on Baidu api, which supports translation between varies of languages. Thanks for using!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ui_Octrans</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">setupUi</span>(<span class="params">self, Octrans</span>):</span><br><span class="line">        Octrans.setObjectName(<span class="string">&quot;Octrans&quot;</span>)</span><br><span class="line">        Octrans.resize(<span class="number">780</span>, <span class="number">587</span>)</span><br><span class="line">        self.centralwidget = QtWidgets.QWidget(Octrans)</span><br><span class="line">        self.centralwidget.setObjectName(<span class="string">&quot;centralwidget&quot;</span>)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)</span><br><span class="line">        self.gridLayout.setObjectName(<span class="string">&quot;gridLayout&quot;</span>)</span><br><span class="line">        self.lanchoice = QtWidgets.QComboBox(self.centralwidget)</span><br><span class="line">        self.lanchoice.setObjectName(<span class="string">&quot;lanchoice&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.lanchoice, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.inptext = QtWidgets.QTextEdit(self.centralwidget)</span><br><span class="line">        self.inptext.setObjectName(<span class="string">&quot;inptext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.inptext, <span class="number">2</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.transbut = QtWidgets.QPushButton(self.centralwidget)</span><br><span class="line">        self.transbut.setObjectName(<span class="string">&quot;transbut&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.transbut, <span class="number">3</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.introtext = QtWidgets.QLabel(self.centralwidget)</span><br><span class="line">        self.introtext.setTextFormat(QtCore.Qt.MarkdownText)</span><br><span class="line">        self.introtext.setObjectName(<span class="string">&quot;introtext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.introtext, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.outext = QtWidgets.QTextEdit(self.centralwidget)</span><br><span class="line">        self.outext.setObjectName(<span class="string">&quot;outext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.outext, <span class="number">4</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        Octrans.setCentralWidget(self.centralwidget)</span><br><span class="line">        self.menubar = QtWidgets.QMenuBar(Octrans)</span><br><span class="line">        self.menubar.setGeometry(QtCore.QRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">780</span>, <span class="number">22</span>))</span><br><span class="line">        self.menubar.setObjectName(<span class="string">&quot;menubar&quot;</span>)</span><br><span class="line">        self.Filem = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.Filem.setObjectName(<span class="string">&quot;Filem&quot;</span>)</span><br><span class="line">        self.settingm = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.settingm.setObjectName(<span class="string">&quot;settingm&quot;</span>)</span><br><span class="line">        self.menulanm = QtWidgets.QMenu(self.settingm)</span><br><span class="line">        self.menulanm.setObjectName(<span class="string">&quot;menulanm&quot;</span>)</span><br><span class="line">        self.Instm = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.Instm.setObjectName(<span class="string">&quot;Instm&quot;</span>)</span><br><span class="line">        Octrans.setMenuBar(self.menubar)</span><br><span class="line">        self.statusbar = QtWidgets.QStatusBar(Octrans)</span><br><span class="line">        self.statusbar.setObjectName(<span class="string">&quot;statusbar&quot;</span>)</span><br><span class="line">        Octrans.setStatusBar(self.statusbar)</span><br><span class="line">        self.openm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.openm.setObjectName(<span class="string">&quot;openm&quot;</span>)</span><br><span class="line">        self.savem = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.savem.setObjectName(<span class="string">&quot;savem&quot;</span>)</span><br><span class="line">        self.chm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.chm.setObjectName(<span class="string">&quot;chm&quot;</span>)</span><br><span class="line">        self.enm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.enm.setObjectName(<span class="string">&quot;enm&quot;</span>)</span><br><span class="line">        self.Filem.addAction(self.openm)</span><br><span class="line">        self.Filem.addAction(self.savem)</span><br><span class="line">        self.menulanm.addAction(self.chm)</span><br><span class="line">        self.menulanm.addAction(self.enm)</span><br><span class="line">        self.settingm.addAction(self.menulanm.menuAction())</span><br><span class="line">        self.menubar.addAction(self.Filem.menuAction())</span><br><span class="line">        self.menubar.addAction(self.settingm.menuAction())</span><br><span class="line"></span><br><span class="line">        self.retranslateUi(Octrans)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(Octrans)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">retranslateUi</span>(<span class="params">self, Octrans</span>):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        Octrans.setWindowTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;Octrans-Version 2.0&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;汉语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;英语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;粤语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;文言文&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;法语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;德语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;日语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;韩语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;西班牙语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;葡萄牙语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;意大利语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;阿拉伯语&quot;</span>))</span><br><span class="line">        self.transbut.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;翻译&quot;</span>))</span><br><span class="line">        self.introtext.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, ch_intro))</span><br><span class="line">        self.introtext.setWordWrap(<span class="literal">True</span>)</span><br><span class="line">        self.Filem.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;文件&quot;</span>))</span><br><span class="line">        self.settingm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;设置&quot;</span>))</span><br><span class="line">        self.Instm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>,<span class="string">&quot;说明&quot;</span>))</span><br><span class="line">        self.menulanm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;系统语言&quot;</span>))</span><br><span class="line">        self.openm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;打开&quot;</span>))</span><br><span class="line">        self.openm.setShortcut(<span class="string">&#x27;ctrl+d&#x27;</span>)</span><br><span class="line">        self.savem.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;保存&quot;</span>))</span><br><span class="line">        self.savem.setShortcut(<span class="string">&#x27;ctrl+s&#x27;</span>)</span><br><span class="line">        self.chm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;中文&quot;</span>))</span><br><span class="line">        self.enm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;English&quot;</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">userlangchoice</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> (self.lanchoice.currentText() <span class="keyword">in</span> cndic)==<span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">return</span> cndic[self.lanchoice.currentText()]</span><br><span class="line">        <span class="keyword">if</span> (self.lanchoice.currentText() <span class="keyword">in</span> endic)==<span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">return</span> endic[self.lanchoice.currentText()]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_sys_ch</span>(<span class="params">self</span>):</span><br><span class="line">        self.Filem.setTitle(<span class="string">&quot;文件&quot;</span>)</span><br><span class="line">        self.settingm.setTitle(<span class="string">&quot;设置&quot;</span>)</span><br><span class="line">        self.menulanm.setTitle(<span class="string">&quot;系统语言&quot;</span>)</span><br><span class="line">        self.Instm.setTitle(<span class="string">&quot;说明&quot;</span>)</span><br><span class="line">        self.openm.setText(<span class="string">&quot;打开&quot;</span>)</span><br><span class="line">        self.savem.setText(<span class="string">&quot;保存&quot;</span>)</span><br><span class="line">        self.introtext.setText(ch_intro)</span><br><span class="line">        self.transbut.setText(<span class="string">&quot;翻译&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, <span class="string">&quot;汉语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, <span class="string">&quot;英语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, <span class="string">&quot;粤语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, <span class="string">&quot;文言文&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, <span class="string">&quot;法语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, <span class="string">&quot;德语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, <span class="string">&quot;日语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, <span class="string">&quot;韩语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, <span class="string">&quot;西班牙语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, <span class="string">&quot;葡萄牙语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, <span class="string">&quot;意大利语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, <span class="string">&quot;阿拉伯语&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_sys_en</span>(<span class="params">self</span>):</span><br><span class="line">        self.Filem.setTitle(<span class="string">&quot;File&quot;</span>)</span><br><span class="line">        self.settingm.setTitle(<span class="string">&quot;Setting&quot;</span>)</span><br><span class="line">        self.menulanm.setTitle(<span class="string">&quot;System Language&quot;</span>)</span><br><span class="line">        self.Instm.setTitle(<span class="string">&quot;Instruction&quot;</span>)</span><br><span class="line">        self.openm.setText(<span class="string">&quot;open&quot;</span>)</span><br><span class="line">        self.savem.setText(<span class="string">&quot;save&quot;</span>)</span><br><span class="line">        self.introtext.setText(en_intro)</span><br><span class="line">        self.transbut.setText(<span class="string">&quot;Translate&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, <span class="string">&quot;Mandarin&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, <span class="string">&quot;English&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, <span class="string">&quot;Cantonese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, <span class="string">&quot;Classical Chinese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, <span class="string">&quot;French&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, <span class="string">&quot;German&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, <span class="string">&quot;Japanese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, <span class="string">&quot;Korean&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, <span class="string">&quot;Spanish&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, <span class="string">&quot;Portuguese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, <span class="string">&quot;Italian&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, <span class="string">&quot;Arabic&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">print_text</span>(<span class="params">self</span>):</span><br><span class="line">        user_input = self.inptext.toPlainText()</span><br><span class="line">        <span class="keyword">return</span>(user_input)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">openfile</span>(<span class="params">self</span>):</span><br><span class="line">        filename,_=QtWidgets.QFileDialog.getOpenFileName(self.centralwidget,<span class="string">&#x27;choose a file&#x27;</span>,os.getcwd(),<span class="string">&quot;Text Files(*.txt)&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> filename:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                    data = f.read()</span><br><span class="line">            <span class="keyword">except</span> Exception:</span><br><span class="line">                data=<span class="literal">None</span></span><br><span class="line">            <span class="keyword">if</span> data <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">                self.inptext.setText(data)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            data=<span class="literal">None</span></span><br><span class="line">        <span class="keyword">return</span> data</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">savefile</span>(<span class="params">self</span>):</span><br><span class="line">        filename,_=QtWidgets.QFileDialog.getOpenFileName(self.centralwidget,<span class="string">&#x27;choose a file&#x27;</span>,os.getcwd(),<span class="string">&quot;Text Files(*.txt)&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> filename:</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(filename,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                data=self.outext.toPlainText()</span><br><span class="line">                f.write(data)</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
-<h2 id="主程序部分">主程序部分</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication, QMainWindow</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> translate</span><br><span class="line"></span><br><span class="line">appid = <span class="string">&#x27;20230508001670915&#x27;</span></span><br><span class="line">appkey = <span class="string">&#x27;sx9jtxYrNpwcMeWl2TjI&#x27;</span></span><br><span class="line"></span><br><span class="line">from_lang =<span class="string">&#x27;auto&#x27;</span></span><br><span class="line"></span><br><span class="line">endpoint = <span class="string">&#x27;http://api.fanyi.baidu.com&#x27;</span></span><br><span class="line">path = <span class="string">&#x27;/api/trans/vip/translate&#x27;</span></span><br><span class="line">url = endpoint + path</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">make_md5</span>(<span class="params">s, encoding=<span class="string">&#x27;utf-8&#x27;</span></span>):</span><br><span class="line">    <span class="keyword">return</span> md5(s.encode(encoding)).hexdigest()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">trans</span>(<span class="params">userinputs</span>):</span><br><span class="line">    <span class="keyword">for</span> userinput <span class="keyword">in</span> userinputs.split(<span class="string">&#x27;\n&#x27;</span>):</span><br><span class="line">        salt = random.randint(<span class="number">32768</span>, <span class="number">65536</span>)</span><br><span class="line">        sign = make_md5(appid + userinput + <span class="built_in">str</span>(salt) + appkey)</span><br><span class="line">        <span class="comment"># Build request</span></span><br><span class="line">        headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">        payload = &#123;<span class="string">&#x27;appid&#x27;</span>: appid, <span class="string">&#x27;q&#x27;</span>: userinput, <span class="string">&#x27;from&#x27;</span>: from_lang, <span class="string">&#x27;to&#x27;</span>: to_lang, <span class="string">&#x27;salt&#x27;</span>: salt, <span class="string">&#x27;sign&#x27;</span>: sign&#125;</span><br><span class="line">        <span class="comment"># Send request</span></span><br><span class="line">        r = requests.post(url, params=payload, headers=headers)</span><br><span class="line">        result = json.loads(r.text)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;trans_result&#x27;</span> <span class="keyword">in</span> result:</span><br><span class="line">            trans_result = result[<span class="string">&#x27;trans_result&#x27;</span>]</span><br><span class="line">            <span class="keyword">for</span> item <span class="keyword">in</span> trans_result:</span><br><span class="line">                <span class="keyword">if</span> <span class="string">&#x27;dst&#x27;</span> <span class="keyword">in</span> item:</span><br><span class="line">                    dst = item[<span class="string">&#x27;dst&#x27;</span>]</span><br><span class="line">        <span class="comment"># Show response</span></span><br><span class="line">        ui.outext.append(dst)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">makesure_trans</span>():</span><br><span class="line">    userinputs=ui.print_text()</span><br><span class="line">    <span class="keyword">global</span> to_lang</span><br><span class="line">    to_lang=ui.userlangchoice()</span><br><span class="line">    ui.outext.setText(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    trans(userinputs)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    Octrans = QMainWindow()</span><br><span class="line">    ui = translate.Ui_Octrans()</span><br><span class="line">    ui.setupUi(Octrans)</span><br><span class="line">    Octrans.show()</span><br><span class="line"></span><br><span class="line">    ui.chm.triggered.connect(ui.set_sys_ch)</span><br><span class="line">    ui.enm.triggered.connect(ui.set_sys_en)</span><br><span class="line">    ui.openm.triggered.connect(ui.openfile)</span><br><span class="line">    ui.savem.triggered.connect(ui.savefile)</span><br><span class="line">    ui.transbut.clicked.connect(makesure_trans)</span><br><span class="line"></span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>程序</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>安艺市背景设定及简介</title>
-    <url>/2023/08/16/014cslaki01/</url>
-    <content><![CDATA[<p>这段时间开了好几个新档，没坏档并且玩的最久的是这个，再发一期设定吧~</p>
-<span id="more"></span>
-<h1 id="概要">概要</h1>
-<p>安艺市位于四国地区的高知县，取材自地球online，总面积约181平方公里，下辖5区，是四国地区唯一的政令指定都市和最大城市，艺高都市圈的核心。安艺市总人口约143万人，2022年经济总量约586亿美元，人均GDP约4.1万美元。</p>
-<p>注：下图所示仍在建造中</p>
-<p><img src="/2023/08/16/014cslaki01/aki.png"></p>
-<table>
-<tr>
-<td style="text-align:center;">
-中文名
-
-</td><td style="text-align:center;">
-安艺市
-
-</td><td style="text-align:center;">
-气候条件
-
-</td><td style="text-align:center;">
-亚热带季风气候
-
-</td></tr>
-<tr>
-<td style="text-align:center;">
-外文名
-</td>
-<td style="text-align:center;">
-安芸市
-</td>
-<td style="text-align:center;">
-人口数量
-</td>
-<td style="text-align:center;">
-约143万
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-行政区类别
-</td>
-<td style="text-align:center;">
-二级行政区
-</td>
-<td style="text-align:center;">
-机 场
-</td>
-<td style="text-align:center;">
-安艺宇和海空港
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-所属地区
-</td>
-<td style="text-align:center;">
-高知县
-</td>
-<td style="text-align:center;">
-车牌代码
-</td>
-<td style="text-align:center;">
-高知
-</td>
-</tr>
-</table>
-<h1 id="历史沿革">历史沿革</h1>
-<p>在中世纪后，曾为壬申之乱战败后被流放到土佐的左大臣苏我赤的子孙安艺氏的领地，直到战国时代末期，被统一四国地区的长宗我部元亲所消灭。到了江户时代成为土佐藩的领地。</p>
-<p>1889年04月01日：实施町村制，现在的安艺市在当时分属：安艺郡安艺村、穴内村、伊尾木村、川北村、东川村、畑山村、井之口村、土居村、赤野村。</p>
-<p>1895年11月21日：安艺村改制为安艺町。</p>
-<p>1943年10月01日：穴内村被并入安艺町。</p>
-<p>1954年08月01日：安艺町、伊尾木村、川北村、东川村、畑山村、井之口村、土居村、赤野村合并为安艺市。</p>
-<p>1960年11月11日，世界线变动，安艺市与地球online脱离联系，并迅速发展工商业。</p>
-<h2 id="行政区划">行政区划</h2>
-<p>安艺市为政令指定都市，分安艺区、北区、西区、安田川区、八幡区、绫濑区。</p>
-<p>其中，安艺区是安艺市的经济、文化、交通中心；政府驻地与机场均位于西区；八幡区与安艺市主要城区相隔较远，是安艺市的工业中心。</p>
-<h2 id="地理环境">地理环境</h2>
-<h3 id="地形">地形</h3>
-<p>安艺市位于四国岛东南部，以山地地形为主，仅安艺平原、八幡平原、绫濑川谷地等少数区域地势较为平坦。安艺平原由安田川冲积形成，是安艺市内面积最大的平原，但也仅约18平方公里。</p>
-<h3 id="水文">水文</h3>
-<p>安艺市西面临海，在野幡湾建有港口。</p>
-<p>安艺境内主要河流为安田川及其支流绫濑川，八幡区内还有野幡川。</p>
-<h3 id="气候">气候</h3>
-<p>安艺市为亚热带季风气候，受地形影响，全年多雨，夏季时有台风过境。</p>
-<h2 id="人口">人口</h2>
-<p>2022年，安艺市总人口约143万人，人口增长率约为1.8%。</p>
-<h2 id="经济">经济</h2>
-<p>安艺工商业发达，是重要的港口城市。2022年，安艺市经济总量约586亿美元，人均GDP约4.1万美元。</p>
-<h3 id="第一产业">第一产业</h3>
-<p>安艺市内第一产业以林业为主，兼有少量农业，第一产业占比约为5%。</p>
-<h3 id="第二产业">第二产业</h3>
-<p>安艺境内有少量石化资源，并建立有四国电力安艺支社。因此，安艺的第二产业以依靠港口的石化加工为主，约占经济总量的23%。</p>
-<h3 id="第三产业">第三产业</h3>
-<p>安艺市商业高度发达，是四国乃至周边地区的贸易交流中心，建有四国证券交易所，第三产业占比高达72%。</p>
-<h2 id="交通状况">交通状况</h2>
-<p>详见具体板块</p>
-<h2 id="社会事业">社会事业</h2>
-<h3 id="文化事业">文化事业</h3>
-<p>安艺市建有市立博物馆、图书馆、体育馆等，并承办多场重要体育赛事、文艺演出。</p>
-<p>安艺市树为日本扁柏，市花为杜鹃花，市鸟为灰鹡鸰。</p>
-<h3 id="教育事业">教育事业</h3>
-<p>高知市有小学31所，初中12所，高中9所，高等院校5所，主要大学为：</p>
-<ul>
-<li>国立：高知大学安艺校区</li>
-<li>公立：安艺经济大学、安艺市立大学</li>
-<li>专科：绫濑商科大学</li>
-<li>私立：安艺文学院大学</li>
-</ul>
-<h3 id="医疗卫生">医疗卫生</h3>
-<p>安艺市内有医院、诊所共约23所，其中，县立安艺病院水平最佳。</p>
-]]></content>
-      <categories>
-        <category>娱乐</category>
-        <category>游戏</category>
       </categories>
   </entry>
   <entry>
@@ -4063,6 +3756,313 @@ Eric Kwok
       </categories>
   </entry>
   <entry>
+    <title>个人服务器配置简介</title>
+    <url>/2023/08/15/012server/</url>
+    <content><![CDATA[<p>期末周、小学期、军训、旅游、实习堆在一起……很久没更新了，今天简单更新一篇小学期自己装服务器的大概情况吧。</p>
+<span id="more"></span>
+<h1 id="起因">起因</h1>
+<p>最初也是最必要的问题，为什么要装服务器？云服务器的价格其实并不算贵，也可以满足大部分个人用户的需求。对我来讲，主要有这几大原因：</p>
+<ol type="1">
+<li>个人服务器可以有更多操作空间，更多的可玩性，扩充我的知识面。</li>
+<li>只拆过机，没装过机，低成本试一试，正好小学期也能有点事情做。</li>
+<li>宿舍尚有空座与闲置的网络接口，并且不会断电。</li>
+</ol>
+<h1 id="配置">配置</h1>
+<p>由于第一次装机，配件都是淘宝上买的，以全新为主。</p>
+<table>
+<tr>
+<td style="text-align:center;">
+主板
+
+</td><td style="text-align:center;">
+微星 PRO H610M
+
+</td><td style="text-align:center;">
+CPU
+
+</td><td style="text-align:center;">
+i3 12100F 散片
+
+</td></tr>
+<tr>
+<td style="text-align:center;">
+散热
+</td>
+<td style="text-align:center;">
+利民 AX120R
+</td>
+<td style="text-align:center;">
+显卡
+</td>
+<td style="text-align:center;">
+蓝宝石 RX580 8G
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+内存
+</td>
+<td style="text-align:center;">
+金士顿 DDR4 8G*2
+</td>
+<td style="text-align:center;">
+硬盘
+</td>
+<td style="text-align:center;">
+sk900 固态 128G + 希捷绿盘 机械 4T
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+电源
+</td>
+<td style="text-align:center;">
+长城铜牌 P500 全出线 500W
+</td>
+<td style="text-align:center;">
+UPS
+</td>
+<td style="text-align:center;">
+雷迪斯 H1000M 600W
+</td>
+</tr>
+</table>
+<p>系统方面。选择了Ubuntu 22.04。</p>
+<h1 id="用途">用途</h1>
+<ol type="1">
+<li>勿忘初心，搭网站这类是必须的</li>
+<li>Ubuntu系统不仅对服务器搭建较为友好，同时也可以接触一下Linux操作</li>
+<li>准备将玩过的游戏，喜欢的音乐以及其他资料在服务器中储存，并使用nextcloud进行云端共享</li>
+<li>网络条件允许的话，可以试着搭建宿舍简易影音服务站</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Octrans</title>
+    <url>/2023/05/21/011Octrans/</url>
+    <content><![CDATA[<p>Octrans是一款基于百度api的翻译软件，由本人自制，功能一般，bug也很多，欢迎各位指正！</p>
+<span id="more"></span>
+<p>当前版本：V2.1</p>
+<p>下载地址：https://pan.baidu.com/s/1N8ADTEyUZFUs2NYZceDkmA</p>
+<p>提取码：hgqq</p>
+<h1 id="说明">说明</h1>
+<h2 id="v1.0">V1.0</h2>
+<ul>
+<li>使用PyQt5编写了简单的图形界面</li>
+<li>可以选择翻译使用的语言与系统语言</li>
+<li>实现单行文字的翻译</li>
+</ul>
+<h2 id="v2.0">V2.0</h2>
+<ul>
+<li><p>通过在输入栏打入多行文字或导入txt文件进行翻译</p></li>
+<li><p>可以将翻译结果导出到txt文件</p></li>
+</ul>
+<h2 id="v2.1">V2.1</h2>
+<ul>
+<li>优化了系统语言设置</li>
+<li>为文件的保存和读取设置了快捷键</li>
+</ul>
+<h2 id="v2.2">V2.2</h2>
+<ul>
+<li>将应用程序进一步封装，并隐藏了控制台</li>
+<li>修改了版本显示错误</li>
+</ul>
+<h1 id="源码">源码</h1>
+<h2 id="ui部分">UI部分</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtCore, QtGui, QtWidgets</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">cndic=&#123;</span><br><span class="line">            <span class="string">&quot;汉语&quot;</span>:<span class="string">&#x27;zh&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;英语&quot;</span>:<span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;粤语&quot;</span>:<span class="string">&#x27;yue&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;文言文&quot;</span>:<span class="string">&#x27;wyw&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;法语&quot;</span>:<span class="string">&#x27;fra&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;德语&quot;</span>:<span class="string">&#x27;de&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;日语&quot;</span>:<span class="string">&#x27;jp&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;韩语&quot;</span>:<span class="string">&#x27;kor&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;西班牙语&quot;</span>:<span class="string">&#x27;spa&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;葡萄牙语&quot;</span>:<span class="string">&#x27;pt&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;意大利语&quot;</span>:<span class="string">&#x27;it&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;阿拉伯语&quot;</span>:<span class="string">&#x27;ara&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">endic=&#123;</span><br><span class="line">            <span class="string">&quot;Mandarin&quot;</span>:<span class="string">&#x27;zh&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;English&quot;</span>:<span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Cantonese&quot;</span>:<span class="string">&#x27;yue&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Classical Chinese&quot;</span>:<span class="string">&#x27;wyw&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;French&quot;</span>:<span class="string">&#x27;fra&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;German&quot;</span>:<span class="string">&#x27;de&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Japanese&quot;</span>:<span class="string">&#x27;jp&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Korean&quot;</span>:<span class="string">&#x27;kor&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Spanish&quot;</span>:<span class="string">&#x27;spa&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Portuguese&quot;</span>:<span class="string">&#x27;pt&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Italian&quot;</span>:<span class="string">&#x27;it&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Arabic&quot;</span>:<span class="string">&#x27;ara&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">ch_intro=<span class="string">&quot;欢迎使用Octrans！这是一个基于百度api的简易翻译器，支持多种语言的翻译，感谢您的使用和支持！&quot;</span></span><br><span class="line">en_intro=<span class="string">&quot;Welcome to Octrans! This is a simle translator based on Baidu api, which supports translation between varies of languages. Thanks for using!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ui_Octrans</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">setupUi</span>(<span class="params">self, Octrans</span>):</span><br><span class="line">        Octrans.setObjectName(<span class="string">&quot;Octrans&quot;</span>)</span><br><span class="line">        Octrans.resize(<span class="number">780</span>, <span class="number">587</span>)</span><br><span class="line">        self.centralwidget = QtWidgets.QWidget(Octrans)</span><br><span class="line">        self.centralwidget.setObjectName(<span class="string">&quot;centralwidget&quot;</span>)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)</span><br><span class="line">        self.gridLayout.setObjectName(<span class="string">&quot;gridLayout&quot;</span>)</span><br><span class="line">        self.lanchoice = QtWidgets.QComboBox(self.centralwidget)</span><br><span class="line">        self.lanchoice.setObjectName(<span class="string">&quot;lanchoice&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.lanchoice, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.inptext = QtWidgets.QTextEdit(self.centralwidget)</span><br><span class="line">        self.inptext.setObjectName(<span class="string">&quot;inptext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.inptext, <span class="number">2</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.transbut = QtWidgets.QPushButton(self.centralwidget)</span><br><span class="line">        self.transbut.setObjectName(<span class="string">&quot;transbut&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.transbut, <span class="number">3</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.introtext = QtWidgets.QLabel(self.centralwidget)</span><br><span class="line">        self.introtext.setTextFormat(QtCore.Qt.MarkdownText)</span><br><span class="line">        self.introtext.setObjectName(<span class="string">&quot;introtext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.introtext, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.outext = QtWidgets.QTextEdit(self.centralwidget)</span><br><span class="line">        self.outext.setObjectName(<span class="string">&quot;outext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.outext, <span class="number">4</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        Octrans.setCentralWidget(self.centralwidget)</span><br><span class="line">        self.menubar = QtWidgets.QMenuBar(Octrans)</span><br><span class="line">        self.menubar.setGeometry(QtCore.QRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">780</span>, <span class="number">22</span>))</span><br><span class="line">        self.menubar.setObjectName(<span class="string">&quot;menubar&quot;</span>)</span><br><span class="line">        self.Filem = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.Filem.setObjectName(<span class="string">&quot;Filem&quot;</span>)</span><br><span class="line">        self.settingm = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.settingm.setObjectName(<span class="string">&quot;settingm&quot;</span>)</span><br><span class="line">        self.menulanm = QtWidgets.QMenu(self.settingm)</span><br><span class="line">        self.menulanm.setObjectName(<span class="string">&quot;menulanm&quot;</span>)</span><br><span class="line">        self.Instm = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.Instm.setObjectName(<span class="string">&quot;Instm&quot;</span>)</span><br><span class="line">        Octrans.setMenuBar(self.menubar)</span><br><span class="line">        self.statusbar = QtWidgets.QStatusBar(Octrans)</span><br><span class="line">        self.statusbar.setObjectName(<span class="string">&quot;statusbar&quot;</span>)</span><br><span class="line">        Octrans.setStatusBar(self.statusbar)</span><br><span class="line">        self.openm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.openm.setObjectName(<span class="string">&quot;openm&quot;</span>)</span><br><span class="line">        self.savem = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.savem.setObjectName(<span class="string">&quot;savem&quot;</span>)</span><br><span class="line">        self.chm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.chm.setObjectName(<span class="string">&quot;chm&quot;</span>)</span><br><span class="line">        self.enm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.enm.setObjectName(<span class="string">&quot;enm&quot;</span>)</span><br><span class="line">        self.Filem.addAction(self.openm)</span><br><span class="line">        self.Filem.addAction(self.savem)</span><br><span class="line">        self.menulanm.addAction(self.chm)</span><br><span class="line">        self.menulanm.addAction(self.enm)</span><br><span class="line">        self.settingm.addAction(self.menulanm.menuAction())</span><br><span class="line">        self.menubar.addAction(self.Filem.menuAction())</span><br><span class="line">        self.menubar.addAction(self.settingm.menuAction())</span><br><span class="line"></span><br><span class="line">        self.retranslateUi(Octrans)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(Octrans)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">retranslateUi</span>(<span class="params">self, Octrans</span>):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        Octrans.setWindowTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;Octrans-Version 2.0&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;汉语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;英语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;粤语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;文言文&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;法语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;德语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;日语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;韩语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;西班牙语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;葡萄牙语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;意大利语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;阿拉伯语&quot;</span>))</span><br><span class="line">        self.transbut.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;翻译&quot;</span>))</span><br><span class="line">        self.introtext.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, ch_intro))</span><br><span class="line">        self.introtext.setWordWrap(<span class="literal">True</span>)</span><br><span class="line">        self.Filem.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;文件&quot;</span>))</span><br><span class="line">        self.settingm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;设置&quot;</span>))</span><br><span class="line">        self.Instm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>,<span class="string">&quot;说明&quot;</span>))</span><br><span class="line">        self.menulanm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;系统语言&quot;</span>))</span><br><span class="line">        self.openm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;打开&quot;</span>))</span><br><span class="line">        self.openm.setShortcut(<span class="string">&#x27;ctrl+d&#x27;</span>)</span><br><span class="line">        self.savem.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;保存&quot;</span>))</span><br><span class="line">        self.savem.setShortcut(<span class="string">&#x27;ctrl+s&#x27;</span>)</span><br><span class="line">        self.chm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;中文&quot;</span>))</span><br><span class="line">        self.enm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;English&quot;</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">userlangchoice</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> (self.lanchoice.currentText() <span class="keyword">in</span> cndic)==<span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">return</span> cndic[self.lanchoice.currentText()]</span><br><span class="line">        <span class="keyword">if</span> (self.lanchoice.currentText() <span class="keyword">in</span> endic)==<span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">return</span> endic[self.lanchoice.currentText()]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_sys_ch</span>(<span class="params">self</span>):</span><br><span class="line">        self.Filem.setTitle(<span class="string">&quot;文件&quot;</span>)</span><br><span class="line">        self.settingm.setTitle(<span class="string">&quot;设置&quot;</span>)</span><br><span class="line">        self.menulanm.setTitle(<span class="string">&quot;系统语言&quot;</span>)</span><br><span class="line">        self.Instm.setTitle(<span class="string">&quot;说明&quot;</span>)</span><br><span class="line">        self.openm.setText(<span class="string">&quot;打开&quot;</span>)</span><br><span class="line">        self.savem.setText(<span class="string">&quot;保存&quot;</span>)</span><br><span class="line">        self.introtext.setText(ch_intro)</span><br><span class="line">        self.transbut.setText(<span class="string">&quot;翻译&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, <span class="string">&quot;汉语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, <span class="string">&quot;英语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, <span class="string">&quot;粤语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, <span class="string">&quot;文言文&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, <span class="string">&quot;法语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, <span class="string">&quot;德语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, <span class="string">&quot;日语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, <span class="string">&quot;韩语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, <span class="string">&quot;西班牙语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, <span class="string">&quot;葡萄牙语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, <span class="string">&quot;意大利语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, <span class="string">&quot;阿拉伯语&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_sys_en</span>(<span class="params">self</span>):</span><br><span class="line">        self.Filem.setTitle(<span class="string">&quot;File&quot;</span>)</span><br><span class="line">        self.settingm.setTitle(<span class="string">&quot;Setting&quot;</span>)</span><br><span class="line">        self.menulanm.setTitle(<span class="string">&quot;System Language&quot;</span>)</span><br><span class="line">        self.Instm.setTitle(<span class="string">&quot;Instruction&quot;</span>)</span><br><span class="line">        self.openm.setText(<span class="string">&quot;open&quot;</span>)</span><br><span class="line">        self.savem.setText(<span class="string">&quot;save&quot;</span>)</span><br><span class="line">        self.introtext.setText(en_intro)</span><br><span class="line">        self.transbut.setText(<span class="string">&quot;Translate&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, <span class="string">&quot;Mandarin&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, <span class="string">&quot;English&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, <span class="string">&quot;Cantonese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, <span class="string">&quot;Classical Chinese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, <span class="string">&quot;French&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, <span class="string">&quot;German&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, <span class="string">&quot;Japanese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, <span class="string">&quot;Korean&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, <span class="string">&quot;Spanish&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, <span class="string">&quot;Portuguese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, <span class="string">&quot;Italian&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, <span class="string">&quot;Arabic&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">print_text</span>(<span class="params">self</span>):</span><br><span class="line">        user_input = self.inptext.toPlainText()</span><br><span class="line">        <span class="keyword">return</span>(user_input)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">openfile</span>(<span class="params">self</span>):</span><br><span class="line">        filename,_=QtWidgets.QFileDialog.getOpenFileName(self.centralwidget,<span class="string">&#x27;choose a file&#x27;</span>,os.getcwd(),<span class="string">&quot;Text Files(*.txt)&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> filename:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                    data = f.read()</span><br><span class="line">            <span class="keyword">except</span> Exception:</span><br><span class="line">                data=<span class="literal">None</span></span><br><span class="line">            <span class="keyword">if</span> data <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">                self.inptext.setText(data)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            data=<span class="literal">None</span></span><br><span class="line">        <span class="keyword">return</span> data</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">savefile</span>(<span class="params">self</span>):</span><br><span class="line">        filename,_=QtWidgets.QFileDialog.getOpenFileName(self.centralwidget,<span class="string">&#x27;choose a file&#x27;</span>,os.getcwd(),<span class="string">&quot;Text Files(*.txt)&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> filename:</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(filename,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                data=self.outext.toPlainText()</span><br><span class="line">                f.write(data)</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
+<h2 id="主程序部分">主程序部分</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication, QMainWindow</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> translate</span><br><span class="line"></span><br><span class="line">appid = <span class="string">&#x27;20230508001670915&#x27;</span></span><br><span class="line">appkey = <span class="string">&#x27;sx9jtxYrNpwcMeWl2TjI&#x27;</span></span><br><span class="line"></span><br><span class="line">from_lang =<span class="string">&#x27;auto&#x27;</span></span><br><span class="line"></span><br><span class="line">endpoint = <span class="string">&#x27;http://api.fanyi.baidu.com&#x27;</span></span><br><span class="line">path = <span class="string">&#x27;/api/trans/vip/translate&#x27;</span></span><br><span class="line">url = endpoint + path</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">make_md5</span>(<span class="params">s, encoding=<span class="string">&#x27;utf-8&#x27;</span></span>):</span><br><span class="line">    <span class="keyword">return</span> md5(s.encode(encoding)).hexdigest()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">trans</span>(<span class="params">userinputs</span>):</span><br><span class="line">    <span class="keyword">for</span> userinput <span class="keyword">in</span> userinputs.split(<span class="string">&#x27;\n&#x27;</span>):</span><br><span class="line">        salt = random.randint(<span class="number">32768</span>, <span class="number">65536</span>)</span><br><span class="line">        sign = make_md5(appid + userinput + <span class="built_in">str</span>(salt) + appkey)</span><br><span class="line">        <span class="comment"># Build request</span></span><br><span class="line">        headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">        payload = &#123;<span class="string">&#x27;appid&#x27;</span>: appid, <span class="string">&#x27;q&#x27;</span>: userinput, <span class="string">&#x27;from&#x27;</span>: from_lang, <span class="string">&#x27;to&#x27;</span>: to_lang, <span class="string">&#x27;salt&#x27;</span>: salt, <span class="string">&#x27;sign&#x27;</span>: sign&#125;</span><br><span class="line">        <span class="comment"># Send request</span></span><br><span class="line">        r = requests.post(url, params=payload, headers=headers)</span><br><span class="line">        result = json.loads(r.text)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;trans_result&#x27;</span> <span class="keyword">in</span> result:</span><br><span class="line">            trans_result = result[<span class="string">&#x27;trans_result&#x27;</span>]</span><br><span class="line">            <span class="keyword">for</span> item <span class="keyword">in</span> trans_result:</span><br><span class="line">                <span class="keyword">if</span> <span class="string">&#x27;dst&#x27;</span> <span class="keyword">in</span> item:</span><br><span class="line">                    dst = item[<span class="string">&#x27;dst&#x27;</span>]</span><br><span class="line">        <span class="comment"># Show response</span></span><br><span class="line">        ui.outext.append(dst)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">makesure_trans</span>():</span><br><span class="line">    userinputs=ui.print_text()</span><br><span class="line">    <span class="keyword">global</span> to_lang</span><br><span class="line">    to_lang=ui.userlangchoice()</span><br><span class="line">    ui.outext.setText(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    trans(userinputs)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    Octrans = QMainWindow()</span><br><span class="line">    ui = translate.Ui_Octrans()</span><br><span class="line">    ui.setupUi(Octrans)</span><br><span class="line">    Octrans.show()</span><br><span class="line"></span><br><span class="line">    ui.chm.triggered.connect(ui.set_sys_ch)</span><br><span class="line">    ui.enm.triggered.connect(ui.set_sys_en)</span><br><span class="line">    ui.openm.triggered.connect(ui.openfile)</span><br><span class="line">    ui.savem.triggered.connect(ui.savefile)</span><br><span class="line">    ui.transbut.clicked.connect(makesure_trans)</span><br><span class="line"></span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>程序</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>浅谈实习经历</title>
+    <url>/2023/08/15/013xcmgwork/</url>
+    <content><![CDATA[<p>专业要求实习20天，前几天去实习了一周水一水，稍微聊聊吧。</p>
+<span id="more"></span>
+<h1 id="我想说的话">我想说的话</h1>
+<p>我做了什么其实并不是最重要的，这些和我在实习报告中写的差不多，无非把时间从一周扩到了一个月而已。因此，我只想讲讲我对这个实习本身，以及我对于企业和工作的浅薄看法。</p>
+<p>首先，我想明确一点，在我未来发展方向中，不会存在留校、考公这类选择，因此，除去创业，企业基本成了我最主要的去向。显然，学校和企业间有着巨大的区别。</p>
+<p>从简单又不怎么靠谱的一点讲起，在学校上学，即使一天安排满了课，我只吃一顿饭都不会有什么影响；但是实习这几天，我每天三餐不仅要吃，还吃的很多。这说明：听课、做作业的劳动强度要远远低于任务驱动的企业实际工作，即使两者都是脑力劳动。这导致很多学生毕业后会出现较大的不适应。</p>
+<p>另外，在学校上课时，即使不认真听课，也没有强制力制止你；但是在企业，上班摸鱼直接面对着扣工资等严厉惩罚。一方面，这的确有利于效率提高——至少我这几天的效率要高了一些。但是另一方面，每周的996，加上这种精神高压，很容易加剧人的劳累，这与所谓高考、考研等似乎不相上下。</p>
+<p>不过，我们也要时刻记住，企业并不如大学单纯。观察前辈的工作，我发现，很多时候，各种请示、电话、等候浪费了大量的时间，导致了各类并不很有意义的交流，然而这就是绝大多数企业日常的一环。不同于大学内部只有同学、老师的简单关系，领导、同事、下属，在企业内除了提供必要帮助外，也成了一种桎梏。</p>
+<p>上面几段我所写的，都表明了大学与企业的差异。因此，在大学阶段提前进行实习，熟悉职场环境，对毕业后适应工作大有裨益，而这恰恰是多数学校所欠缺的。我所在的学校姑且还算不错，但真正去实习，而非走马观花的参观的专业，依然寥寥无几。虽然大一就实习或许早了一些，时间也显得稍长，但我还是很感谢这次机会，让我认清了一些事，可以在未来发展面上看到更加现实的道路。</p>
+<h1 id="写在官方的话">写在官方的话</h1>
+<p>最后附上准备交给学校的实习报告，有兴趣也可以看看。</p>
+<h2 id="实习目的及计划">实习目的及计划</h2>
+<p>在本次实习中，我希望结合大一所学的知识，进入生产制造企业实习。在能力上，我希望能够学习产品加工的工艺及流程，同时练习提高自己平面制图与三维建模的水平等；在思维上，我希望能够了解企业日常工作程序及企业文化，提高自身协作交流能力，为日后在企业继续更深入的实习、工作做准备。</p>
+<p>本次实习，我计划到**有限公司的工艺技术部实习，主要工作包括调查研究企业的文化与价值观念，参观或动手操作加工设备，协助进行绘图或建模等。</p>
+<h2 id="实习期完成任务">实习期完成任务</h2>
+<ol type="1">
+<li><p>干了些什么？</p>
+<p>本次实习共历时四周，计20工作日，所在部门为**有限公司工艺技术部，并分配至起重机臂班组。</p></li>
+</ol>
+<ul>
+<li>在第一周，我熟悉了工作环境，通过了安全教育考试，对企业的价值观、发展观等进行了调查，并协助了一些简单的文件操作。</li>
+<li>在第二周，我主要在车间进行参观（因企业车间实操培训时间过长所限，无法实际操作），并协助师傅对新型起重机臂的各类结构数据进行测量计算，以备后续改进使用。</li>
+<li>在第三周，我利用AutoCAD，计算并绘制了几种型号起重机各级起重臂上下盖板折弯的工艺附图，并制作了对应的焊接操作指导书。</li>
+<li>在第四周，我在进行了公司的Pro/E基础考查后，利用该软件协助进行了起重机臂的三维建模，主要负责滑轮支架、折弯钣金件等的建模与小型结构装配。</li>
+</ul>
+<ol start="2" type="1">
+<li>学到什么？</li>
+</ol>
+<ul>
+<li>在第一周，通过交流调查等，学习了企业工作的注意事项、工作流程，进行了企业、部门、班组的三级安全教育，学习了解了安全在制造企业中的地位及相关注意事项，在初步简单工作中学习了部门各项文件的要求及格式等。</li>
+<li>在第二周，我在车间学到了中小型起重机（单缸拉索式）与中大型起重机（双缸插销式）的不同工作原理及制造流程。学习了起重机臂型号读取与数据测算，掌握了相关测量工具的使用方法。</li>
+<li>在第三周，我学习了公司的焊接工艺要求及不同型号机臂的精度要求、计算方法，了解了工艺附图及焊接操作指导书的格式，以及实际生产中的应用。</li>
+<li>在第四周，我接受了部门的Pro/E基础教学，并通过实际案例，掌握了Pro/E中草图绘制，三维建模，钣金件弯折及多个零件的装配组合等操作。</li>
+</ul>
+<ol start="3" type="1">
+<li>听到和见到的</li>
+</ol>
+<ul>
+<li>在第一周，我听到了不同员工、领导对公司工作模式、价值观及未来发展的理解，见到了实际的职场环境与工作流程。</li>
+<li>在第二周，我在车间见到了中大型起重机下料、焊接、装配、喷漆等工序的全流程，听到了一线工人在生产中的注意事项及心得体会。</li>
+<li>在第三周，我听到了部门前辈对新型起重臂改进方案的讨论，见到了几次方案试制的产品及最终确定的成品。</li>
+<li>在第四周，我见到了协助进行建模的机臂的整体结构等。</li>
+</ul>
+<h2 id="实习收获和体会">实习收获和体会</h2>
+<ol type="1">
+<li>通过与部门领导、员工交流，深入理解了部门的精神，懂得了尽己所能完成应尽的职责，学会交流合作，才能成大事。校园与企业有着很大的区别，我在这里得以发现实践的重要性，认识到生产安全的最高地位。</li>
+<li>通过了解大型机械制造流程，加深了对工业设计师职责的认识，对于各项工艺流程都应当有较为明确的了解与规划，并能仔细发现问题，提出合适的解决、改进办法。</li>
+<li>在产品制造销售中，创新性与安全性都是重中之重，没有创新就无法给企业、市场带来活力，促进技术进步，提高产品核心竞争力；没有安全性就无法保证产品的稳定使用，无法在实际生产生活中发挥产品的作用。因此，产品制造上游的开发与下游的测试应当相互促进彼此完善，这也是工业设计师所发挥的重要作用之一。</li>
+<li>不同的公司在实际设计中很可能使用不同的软件，这次实习期间的部分软件也是我从未接触过的，但是各类建模软件往往有相同之处，掌握核心思想后，通过实际操作练习，即可较为顺利的学习运用。</li>
+</ol>
+<h2 id="实习过程中自己的不足之处">实习过程中自己的不足之处</h2>
+<ol type="1">
+<li>由于是第一次实习，我较为缺乏经验，因此在实习之初不够自信，不敢加入部门的交流讨论等；但随着经历不断丰富，我在实习后期能够更为积极主动的参与工作和讨论，在以后的实习中，应该继续提高交流合作能力，发挥自身作用。</li>
+<li>缺少作为工业设计师的宏观认识，在生产中往往只能针对产品的部分环节进行思考，没有考虑制造流程及产品的全貌；在学习和日常中，应该多多丰富充实自己的认知，从而在整体上规划设计产品及工艺等。</li>
+<li>在工作中较为循规蹈矩，以完成分配的任务为主，很少能提出创造性的意见；这与设计思维的缺乏息息相关，应该多观察，多思考，发现每一处值得改进的地方，发掘每一个适于创新的想法。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>安艺市背景设定及简介</title>
+    <url>/2023/08/16/014cslaki01/</url>
+    <content><![CDATA[<p>这段时间开了好几个新档，没坏档并且玩的最久的是这个，再发一期设定吧~</p>
+<span id="more"></span>
+<h1 id="概要">概要</h1>
+<p>安艺市位于四国地区的高知县，取材自地球online，总面积约181平方公里，下辖5区，是四国地区唯一的政令指定都市和最大城市，艺高都市圈的核心。安艺市总人口约143万人，2022年经济总量约586亿美元，人均GDP约4.1万美元。</p>
+<p>注：下图所示仍在建造中</p>
+<p><img src="/2023/08/16/014cslaki01/aki.png"></p>
+<table>
+<tr>
+<td style="text-align:center;">
+中文名
+
+</td><td style="text-align:center;">
+安艺市
+
+</td><td style="text-align:center;">
+气候条件
+
+</td><td style="text-align:center;">
+亚热带季风气候
+
+</td></tr>
+<tr>
+<td style="text-align:center;">
+外文名
+</td>
+<td style="text-align:center;">
+安芸市
+</td>
+<td style="text-align:center;">
+人口数量
+</td>
+<td style="text-align:center;">
+约143万
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+行政区类别
+</td>
+<td style="text-align:center;">
+二级行政区
+</td>
+<td style="text-align:center;">
+机 场
+</td>
+<td style="text-align:center;">
+安艺宇和海空港
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+所属地区
+</td>
+<td style="text-align:center;">
+高知县
+</td>
+<td style="text-align:center;">
+车牌代码
+</td>
+<td style="text-align:center;">
+高知
+</td>
+</tr>
+</table>
+<h1 id="历史沿革">历史沿革</h1>
+<p>在中世纪后，曾为壬申之乱战败后被流放到土佐的左大臣苏我赤的子孙安艺氏的领地，直到战国时代末期，被统一四国地区的长宗我部元亲所消灭。到了江户时代成为土佐藩的领地。</p>
+<p>1889年04月01日：实施町村制，现在的安艺市在当时分属：安艺郡安艺村、穴内村、伊尾木村、川北村、东川村、畑山村、井之口村、土居村、赤野村。</p>
+<p>1895年11月21日：安艺村改制为安艺町。</p>
+<p>1943年10月01日：穴内村被并入安艺町。</p>
+<p>1954年08月01日：安艺町、伊尾木村、川北村、东川村、畑山村、井之口村、土居村、赤野村合并为安艺市。</p>
+<p>1960年11月11日，世界线变动，安艺市与地球online脱离联系，并迅速发展工商业。</p>
+<h2 id="行政区划">行政区划</h2>
+<p>安艺市为政令指定都市，分安艺区、北区、西区、安田川区、八幡区、绫濑区。</p>
+<p>其中，安艺区是安艺市的经济、文化、交通中心；政府驻地与机场均位于西区；八幡区与安艺市主要城区相隔较远，是安艺市的工业中心。</p>
+<h2 id="地理环境">地理环境</h2>
+<h3 id="地形">地形</h3>
+<p>安艺市位于四国岛东南部，以山地地形为主，仅安艺平原、八幡平原、绫濑川谷地等少数区域地势较为平坦。安艺平原由安田川冲积形成，是安艺市内面积最大的平原，但也仅约18平方公里。</p>
+<h3 id="水文">水文</h3>
+<p>安艺市西面临海，在野幡湾建有港口。</p>
+<p>安艺境内主要河流为安田川及其支流绫濑川，八幡区内还有野幡川。</p>
+<h3 id="气候">气候</h3>
+<p>安艺市为亚热带季风气候，受地形影响，全年多雨，夏季时有台风过境。</p>
+<h2 id="人口">人口</h2>
+<p>2022年，安艺市总人口约143万人，人口增长率约为1.8%。</p>
+<h2 id="经济">经济</h2>
+<p>安艺工商业发达，是重要的港口城市。2022年，安艺市经济总量约586亿美元，人均GDP约4.1万美元。</p>
+<h3 id="第一产业">第一产业</h3>
+<p>安艺市内第一产业以林业为主，兼有少量农业，第一产业占比约为5%。</p>
+<h3 id="第二产业">第二产业</h3>
+<p>安艺境内有少量石化资源，并建立有四国电力安艺支社。因此，安艺的第二产业以依靠港口的石化加工为主，约占经济总量的23%。</p>
+<h3 id="第三产业">第三产业</h3>
+<p>安艺市商业高度发达，是四国乃至周边地区的贸易交流中心，建有四国证券交易所，第三产业占比高达72%。</p>
+<h2 id="交通状况">交通状况</h2>
+<p>详见具体板块</p>
+<h2 id="社会事业">社会事业</h2>
+<h3 id="文化事业">文化事业</h3>
+<p>安艺市建有市立博物馆、图书馆、体育馆等，并承办多场重要体育赛事、文艺演出。</p>
+<p>安艺市树为日本扁柏，市花为杜鹃花，市鸟为灰鹡鸰。</p>
+<h3 id="教育事业">教育事业</h3>
+<p>高知市有小学31所，初中12所，高中9所，高等院校5所，主要大学为：</p>
+<ul>
+<li>国立：高知大学安艺校区</li>
+<li>公立：安艺经济大学、安艺市立大学</li>
+<li>专科：绫濑商科大学</li>
+<li>私立：安艺文学院大学</li>
+</ul>
+<h3 id="医疗卫生">医疗卫生</h3>
+<p>安艺市内有医院、诊所共约23所，其中，县立安艺病院水平最佳。</p>
+]]></content>
+      <categories>
+        <category>娱乐</category>
+        <category>游戏</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Kindle再利用教程</title>
     <url>/2023/08/20/015kindleus/</url>
     <content><![CDATA[<p>这两天和同学聊天聊到，正好把好几个月没动过的kindle找出来玩玩。在亚马逊不再支持国内kindle服务的当下，又有什么办法能继续使用kindle呢？</p>
@@ -4095,46 +4095,6 @@ Eric Kwok
 ]]></content>
       <categories>
         <category>教程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>摩卡壶改进方案一则</title>
-    <url>/2023/09/24/017mokapot/</url>
-    <content><![CDATA[<p>给自己练手的虚拟项目……</p>
-<span id="more"></span>
-<h1 id="原产品分析">原产品分析</h1>
-<p>摩卡壶是一种萃取意式浓缩咖啡基底的工具，分为上中下结构，下座是盛水的水槽，中间的粉槽盛放咖啡粉，上座盛放萃取后的咖啡液。它的原理是通过加热下壶中的水变成蒸气，利用蒸气的压力将水推升至导管进入粉槽而萃取咖啡液，再继续通过导管推升到上壶聚合流出。</p>
-<p>在最近半年使用摩卡壶的过程中，我发现传统的摩卡壶仍然有几大不足之处。</p>
-<ol type="1">
-<li>壶体由铝制成，易氧化，且不利于清洗；新式摩卡壶可能由不锈钢制成，尽管避免生锈，但依旧有不便清洗等问题。</li>
-<li>对新手来说，掌握火候可能面临问题，并导致做出的咖啡味道不尽人意。如使用不慎，高温液体还可能喷溅，对人体造成伤害。</li>
-<li>压粉力度不好掌握，需要额外的布粉器辅助，且粉槽在清洗的时候很难取出。</li>
-<li>摩卡壶原本设计用于明火，虽然现在可以用电陶炉等加热，但不足以适应部分人群对城市快节奏生活的需求。</li>
-<li>制作完成后下壶体温度极高，不便与上壶体分离，可能导致过萃。</li>
-</ol>
-<h1 id="设计思路">设计思路</h1>
-<ol type="1">
-<li>提取原有的壶体八角结构，但打磨至更圆润，在现代室内装修环境中更协调。</li>
-<li>采用陶瓷制作壶体，便于清洗，不易生锈，但是需考虑工艺、造价问题。</li>
-<li>用压粉模块替代外置布粉器，并用渐变色直观指示压粉深度。</li>
-<li>集成加热、恒温模块，避免使用炉灶、电陶炉的麻烦，随时随地享用咖啡。</li>
-</ol>
-<h1 id="成果展示">成果展示</h1>
-<h2 id="说明">说明</h2>
-<ol type="1">
-<li>由于建模能力所限，八角结构的提取不够完美，存在接缝线等问题；壶盖与壶体的连接也没有建立模型。</li>
-<li>压粉模块并没有设计完整的结构和原理，更偏向概念性。</li>
-<li>陶瓷材质的渲染及打光等有待改进。</li>
-</ol>
-<h2 id="出图">出图</h2>
-<p>壶体总装展示</p>
-<p><img src="/2023/09/24/017mokapot/pot.jpg"></p>
-<p>粉座展示</p>
-<p><img src="/2023/09/24/017mokapot/box.jpg"></p>
-]]></content>
-      <categories>
-        <category>设计</category>
-        <category>产品</category>
       </categories>
   </entry>
   <entry>
@@ -4275,18 +4235,43 @@ cpolar)。在cpolar官网的验证选项，复制指令并为cpolar添加authtok
       </categories>
   </entry>
   <entry>
-    <title>西交毕设模版Latex基础版</title>
-    <url>/2023/11/04/019xjtutemplate/</url>
-    <content><![CDATA[<p>由于一门课程要求使用西交毕设模版写报告，就自己简单整理了一个Latex模板。</p>
+    <title>摩卡壶改进方案一则</title>
+    <url>/2023/09/24/017mokapot/</url>
+    <content><![CDATA[<p>给自己练手的虚拟项目……</p>
 <span id="more"></span>
-<h1 id="简介">简介</h1>
-<p>其实没什么好说的，可能单纯来水一篇文章。这个模版极其简略，可能也会有不少错误，但是应该能满足最基本的要求。</p>
-<p>参考<a href="%5B2022届本科毕业设计（论文）工作手册-西安交通大学实践教学中心%20(xjtu.edu.cn)%5D(http://pec.xjtu.edu.cn/info/1164/2577.htm)">西安交大官方格式要求</a>编写，如有错误，敬请指出。</p>
-<p>另附模板<a href="http://192.168.1.106/nextcloud/index.php/s/kgDyrFNTKZm9QDT">下载链接</a></p>
+<h1 id="原产品分析">原产品分析</h1>
+<p>摩卡壶是一种萃取意式浓缩咖啡基底的工具，分为上中下结构，下座是盛水的水槽，中间的粉槽盛放咖啡粉，上座盛放萃取后的咖啡液。它的原理是通过加热下壶中的水变成蒸气，利用蒸气的压力将水推升至导管进入粉槽而萃取咖啡液，再继续通过导管推升到上壶聚合流出。</p>
+<p>在最近半年使用摩卡壶的过程中，我发现传统的摩卡壶仍然有几大不足之处。</p>
+<ol type="1">
+<li>壶体由铝制成，易氧化，且不利于清洗；新式摩卡壶可能由不锈钢制成，尽管避免生锈，但依旧有不便清洗等问题。</li>
+<li>对新手来说，掌握火候可能面临问题，并导致做出的咖啡味道不尽人意。如使用不慎，高温液体还可能喷溅，对人体造成伤害。</li>
+<li>压粉力度不好掌握，需要额外的布粉器辅助，且粉槽在清洗的时候很难取出。</li>
+<li>摩卡壶原本设计用于明火，虽然现在可以用电陶炉等加热，但不足以适应部分人群对城市快节奏生活的需求。</li>
+<li>制作完成后下壶体温度极高，不便与上壶体分离，可能导致过萃。</li>
+</ol>
+<h1 id="设计思路">设计思路</h1>
+<ol type="1">
+<li>提取原有的壶体八角结构，但打磨至更圆润，在现代室内装修环境中更协调。</li>
+<li>采用陶瓷制作壶体，便于清洗，不易生锈，但是需考虑工艺、造价问题。</li>
+<li>用压粉模块替代外置布粉器，并用渐变色直观指示压粉深度。</li>
+<li>集成加热、恒温模块，避免使用炉灶、电陶炉的麻烦，随时随地享用咖啡。</li>
+</ol>
+<h1 id="成果展示">成果展示</h1>
+<h2 id="说明">说明</h2>
+<ol type="1">
+<li>由于建模能力所限，八角结构的提取不够完美，存在接缝线等问题；壶盖与壶体的连接也没有建立模型。</li>
+<li>压粉模块并没有设计完整的结构和原理，更偏向概念性。</li>
+<li>陶瓷材质的渲染及打光等有待改进。</li>
+</ol>
+<h2 id="出图">出图</h2>
+<p>壶体总装展示</p>
+<p><img src="/2023/09/24/017mokapot/pot.jpg"></p>
+<p>粉座展示</p>
+<p><img src="/2023/09/24/017mokapot/box.jpg"></p>
 ]]></content>
       <categories>
-        <category>学习</category>
-        <category>其他</category>
+        <category>设计</category>
+        <category>产品</category>
       </categories>
   </entry>
   <entry>
@@ -4357,6 +4342,21 @@ cpolar)。在cpolar官网的验证选项，复制指令并为cpolar添加authtok
       </categories>
   </entry>
   <entry>
+    <title>西交毕设模版Latex基础版</title>
+    <url>/2023/11/04/019xjtutemplate/</url>
+    <content><![CDATA[<p>由于一门课程要求使用西交毕设模版写报告，就自己简单整理了一个Latex模板。</p>
+<span id="more"></span>
+<h1 id="简介">简介</h1>
+<p>其实没什么好说的，可能单纯来水一篇文章。这个模版极其简略，可能也会有不少错误，但是应该能满足最基本的要求。</p>
+<p>参考<a href="%5B2022届本科毕业设计（论文）工作手册-西安交通大学实践教学中心%20(xjtu.edu.cn)%5D(http://pec.xjtu.edu.cn/info/1164/2577.htm)">西安交大官方格式要求</a>编写，如有错误，敬请指出。</p>
+<p>另附模板<a href="http://192.168.1.106/nextcloud/index.php/s/kgDyrFNTKZm9QDT">下载链接</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
     <title>江苏轨道交通架空规划</title>
     <url>/2023/11/14/021jiangsumetro/</url>
     <content><![CDATA[<p>在开始之前，首先声明，本规划与官方无关，纯属个人yy，欢迎友好交流，请勿信以为真。</p>
@@ -4387,220 +4387,10 @@ cpolar)。在cpolar官网的验证选项，复制指令并为cpolar添加authtok
       </categories>
   </entry>
   <entry>
-    <title>摩卡壶改进方案与建模第二版</title>
-    <url>/2023/11/30/022mokapotnew/</url>
-    <content><![CDATA[<p>时隔多日的摩卡壶第二版~</p>
-<span id="more"></span>
-<p>其实是课程大作业拿出来重做了一遍，所以直接把分析报告贴上来水一篇博客……</p>
-<p>这次大作业的主体是Top-Down设计，使用solidworks建模，有几个交互控件。另外就是没有渲染图，过段时间闲下来练手时再补上。</p>
-<h1 id="设计建模分析">设计建模分析</h1>
-<h2 id="产品选取及改进点">产品选取及改进点</h2>
-<p>摩卡壶是一种萃取意式浓缩咖啡基底的工具，因其制咖操作的便利性开始在意大利家庭中普及，后来逐渐发展成为意大利国民产品，如今已行销至全球。</p>
-<p>摩卡壶分为上中下结构，下座是盛水的水槽，中间的粉槽盛放咖啡粉，上座盛放萃取后的咖啡液。它的原理是通过加热下壶中的水变成蒸气，利用蒸气的压力将水推升至导管进入粉槽而萃取咖啡液，再继续通过导管推升到上壶聚合流出。摩卡壶做出的咖啡是一种浓缩式的萃取，还原了原始意大利咖啡Espresso的浓度和风味。</p>
-<p><img src="/2023/11/30/022mokapotnew/1.jpg" height="600px"></p>
-<p>选择摩卡壶作为Top-Down设计的产品，主要原因在于其具有明显的零件装配结构，且大多数零件不是工业生产中常用的标准件，适合采用自顶至下的方法设计建模。同时，摩卡壶有较高的可交互性，便于对交互设计过程与方式进行分析。</p>
-<p>在日常使用中，我也发现摩卡壶存在的一些问题，如粉座很难从水槽取出等，在此也进行了适当的改进设计。</p>
-<p><img src="/2023/11/30/022mokapotnew/2.jpg" height="600px"></p>
-<h2 id="自顶至下的设计">自顶至下的设计</h2>
-<p>在设计建模之前，首先按照自顶至下的方式设计了初步的零件树，将摩卡壶分为壶身、上部、下部和电热器四个主要装配体，并进一步细分建模：</p>
-<p><img src="/2023/11/30/022mokapotnew/4.png" height="600px"></p>
-<p>使用solidworks建模时，结合实际情况，进一步改进了零件树，分壶体和电热器两大部分建模，壶体进一步分为上部和下部，总计21个零件。主要设计了壶盖、粉座升降器、总控开关三处交互组合；此外，电源线，各部分壶体与电热底座间也可以自由活动。</p>
-<p><img src="/2023/11/30/022mokapotnew/5.png" height="600px"></p>
-<h1 id="交互设计分析">交互设计分析</h1>
-<h2 id="交互过程简介">交互过程简介</h2>
-<ol type="1">
-<li><p>摩卡壶盖</p>
-<p>通过壶盖、壶身与插销-插孔转轴三者配合，由上盖开盖把手控制，实现任意角度下的壶盖旋转开合。</p>
-<p><img src="/2023/11/30/022mokapotnew/3.jpg" height="600px"></p></li>
-<li><p>粉座升降机构</p>
-<p>开关在外侧设置滑块，内侧金属销抵住漏斗状粉座下边缘，通过滑块滑动带动插销，实现粉座上下滑动，便于从水槽取出。</p>
-<p><img src="/2023/11/30/022mokapotnew/6.jpg" height="600px"></p></li>
-<li><p>总控开关</p>
-<p>总控开关通过按钮凹凸调节，实现电源控制（此处并未设计内部电路）。</p>
-<p><img src="/2023/11/30/022mokapotnew/7.jpg" height="600px"></p></li>
-</ol>
-<h2 id="人机交互方式">人机交互方式</h2>
-<p>人机交互中，控件外观和操作等主要采取两种表现形式，即语义方法和直接方法：语义方法往往依赖隐喻，将新产品的功能与用户熟悉的现有概念或产品进行比较；产品的外观及其控制成为符号，通常使用标有图标的控制面板。直接方法则以行为和行动为出发点，让用户在互动中发现行为的意义。</p>
-<p>好的交互产品应当尊重人的所有技能：认知、感知、运动和情感技能：感知运动技能指的是用户用感官能感知到什么，用身体能做什么。情感技能是指我们体验、表达情感和识别情感的能力。这包括我们对美好事物的易感性等。</p>
-<p>下面，我将对三处主要的交互控件的人机交互方式进行分析：</p>
-<ol type="1">
-<li><p>摩卡壶盖</p>
-<p>这种设计采用了直接方法，让用户通过顶部的把手直接控制壶盖的开合。这符合直观的物理原理，用户可以通过旋转把手的方式，轻松地控制壶盖在任意角度下的开合。这种直接的物理操作使用户能够更直观地感知壶盖的状态，同时也提供了一种自然而流畅的使用体验。</p></li>
-<li><p>粉座升降机构</p>
-<p>这个控件采用了语义方法和直接方法相结合的设计。外侧滑块的设置提供了语义上的指示，用户通过滑动滑块可以轻松地理解和控制粉座的上下移动。内侧金属销的作用是确保粉座在升降过程中的稳定，通过这种直接的物理连接，用户在滑动滑块时感知到滑块对插销的作用，从而使粉座上下滑动。这种设计在保证直观性的同时，通过内外结合的方式提供了更为丰富的语义信息。</p></li>
-<li><p>总控开关</p>
-<p>这个设计同样结合了语义方法和直接方法，用户通过按钮的凹凸感觉来感知开关状态，实现电源的控制。这种物理上的直接感知能够使用户在操作时更加精准，同时也降低了误操作的可能性。通过按钮的形状和位置设计，还可以在触觉上提供一定的信息，让用户更容易理解和掌握总控开关的状态。同时，按钮表面有最传统常见的开关标识，可以告诉用户该处开关的功能。</p></li>
-</ol>
-<p>这三个交互控件的设计都考虑到了用户的认知过程:直接的物理操作和语义指示使用户更容易理解每个控件的功能和操作方式，降低了认知负担，提升了用户友好性。通过直观的物理感知和语义指示，用户能够清晰地感知到每个控件的状态和操作效果，增强了用户对产品的感知体验。同时，设计考虑到了用户在使用过程中的手部运动，通过自然的手部动作完成操作，使得用户的动作更加流畅和符合直觉。</p>
-<p>当然，这些控件的设计不仅考虑了功能性，还注重了用户体验的情感层面。直观、流畅的操作方式以及精巧的设计可能会引发用户对产品的好感和满足感，从而建立起用户对产品的情感连接。</p>
-<h1 id="参考文献">参考文献</h1>
-<ol type="1">
-<li>Djajadiningrat T, Wensveen S, Overbeeke J F K. Tangible products:
-redressing the balance between appearance and action[J]. Pers Ubiquit
-Comput, 2004(7).</li>
-<li>BIALETTI比乐蒂. 咖啡巨匠 一见钟情|百年摩卡壶世家——比乐蒂[EB/OL].
-[2020-09-23]. https://zhuanlan.zhihu.com/p/258381635.</li>
-<li>百度百科. 摩卡壶[EB/OL]. [2023-04-12].
-https://baike.baidu.com/item/%E6%91%A9%E5%8D%A1%E5%A3%B6/224714.</li>
-</ol>
-]]></content>
-      <categories>
-        <category>设计</category>
-        <category>产品</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>我的2023年度音乐总结</title>
-    <url>/2023/12/31/023annualmusic/</url>
-    <content><![CDATA[<p>复习考试的间隙摸鱼，总结下今年听到比较喜欢的音乐，然而一不小心就摸了整整一上午，急急急。。。</p>
-<span id="more"></span>
-<p>总结分为最喜欢的新专辑Top3，新听的老专辑Top3，以及今年听到的10首满意的新歌，都以华语流行为主。专辑排名有先后顺序，新曲排名无先后顺序，按歌手姓名首字母排序。</p>
-<h1 id="新专辑top3">新专辑Top3</h1>
-<h2 id="top1-chin-up-陈奕迅">Top1 《Chin Up!》—— 陈奕迅</h2>
-<p><img src="/2023/12/31/023annualmusic/chin up.jpg" width="600px" height="600px"></p>
-<p>把这张专辑放在第一，毫无疑问是有我的私心的。这张专辑有两个致命的缺点：作词平均水平较差，不说和林夕、黄伟文、林若宁比，就是前些年的《准备中》比起都显得逊色（我很喜欢也很尊重潘源良，但是《准备中》受到各种因素限制，让他实在不敢发挥）。同时，这张专辑只有短短8首歌，其中5首还是专辑释出前就已经发行的，甚至包括《是但求其爱》、《致明日的舞》这些几年前的歌，这份诚意堪比隔壁周杰伦的《伟作》了。</p>
-<p>不过，这张专辑的综合质量还是值得称赞的。全专作曲由林家谦包揽，编曲由林家谦和李荣浩承担，保证了听感的高度统一性。同时，作为陈奕迅少有的概念专辑，每首歌表达的概念层层递进，带来了一段从焦虑恐慌到大彻大悟的旅程，与Fears
-&amp; Dreams演唱会的概念也有异曲同工之处，是听完之后真的能够让人chin
-up的一张专辑。有许多人不认可李荣浩和林家谦，我对此持保留意见，并建议这些人培养下审美。《尘大师》和《社交恐惧癌》我会在后续单独介绍，在此简要谈谈另外六首吧。</p>
-<p>《人啊人》是我初次听不怎么喜欢的歌，不过找来live洗过耳朵后也变的悦耳多了，再回头听原版，也能够更好的体会编曲的妙处。顺带一提，周耀辉凭借这首歌获得了本届金曲奖的最佳词作者，然而我有些看不懂……这首歌用了许多罕见的乐器、合成器，营造了一种诡谲而宏大的氛围，颇有一种在天国之上睥睨众生的感觉。歌曲的MV也同样诡异，甚至有点吓到我了（汗）。</p>
-<p>《焦焦焦》的鼓点与和声，听起来就和歌名一样焦虑，中间还带来了大段动感的吉他solo，风格很像《Listen
-to Eason
-Chan》，适合抖腿。《空城计》作为一首短而无趣的芭乐，词作更是差到谷底，还是陈奕迅靠唱商救了一手。《是但求其爱》应该算这张专辑里主推的芭乐，放到二十年前毫不违和，很好听的同时也没什么亮点。</p>
-<p>《盲婚哑嫁》，表面编曲的杂乱繁冗，实际上很好地契合歌曲主题，营造了九十年代流行乐的韵味。如果去看MV，就会发现，这首歌讲述了一个很悲伤的故事，但是他的基调并不悲伤，反而在最后是走向释怀的，因此编曲略显欢快一些也蛮好。这首歌的词要是能再打磨打磨就更好了，我看来还是有些莫名其妙的地方。</p>
-<p>最后，《致明日的舞》，这首歌作为单曲发行时只是普通的好听，但这次作为专辑的最后一首歌，甚至可以说是升华了整张专辑。三拍子的独特律动感，轻松的旋律和简单的编曲，也带给听众轻松而简单的感动，从不美好、不快乐中解脱出来，相信明天的一切都“会更暖，会更光”，相信“我与你永远一起守望”。</p>
-<h2 id="top2-裘德-裘德">Top2 《裘德》—— 裘德</h2>
-<p><img src="/2023/12/31/023annualmusic/裘德.jpg" width="600px" height="600px"></p>
-<p>其实开始听裘德还没几天，这张新专就出来了。同名专辑往往是对于一个歌手最重要的专辑之一，裘德选择了第三张专辑，命名为《裘德》，在概念上对自己进行完全的解构，用音乐讲述了一个人一生的经历。这张专辑的听感有点像《太空人》，在动听与概念完整的同时，有一些过分囿于格律，导致听下来有些累。</p>
-<p>《伊始》作为熟悉的裘德式Intro，与第二首《胚胎》紧密配合，展示了一个人诞生的过程。紧跟着的《练声曲》，跟窦靖童合作带来了很美妙的旋律，但是具体分析我也不知道该分析什么。《斯德哥尔摩难题》，旋律确实有点神经病其实听裘德最爽的就是那些莫名其妙的反常音，给人带来眼前一亮的感觉。</p>
-<p>由于新专评价其实是我在最后写的，现在实在写不动了，重新听一遍《裘德》真的很累，词曲编都有大量的信息，希望裘老板下次少给听众上那么大的压力……</p>
-<h2 id="top3-flow-杨乃文">Top3 《Flow》—— 杨乃文</h2>
-<p><img src="/2023/12/31/023annualmusic/flow.png" width="600px" height="600px"></p>
-<p>同样是每首歌都与别的音乐人合作，《马拉美》之于《Flow》，就好像优衣库之于H&amp;M：吴青峰跟谁合作都是自己的味道，杨乃文跟谁合作，这首歌就会变成别人的样子。当然这只是玩笑，杨乃文的声音很好地贯通了风格不同的每一首歌，形散而神不散。</p>
-<p>不过还是上面的那句话，由于倒序写这篇博客，实在写不动了，就这样吧。</p>
-<h1 id="拾遗top3">拾遗Top3</h1>
-<h2 id="top1-groupies-吉他手">Top1 《Groupies 吉他手》</h2>
-<p><img src="/2023/12/31/023annualmusic/吉他手.jpg" width="600px" height="600px"></p>
-<ul>
-<li>演唱：陈绮贞</li>
-<li>发行年份：2002</li>
-<li>简评：这张专辑给我的感觉完全展示在了封面上，让我看到了夏天、蓝天和大海的旋律，可以完全沉浸在陈绮贞的声音里。据说陈老师是典型的INFP，她的作品中也确实充斥着感性洋溢又天马行空的思考，在这张专辑中更是展现的淋漓尽致。</li>
-</ul>
-<h2 id="top2-最后的水族馆">Top2 《最后的水族馆》</h2>
-<p><img src="/2023/12/31/023annualmusic/最后的水族馆.jpg" width="600px" height="600px"></p>
-<ul>
-<li>演唱：裘德</li>
-<li>发行年份：2021</li>
-<li>简评：跟随Intro中的指引，进入水族馆的旅行，用全身心去感受神秘的海底世界……这或许是一个细思极恐的旅程，我们也成了水族馆中最后的藏品，把自己的一部分留在大海深处。这让我想到了《ever
-17》，一个同样发生在深海密闭空间的游戏，在紧张、未知的故事最后，带给我们深刻的思考和感动。</li>
-</ul>
-<h2 id="top3-心里学">Top3 《心里学》</h2>
-<p><img src="/2023/12/31/023annualmusic/心里学.png" width="600px" height="600px"></p>
-<ul>
-<li>演唱：徐佳莹</li>
-<li>发行年份：2017</li>
-<li>简评：在这张专辑里，LaLa用优美的旋律和演唱，全方面展示了她对内心世界的探索。最近听了很多遍，但是真的要写却似乎写不出来什么东西，总之我很喜欢，就这样吧。</li>
-</ul>
-<h1 id="新曲top10">新曲Top10</h1>
-<h2 id="尘大师">1 《尘大师》</h2>
-<ul>
-<li>演唱：陈奕迅</li>
-<li>作词：林海峰</li>
-<li>作曲：林家谦</li>
-<li>编曲：李荣浩</li>
-<li>收录专辑：《Chin Up!》</li>
-<li>简评：这首歌很像是陈奕迅本人的写照，同时加入大量粤语俚语，算得上一首非常私人的歌。多提一句，词作者林海峰与Eason合作的名场面是《麦当劳汉堡》，突然觉得这首歌的词更好理解了……在李荣浩的新专被骂的这一年，他把更好的编曲给了陈奕迅，这首尘大师更是我最满意的一首。前奏的吉他一下就能把人带入轻松愉快的氛围，并贯穿全程。这首歌全程被各类乐器、合成器铺满，第一次听时让我有些不解，但是听上几遍后，才发现编曲完美配合了人声。</li>
-</ul>
-<h2 id="社交恐惧癌">2 《社交恐惧癌》</h2>
-<ul>
-<li>演唱：陈奕迅</li>
-<li>作词：李荣浩</li>
-<li>作曲：林家谦</li>
-<li>编曲：林家谦</li>
-<li>收录专辑：《Chin Up!》</li>
-<li>简评：本着一碗水端平的原则，从这张专辑再选一首国语歌进来，不过我也的确很喜欢这首。李荣浩这次没有编曲，而是为这首歌作了词，我整体还是蛮喜欢的，不过一些粤语区听众似乎觉得“脑海爆炸的High”有些难绷……这首歌的旋律在不少细节处不是很常规，编曲中也藏了许多小细节，比如之前看HOPICO访谈Eason时提到的，第二段副歌中的手机铃声，这些有趣的小细节都很有林家谦的风格，让这首歌变得更加丰富立体。另外值得一提的是，这首歌的MV也很有趣，请来了梁朝伟参演，有空不妨看看。</li>
-</ul>
-<h2 id="烟花">3 《烟花》</h2>
-<ul>
-<li>演唱：窦靖童</li>
-<li>作词：窦靖童</li>
-<li>作曲：窦靖童</li>
-<li>编曲：窦靖童</li>
-<li>收录专辑：《春游》</li>
-<li>简评：窦靖童的天赋肉眼可见，第一张原创国语专辑，虽然仍有不少地方有待打磨，但是灵动与可爱的感觉洋溢在每首歌之间。《烟花》是这张专辑中我最喜欢的一首，《Monday》的节奏性与氛围感太强，这首歌更能凸显窦靖童遗传下来音色的魅力，旋律也更出彩一些。</li>
-</ul>
-<h2 id="万一你是个好人怪我只敢做好人">4
-《万一你是个好人》&amp;《怪我只敢做好人》</h2>
-<ul>
-<li>演唱：林家谦</li>
-<li>作词：黄伟文&amp;林夕</li>
-<li>作曲：林家谦</li>
-<li>编曲：林家谦</li>
-<li>收录专辑：单曲发行</li>
-<li>简评：尽管不少人不喜欢他的音色和唱腔，林家谦无疑是香港新生代最为出色的唱作人。除了与陈奕迅等歌手合作之外，小林为自己也写了许多好歌，今年虽然没有新专和ep，但是这两首歌带来的惊喜已经足够。黄伟文和林夕的姊妹词作，结合林家谦优秀的作曲，为两首歌分别赋予了拔群的魅力。正如我上面说的，林家谦的曲主体旋律都很悦耳顺畅，甚至有一点复古的感觉；但是不时出现的反常音与编曲中丰富的细节，为作曲带来了浓厚的现代感与高级感。</li>
-</ul>
-<h2 id="忘记趁早">5 《忘记趁早》</h2>
-<ul>
-<li>演唱：林智乐</li>
-<li>作词：林若宁</li>
-<li>作曲：泽日生</li>
-<li>编曲：傅丹斌/谭畅/泽日生</li>
-<li>收录专辑：单曲发行</li>
-<li>简评：林智乐作为新人的出道作品，词曲基本代表了目前香港乐坛的最高水平，他的演唱也完全不令人失望。凭借极高的唱功与唱商，很出色的驾驭了泽日生的断气旋律。</li>
-</ul>
-<h2 id="涩谷驿前等">6 《涩谷驿前等》</h2>
-<ul>
-<li>演唱：林智乐</li>
-<li>作词：林若宁</li>
-<li>作曲：泽日生</li>
-<li>编曲：傅丹斌/谭畅/泽日生</li>
-<li>收录专辑：单曲发行</li>
-<li>简评：延续上一首歌的阵容，发挥依旧出色。如果这样保持下去，我认为林智乐有可能成为下一个陈奕迅。</li>
-</ul>
-<h2 id="色盲">7 《色盲》</h2>
-<ul>
-<li>演唱：裘德/徐佳莹</li>
-<li>作词：万一</li>
-<li>作曲：裘德</li>
-<li>编曲：关浩德/宋扬</li>
-<li>收录专辑：《裘德》</li>
-<li>简评：副歌部分，徐佳莹声音出来的那一刻，这首歌就必须入选了，五体投地的喜欢，别的部分不多评价了。</li>
-</ul>
-<h2 id="今天吃点什么好">8《今天吃点什么好》</h2>
-<ul>
-<li>演唱：裘德</li>
-<li>作词：万一</li>
-<li>作曲：裘德</li>
-<li>编曲：裘德</li>
-<li>收录专辑：《裘德》</li>
-<li>简评：跃动的旋律，跳脱的歌词，造就了这首疯狂的歌曲。同时，各种乐器的搭配，为并不复杂的旋律锦上添花。这首歌可以算是整张专辑里最代表裘德“味道”的一首，我感觉可以一直单曲循环~</li>
-</ul>
-<h2 id="说不出口">9 《说不出口》</h2>
-<ul>
-<li>演唱：杨乃文/伍佰</li>
-<li>作词：伍佰</li>
-<li>作曲：伍佰</li>
-<li>编曲：蔡维泽</li>
-<li>收录专辑：《Flow》</li>
-<li>简评：廉价的像是从收音机中放出的吉他声音出来的那一刻，伍佰的感觉扑面而来，配合杨乃文冷冽的声音，瞬间把我拿捏在了旋律之中。不过，这首歌并非一首很“冷”的歌，反而逐渐带来了“暖”的感觉。</li>
-</ul>
-<h2 id="堕落">10 《堕落》</h2>
-<ul>
-<li>演唱：杨乃文/佛跳墙</li>
-<li>作词：戴佩妮/杨乃文</li>
-<li>作曲：戴佩妮/陈君豪</li>
-<li>编曲：佛跳墙</li>
-<li>收录专辑：《Flow》</li>
-<li>简评：主歌部分有一种冷冷的颓感，副歌却突然滚烫地爆发出来，把整张专辑的情绪推向了高潮，是我在这张专辑中最爱的一首。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>音乐</category>
-      </categories>
-  </entry>
-  <entry>
     <title>每日专辑计划</title>
     <url>/2023/11/04/020daymusic/</url>
-    <content><![CDATA[<p>每天听一张新专辑~</p>
+    <content><![CDATA[<p><strong>Edit：</strong>本栏目已暂停更新，虽然我还在听新专辑……</p>
+<p>每天听一张新专辑~</p>
 <span id="more"></span>
 <h1 id="简介">简介</h1>
 <h2 id="原版">原版</h2>
@@ -4973,14 +4763,240 @@ Chan》，适合抖腿。《空城计》作为一首短而无趣的芭乐，词�
       </categories>
   </entry>
   <entry>
-    <title>浅论《伦理学》</title>
-    <url>/2024/04/03/027ethics/</url>
-    <content><![CDATA[<p>简单谈谈对于斯宾诺莎《伦理学》的感受。</p>
+    <title>摩卡壶改进方案与建模第二版</title>
+    <url>/2023/11/30/022mokapotnew/</url>
+    <content><![CDATA[<p>时隔多日的摩卡壶第二版~</p>
 <span id="more"></span>
+<p>其实是课程大作业拿出来重做了一遍，所以直接把分析报告贴上来水一篇博客……</p>
+<p>这次大作业的主体是Top-Down设计，使用solidworks建模，有几个交互控件。另外就是没有渲染图，过段时间闲下来练手时再补上。</p>
+<h1 id="设计建模分析">设计建模分析</h1>
+<h2 id="产品选取及改进点">产品选取及改进点</h2>
+<p>摩卡壶是一种萃取意式浓缩咖啡基底的工具，因其制咖操作的便利性开始在意大利家庭中普及，后来逐渐发展成为意大利国民产品，如今已行销至全球。</p>
+<p>摩卡壶分为上中下结构，下座是盛水的水槽，中间的粉槽盛放咖啡粉，上座盛放萃取后的咖啡液。它的原理是通过加热下壶中的水变成蒸气，利用蒸气的压力将水推升至导管进入粉槽而萃取咖啡液，再继续通过导管推升到上壶聚合流出。摩卡壶做出的咖啡是一种浓缩式的萃取，还原了原始意大利咖啡Espresso的浓度和风味。</p>
+<p><img src="/2023/11/30/022mokapotnew/1.jpg" height="600px"></p>
+<p>选择摩卡壶作为Top-Down设计的产品，主要原因在于其具有明显的零件装配结构，且大多数零件不是工业生产中常用的标准件，适合采用自顶至下的方法设计建模。同时，摩卡壶有较高的可交互性，便于对交互设计过程与方式进行分析。</p>
+<p>在日常使用中，我也发现摩卡壶存在的一些问题，如粉座很难从水槽取出等，在此也进行了适当的改进设计。</p>
+<p><img src="/2023/11/30/022mokapotnew/2.jpg" height="600px"></p>
+<h2 id="自顶至下的设计">自顶至下的设计</h2>
+<p>在设计建模之前，首先按照自顶至下的方式设计了初步的零件树，将摩卡壶分为壶身、上部、下部和电热器四个主要装配体，并进一步细分建模：</p>
+<p><img src="/2023/11/30/022mokapotnew/4.png" height="600px"></p>
+<p>使用solidworks建模时，结合实际情况，进一步改进了零件树，分壶体和电热器两大部分建模，壶体进一步分为上部和下部，总计21个零件。主要设计了壶盖、粉座升降器、总控开关三处交互组合；此外，电源线，各部分壶体与电热底座间也可以自由活动。</p>
+<p><img src="/2023/11/30/022mokapotnew/5.png" height="600px"></p>
+<h1 id="交互设计分析">交互设计分析</h1>
+<h2 id="交互过程简介">交互过程简介</h2>
+<ol type="1">
+<li><p>摩卡壶盖</p>
+<p>通过壶盖、壶身与插销-插孔转轴三者配合，由上盖开盖把手控制，实现任意角度下的壶盖旋转开合。</p>
+<p><img src="/2023/11/30/022mokapotnew/3.jpg" height="600px"></p></li>
+<li><p>粉座升降机构</p>
+<p>开关在外侧设置滑块，内侧金属销抵住漏斗状粉座下边缘，通过滑块滑动带动插销，实现粉座上下滑动，便于从水槽取出。</p>
+<p><img src="/2023/11/30/022mokapotnew/6.jpg" height="600px"></p></li>
+<li><p>总控开关</p>
+<p>总控开关通过按钮凹凸调节，实现电源控制（此处并未设计内部电路）。</p>
+<p><img src="/2023/11/30/022mokapotnew/7.jpg" height="600px"></p></li>
+</ol>
+<h2 id="人机交互方式">人机交互方式</h2>
+<p>人机交互中，控件外观和操作等主要采取两种表现形式，即语义方法和直接方法：语义方法往往依赖隐喻，将新产品的功能与用户熟悉的现有概念或产品进行比较；产品的外观及其控制成为符号，通常使用标有图标的控制面板。直接方法则以行为和行动为出发点，让用户在互动中发现行为的意义。</p>
+<p>好的交互产品应当尊重人的所有技能：认知、感知、运动和情感技能：感知运动技能指的是用户用感官能感知到什么，用身体能做什么。情感技能是指我们体验、表达情感和识别情感的能力。这包括我们对美好事物的易感性等。</p>
+<p>下面，我将对三处主要的交互控件的人机交互方式进行分析：</p>
+<ol type="1">
+<li><p>摩卡壶盖</p>
+<p>这种设计采用了直接方法，让用户通过顶部的把手直接控制壶盖的开合。这符合直观的物理原理，用户可以通过旋转把手的方式，轻松地控制壶盖在任意角度下的开合。这种直接的物理操作使用户能够更直观地感知壶盖的状态，同时也提供了一种自然而流畅的使用体验。</p></li>
+<li><p>粉座升降机构</p>
+<p>这个控件采用了语义方法和直接方法相结合的设计。外侧滑块的设置提供了语义上的指示，用户通过滑动滑块可以轻松地理解和控制粉座的上下移动。内侧金属销的作用是确保粉座在升降过程中的稳定，通过这种直接的物理连接，用户在滑动滑块时感知到滑块对插销的作用，从而使粉座上下滑动。这种设计在保证直观性的同时，通过内外结合的方式提供了更为丰富的语义信息。</p></li>
+<li><p>总控开关</p>
+<p>这个设计同样结合了语义方法和直接方法，用户通过按钮的凹凸感觉来感知开关状态，实现电源的控制。这种物理上的直接感知能够使用户在操作时更加精准，同时也降低了误操作的可能性。通过按钮的形状和位置设计，还可以在触觉上提供一定的信息，让用户更容易理解和掌握总控开关的状态。同时，按钮表面有最传统常见的开关标识，可以告诉用户该处开关的功能。</p></li>
+</ol>
+<p>这三个交互控件的设计都考虑到了用户的认知过程:直接的物理操作和语义指示使用户更容易理解每个控件的功能和操作方式，降低了认知负担，提升了用户友好性。通过直观的物理感知和语义指示，用户能够清晰地感知到每个控件的状态和操作效果，增强了用户对产品的感知体验。同时，设计考虑到了用户在使用过程中的手部运动，通过自然的手部动作完成操作，使得用户的动作更加流畅和符合直觉。</p>
+<p>当然，这些控件的设计不仅考虑了功能性，还注重了用户体验的情感层面。直观、流畅的操作方式以及精巧的设计可能会引发用户对产品的好感和满足感，从而建立起用户对产品的情感连接。</p>
+<h1 id="参考文献">参考文献</h1>
+<ol type="1">
+<li>Djajadiningrat T, Wensveen S, Overbeeke J F K. Tangible products:
+redressing the balance between appearance and action[J]. Pers Ubiquit
+Comput, 2004(7).</li>
+<li>BIALETTI比乐蒂. 咖啡巨匠 一见钟情|百年摩卡壶世家——比乐蒂[EB/OL].
+[2020-09-23]. https://zhuanlan.zhihu.com/p/258381635.</li>
+<li>百度百科. 摩卡壶[EB/OL]. [2023-04-12].
+https://baike.baidu.com/item/%E6%91%A9%E5%8D%A1%E5%A3%B6/224714.</li>
+</ol>
 ]]></content>
       <categories>
-        <category>书评</category>
-        <category>哲学</category>
+        <category>设计</category>
+        <category>产品</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>OpenCV基本函数简介</title>
+    <url>/2024/01/19/024opencvintro/</url>
+    <content><![CDATA[<p>自学过程中顺便记录一下</p>
+<span id="more"></span>
+<h1 id="简介">简介</h1>
+<p><a href="https://opencv.org/">OpenCV</a>的设计目标是提供一套简单而且可扩展的计算机视觉库，应用领域包括人机互动、图像识别、机器视觉、运动分析等。</p>
+<p>在Python环境下，使用<code>pip install opencv-python</code>安装OpenCV库，使用<code>import cv2</code>进行调用。</p>
+<h1 id="基本函数">基本函数</h1>
+<h2 id="文件操作">文件操作</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 加载图像</span></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示图像</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;image&#x27;</span>,img)</span><br><span class="line"><span class="comment"># 等待用户按键，delay设置为0将无限期等待</span></span><br><span class="line">cv2.waitKey(delay)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图像到指定路径</span></span><br><span class="line">cv2.imwrite(<span class="string">&#x27;image.jpg&#x27;</span>,img)</span><br></pre></td></tr></table></figure>
+<h2 id="图像属性查看">图像属性查看</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取像素</span></span><br><span class="line"><span class="comment"># 灰度图通过行列坐标获取</span></span><br><span class="line">px = img[y, x]</span><br><span class="line"><span class="comment"># 彩图加入RGB通道索引(分别为0/1/2)</span></span><br><span class="line">px = img[y, x, c]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改像素</span></span><br><span class="line">img[y, x] = [y_new, x_new]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取图像属性</span></span><br><span class="line"><span class="comment"># 图像大小：行数、列数、通道数</span></span><br><span class="line"><span class="built_in">print</span>(img.shape)</span><br><span class="line"><span class="comment"># 像素总数</span></span><br><span class="line"><span class="built_in">print</span>(img.size)</span><br><span class="line"><span class="comment"># 数据类型</span></span><br><span class="line"><span class="built_in">print</span>(img.dtype)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置感兴趣的区域(起始、结束坐标)</span></span><br><span class="line">roi = img[y1:y2, x1:x2]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拆分颜色通道</span></span><br><span class="line">b,g,r = cv2.split(img)</span><br><span class="line"><span class="comment"># 合并颜色通道</span></span><br><span class="line">img = cv2.merge([b,g,r])</span><br></pre></td></tr></table></figure>
+<h1 id="图像操作">图像操作</h1>
+<h2 id="基本编辑">基本编辑</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 图像缩放</span></span><br><span class="line">resize_img = cv2.resize(img, (width, height))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取旋转矩阵</span></span><br><span class="line">rotate_matrix = cv2.getRotationMatrix2D(center, angle, scale)</span><br><span class="line"><span class="comment"># 图像旋转</span></span><br><span class="line">rotate_img = cv2.warpAffine(img, rotate_matrix, (width, height))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 图像翻转(1表示水平翻转，0表示垂直翻转，-1表示水平和垂直同时翻转)</span></span><br><span class="line">flip_img = cv2.flip(img, <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="图像预处理">图像预处理</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 颜色空间转换(将图像从一种颜色表示方式转换为另一种)</span></span><br><span class="line"><span class="comment"># 例：RGB图像转换为灰度图</span></span><br><span class="line">gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 阈值处理(将图像中的像素按阈值分为两个区域)</span></span><br><span class="line"><span class="comment"># 例：将灰度图按阈值127，最大值255进行二进制阈值化，大于阈值变为最大值，否则变为0</span></span><br><span class="line">ret, binary_img = cv2.threshold(gray_img, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_BINARY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 滤波操作：用于平滑、去噪或增强图像特征</span></span><br><span class="line"><span class="comment"># 高斯滤波(高斯核大小、标准差)</span></span><br><span class="line">gaussblur_img = cv2.GaussianBlur(img, (<span class="number">5</span>, <span class="number">5</span>), <span class="number">0</span>)</span><br><span class="line"><span class="comment"># 中值滤波(滤波器大小)</span></span><br><span class="line">medianblur_img = cv2.medianBlur(img, <span class="number">5</span>)</span><br><span class="line"><span class="comment"># 均值滤波(滤波器大小)</span></span><br><span class="line">meanblur_img = cv2.blur(img, (<span class="number">5</span>, <span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="图像识别检测">图像识别检测</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Canny边缘检测</span></span><br><span class="line">edge = cv2.Canny(img, threshold1, threshold2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 霍夫变换检测直线</span></span><br><span class="line">line = cv2.HoughLines(edge, rho, theta, threshold)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 霍夫变换检测圆</span></span><br><span class="line">circ = cv2.HoughCircles(img, cv2.HOUGH_GRADIENT, dp, minDist, param1, param2, minR, maxR)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>程序</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>我的2023年度音乐总结</title>
+    <url>/2023/12/31/023annualmusic/</url>
+    <content><![CDATA[<p>复习考试的间隙摸鱼，总结下今年听到比较喜欢的音乐，然而一不小心就摸了整整一上午，急急急。。。</p>
+<span id="more"></span>
+<p>总结分为最喜欢的新专辑Top3，新听的老专辑Top3，以及今年听到的10首满意的新歌，都以华语流行为主。专辑排名有先后顺序，新曲排名无先后顺序，按歌手姓名首字母排序。</p>
+<h1 id="新专辑top3">新专辑Top3</h1>
+<h2 id="top1-chin-up-陈奕迅">Top1 《Chin Up!》—— 陈奕迅</h2>
+<p><img src="/2023/12/31/023annualmusic/chin up.jpg" width="600px" height="600px"></p>
+<p>把这张专辑放在第一，毫无疑问是有我的私心的。这张专辑有两个致命的缺点：作词平均水平较差，不说和林夕、黄伟文、林若宁比，就是前些年的《准备中》比起都显得逊色（我很喜欢也很尊重潘源良，但是《准备中》受到各种因素限制，让他实在不敢发挥）。同时，这张专辑只有短短8首歌，其中5首还是专辑释出前就已经发行的，甚至包括《是但求其爱》、《致明日的舞》这些几年前的歌，这份诚意堪比隔壁周杰伦的《伟作》了。</p>
+<p>不过，这张专辑的综合质量还是值得称赞的。全专作曲由林家谦包揽，编曲由林家谦和李荣浩承担，保证了听感的高度统一性。同时，作为陈奕迅少有的概念专辑，每首歌表达的概念层层递进，带来了一段从焦虑恐慌到大彻大悟的旅程，与Fears
+&amp; Dreams演唱会的概念也有异曲同工之处，是听完之后真的能够让人chin
+up的一张专辑。有许多人不认可李荣浩和林家谦，我对此持保留意见，并建议这些人培养下审美。《尘大师》和《社交恐惧癌》我会在后续单独介绍，在此简要谈谈另外六首吧。</p>
+<p>《人啊人》是我初次听不怎么喜欢的歌，不过找来live洗过耳朵后也变的悦耳多了，再回头听原版，也能够更好的体会编曲的妙处。顺带一提，周耀辉凭借这首歌获得了本届金曲奖的最佳词作者，然而我有些看不懂……这首歌用了许多罕见的乐器、合成器，营造了一种诡谲而宏大的氛围，颇有一种在天国之上睥睨众生的感觉。歌曲的MV也同样诡异，甚至有点吓到我了（汗）。</p>
+<p>《焦焦焦》的鼓点与和声，听起来就和歌名一样焦虑，中间还带来了大段动感的吉他solo，风格很像《Listen
+to Eason
+Chan》，适合抖腿。《空城计》作为一首短而无趣的芭乐，词作更是差到谷底，还是陈奕迅靠唱商救了一手。《是但求其爱》应该算这张专辑里主推的芭乐，放到二十年前毫不违和，很好听的同时也没什么亮点。</p>
+<p>《盲婚哑嫁》，表面编曲的杂乱繁冗，实际上很好地契合歌曲主题，营造了九十年代流行乐的韵味。如果去看MV，就会发现，这首歌讲述了一个很悲伤的故事，但是他的基调并不悲伤，反而在最后是走向释怀的，因此编曲略显欢快一些也蛮好。这首歌的词要是能再打磨打磨就更好了，我看来还是有些莫名其妙的地方。</p>
+<p>最后，《致明日的舞》，这首歌作为单曲发行时只是普通的好听，但这次作为专辑的最后一首歌，甚至可以说是升华了整张专辑。三拍子的独特律动感，轻松的旋律和简单的编曲，也带给听众轻松而简单的感动，从不美好、不快乐中解脱出来，相信明天的一切都“会更暖，会更光”，相信“我与你永远一起守望”。</p>
+<h2 id="top2-裘德-裘德">Top2 《裘德》—— 裘德</h2>
+<p><img src="/2023/12/31/023annualmusic/裘德.jpg" width="600px" height="600px"></p>
+<p>其实开始听裘德还没几天，这张新专就出来了。同名专辑往往是对于一个歌手最重要的专辑之一，裘德选择了第三张专辑，命名为《裘德》，在概念上对自己进行完全的解构，用音乐讲述了一个人一生的经历。这张专辑的听感有点像《太空人》，在动听与概念完整的同时，有一些过分囿于格律，导致听下来有些累。</p>
+<p>《伊始》作为熟悉的裘德式Intro，与第二首《胚胎》紧密配合，展示了一个人诞生的过程。紧跟着的《练声曲》，跟窦靖童合作带来了很美妙的旋律，但是具体分析我也不知道该分析什么。《斯德哥尔摩难题》，旋律确实有点神经病其实听裘德最爽的就是那些莫名其妙的反常音，给人带来眼前一亮的感觉。</p>
+<p>由于新专评价其实是我在最后写的，现在实在写不动了，重新听一遍《裘德》真的很累，词曲编都有大量的信息，希望裘老板下次少给听众上那么大的压力……</p>
+<h2 id="top3-flow-杨乃文">Top3 《Flow》—— 杨乃文</h2>
+<p><img src="/2023/12/31/023annualmusic/flow.png" width="600px" height="600px"></p>
+<p>同样是每首歌都与别的音乐人合作，《马拉美》之于《Flow》，就好像优衣库之于H&amp;M：吴青峰跟谁合作都是自己的味道，杨乃文跟谁合作，这首歌就会变成别人的样子。当然这只是玩笑，杨乃文的声音很好地贯通了风格不同的每一首歌，形散而神不散。</p>
+<p>不过还是上面的那句话，由于倒序写这篇博客，实在写不动了，就这样吧。</p>
+<h1 id="拾遗top3">拾遗Top3</h1>
+<h2 id="top1-groupies-吉他手">Top1 《Groupies 吉他手》</h2>
+<p><img src="/2023/12/31/023annualmusic/吉他手.jpg" width="600px" height="600px"></p>
+<ul>
+<li>演唱：陈绮贞</li>
+<li>发行年份：2002</li>
+<li>简评：这张专辑给我的感觉完全展示在了封面上，让我看到了夏天、蓝天和大海的旋律，可以完全沉浸在陈绮贞的声音里。据说陈老师是典型的INFP，她的作品中也确实充斥着感性洋溢又天马行空的思考，在这张专辑中更是展现的淋漓尽致。</li>
+</ul>
+<h2 id="top2-最后的水族馆">Top2 《最后的水族馆》</h2>
+<p><img src="/2023/12/31/023annualmusic/最后的水族馆.jpg" width="600px" height="600px"></p>
+<ul>
+<li>演唱：裘德</li>
+<li>发行年份：2021</li>
+<li>简评：跟随Intro中的指引，进入水族馆的旅行，用全身心去感受神秘的海底世界……这或许是一个细思极恐的旅程，我们也成了水族馆中最后的藏品，把自己的一部分留在大海深处。这让我想到了《ever
+17》，一个同样发生在深海密闭空间的游戏，在紧张、未知的故事最后，带给我们深刻的思考和感动。</li>
+</ul>
+<h2 id="top3-心里学">Top3 《心里学》</h2>
+<p><img src="/2023/12/31/023annualmusic/心里学.png" width="600px" height="600px"></p>
+<ul>
+<li>演唱：徐佳莹</li>
+<li>发行年份：2017</li>
+<li>简评：在这张专辑里，LaLa用优美的旋律和演唱，全方面展示了她对内心世界的探索。最近听了很多遍，但是真的要写却似乎写不出来什么东西，总之我很喜欢，就这样吧。</li>
+</ul>
+<h1 id="新曲top10">新曲Top10</h1>
+<h2 id="尘大师">1 《尘大师》</h2>
+<ul>
+<li>演唱：陈奕迅</li>
+<li>作词：林海峰</li>
+<li>作曲：林家谦</li>
+<li>编曲：李荣浩</li>
+<li>收录专辑：《Chin Up!》</li>
+<li>简评：这首歌很像是陈奕迅本人的写照，同时加入大量粤语俚语，算得上一首非常私人的歌。多提一句，词作者林海峰与Eason合作的名场面是《麦当劳汉堡》，突然觉得这首歌的词更好理解了……在李荣浩的新专被骂的这一年，他把更好的编曲给了陈奕迅，这首尘大师更是我最满意的一首。前奏的吉他一下就能把人带入轻松愉快的氛围，并贯穿全程。这首歌全程被各类乐器、合成器铺满，第一次听时让我有些不解，但是听上几遍后，才发现编曲完美配合了人声。</li>
+</ul>
+<h2 id="社交恐惧癌">2 《社交恐惧癌》</h2>
+<ul>
+<li>演唱：陈奕迅</li>
+<li>作词：李荣浩</li>
+<li>作曲：林家谦</li>
+<li>编曲：林家谦</li>
+<li>收录专辑：《Chin Up!》</li>
+<li>简评：本着一碗水端平的原则，从这张专辑再选一首国语歌进来，不过我也的确很喜欢这首。李荣浩这次没有编曲，而是为这首歌作了词，我整体还是蛮喜欢的，不过一些粤语区听众似乎觉得“脑海爆炸的High”有些难绷……这首歌的旋律在不少细节处不是很常规，编曲中也藏了许多小细节，比如之前看HOPICO访谈Eason时提到的，第二段副歌中的手机铃声，这些有趣的小细节都很有林家谦的风格，让这首歌变得更加丰富立体。另外值得一提的是，这首歌的MV也很有趣，请来了梁朝伟参演，有空不妨看看。</li>
+</ul>
+<h2 id="烟花">3 《烟花》</h2>
+<ul>
+<li>演唱：窦靖童</li>
+<li>作词：窦靖童</li>
+<li>作曲：窦靖童</li>
+<li>编曲：窦靖童</li>
+<li>收录专辑：《春游》</li>
+<li>简评：窦靖童的天赋肉眼可见，第一张原创国语专辑，虽然仍有不少地方有待打磨，但是灵动与可爱的感觉洋溢在每首歌之间。《烟花》是这张专辑中我最喜欢的一首，《Monday》的节奏性与氛围感太强，这首歌更能凸显窦靖童遗传下来音色的魅力，旋律也更出彩一些。</li>
+</ul>
+<h2 id="万一你是个好人怪我只敢做好人">4
+《万一你是个好人》&amp;《怪我只敢做好人》</h2>
+<ul>
+<li>演唱：林家谦</li>
+<li>作词：黄伟文&amp;林夕</li>
+<li>作曲：林家谦</li>
+<li>编曲：林家谦</li>
+<li>收录专辑：单曲发行</li>
+<li>简评：尽管不少人不喜欢他的音色和唱腔，林家谦无疑是香港新生代最为出色的唱作人。除了与陈奕迅等歌手合作之外，小林为自己也写了许多好歌，今年虽然没有新专和ep，但是这两首歌带来的惊喜已经足够。黄伟文和林夕的姊妹词作，结合林家谦优秀的作曲，为两首歌分别赋予了拔群的魅力。正如我上面说的，林家谦的曲主体旋律都很悦耳顺畅，甚至有一点复古的感觉；但是不时出现的反常音与编曲中丰富的细节，为作曲带来了浓厚的现代感与高级感。</li>
+</ul>
+<h2 id="忘记趁早">5 《忘记趁早》</h2>
+<ul>
+<li>演唱：林智乐</li>
+<li>作词：林若宁</li>
+<li>作曲：泽日生</li>
+<li>编曲：傅丹斌/谭畅/泽日生</li>
+<li>收录专辑：单曲发行</li>
+<li>简评：林智乐作为新人的出道作品，词曲基本代表了目前香港乐坛的最高水平，他的演唱也完全不令人失望。凭借极高的唱功与唱商，很出色的驾驭了泽日生的断气旋律。</li>
+</ul>
+<h2 id="涩谷驿前等">6 《涩谷驿前等》</h2>
+<ul>
+<li>演唱：林智乐</li>
+<li>作词：林若宁</li>
+<li>作曲：泽日生</li>
+<li>编曲：傅丹斌/谭畅/泽日生</li>
+<li>收录专辑：单曲发行</li>
+<li>简评：延续上一首歌的阵容，发挥依旧出色。如果这样保持下去，我认为林智乐有可能成为下一个陈奕迅。</li>
+</ul>
+<h2 id="色盲">7 《色盲》</h2>
+<ul>
+<li>演唱：裘德/徐佳莹</li>
+<li>作词：万一</li>
+<li>作曲：裘德</li>
+<li>编曲：关浩德/宋扬</li>
+<li>收录专辑：《裘德》</li>
+<li>简评：副歌部分，徐佳莹声音出来的那一刻，这首歌就必须入选了，五体投地的喜欢，别的部分不多评价了。</li>
+</ul>
+<h2 id="今天吃点什么好">8《今天吃点什么好》</h2>
+<ul>
+<li>演唱：裘德</li>
+<li>作词：万一</li>
+<li>作曲：裘德</li>
+<li>编曲：裘德</li>
+<li>收录专辑：《裘德》</li>
+<li>简评：跃动的旋律，跳脱的歌词，造就了这首疯狂的歌曲。同时，各种乐器的搭配，为并不复杂的旋律锦上添花。这首歌可以算是整张专辑里最代表裘德“味道”的一首，我感觉可以一直单曲循环~</li>
+</ul>
+<h2 id="说不出口">9 《说不出口》</h2>
+<ul>
+<li>演唱：杨乃文/伍佰</li>
+<li>作词：伍佰</li>
+<li>作曲：伍佰</li>
+<li>编曲：蔡维泽</li>
+<li>收录专辑：《Flow》</li>
+<li>简评：廉价的像是从收音机中放出的吉他声音出来的那一刻，伍佰的感觉扑面而来，配合杨乃文冷冽的声音，瞬间把我拿捏在了旋律之中。不过，这首歌并非一首很“冷”的歌，反而逐渐带来了“暖”的感觉。</li>
+</ul>
+<h2 id="堕落">10 《堕落》</h2>
+<ul>
+<li>演唱：杨乃文/佛跳墙</li>
+<li>作词：戴佩妮/杨乃文</li>
+<li>作曲：戴佩妮/陈君豪</li>
+<li>编曲：佛跳墙</li>
+<li>收录专辑：《Flow》</li>
+<li>简评：主歌部分有一种冷冷的颓感，副歌却突然滚烫地爆发出来，把整张专辑的情绪推向了高潮，是我在这张专辑中最爱的一首。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>音乐</category>
       </categories>
   </entry>
   <entry>
@@ -5037,29 +5053,42 @@ Chan》，适合抖腿。《空城计》作为一首短而无趣的芭乐，词�
       </categories>
   </entry>
   <entry>
-    <title>OpenCV基本函数简介</title>
-    <url>/2024/01/19/024opencvintro/</url>
-    <content><![CDATA[<p>自学过程中顺便记录一下</p>
+    <title>福建轨道交通架空规划</title>
+    <url>/2024/08/06/027fujianmetro/</url>
+    <content><![CDATA[<p>学期内懒得更新，一次性更新下之前摸鱼的图，主要为福建各城市地铁架空规划……</p>
 <span id="more"></span>
-<h1 id="简介">简介</h1>
-<p><a href="https://opencv.org/">OpenCV</a>的设计目标是提供一套简单而且可扩展的计算机视觉库，应用领域包括人机互动、图像识别、机器视觉、运动分析等。</p>
-<p>在Python环境下，使用<code>pip install opencv-python</code>安装OpenCV库，使用<code>import cv2</code>进行调用。</p>
-<h1 id="基本函数">基本函数</h1>
-<h2 id="文件操作">文件操作</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 加载图像</span></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示图像</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;image&#x27;</span>,img)</span><br><span class="line"><span class="comment"># 等待用户按键，delay设置为0将无限期等待</span></span><br><span class="line">cv2.waitKey(delay)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图像到指定路径</span></span><br><span class="line">cv2.imwrite(<span class="string">&#x27;image.jpg&#x27;</span>,img)</span><br></pre></td></tr></table></figure>
-<h2 id="图像属性查看">图像属性查看</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取像素</span></span><br><span class="line"><span class="comment"># 灰度图通过行列坐标获取</span></span><br><span class="line">px = img[y, x]</span><br><span class="line"><span class="comment"># 彩图加入RGB通道索引(分别为0/1/2)</span></span><br><span class="line">px = img[y, x, c]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改像素</span></span><br><span class="line">img[y, x] = [y_new, x_new]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取图像属性</span></span><br><span class="line"><span class="comment"># 图像大小：行数、列数、通道数</span></span><br><span class="line"><span class="built_in">print</span>(img.shape)</span><br><span class="line"><span class="comment"># 像素总数</span></span><br><span class="line"><span class="built_in">print</span>(img.size)</span><br><span class="line"><span class="comment"># 数据类型</span></span><br><span class="line"><span class="built_in">print</span>(img.dtype)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置感兴趣的区域(起始、结束坐标)</span></span><br><span class="line">roi = img[y1:y2, x1:x2]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拆分颜色通道</span></span><br><span class="line">b,g,r = cv2.split(img)</span><br><span class="line"><span class="comment"># 合并颜色通道</span></span><br><span class="line">img = cv2.merge([b,g,r])</span><br></pre></td></tr></table></figure>
-<h1 id="图像操作">图像操作</h1>
-<h2 id="基本编辑">基本编辑</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 图像缩放</span></span><br><span class="line">resize_img = cv2.resize(img, (width, height))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取旋转矩阵</span></span><br><span class="line">rotate_matrix = cv2.getRotationMatrix2D(center, angle, scale)</span><br><span class="line"><span class="comment"># 图像旋转</span></span><br><span class="line">rotate_img = cv2.warpAffine(img, rotate_matrix, (width, height))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 图像翻转(1表示水平翻转，0表示垂直翻转，-1表示水平和垂直同时翻转)</span></span><br><span class="line">flip_img = cv2.flip(img, <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="图像预处理">图像预处理</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 颜色空间转换(将图像从一种颜色表示方式转换为另一种)</span></span><br><span class="line"><span class="comment"># 例：RGB图像转换为灰度图</span></span><br><span class="line">gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 阈值处理(将图像中的像素按阈值分为两个区域)</span></span><br><span class="line"><span class="comment"># 例：将灰度图按阈值127，最大值255进行二进制阈值化，大于阈值变为最大值，否则变为0</span></span><br><span class="line">ret, binary_img = cv2.threshold(gray_img, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_BINARY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 滤波操作：用于平滑、去噪或增强图像特征</span></span><br><span class="line"><span class="comment"># 高斯滤波(高斯核大小、标准差)</span></span><br><span class="line">gaussblur_img = cv2.GaussianBlur(img, (<span class="number">5</span>, <span class="number">5</span>), <span class="number">0</span>)</span><br><span class="line"><span class="comment"># 中值滤波(滤波器大小)</span></span><br><span class="line">medianblur_img = cv2.medianBlur(img, <span class="number">5</span>)</span><br><span class="line"><span class="comment"># 均值滤波(滤波器大小)</span></span><br><span class="line">meanblur_img = cv2.blur(img, (<span class="number">5</span>, <span class="number">5</span>))</span><br></pre></td></tr></table></figure>
-<h2 id="图像识别检测">图像识别检测</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Canny边缘检测</span></span><br><span class="line">edge = cv2.Canny(img, threshold1, threshold2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 霍夫变换检测直线</span></span><br><span class="line">line = cv2.HoughLines(edge, rho, theta, threshold)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 霍夫变换检测圆</span></span><br><span class="line">circ = cv2.HoughCircles(img, cv2.HOUGH_GRADIENT, dp, minDist, param1, param2, minR, maxR)</span><br></pre></td></tr></table></figure>
+<h1 id="福建">福建</h1>
+<h2 id="泉州">泉州</h2>
+<p><img src="/2024/08/06/027fujianmetro/泉州-01.jpg"></p>
+<h2 id="漳州厦门">漳州（厦门）</h2>
+<figure>
+<img src="/2024/08/06/027fujianmetro/厦门&amp;漳州-01.jpg" alt="厦门&amp;漳州-01">
+<figcaption aria-hidden="true">厦门&amp;漳州-01</figcaption>
+</figure>
+<h2 id="宁德">宁德</h2>
+<figure>
+<img src="/2024/08/06/027fujianmetro/宁德-01.jpg" alt="宁德-01">
+<figcaption aria-hidden="true">宁德-01</figcaption>
+</figure>
+<h2 id="莆田">莆田</h2>
+<figure>
+<img src="/2024/08/06/027fujianmetro/莆田-01.jpg" alt="莆田-01">
+<figcaption aria-hidden="true">莆田-01</figcaption>
+</figure>
+<h2 id="龙岩">龙岩</h2>
+<figure>
+<img src="/2024/08/06/027fujianmetro/龙岩-01.jpg" alt="龙岩-01">
+<figcaption aria-hidden="true">龙岩-01</figcaption>
+</figure>
+<h2 id="三明">三明</h2>
+<figure>
+<img src="/2024/08/06/027fujianmetro/三明-01.jpg" alt="三明-01">
+<figcaption aria-hidden="true">三明-01</figcaption>
+</figure>
 ]]></content>
       <categories>
-        <category>教程</category>
-        <category>程序</category>
+        <category>设计</category>
+        <category>交通</category>
       </categories>
   </entry>
   <entry>
