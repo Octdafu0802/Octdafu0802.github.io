@@ -12,6 +12,93 @@
       </categories>
   </entry>
   <entry>
+    <title>Foobar2000配置教程</title>
+    <url>/2023/05/10/004foobar2000/</url>
+    <content><![CDATA[<p>Foobar2000是当前主流的Hifi本地音乐播放器，拥有强大的功能，并支持绝大多数主流音乐格式，这篇文章将简要介绍一些Foobar2000基础配置。注意，本篇文章不涉及理论，仅考虑功能。当然，欢迎各位路过的大佬传授经验，提供建议，也欢迎小白提问，我会尽力解答。</p>
+<span id="more"></span>
+<h2 id="ui与界面">UI与界面</h2>
+<p>首先，Foobar2000的下载完全免费，对于下载和安装我就不再赘述。</p>
+<h3 id="ui整合包">UI整合包</h3>
+<p>对于一般人，自己设计制作Foobar2000的UI界面难度过大，也不能满足全方面的使用要求。因此，我推荐使用大佬们制作的UI整合包，下载这些整合包时，一般自带Foobar2000的本体，所以可以不必另行安装本体。这些整合包中，我个人比较推荐Foobox，也可以选择Foobaka、FlatLite等使用。这是我的Foobox整合包界面，可以感受一下是否符合自己的审美。</p>
+<p><img src="/2023/05/10/004foobar2000/1.jpg"></p>
+<h3 id="foobox设置">Foobox设置</h3>
+<p>选择设置，并进入Foobox设置，可以在不改变基本结构的基础上，自定义Foobar2000（后文简称fb2k）的界面。</p>
+<p><img src="/2023/05/10/004foobar2000/2.jpg"></p>
+<p>这些设置都简单易懂，比较值得一提的是列设置，通过开启/关闭列，可以改变播放界面展示的歌曲信息。</p>
+<h2 id="foobar2000的基础配置">Foobar2000的基础配置</h2>
+<p>接下来，让我们进入fb2k软件的原生配置环节。通过foobox设置中转入，或右上角菜单栏，可以进入设置选项。提示，fb2k最好开启音频独占使用。</p>
+<h3 id="播放与dsp管理器">播放与DSP管理器</h3>
+<ul>
+<li><p>播放增益：简单来讲就是播放音量与原始音量的差值</p>
+<ul>
+<li>源模式：专辑</li>
+<li>处理：应用增益并根据峰值阻止谐波失真</li>
+</ul></li>
+<li><p>DSP管理器：提供各类小工具</p>
+<ul>
+<li><p>高级限幅器、硬-6dB限幅器：可以减少杂音干扰，推荐开启</p></li>
+<li><p>重采样：个人认为，这东西并不是开的越高越好，要看解码器水平与音频质量，在保证不出杂音的情况下，尽可能开高。如果有解码器的朋友，记得在解码驱动程序中同时调节，保持与fb2k中采样率的一致。</p></li>
+<li><p>立体声、声道、上混等：我没用过，各位可以看心情试试</p></li>
+<li><p>交叉渐变器：听起来很牛，其实只是音乐淡入淡出</p></li>
+<li><p>跳过静音区域：字面意思</p></li>
+<li><p>均衡器：调节EQ曲线，个人喜欢原汁原味，但是据说有些耳机调了有奇效</p></li>
+</ul></li>
+</ul>
+<h3 id="解码与输出">解码与输出</h3>
+<ul>
+<li><p>解码：没什么要调的，勾选即可</p></li>
+<li><p>输出：放张图看看</p>
+<p><img src="/2023/05/10/004foobar2000/3.jpg"></p>
+<ul>
+<li>设备：没有解码耳放的朋友，可以选择wasapi播放，比默认略好一些；有解码耳放的朋友，可以选择asio+dsd输出（asio也可以，这里仅以自己的配置进行说明）。</li>
+<li>缓冲长度：基本保持默认即可。</li>
+<li>输出格式：声卡/解码耳放支持的最高位数。</li>
+</ul></li>
+<li><p>asio+dsd：默认即可。</p></li>
+</ul>
+<h2 id="工具">工具</h2>
+<h3 id="dsd处理器">DSD处理器</h3>
+<p><img src="/2023/05/10/004foobar2000/4.jpg"></p>
+<p>SDM类型选择A，采样选择8×即可。输出一栏的调节俗称升频功能，需参考解码器最大支持的码率调节。升频和上文提及的重采样类似，不求极致，但求合适。由于我在解码器中已经设置了升频，因此软件中没有重复设置。</p>
+<h3 id="eslyric">ESLyric</h3>
+<ul>
+<li><p>主选单：搜索按如图设置即可，是否启用桌面歌词看个人喜好</p>
+<p><img src="/2023/05/10/004foobar2000/5.jpg"></p></li>
+<li><p>歌词选项：关联全选，其余基本默认即可，保存格式为UTF-8</p></li>
+<li><p>桌面歌词：按个人喜好配置即可，分享一下我的配置：</p>
+<p><img src="/2023/05/10/004foobar2000/6.jpg"></p></li>
+<li><p>高级选项：保持默认即可</p></li>
+</ul>
+<h3 id="sacd">SACD</h3>
+<p>输出类型选择DSD，转换选择多级64fp，使用DSD处理器。声道优先看个人喜好，我选择无。剩下的直接上图看吧：</p>
+<p><img src="/2023/05/10/004foobar2000/7.jpg"></p>
+<h3 id="播放增益扫描器">播放增益扫描器</h3>
+<p>印象中基本无需更改，如图设置即可：</p>
+<p><img src="/2023/05/10/004foobar2000/8.jpg"></p>
+<p>其余项目印象中不需要什么调整，就不多讲了。</p>
+<h2 id="杂项设置">杂项设置</h2>
+<h3 id="快捷键">快捷键</h3>
+<p>可以自行添加、移除快捷键；通过点击按键栏，再用键盘指定键位的方式修改；对于暂停，下一首等常用按键，推荐勾选全局设置。</p>
+<p><img src="/2023/05/10/004foobar2000/9.jpg"></p>
+<h3 id="媒体库-可视化">媒体库 &amp; 可视化</h3>
+<p>请设置为自己音乐所在的文件目录，以便fb2k统计播放数据。</p>
+<p>可视化保持默认即可（还有一个对大多数人可有可无的网络设置也是）。</p>
+<p>这两项设置其实毫无关系，只是因为都只有一句话，就放在一起了。</p>
+<h3 id="外壳交互">外壳交互</h3>
+<p>设置如图，另外，可以在系统设置中，将主流音频格式默认关联到fb2k。</p>
+<p><img src="/2023/05/10/004foobar2000/10.jpg"></p>
+<h3 id="显示">显示</h3>
+<p>这一部分主要可以个性化设置的是主窗口栏，这依然是一个看个人喜好的设置，不妨自行调整测试，得出最适合自己的配置方案。</p>
+<h3 id="组件与高级">组件与高级</h3>
+<p>因为这是一篇基础教程，所以这两项并不会涉及，有兴趣请自行深入研究。另外，对于一般的UI整合包，必要的组件已经预安装完成，如果您使用原版fb2k，并且发现我上面提到的一些设置选项不存在，就需要安装对应的组合包了。</p>
+<p>最后想说，我本人并不专业，按照这个配置，可能无法达到最完美的播放效果。感谢各位的阅读，也欢迎各位提出自己的建议，指出我的错误！</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>数码</category>
+      </categories>
+  </entry>
+  <entry>
     <title>线性代数笔记整理</title>
     <url>/2023/05/10/003mathnoted1s/</url>
     <content><![CDATA[<p>大一上学期，自己用Latex整理的线性代数笔记，欢迎各位浏览学习。</p>
@@ -900,104 +987,8 @@ n\)</span>. </p></li>
 </ul>
 ]]></content>
       <categories>
-        <category>学习</category>
-        <category>数理</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Foobar2000配置教程</title>
-    <url>/2023/05/10/004foobar2000/</url>
-    <content><![CDATA[<p>Foobar2000是当前主流的Hifi本地音乐播放器，拥有强大的功能，并支持绝大多数主流音乐格式，这篇文章将简要介绍一些Foobar2000基础配置。注意，本篇文章不涉及理论，仅考虑功能。当然，欢迎各位路过的大佬传授经验，提供建议，也欢迎小白提问，我会尽力解答。</p>
-<span id="more"></span>
-<h2 id="ui与界面">UI与界面</h2>
-<p>首先，Foobar2000的下载完全免费，对于下载和安装我就不再赘述。</p>
-<h3 id="ui整合包">UI整合包</h3>
-<p>对于一般人，自己设计制作Foobar2000的UI界面难度过大，也不能满足全方面的使用要求。因此，我推荐使用大佬们制作的UI整合包，下载这些整合包时，一般自带Foobar2000的本体，所以可以不必另行安装本体。这些整合包中，我个人比较推荐Foobox，也可以选择Foobaka、FlatLite等使用。这是我的Foobox整合包界面，可以感受一下是否符合自己的审美。</p>
-<p><img src="/2023/05/10/004foobar2000/1.jpg"></p>
-<h3 id="foobox设置">Foobox设置</h3>
-<p>选择设置，并进入Foobox设置，可以在不改变基本结构的基础上，自定义Foobar2000（后文简称fb2k）的界面。</p>
-<p><img src="/2023/05/10/004foobar2000/2.jpg"></p>
-<p>这些设置都简单易懂，比较值得一提的是列设置，通过开启/关闭列，可以改变播放界面展示的歌曲信息。</p>
-<h2 id="foobar2000的基础配置">Foobar2000的基础配置</h2>
-<p>接下来，让我们进入fb2k软件的原生配置环节。通过foobox设置中转入，或右上角菜单栏，可以进入设置选项。提示，fb2k最好开启音频独占使用。</p>
-<h3 id="播放与dsp管理器">播放与DSP管理器</h3>
-<ul>
-<li><p>播放增益：简单来讲就是播放音量与原始音量的差值</p>
-<ul>
-<li>源模式：专辑</li>
-<li>处理：应用增益并根据峰值阻止谐波失真</li>
-</ul></li>
-<li><p>DSP管理器：提供各类小工具</p>
-<ul>
-<li><p>高级限幅器、硬-6dB限幅器：可以减少杂音干扰，推荐开启</p></li>
-<li><p>重采样：个人认为，这东西并不是开的越高越好，要看解码器水平与音频质量，在保证不出杂音的情况下，尽可能开高。如果有解码器的朋友，记得在解码驱动程序中同时调节，保持与fb2k中采样率的一致。</p></li>
-<li><p>立体声、声道、上混等：我没用过，各位可以看心情试试</p></li>
-<li><p>交叉渐变器：听起来很牛，其实只是音乐淡入淡出</p></li>
-<li><p>跳过静音区域：字面意思</p></li>
-<li><p>均衡器：调节EQ曲线，个人喜欢原汁原味，但是据说有些耳机调了有奇效</p></li>
-</ul></li>
-</ul>
-<h3 id="解码与输出">解码与输出</h3>
-<ul>
-<li><p>解码：没什么要调的，勾选即可</p></li>
-<li><p>输出：放张图看看</p>
-<p><img src="/2023/05/10/004foobar2000/3.jpg"></p>
-<ul>
-<li>设备：没有解码耳放的朋友，可以选择wasapi播放，比默认略好一些；有解码耳放的朋友，可以选择asio+dsd输出（asio也可以，这里仅以自己的配置进行说明）。</li>
-<li>缓冲长度：基本保持默认即可。</li>
-<li>输出格式：声卡/解码耳放支持的最高位数。</li>
-</ul></li>
-<li><p>asio+dsd：默认即可。</p></li>
-</ul>
-<h2 id="工具">工具</h2>
-<h3 id="dsd处理器">DSD处理器</h3>
-<p><img src="/2023/05/10/004foobar2000/4.jpg"></p>
-<p>SDM类型选择A，采样选择8×即可。输出一栏的调节俗称升频功能，需参考解码器最大支持的码率调节。升频和上文提及的重采样类似，不求极致，但求合适。由于我在解码器中已经设置了升频，因此软件中没有重复设置。</p>
-<h3 id="eslyric">ESLyric</h3>
-<ul>
-<li><p>主选单：搜索按如图设置即可，是否启用桌面歌词看个人喜好</p>
-<p><img src="/2023/05/10/004foobar2000/5.jpg"></p></li>
-<li><p>歌词选项：关联全选，其余基本默认即可，保存格式为UTF-8</p></li>
-<li><p>桌面歌词：按个人喜好配置即可，分享一下我的配置：</p>
-<p><img src="/2023/05/10/004foobar2000/6.jpg"></p></li>
-<li><p>高级选项：保持默认即可</p></li>
-</ul>
-<h3 id="sacd">SACD</h3>
-<p>输出类型选择DSD，转换选择多级64fp，使用DSD处理器。声道优先看个人喜好，我选择无。剩下的直接上图看吧：</p>
-<p><img src="/2023/05/10/004foobar2000/7.jpg"></p>
-<h3 id="播放增益扫描器">播放增益扫描器</h3>
-<p>印象中基本无需更改，如图设置即可：</p>
-<p><img src="/2023/05/10/004foobar2000/8.jpg"></p>
-<p>其余项目印象中不需要什么调整，就不多讲了。</p>
-<h2 id="杂项设置">杂项设置</h2>
-<h3 id="快捷键">快捷键</h3>
-<p>可以自行添加、移除快捷键；通过点击按键栏，再用键盘指定键位的方式修改；对于暂停，下一首等常用按键，推荐勾选全局设置。</p>
-<p><img src="/2023/05/10/004foobar2000/9.jpg"></p>
-<h3 id="媒体库-可视化">媒体库 &amp; 可视化</h3>
-<p>请设置为自己音乐所在的文件目录，以便fb2k统计播放数据。</p>
-<p>可视化保持默认即可（还有一个对大多数人可有可无的网络设置也是）。</p>
-<p>这两项设置其实毫无关系，只是因为都只有一句话，就放在一起了。</p>
-<h3 id="外壳交互">外壳交互</h3>
-<p>设置如图，另外，可以在系统设置中，将主流音频格式默认关联到fb2k。</p>
-<p><img src="/2023/05/10/004foobar2000/10.jpg"></p>
-<h3 id="显示">显示</h3>
-<p>这一部分主要可以个性化设置的是主窗口栏，这依然是一个看个人喜好的设置，不妨自行调整测试，得出最适合自己的配置方案。</p>
-<h3 id="组件与高级">组件与高级</h3>
-<p>因为这是一篇基础教程，所以这两项并不会涉及，有兴趣请自行深入研究。另外，对于一般的UI整合包，必要的组件已经预安装完成，如果您使用原版fb2k，并且发现我上面提到的一些设置选项不存在，就需要安装对应的组合包了。</p>
-<p>最后想说，我本人并不专业，按照这个配置，可能无法达到最完美的播放效果。感谢各位的阅读，也欢迎各位提出自己的建议，指出我的错误！</p>
-]]></content>
-      <categories>
         <category>教程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Sigil制作epub电子书入门</title>
-    <url>/2023/05/10/005sigilepub/</url>
-    <content><![CDATA[<p>开坑待填</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>教程</category>
+        <category>课程</category>
       </categories>
   </entry>
   <entry>
@@ -1163,7 +1154,7 @@ Album》和水樹奈々的《深爱》。</p>
 <p>看到这里的朋友可能会发现，后五部的简评明显要短得多，这不是我的设计，只是单纯写累了（笑）。总之，谢谢您的阅读，也欢迎留下自己的观点~</p>
 ]]></content>
       <categories>
-        <category>娱乐</category>
+        <category>评价</category>
         <category>动画</category>
       </categories>
   </entry>
@@ -2440,8 +2431,8 @@ E\)</span>越大.</p></li>
 </ul>
 ]]></content>
       <categories>
-        <category>学习</category>
-        <category>数理</category>
+        <category>教程</category>
+        <category>课程</category>
       </categories>
   </entry>
   <entry>
@@ -2701,7 +2692,6 @@ E\)</span>越大.</p></li>
 <p>宫越县有医院、诊所共1521所。</p>
 ]]></content>
       <categories>
-        <category>娱乐</category>
         <category>游戏</category>
       </categories>
   </entry>
@@ -2751,12 +2741,11 @@ E\)</span>越大.</p></li>
 </ul>
 ]]></content>
       <categories>
-        <category>娱乐</category>
         <category>游戏</category>
       </categories>
   </entry>
   <entry>
-    <title>日式城市命名思路</title>
+    <title>日式城市随机命名</title>
     <url>/2023/05/17/009pyrandomname/</url>
     <content><![CDATA[<p>最近在天际线中建造日式城市时，经常需要为城市中的行政区划和轨道线路等命名，那么如何创作出合适的日式城市名称呢？</p>
 <span id="more"></span>
@@ -2771,6 +2760,134 @@ E\)</span>越大.</p></li>
 ]]></content>
       <categories>
         <category>教程</category>
+        <category>程序</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Octrans</title>
+    <url>/2023/05/21/011Octrans/</url>
+    <content><![CDATA[<p>Octrans是一款基于百度api的翻译软件，由本人自制，功能一般，bug也很多，欢迎各位指正！</p>
+<span id="more"></span>
+<p>当前版本：V2.1</p>
+<p>下载地址：https://pan.baidu.com/s/1N8ADTEyUZFUs2NYZceDkmA</p>
+<p>提取码：hgqq</p>
+<h1 id="说明">说明</h1>
+<h2 id="v1.0">V1.0</h2>
+<ul>
+<li>使用PyQt5编写了简单的图形界面</li>
+<li>可以选择翻译使用的语言与系统语言</li>
+<li>实现单行文字的翻译</li>
+</ul>
+<h2 id="v2.0">V2.0</h2>
+<ul>
+<li><p>通过在输入栏打入多行文字或导入txt文件进行翻译</p></li>
+<li><p>可以将翻译结果导出到txt文件</p></li>
+</ul>
+<h2 id="v2.1">V2.1</h2>
+<ul>
+<li>优化了系统语言设置</li>
+<li>为文件的保存和读取设置了快捷键</li>
+</ul>
+<h2 id="v2.2">V2.2</h2>
+<ul>
+<li>将应用程序进一步封装，并隐藏了控制台</li>
+<li>修改了版本显示错误</li>
+</ul>
+<h1 id="源码">源码</h1>
+<h2 id="ui部分">UI部分</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtCore, QtGui, QtWidgets</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">cndic=&#123;</span><br><span class="line">            <span class="string">&quot;汉语&quot;</span>:<span class="string">&#x27;zh&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;英语&quot;</span>:<span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;粤语&quot;</span>:<span class="string">&#x27;yue&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;文言文&quot;</span>:<span class="string">&#x27;wyw&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;法语&quot;</span>:<span class="string">&#x27;fra&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;德语&quot;</span>:<span class="string">&#x27;de&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;日语&quot;</span>:<span class="string">&#x27;jp&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;韩语&quot;</span>:<span class="string">&#x27;kor&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;西班牙语&quot;</span>:<span class="string">&#x27;spa&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;葡萄牙语&quot;</span>:<span class="string">&#x27;pt&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;意大利语&quot;</span>:<span class="string">&#x27;it&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;阿拉伯语&quot;</span>:<span class="string">&#x27;ara&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">endic=&#123;</span><br><span class="line">            <span class="string">&quot;Mandarin&quot;</span>:<span class="string">&#x27;zh&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;English&quot;</span>:<span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Cantonese&quot;</span>:<span class="string">&#x27;yue&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Classical Chinese&quot;</span>:<span class="string">&#x27;wyw&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;French&quot;</span>:<span class="string">&#x27;fra&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;German&quot;</span>:<span class="string">&#x27;de&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Japanese&quot;</span>:<span class="string">&#x27;jp&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Korean&quot;</span>:<span class="string">&#x27;kor&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Spanish&quot;</span>:<span class="string">&#x27;spa&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Portuguese&quot;</span>:<span class="string">&#x27;pt&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Italian&quot;</span>:<span class="string">&#x27;it&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Arabic&quot;</span>:<span class="string">&#x27;ara&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">ch_intro=<span class="string">&quot;欢迎使用Octrans！这是一个基于百度api的简易翻译器，支持多种语言的翻译，感谢您的使用和支持！&quot;</span></span><br><span class="line">en_intro=<span class="string">&quot;Welcome to Octrans! This is a simle translator based on Baidu api, which supports translation between varies of languages. Thanks for using!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ui_Octrans</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">setupUi</span>(<span class="params">self, Octrans</span>):</span><br><span class="line">        Octrans.setObjectName(<span class="string">&quot;Octrans&quot;</span>)</span><br><span class="line">        Octrans.resize(<span class="number">780</span>, <span class="number">587</span>)</span><br><span class="line">        self.centralwidget = QtWidgets.QWidget(Octrans)</span><br><span class="line">        self.centralwidget.setObjectName(<span class="string">&quot;centralwidget&quot;</span>)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)</span><br><span class="line">        self.gridLayout.setObjectName(<span class="string">&quot;gridLayout&quot;</span>)</span><br><span class="line">        self.lanchoice = QtWidgets.QComboBox(self.centralwidget)</span><br><span class="line">        self.lanchoice.setObjectName(<span class="string">&quot;lanchoice&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.lanchoice, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.inptext = QtWidgets.QTextEdit(self.centralwidget)</span><br><span class="line">        self.inptext.setObjectName(<span class="string">&quot;inptext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.inptext, <span class="number">2</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.transbut = QtWidgets.QPushButton(self.centralwidget)</span><br><span class="line">        self.transbut.setObjectName(<span class="string">&quot;transbut&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.transbut, <span class="number">3</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.introtext = QtWidgets.QLabel(self.centralwidget)</span><br><span class="line">        self.introtext.setTextFormat(QtCore.Qt.MarkdownText)</span><br><span class="line">        self.introtext.setObjectName(<span class="string">&quot;introtext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.introtext, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.outext = QtWidgets.QTextEdit(self.centralwidget)</span><br><span class="line">        self.outext.setObjectName(<span class="string">&quot;outext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.outext, <span class="number">4</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        Octrans.setCentralWidget(self.centralwidget)</span><br><span class="line">        self.menubar = QtWidgets.QMenuBar(Octrans)</span><br><span class="line">        self.menubar.setGeometry(QtCore.QRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">780</span>, <span class="number">22</span>))</span><br><span class="line">        self.menubar.setObjectName(<span class="string">&quot;menubar&quot;</span>)</span><br><span class="line">        self.Filem = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.Filem.setObjectName(<span class="string">&quot;Filem&quot;</span>)</span><br><span class="line">        self.settingm = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.settingm.setObjectName(<span class="string">&quot;settingm&quot;</span>)</span><br><span class="line">        self.menulanm = QtWidgets.QMenu(self.settingm)</span><br><span class="line">        self.menulanm.setObjectName(<span class="string">&quot;menulanm&quot;</span>)</span><br><span class="line">        self.Instm = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.Instm.setObjectName(<span class="string">&quot;Instm&quot;</span>)</span><br><span class="line">        Octrans.setMenuBar(self.menubar)</span><br><span class="line">        self.statusbar = QtWidgets.QStatusBar(Octrans)</span><br><span class="line">        self.statusbar.setObjectName(<span class="string">&quot;statusbar&quot;</span>)</span><br><span class="line">        Octrans.setStatusBar(self.statusbar)</span><br><span class="line">        self.openm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.openm.setObjectName(<span class="string">&quot;openm&quot;</span>)</span><br><span class="line">        self.savem = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.savem.setObjectName(<span class="string">&quot;savem&quot;</span>)</span><br><span class="line">        self.chm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.chm.setObjectName(<span class="string">&quot;chm&quot;</span>)</span><br><span class="line">        self.enm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.enm.setObjectName(<span class="string">&quot;enm&quot;</span>)</span><br><span class="line">        self.Filem.addAction(self.openm)</span><br><span class="line">        self.Filem.addAction(self.savem)</span><br><span class="line">        self.menulanm.addAction(self.chm)</span><br><span class="line">        self.menulanm.addAction(self.enm)</span><br><span class="line">        self.settingm.addAction(self.menulanm.menuAction())</span><br><span class="line">        self.menubar.addAction(self.Filem.menuAction())</span><br><span class="line">        self.menubar.addAction(self.settingm.menuAction())</span><br><span class="line"></span><br><span class="line">        self.retranslateUi(Octrans)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(Octrans)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">retranslateUi</span>(<span class="params">self, Octrans</span>):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        Octrans.setWindowTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;Octrans-Version 2.0&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;汉语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;英语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;粤语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;文言文&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;法语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;德语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;日语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;韩语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;西班牙语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;葡萄牙语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;意大利语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;阿拉伯语&quot;</span>))</span><br><span class="line">        self.transbut.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;翻译&quot;</span>))</span><br><span class="line">        self.introtext.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, ch_intro))</span><br><span class="line">        self.introtext.setWordWrap(<span class="literal">True</span>)</span><br><span class="line">        self.Filem.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;文件&quot;</span>))</span><br><span class="line">        self.settingm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;设置&quot;</span>))</span><br><span class="line">        self.Instm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>,<span class="string">&quot;说明&quot;</span>))</span><br><span class="line">        self.menulanm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;系统语言&quot;</span>))</span><br><span class="line">        self.openm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;打开&quot;</span>))</span><br><span class="line">        self.openm.setShortcut(<span class="string">&#x27;ctrl+d&#x27;</span>)</span><br><span class="line">        self.savem.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;保存&quot;</span>))</span><br><span class="line">        self.savem.setShortcut(<span class="string">&#x27;ctrl+s&#x27;</span>)</span><br><span class="line">        self.chm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;中文&quot;</span>))</span><br><span class="line">        self.enm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;English&quot;</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">userlangchoice</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> (self.lanchoice.currentText() <span class="keyword">in</span> cndic)==<span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">return</span> cndic[self.lanchoice.currentText()]</span><br><span class="line">        <span class="keyword">if</span> (self.lanchoice.currentText() <span class="keyword">in</span> endic)==<span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">return</span> endic[self.lanchoice.currentText()]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_sys_ch</span>(<span class="params">self</span>):</span><br><span class="line">        self.Filem.setTitle(<span class="string">&quot;文件&quot;</span>)</span><br><span class="line">        self.settingm.setTitle(<span class="string">&quot;设置&quot;</span>)</span><br><span class="line">        self.menulanm.setTitle(<span class="string">&quot;系统语言&quot;</span>)</span><br><span class="line">        self.Instm.setTitle(<span class="string">&quot;说明&quot;</span>)</span><br><span class="line">        self.openm.setText(<span class="string">&quot;打开&quot;</span>)</span><br><span class="line">        self.savem.setText(<span class="string">&quot;保存&quot;</span>)</span><br><span class="line">        self.introtext.setText(ch_intro)</span><br><span class="line">        self.transbut.setText(<span class="string">&quot;翻译&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, <span class="string">&quot;汉语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, <span class="string">&quot;英语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, <span class="string">&quot;粤语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, <span class="string">&quot;文言文&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, <span class="string">&quot;法语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, <span class="string">&quot;德语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, <span class="string">&quot;日语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, <span class="string">&quot;韩语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, <span class="string">&quot;西班牙语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, <span class="string">&quot;葡萄牙语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, <span class="string">&quot;意大利语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, <span class="string">&quot;阿拉伯语&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_sys_en</span>(<span class="params">self</span>):</span><br><span class="line">        self.Filem.setTitle(<span class="string">&quot;File&quot;</span>)</span><br><span class="line">        self.settingm.setTitle(<span class="string">&quot;Setting&quot;</span>)</span><br><span class="line">        self.menulanm.setTitle(<span class="string">&quot;System Language&quot;</span>)</span><br><span class="line">        self.Instm.setTitle(<span class="string">&quot;Instruction&quot;</span>)</span><br><span class="line">        self.openm.setText(<span class="string">&quot;open&quot;</span>)</span><br><span class="line">        self.savem.setText(<span class="string">&quot;save&quot;</span>)</span><br><span class="line">        self.introtext.setText(en_intro)</span><br><span class="line">        self.transbut.setText(<span class="string">&quot;Translate&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, <span class="string">&quot;Mandarin&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, <span class="string">&quot;English&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, <span class="string">&quot;Cantonese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, <span class="string">&quot;Classical Chinese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, <span class="string">&quot;French&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, <span class="string">&quot;German&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, <span class="string">&quot;Japanese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, <span class="string">&quot;Korean&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, <span class="string">&quot;Spanish&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, <span class="string">&quot;Portuguese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, <span class="string">&quot;Italian&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, <span class="string">&quot;Arabic&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">print_text</span>(<span class="params">self</span>):</span><br><span class="line">        user_input = self.inptext.toPlainText()</span><br><span class="line">        <span class="keyword">return</span>(user_input)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">openfile</span>(<span class="params">self</span>):</span><br><span class="line">        filename,_=QtWidgets.QFileDialog.getOpenFileName(self.centralwidget,<span class="string">&#x27;choose a file&#x27;</span>,os.getcwd(),<span class="string">&quot;Text Files(*.txt)&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> filename:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                    data = f.read()</span><br><span class="line">            <span class="keyword">except</span> Exception:</span><br><span class="line">                data=<span class="literal">None</span></span><br><span class="line">            <span class="keyword">if</span> data <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">                self.inptext.setText(data)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            data=<span class="literal">None</span></span><br><span class="line">        <span class="keyword">return</span> data</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">savefile</span>(<span class="params">self</span>):</span><br><span class="line">        filename,_=QtWidgets.QFileDialog.getOpenFileName(self.centralwidget,<span class="string">&#x27;choose a file&#x27;</span>,os.getcwd(),<span class="string">&quot;Text Files(*.txt)&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> filename:</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(filename,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                data=self.outext.toPlainText()</span><br><span class="line">                f.write(data)</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
+<h2 id="主程序部分">主程序部分</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication, QMainWindow</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> translate</span><br><span class="line"></span><br><span class="line">appid = <span class="string">&#x27;20230508001670915&#x27;</span></span><br><span class="line">appkey = <span class="string">&#x27;sx9jtxYrNpwcMeWl2TjI&#x27;</span></span><br><span class="line"></span><br><span class="line">from_lang =<span class="string">&#x27;auto&#x27;</span></span><br><span class="line"></span><br><span class="line">endpoint = <span class="string">&#x27;http://api.fanyi.baidu.com&#x27;</span></span><br><span class="line">path = <span class="string">&#x27;/api/trans/vip/translate&#x27;</span></span><br><span class="line">url = endpoint + path</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">make_md5</span>(<span class="params">s, encoding=<span class="string">&#x27;utf-8&#x27;</span></span>):</span><br><span class="line">    <span class="keyword">return</span> md5(s.encode(encoding)).hexdigest()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">trans</span>(<span class="params">userinputs</span>):</span><br><span class="line">    <span class="keyword">for</span> userinput <span class="keyword">in</span> userinputs.split(<span class="string">&#x27;\n&#x27;</span>):</span><br><span class="line">        salt = random.randint(<span class="number">32768</span>, <span class="number">65536</span>)</span><br><span class="line">        sign = make_md5(appid + userinput + <span class="built_in">str</span>(salt) + appkey)</span><br><span class="line">        <span class="comment"># Build request</span></span><br><span class="line">        headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">        payload = &#123;<span class="string">&#x27;appid&#x27;</span>: appid, <span class="string">&#x27;q&#x27;</span>: userinput, <span class="string">&#x27;from&#x27;</span>: from_lang, <span class="string">&#x27;to&#x27;</span>: to_lang, <span class="string">&#x27;salt&#x27;</span>: salt, <span class="string">&#x27;sign&#x27;</span>: sign&#125;</span><br><span class="line">        <span class="comment"># Send request</span></span><br><span class="line">        r = requests.post(url, params=payload, headers=headers)</span><br><span class="line">        result = json.loads(r.text)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;trans_result&#x27;</span> <span class="keyword">in</span> result:</span><br><span class="line">            trans_result = result[<span class="string">&#x27;trans_result&#x27;</span>]</span><br><span class="line">            <span class="keyword">for</span> item <span class="keyword">in</span> trans_result:</span><br><span class="line">                <span class="keyword">if</span> <span class="string">&#x27;dst&#x27;</span> <span class="keyword">in</span> item:</span><br><span class="line">                    dst = item[<span class="string">&#x27;dst&#x27;</span>]</span><br><span class="line">        <span class="comment"># Show response</span></span><br><span class="line">        ui.outext.append(dst)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">makesure_trans</span>():</span><br><span class="line">    userinputs=ui.print_text()</span><br><span class="line">    <span class="keyword">global</span> to_lang</span><br><span class="line">    to_lang=ui.userlangchoice()</span><br><span class="line">    ui.outext.setText(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    trans(userinputs)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    Octrans = QMainWindow()</span><br><span class="line">    ui = translate.Ui_Octrans()</span><br><span class="line">    ui.setupUi(Octrans)</span><br><span class="line">    Octrans.show()</span><br><span class="line"></span><br><span class="line">    ui.chm.triggered.connect(ui.set_sys_ch)</span><br><span class="line">    ui.enm.triggered.connect(ui.set_sys_en)</span><br><span class="line">    ui.openm.triggered.connect(ui.openfile)</span><br><span class="line">    ui.savem.triggered.connect(ui.savefile)</span><br><span class="line">    ui.transbut.clicked.connect(makesure_trans)</span><br><span class="line"></span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>程序</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>个人服务器配置简介</title>
+    <url>/2023/08/15/012server/</url>
+    <content><![CDATA[<p>期末周、小学期、军训、旅游、实习堆在一起……很久没更新了，今天简单更新一篇小学期自己装服务器的大概情况吧。</p>
+<span id="more"></span>
+<h1 id="起因">起因</h1>
+<p>最初也是最必要的问题，为什么要装服务器？云服务器的价格其实并不算贵，也可以满足大部分个人用户的需求。对我来讲，主要有这几大原因：</p>
+<ol type="1">
+<li>个人服务器可以有更多操作空间，更多的可玩性，扩充我的知识面。</li>
+<li>只拆过机，没装过机，低成本试一试，正好小学期也能有点事情做。</li>
+<li>宿舍尚有空座与闲置的网络接口，并且不会断电。</li>
+</ol>
+<h1 id="配置">配置</h1>
+<p>由于第一次装机，配件都是淘宝上买的，以全新为主。</p>
+<table>
+<tr>
+<td style="text-align:center;">
+主板
+
+</td><td style="text-align:center;">
+微星 PRO H610M
+
+</td><td style="text-align:center;">
+CPU
+
+</td><td style="text-align:center;">
+i3 12100F 散片
+
+</td></tr>
+<tr>
+<td style="text-align:center;">
+散热
+</td>
+<td style="text-align:center;">
+利民 AX120R
+</td>
+<td style="text-align:center;">
+显卡
+</td>
+<td style="text-align:center;">
+蓝宝石 RX580 8G
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+内存
+</td>
+<td style="text-align:center;">
+金士顿 DDR4 8G*2
+</td>
+<td style="text-align:center;">
+硬盘
+</td>
+<td style="text-align:center;">
+sk900 固态 128G + 希捷绿盘 机械 4T
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+电源
+</td>
+<td style="text-align:center;">
+长城铜牌 P500 全出线 500W
+</td>
+<td style="text-align:center;">
+UPS
+</td>
+<td style="text-align:center;">
+雷迪斯 H1000M 600W
+</td>
+</tr>
+</table>
+<p>系统方面。选择了Ubuntu 22.04。</p>
+<h1 id="用途">用途</h1>
+<ol type="1">
+<li>勿忘初心，搭网站这类是必须的</li>
+<li>Ubuntu系统不仅对服务器搭建较为友好，同时也可以接触一下Linux操作</li>
+<li>准备将玩过的游戏，喜欢的音乐以及其他资料在服务器中储存，并使用nextcloud进行云端共享</li>
+<li>网络条件允许的话，可以试着搭建宿舍简易影音服务站</li>
+</ol>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>数码</category>
       </categories>
   </entry>
   <entry>
@@ -3752,197 +3869,8 @@ Eric Kwok
 </ol>
 ]]></content>
       <categories>
+        <category>评价</category>
         <category>音乐</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>个人服务器配置简介</title>
-    <url>/2023/08/15/012server/</url>
-    <content><![CDATA[<p>期末周、小学期、军训、旅游、实习堆在一起……很久没更新了，今天简单更新一篇小学期自己装服务器的大概情况吧。</p>
-<span id="more"></span>
-<h1 id="起因">起因</h1>
-<p>最初也是最必要的问题，为什么要装服务器？云服务器的价格其实并不算贵，也可以满足大部分个人用户的需求。对我来讲，主要有这几大原因：</p>
-<ol type="1">
-<li>个人服务器可以有更多操作空间，更多的可玩性，扩充我的知识面。</li>
-<li>只拆过机，没装过机，低成本试一试，正好小学期也能有点事情做。</li>
-<li>宿舍尚有空座与闲置的网络接口，并且不会断电。</li>
-</ol>
-<h1 id="配置">配置</h1>
-<p>由于第一次装机，配件都是淘宝上买的，以全新为主。</p>
-<table>
-<tr>
-<td style="text-align:center;">
-主板
-
-</td><td style="text-align:center;">
-微星 PRO H610M
-
-</td><td style="text-align:center;">
-CPU
-
-</td><td style="text-align:center;">
-i3 12100F 散片
-
-</td></tr>
-<tr>
-<td style="text-align:center;">
-散热
-</td>
-<td style="text-align:center;">
-利民 AX120R
-</td>
-<td style="text-align:center;">
-显卡
-</td>
-<td style="text-align:center;">
-蓝宝石 RX580 8G
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-内存
-</td>
-<td style="text-align:center;">
-金士顿 DDR4 8G*2
-</td>
-<td style="text-align:center;">
-硬盘
-</td>
-<td style="text-align:center;">
-sk900 固态 128G + 希捷绿盘 机械 4T
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-电源
-</td>
-<td style="text-align:center;">
-长城铜牌 P500 全出线 500W
-</td>
-<td style="text-align:center;">
-UPS
-</td>
-<td style="text-align:center;">
-雷迪斯 H1000M 600W
-</td>
-</tr>
-</table>
-<p>系统方面。选择了Ubuntu 22.04。</p>
-<h1 id="用途">用途</h1>
-<ol type="1">
-<li>勿忘初心，搭网站这类是必须的</li>
-<li>Ubuntu系统不仅对服务器搭建较为友好，同时也可以接触一下Linux操作</li>
-<li>准备将玩过的游戏，喜欢的音乐以及其他资料在服务器中储存，并使用nextcloud进行云端共享</li>
-<li>网络条件允许的话，可以试着搭建宿舍简易影音服务站</li>
-</ol>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Octrans</title>
-    <url>/2023/05/21/011Octrans/</url>
-    <content><![CDATA[<p>Octrans是一款基于百度api的翻译软件，由本人自制，功能一般，bug也很多，欢迎各位指正！</p>
-<span id="more"></span>
-<p>当前版本：V2.1</p>
-<p>下载地址：https://pan.baidu.com/s/1N8ADTEyUZFUs2NYZceDkmA</p>
-<p>提取码：hgqq</p>
-<h1 id="说明">说明</h1>
-<h2 id="v1.0">V1.0</h2>
-<ul>
-<li>使用PyQt5编写了简单的图形界面</li>
-<li>可以选择翻译使用的语言与系统语言</li>
-<li>实现单行文字的翻译</li>
-</ul>
-<h2 id="v2.0">V2.0</h2>
-<ul>
-<li><p>通过在输入栏打入多行文字或导入txt文件进行翻译</p></li>
-<li><p>可以将翻译结果导出到txt文件</p></li>
-</ul>
-<h2 id="v2.1">V2.1</h2>
-<ul>
-<li>优化了系统语言设置</li>
-<li>为文件的保存和读取设置了快捷键</li>
-</ul>
-<h2 id="v2.2">V2.2</h2>
-<ul>
-<li>将应用程序进一步封装，并隐藏了控制台</li>
-<li>修改了版本显示错误</li>
-</ul>
-<h1 id="源码">源码</h1>
-<h2 id="ui部分">UI部分</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtCore, QtGui, QtWidgets</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">cndic=&#123;</span><br><span class="line">            <span class="string">&quot;汉语&quot;</span>:<span class="string">&#x27;zh&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;英语&quot;</span>:<span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;粤语&quot;</span>:<span class="string">&#x27;yue&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;文言文&quot;</span>:<span class="string">&#x27;wyw&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;法语&quot;</span>:<span class="string">&#x27;fra&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;德语&quot;</span>:<span class="string">&#x27;de&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;日语&quot;</span>:<span class="string">&#x27;jp&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;韩语&quot;</span>:<span class="string">&#x27;kor&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;西班牙语&quot;</span>:<span class="string">&#x27;spa&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;葡萄牙语&quot;</span>:<span class="string">&#x27;pt&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;意大利语&quot;</span>:<span class="string">&#x27;it&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;阿拉伯语&quot;</span>:<span class="string">&#x27;ara&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">endic=&#123;</span><br><span class="line">            <span class="string">&quot;Mandarin&quot;</span>:<span class="string">&#x27;zh&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;English&quot;</span>:<span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Cantonese&quot;</span>:<span class="string">&#x27;yue&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Classical Chinese&quot;</span>:<span class="string">&#x27;wyw&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;French&quot;</span>:<span class="string">&#x27;fra&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;German&quot;</span>:<span class="string">&#x27;de&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Japanese&quot;</span>:<span class="string">&#x27;jp&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Korean&quot;</span>:<span class="string">&#x27;kor&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Spanish&quot;</span>:<span class="string">&#x27;spa&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Portuguese&quot;</span>:<span class="string">&#x27;pt&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Italian&quot;</span>:<span class="string">&#x27;it&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;Arabic&quot;</span>:<span class="string">&#x27;ara&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">ch_intro=<span class="string">&quot;欢迎使用Octrans！这是一个基于百度api的简易翻译器，支持多种语言的翻译，感谢您的使用和支持！&quot;</span></span><br><span class="line">en_intro=<span class="string">&quot;Welcome to Octrans! This is a simle translator based on Baidu api, which supports translation between varies of languages. Thanks for using!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ui_Octrans</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">setupUi</span>(<span class="params">self, Octrans</span>):</span><br><span class="line">        Octrans.setObjectName(<span class="string">&quot;Octrans&quot;</span>)</span><br><span class="line">        Octrans.resize(<span class="number">780</span>, <span class="number">587</span>)</span><br><span class="line">        self.centralwidget = QtWidgets.QWidget(Octrans)</span><br><span class="line">        self.centralwidget.setObjectName(<span class="string">&quot;centralwidget&quot;</span>)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)</span><br><span class="line">        self.gridLayout.setObjectName(<span class="string">&quot;gridLayout&quot;</span>)</span><br><span class="line">        self.lanchoice = QtWidgets.QComboBox(self.centralwidget)</span><br><span class="line">        self.lanchoice.setObjectName(<span class="string">&quot;lanchoice&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.lanchoice.addItem(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.lanchoice, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.inptext = QtWidgets.QTextEdit(self.centralwidget)</span><br><span class="line">        self.inptext.setObjectName(<span class="string">&quot;inptext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.inptext, <span class="number">2</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.transbut = QtWidgets.QPushButton(self.centralwidget)</span><br><span class="line">        self.transbut.setObjectName(<span class="string">&quot;transbut&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.transbut, <span class="number">3</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.introtext = QtWidgets.QLabel(self.centralwidget)</span><br><span class="line">        self.introtext.setTextFormat(QtCore.Qt.MarkdownText)</span><br><span class="line">        self.introtext.setObjectName(<span class="string">&quot;introtext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.introtext, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.outext = QtWidgets.QTextEdit(self.centralwidget)</span><br><span class="line">        self.outext.setObjectName(<span class="string">&quot;outext&quot;</span>)</span><br><span class="line">        self.gridLayout.addWidget(self.outext, <span class="number">4</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        Octrans.setCentralWidget(self.centralwidget)</span><br><span class="line">        self.menubar = QtWidgets.QMenuBar(Octrans)</span><br><span class="line">        self.menubar.setGeometry(QtCore.QRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">780</span>, <span class="number">22</span>))</span><br><span class="line">        self.menubar.setObjectName(<span class="string">&quot;menubar&quot;</span>)</span><br><span class="line">        self.Filem = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.Filem.setObjectName(<span class="string">&quot;Filem&quot;</span>)</span><br><span class="line">        self.settingm = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.settingm.setObjectName(<span class="string">&quot;settingm&quot;</span>)</span><br><span class="line">        self.menulanm = QtWidgets.QMenu(self.settingm)</span><br><span class="line">        self.menulanm.setObjectName(<span class="string">&quot;menulanm&quot;</span>)</span><br><span class="line">        self.Instm = QtWidgets.QMenu(self.menubar)</span><br><span class="line">        self.Instm.setObjectName(<span class="string">&quot;Instm&quot;</span>)</span><br><span class="line">        Octrans.setMenuBar(self.menubar)</span><br><span class="line">        self.statusbar = QtWidgets.QStatusBar(Octrans)</span><br><span class="line">        self.statusbar.setObjectName(<span class="string">&quot;statusbar&quot;</span>)</span><br><span class="line">        Octrans.setStatusBar(self.statusbar)</span><br><span class="line">        self.openm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.openm.setObjectName(<span class="string">&quot;openm&quot;</span>)</span><br><span class="line">        self.savem = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.savem.setObjectName(<span class="string">&quot;savem&quot;</span>)</span><br><span class="line">        self.chm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.chm.setObjectName(<span class="string">&quot;chm&quot;</span>)</span><br><span class="line">        self.enm = QtWidgets.QAction(Octrans)</span><br><span class="line">        self.enm.setObjectName(<span class="string">&quot;enm&quot;</span>)</span><br><span class="line">        self.Filem.addAction(self.openm)</span><br><span class="line">        self.Filem.addAction(self.savem)</span><br><span class="line">        self.menulanm.addAction(self.chm)</span><br><span class="line">        self.menulanm.addAction(self.enm)</span><br><span class="line">        self.settingm.addAction(self.menulanm.menuAction())</span><br><span class="line">        self.menubar.addAction(self.Filem.menuAction())</span><br><span class="line">        self.menubar.addAction(self.settingm.menuAction())</span><br><span class="line"></span><br><span class="line">        self.retranslateUi(Octrans)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(Octrans)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">retranslateUi</span>(<span class="params">self, Octrans</span>):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        Octrans.setWindowTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;Octrans-Version 2.0&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;汉语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;英语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;粤语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;文言文&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;法语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;德语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;日语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;韩语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;西班牙语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;葡萄牙语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;意大利语&quot;</span>))</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, _translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;阿拉伯语&quot;</span>))</span><br><span class="line">        self.transbut.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;翻译&quot;</span>))</span><br><span class="line">        self.introtext.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, ch_intro))</span><br><span class="line">        self.introtext.setWordWrap(<span class="literal">True</span>)</span><br><span class="line">        self.Filem.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;文件&quot;</span>))</span><br><span class="line">        self.settingm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;设置&quot;</span>))</span><br><span class="line">        self.Instm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>,<span class="string">&quot;说明&quot;</span>))</span><br><span class="line">        self.menulanm.setTitle(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;系统语言&quot;</span>))</span><br><span class="line">        self.openm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;打开&quot;</span>))</span><br><span class="line">        self.openm.setShortcut(<span class="string">&#x27;ctrl+d&#x27;</span>)</span><br><span class="line">        self.savem.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;保存&quot;</span>))</span><br><span class="line">        self.savem.setShortcut(<span class="string">&#x27;ctrl+s&#x27;</span>)</span><br><span class="line">        self.chm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;中文&quot;</span>))</span><br><span class="line">        self.enm.setText(_translate(<span class="string">&quot;Octrans&quot;</span>, <span class="string">&quot;English&quot;</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">userlangchoice</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> (self.lanchoice.currentText() <span class="keyword">in</span> cndic)==<span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">return</span> cndic[self.lanchoice.currentText()]</span><br><span class="line">        <span class="keyword">if</span> (self.lanchoice.currentText() <span class="keyword">in</span> endic)==<span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">return</span> endic[self.lanchoice.currentText()]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_sys_ch</span>(<span class="params">self</span>):</span><br><span class="line">        self.Filem.setTitle(<span class="string">&quot;文件&quot;</span>)</span><br><span class="line">        self.settingm.setTitle(<span class="string">&quot;设置&quot;</span>)</span><br><span class="line">        self.menulanm.setTitle(<span class="string">&quot;系统语言&quot;</span>)</span><br><span class="line">        self.Instm.setTitle(<span class="string">&quot;说明&quot;</span>)</span><br><span class="line">        self.openm.setText(<span class="string">&quot;打开&quot;</span>)</span><br><span class="line">        self.savem.setText(<span class="string">&quot;保存&quot;</span>)</span><br><span class="line">        self.introtext.setText(ch_intro)</span><br><span class="line">        self.transbut.setText(<span class="string">&quot;翻译&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, <span class="string">&quot;汉语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, <span class="string">&quot;英语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, <span class="string">&quot;粤语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, <span class="string">&quot;文言文&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, <span class="string">&quot;法语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, <span class="string">&quot;德语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, <span class="string">&quot;日语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, <span class="string">&quot;韩语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, <span class="string">&quot;西班牙语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, <span class="string">&quot;葡萄牙语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, <span class="string">&quot;意大利语&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, <span class="string">&quot;阿拉伯语&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_sys_en</span>(<span class="params">self</span>):</span><br><span class="line">        self.Filem.setTitle(<span class="string">&quot;File&quot;</span>)</span><br><span class="line">        self.settingm.setTitle(<span class="string">&quot;Setting&quot;</span>)</span><br><span class="line">        self.menulanm.setTitle(<span class="string">&quot;System Language&quot;</span>)</span><br><span class="line">        self.Instm.setTitle(<span class="string">&quot;Instruction&quot;</span>)</span><br><span class="line">        self.openm.setText(<span class="string">&quot;open&quot;</span>)</span><br><span class="line">        self.savem.setText(<span class="string">&quot;save&quot;</span>)</span><br><span class="line">        self.introtext.setText(en_intro)</span><br><span class="line">        self.transbut.setText(<span class="string">&quot;Translate&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">0</span>, <span class="string">&quot;Mandarin&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">1</span>, <span class="string">&quot;English&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">2</span>, <span class="string">&quot;Cantonese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">3</span>, <span class="string">&quot;Classical Chinese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">4</span>, <span class="string">&quot;French&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">5</span>, <span class="string">&quot;German&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">6</span>, <span class="string">&quot;Japanese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">7</span>, <span class="string">&quot;Korean&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">8</span>, <span class="string">&quot;Spanish&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">9</span>, <span class="string">&quot;Portuguese&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">10</span>, <span class="string">&quot;Italian&quot;</span>)</span><br><span class="line">        self.lanchoice.setItemText(<span class="number">11</span>, <span class="string">&quot;Arabic&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">print_text</span>(<span class="params">self</span>):</span><br><span class="line">        user_input = self.inptext.toPlainText()</span><br><span class="line">        <span class="keyword">return</span>(user_input)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">openfile</span>(<span class="params">self</span>):</span><br><span class="line">        filename,_=QtWidgets.QFileDialog.getOpenFileName(self.centralwidget,<span class="string">&#x27;choose a file&#x27;</span>,os.getcwd(),<span class="string">&quot;Text Files(*.txt)&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> filename:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                    data = f.read()</span><br><span class="line">            <span class="keyword">except</span> Exception:</span><br><span class="line">                data=<span class="literal">None</span></span><br><span class="line">            <span class="keyword">if</span> data <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">                self.inptext.setText(data)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            data=<span class="literal">None</span></span><br><span class="line">        <span class="keyword">return</span> data</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">savefile</span>(<span class="params">self</span>):</span><br><span class="line">        filename,_=QtWidgets.QFileDialog.getOpenFileName(self.centralwidget,<span class="string">&#x27;choose a file&#x27;</span>,os.getcwd(),<span class="string">&quot;Text Files(*.txt)&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> filename:</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(filename,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                data=self.outext.toPlainText()</span><br><span class="line">                f.write(data)</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
-<h2 id="主程序部分">主程序部分</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication, QMainWindow</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> translate</span><br><span class="line"></span><br><span class="line">appid = <span class="string">&#x27;20230508001670915&#x27;</span></span><br><span class="line">appkey = <span class="string">&#x27;sx9jtxYrNpwcMeWl2TjI&#x27;</span></span><br><span class="line"></span><br><span class="line">from_lang =<span class="string">&#x27;auto&#x27;</span></span><br><span class="line"></span><br><span class="line">endpoint = <span class="string">&#x27;http://api.fanyi.baidu.com&#x27;</span></span><br><span class="line">path = <span class="string">&#x27;/api/trans/vip/translate&#x27;</span></span><br><span class="line">url = endpoint + path</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">make_md5</span>(<span class="params">s, encoding=<span class="string">&#x27;utf-8&#x27;</span></span>):</span><br><span class="line">    <span class="keyword">return</span> md5(s.encode(encoding)).hexdigest()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">trans</span>(<span class="params">userinputs</span>):</span><br><span class="line">    <span class="keyword">for</span> userinput <span class="keyword">in</span> userinputs.split(<span class="string">&#x27;\n&#x27;</span>):</span><br><span class="line">        salt = random.randint(<span class="number">32768</span>, <span class="number">65536</span>)</span><br><span class="line">        sign = make_md5(appid + userinput + <span class="built_in">str</span>(salt) + appkey)</span><br><span class="line">        <span class="comment"># Build request</span></span><br><span class="line">        headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">        payload = &#123;<span class="string">&#x27;appid&#x27;</span>: appid, <span class="string">&#x27;q&#x27;</span>: userinput, <span class="string">&#x27;from&#x27;</span>: from_lang, <span class="string">&#x27;to&#x27;</span>: to_lang, <span class="string">&#x27;salt&#x27;</span>: salt, <span class="string">&#x27;sign&#x27;</span>: sign&#125;</span><br><span class="line">        <span class="comment"># Send request</span></span><br><span class="line">        r = requests.post(url, params=payload, headers=headers)</span><br><span class="line">        result = json.loads(r.text)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;trans_result&#x27;</span> <span class="keyword">in</span> result:</span><br><span class="line">            trans_result = result[<span class="string">&#x27;trans_result&#x27;</span>]</span><br><span class="line">            <span class="keyword">for</span> item <span class="keyword">in</span> trans_result:</span><br><span class="line">                <span class="keyword">if</span> <span class="string">&#x27;dst&#x27;</span> <span class="keyword">in</span> item:</span><br><span class="line">                    dst = item[<span class="string">&#x27;dst&#x27;</span>]</span><br><span class="line">        <span class="comment"># Show response</span></span><br><span class="line">        ui.outext.append(dst)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">makesure_trans</span>():</span><br><span class="line">    userinputs=ui.print_text()</span><br><span class="line">    <span class="keyword">global</span> to_lang</span><br><span class="line">    to_lang=ui.userlangchoice()</span><br><span class="line">    ui.outext.setText(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    trans(userinputs)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    Octrans = QMainWindow()</span><br><span class="line">    ui = translate.Ui_Octrans()</span><br><span class="line">    ui.setupUi(Octrans)</span><br><span class="line">    Octrans.show()</span><br><span class="line"></span><br><span class="line">    ui.chm.triggered.connect(ui.set_sys_ch)</span><br><span class="line">    ui.enm.triggered.connect(ui.set_sys_en)</span><br><span class="line">    ui.openm.triggered.connect(ui.openfile)</span><br><span class="line">    ui.savem.triggered.connect(ui.savefile)</span><br><span class="line">    ui.transbut.clicked.connect(makesure_trans)</span><br><span class="line"></span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>程序</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>浅谈实习经历</title>
-    <url>/2023/08/15/013xcmgwork/</url>
-    <content><![CDATA[<p>专业要求实习20天，前几天去实习了一周水一水，稍微聊聊吧。</p>
-<span id="more"></span>
-<h1 id="我想说的话">我想说的话</h1>
-<p>我做了什么其实并不是最重要的，这些和我在实习报告中写的差不多，无非把时间从一周扩到了一个月而已。因此，我只想讲讲我对这个实习本身，以及我对于企业和工作的浅薄看法。</p>
-<p>首先，我想明确一点，在我未来发展方向中，不会存在留校、考公这类选择，因此，除去创业，企业基本成了我最主要的去向。显然，学校和企业间有着巨大的区别。</p>
-<p>从简单又不怎么靠谱的一点讲起，在学校上学，即使一天安排满了课，我只吃一顿饭都不会有什么影响；但是实习这几天，我每天三餐不仅要吃，还吃的很多。这说明：听课、做作业的劳动强度要远远低于任务驱动的企业实际工作，即使两者都是脑力劳动。这导致很多学生毕业后会出现较大的不适应。</p>
-<p>另外，在学校上课时，即使不认真听课，也没有强制力制止你；但是在企业，上班摸鱼直接面对着扣工资等严厉惩罚。一方面，这的确有利于效率提高——至少我这几天的效率要高了一些。但是另一方面，每周的996，加上这种精神高压，很容易加剧人的劳累，这与所谓高考、考研等似乎不相上下。</p>
-<p>不过，我们也要时刻记住，企业并不如大学单纯。观察前辈的工作，我发现，很多时候，各种请示、电话、等候浪费了大量的时间，导致了各类并不很有意义的交流，然而这就是绝大多数企业日常的一环。不同于大学内部只有同学、老师的简单关系，领导、同事、下属，在企业内除了提供必要帮助外，也成了一种桎梏。</p>
-<p>上面几段我所写的，都表明了大学与企业的差异。因此，在大学阶段提前进行实习，熟悉职场环境，对毕业后适应工作大有裨益，而这恰恰是多数学校所欠缺的。我所在的学校姑且还算不错，但真正去实习，而非走马观花的参观的专业，依然寥寥无几。虽然大一就实习或许早了一些，时间也显得稍长，但我还是很感谢这次机会，让我认清了一些事，可以在未来发展面上看到更加现实的道路。</p>
-<h1 id="写在官方的话">写在官方的话</h1>
-<p>最后附上准备交给学校的实习报告，有兴趣也可以看看。</p>
-<h2 id="实习目的及计划">实习目的及计划</h2>
-<p>在本次实习中，我希望结合大一所学的知识，进入生产制造企业实习。在能力上，我希望能够学习产品加工的工艺及流程，同时练习提高自己平面制图与三维建模的水平等；在思维上，我希望能够了解企业日常工作程序及企业文化，提高自身协作交流能力，为日后在企业继续更深入的实习、工作做准备。</p>
-<p>本次实习，我计划到**有限公司的工艺技术部实习，主要工作包括调查研究企业的文化与价值观念，参观或动手操作加工设备，协助进行绘图或建模等。</p>
-<h2 id="实习期完成任务">实习期完成任务</h2>
-<ol type="1">
-<li><p>干了些什么？</p>
-<p>本次实习共历时四周，计20工作日，所在部门为**有限公司工艺技术部，并分配至起重机臂班组。</p></li>
-</ol>
-<ul>
-<li>在第一周，我熟悉了工作环境，通过了安全教育考试，对企业的价值观、发展观等进行了调查，并协助了一些简单的文件操作。</li>
-<li>在第二周，我主要在车间进行参观（因企业车间实操培训时间过长所限，无法实际操作），并协助师傅对新型起重机臂的各类结构数据进行测量计算，以备后续改进使用。</li>
-<li>在第三周，我利用AutoCAD，计算并绘制了几种型号起重机各级起重臂上下盖板折弯的工艺附图，并制作了对应的焊接操作指导书。</li>
-<li>在第四周，我在进行了公司的Pro/E基础考查后，利用该软件协助进行了起重机臂的三维建模，主要负责滑轮支架、折弯钣金件等的建模与小型结构装配。</li>
-</ul>
-<ol start="2" type="1">
-<li>学到什么？</li>
-</ol>
-<ul>
-<li>在第一周，通过交流调查等，学习了企业工作的注意事项、工作流程，进行了企业、部门、班组的三级安全教育，学习了解了安全在制造企业中的地位及相关注意事项，在初步简单工作中学习了部门各项文件的要求及格式等。</li>
-<li>在第二周，我在车间学到了中小型起重机（单缸拉索式）与中大型起重机（双缸插销式）的不同工作原理及制造流程。学习了起重机臂型号读取与数据测算，掌握了相关测量工具的使用方法。</li>
-<li>在第三周，我学习了公司的焊接工艺要求及不同型号机臂的精度要求、计算方法，了解了工艺附图及焊接操作指导书的格式，以及实际生产中的应用。</li>
-<li>在第四周，我接受了部门的Pro/E基础教学，并通过实际案例，掌握了Pro/E中草图绘制，三维建模，钣金件弯折及多个零件的装配组合等操作。</li>
-</ul>
-<ol start="3" type="1">
-<li>听到和见到的</li>
-</ol>
-<ul>
-<li>在第一周，我听到了不同员工、领导对公司工作模式、价值观及未来发展的理解，见到了实际的职场环境与工作流程。</li>
-<li>在第二周，我在车间见到了中大型起重机下料、焊接、装配、喷漆等工序的全流程，听到了一线工人在生产中的注意事项及心得体会。</li>
-<li>在第三周，我听到了部门前辈对新型起重臂改进方案的讨论，见到了几次方案试制的产品及最终确定的成品。</li>
-<li>在第四周，我见到了协助进行建模的机臂的整体结构等。</li>
-</ul>
-<h2 id="实习收获和体会">实习收获和体会</h2>
-<ol type="1">
-<li>通过与部门领导、员工交流，深入理解了部门的精神，懂得了尽己所能完成应尽的职责，学会交流合作，才能成大事。校园与企业有着很大的区别，我在这里得以发现实践的重要性，认识到生产安全的最高地位。</li>
-<li>通过了解大型机械制造流程，加深了对工业设计师职责的认识，对于各项工艺流程都应当有较为明确的了解与规划，并能仔细发现问题，提出合适的解决、改进办法。</li>
-<li>在产品制造销售中，创新性与安全性都是重中之重，没有创新就无法给企业、市场带来活力，促进技术进步，提高产品核心竞争力；没有安全性就无法保证产品的稳定使用，无法在实际生产生活中发挥产品的作用。因此，产品制造上游的开发与下游的测试应当相互促进彼此完善，这也是工业设计师所发挥的重要作用之一。</li>
-<li>不同的公司在实际设计中很可能使用不同的软件，这次实习期间的部分软件也是我从未接触过的，但是各类建模软件往往有相同之处，掌握核心思想后，通过实际操作练习，即可较为顺利的学习运用。</li>
-</ol>
-<h2 id="实习过程中自己的不足之处">实习过程中自己的不足之处</h2>
-<ol type="1">
-<li>由于是第一次实习，我较为缺乏经验，因此在实习之初不够自信，不敢加入部门的交流讨论等；但随着经历不断丰富，我在实习后期能够更为积极主动的参与工作和讨论，在以后的实习中，应该继续提高交流合作能力，发挥自身作用。</li>
-<li>缺少作为工业设计师的宏观认识，在生产中往往只能针对产品的部分环节进行思考，没有考虑制造流程及产品的全貌；在学习和日常中，应该多多丰富充实自己的认知，从而在整体上规划设计产品及工艺等。</li>
-<li>在工作中较为循规蹈矩，以完成分配的任务为主，很少能提出创造性的意见；这与设计思维的缺乏息息相关，应该多观察，多思考，发现每一处值得改进的地方，发掘每一个适于创新的想法。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>杂记</category>
       </categories>
   </entry>
   <entry>
@@ -4058,8 +3986,71 @@ UPS
 <p>安艺市内有医院、诊所共约23所，其中，县立安艺病院水平最佳。</p>
 ]]></content>
       <categories>
-        <category>娱乐</category>
         <category>游戏</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>浅谈实习经历</title>
+    <url>/2023/08/15/013xcmgwork/</url>
+    <content><![CDATA[<p>专业要求实习20天，前几天去实习了一周水一水，稍微聊聊吧。</p>
+<span id="more"></span>
+<h1 id="我想说的话">我想说的话</h1>
+<p>我做了什么其实并不是最重要的，这些和我在实习报告中写的差不多，无非把时间从一周扩到了一个月而已。因此，我只想讲讲我对这个实习本身，以及我对于企业和工作的浅薄看法。</p>
+<p>首先，我想明确一点，在我未来发展方向中，不会存在留校、考公这类选择，因此，除去创业，企业基本成了我最主要的去向。显然，学校和企业间有着巨大的区别。</p>
+<p>从简单又不怎么靠谱的一点讲起，在学校上学，即使一天安排满了课，我只吃一顿饭都不会有什么影响；但是实习这几天，我每天三餐不仅要吃，还吃的很多。这说明：听课、做作业的劳动强度要远远低于任务驱动的企业实际工作，即使两者都是脑力劳动。这导致很多学生毕业后会出现较大的不适应。</p>
+<p>另外，在学校上课时，即使不认真听课，也没有强制力制止你；但是在企业，上班摸鱼直接面对着扣工资等严厉惩罚。一方面，这的确有利于效率提高——至少我这几天的效率要高了一些。但是另一方面，每周的996，加上这种精神高压，很容易加剧人的劳累，这与所谓高考、考研等似乎不相上下。</p>
+<p>不过，我们也要时刻记住，企业并不如大学单纯。观察前辈的工作，我发现，很多时候，各种请示、电话、等候浪费了大量的时间，导致了各类并不很有意义的交流，然而这就是绝大多数企业日常的一环。不同于大学内部只有同学、老师的简单关系，领导、同事、下属，在企业内除了提供必要帮助外，也成了一种桎梏。</p>
+<p>上面几段我所写的，都表明了大学与企业的差异。因此，在大学阶段提前进行实习，熟悉职场环境，对毕业后适应工作大有裨益，而这恰恰是多数学校所欠缺的。我所在的学校姑且还算不错，但真正去实习，而非走马观花的参观的专业，依然寥寥无几。虽然大一就实习或许早了一些，时间也显得稍长，但我还是很感谢这次机会，让我认清了一些事，可以在未来发展面上看到更加现实的道路。</p>
+<h1 id="写在官方的话">写在官方的话</h1>
+<p>最后附上准备交给学校的实习报告，有兴趣也可以看看。</p>
+<h2 id="实习目的及计划">实习目的及计划</h2>
+<p>在本次实习中，我希望结合大一所学的知识，进入生产制造企业实习。在能力上，我希望能够学习产品加工的工艺及流程，同时练习提高自己平面制图与三维建模的水平等；在思维上，我希望能够了解企业日常工作程序及企业文化，提高自身协作交流能力，为日后在企业继续更深入的实习、工作做准备。</p>
+<p>本次实习，我计划到**有限公司的工艺技术部实习，主要工作包括调查研究企业的文化与价值观念，参观或动手操作加工设备，协助进行绘图或建模等。</p>
+<h2 id="实习期完成任务">实习期完成任务</h2>
+<ol type="1">
+<li><p>干了些什么？</p>
+<p>本次实习共历时四周，计20工作日，所在部门为**有限公司工艺技术部，并分配至起重机臂班组。</p></li>
+</ol>
+<ul>
+<li>在第一周，我熟悉了工作环境，通过了安全教育考试，对企业的价值观、发展观等进行了调查，并协助了一些简单的文件操作。</li>
+<li>在第二周，我主要在车间进行参观（因企业车间实操培训时间过长所限，无法实际操作），并协助师傅对新型起重机臂的各类结构数据进行测量计算，以备后续改进使用。</li>
+<li>在第三周，我利用AutoCAD，计算并绘制了几种型号起重机各级起重臂上下盖板折弯的工艺附图，并制作了对应的焊接操作指导书。</li>
+<li>在第四周，我在进行了公司的Pro/E基础考查后，利用该软件协助进行了起重机臂的三维建模，主要负责滑轮支架、折弯钣金件等的建模与小型结构装配。</li>
+</ul>
+<ol start="2" type="1">
+<li>学到什么？</li>
+</ol>
+<ul>
+<li>在第一周，通过交流调查等，学习了企业工作的注意事项、工作流程，进行了企业、部门、班组的三级安全教育，学习了解了安全在制造企业中的地位及相关注意事项，在初步简单工作中学习了部门各项文件的要求及格式等。</li>
+<li>在第二周，我在车间学到了中小型起重机（单缸拉索式）与中大型起重机（双缸插销式）的不同工作原理及制造流程。学习了起重机臂型号读取与数据测算，掌握了相关测量工具的使用方法。</li>
+<li>在第三周，我学习了公司的焊接工艺要求及不同型号机臂的精度要求、计算方法，了解了工艺附图及焊接操作指导书的格式，以及实际生产中的应用。</li>
+<li>在第四周，我接受了部门的Pro/E基础教学，并通过实际案例，掌握了Pro/E中草图绘制，三维建模，钣金件弯折及多个零件的装配组合等操作。</li>
+</ul>
+<ol start="3" type="1">
+<li>听到和见到的</li>
+</ol>
+<ul>
+<li>在第一周，我听到了不同员工、领导对公司工作模式、价值观及未来发展的理解，见到了实际的职场环境与工作流程。</li>
+<li>在第二周，我在车间见到了中大型起重机下料、焊接、装配、喷漆等工序的全流程，听到了一线工人在生产中的注意事项及心得体会。</li>
+<li>在第三周，我听到了部门前辈对新型起重臂改进方案的讨论，见到了几次方案试制的产品及最终确定的成品。</li>
+<li>在第四周，我见到了协助进行建模的机臂的整体结构等。</li>
+</ul>
+<h2 id="实习收获和体会">实习收获和体会</h2>
+<ol type="1">
+<li>通过与部门领导、员工交流，深入理解了部门的精神，懂得了尽己所能完成应尽的职责，学会交流合作，才能成大事。校园与企业有着很大的区别，我在这里得以发现实践的重要性，认识到生产安全的最高地位。</li>
+<li>通过了解大型机械制造流程，加深了对工业设计师职责的认识，对于各项工艺流程都应当有较为明确的了解与规划，并能仔细发现问题，提出合适的解决、改进办法。</li>
+<li>在产品制造销售中，创新性与安全性都是重中之重，没有创新就无法给企业、市场带来活力，促进技术进步，提高产品核心竞争力；没有安全性就无法保证产品的稳定使用，无法在实际生产生活中发挥产品的作用。因此，产品制造上游的开发与下游的测试应当相互促进彼此完善，这也是工业设计师所发挥的重要作用之一。</li>
+<li>不同的公司在实际设计中很可能使用不同的软件，这次实习期间的部分软件也是我从未接触过的，但是各类建模软件往往有相同之处，掌握核心思想后，通过实际操作练习，即可较为顺利的学习运用。</li>
+</ol>
+<h2 id="实习过程中自己的不足之处">实习过程中自己的不足之处</h2>
+<ol type="1">
+<li>由于是第一次实习，我较为缺乏经验，因此在实习之初不够自信，不敢加入部门的交流讨论等；但随着经历不断丰富，我在实习后期能够更为积极主动的参与工作和讨论，在以后的实习中，应该继续提高交流合作能力，发挥自身作用。</li>
+<li>缺少作为工业设计师的宏观认识，在生产中往往只能针对产品的部分环节进行思考，没有考虑制造流程及产品的全貌；在学习和日常中，应该多多丰富充实自己的认知，从而在整体上规划设计产品及工艺等。</li>
+<li>在工作中较为循规蹈矩，以完成分配的任务为主，很少能提出创造性的意见；这与设计思维的缺乏息息相关，应该多观察，多思考，发现每一处值得改进的地方，发掘每一个适于创新的想法。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>杂记</category>
       </categories>
   </entry>
   <entry>
@@ -4095,6 +4086,7 @@ UPS
 ]]></content>
       <categories>
         <category>教程</category>
+        <category>数码</category>
       </categories>
   </entry>
   <entry>
@@ -4232,6 +4224,7 @@ cpolar)。在cpolar官网的验证选项，复制指令并为cpolar添加authtok
 ]]></content>
       <categories>
         <category>教程</category>
+        <category>程序</category>
       </categories>
   </entry>
   <entry>
@@ -4272,6 +4265,22 @@ cpolar)。在cpolar官网的验证选项，复制指令并为cpolar添加authtok
       <categories>
         <category>设计</category>
         <category>产品</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>西交毕设模版Latex基础版</title>
+    <url>/2023/11/04/019xjtutemplate/</url>
+    <content><![CDATA[<p>由于一门课程要求使用西交毕设模版写报告，就自己简单整理了一个Latex模板。</p>
+<span id="more"></span>
+<h1 id="简介">简介</h1>
+<p>其实没什么好说的，可能单纯来水一篇文章。这个模版极其简略，可能也会有不少错误，但是应该能满足最基本的要求。</p>
+<p>参考<a href="%5B2022届本科毕业设计（论文）工作手册-西安交通大学实践教学中心%20(xjtu.edu.cn)%5D(http://pec.xjtu.edu.cn/info/1164/2577.htm)">西安交大官方格式要求</a>编写，如有错误，敬请指出。</p>
+<p>另附模板<a href="http://192.168.1.106/nextcloud/index.php/s/kgDyrFNTKZm9QDT">下载链接</a></p>
+<p>Edit：貌似不太好用啊……不写公式还是老实用回word了</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>课程</category>
       </categories>
   </entry>
   <entry>
@@ -4337,53 +4346,7 @@ cpolar)。在cpolar官网的验证选项，复制指令并为cpolar添加authtok
 <p>随着天际线二代的消息放出及不断公开的细节，一代被对比的索然无味，我也开始计划用最后一个存档作结。尽管完成度离100%还有着不小的差距，但是最后一个存档让我充分发挥了城市规划的热情，构建起了较为完善的轨道交通网络，我认为已经是时候和这个游戏说再见了。想说的其实还有很多，但是又不知道讲点什么好，那就让我们在即将发售的城市天际线二代再见吧！</p>
 ]]></content>
       <categories>
-        <category>娱乐</category>
         <category>游戏</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>西交毕设模版Latex基础版</title>
-    <url>/2023/11/04/019xjtutemplate/</url>
-    <content><![CDATA[<p>由于一门课程要求使用西交毕设模版写报告，就自己简单整理了一个Latex模板。</p>
-<span id="more"></span>
-<h1 id="简介">简介</h1>
-<p>其实没什么好说的，可能单纯来水一篇文章。这个模版极其简略，可能也会有不少错误，但是应该能满足最基本的要求。</p>
-<p>参考<a href="%5B2022届本科毕业设计（论文）工作手册-西安交通大学实践教学中心%20(xjtu.edu.cn)%5D(http://pec.xjtu.edu.cn/info/1164/2577.htm)">西安交大官方格式要求</a>编写，如有错误，敬请指出。</p>
-<p>另附模板<a href="http://192.168.1.106/nextcloud/index.php/s/kgDyrFNTKZm9QDT">下载链接</a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>其他</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>江苏轨道交通架空规划</title>
-    <url>/2023/11/14/021jiangsumetro/</url>
-    <content><![CDATA[<p>在开始之前，首先声明，本规划与官方无关，纯属个人yy，欢迎友好交流，请勿信以为真。</p>
-<span id="more"></span>
-<h1 id="规划思路">规划思路</h1>
-<p>本人并非城规、轨交专业学生，但对此方面较为感兴趣，也粗略读过一些相关书籍。对江苏省的城市，我基本还算有些了解，因此斗胆对其中没有轨道交通的七座城市进行一些粗浅的规划。不过，部分城市我也并未实际到访过，因此会有诸多不足之处。</p>
-<p>这几座城市的建设各有特点，有明确中心的城市，采用棋盘式、发散式布局；多中心组团型城市，采用市域线路连接，并在核心城区用低运量线路辅助。江苏省内的中小型城市发展基础较好，质量较高，但是城市框架不大。随着中国人口开始呈现下降趋势，老龄化也日渐严重，我认为对于中小型城市，交通导向的规划已经不在是必要。因此，在这几座城市的轨道交通规划中，我大多采用了较为保守的线路布局。但对于一些可能会在未来获得发展机遇，抑或轨道交通能支撑起城市骨架的案例，我也给出了较为激进的规划。</p>
-<p>在此附上规划高清图片<a href="http://octyun.xyz/nextcloud/index.php/s/y9Z7axJdbR8s3dz">下载链接</a>（这两天个人云盘访问出了点问题，周末修一下）。</p>
-<h1 id="具体介绍">具体介绍</h1>
-<p>以下按我绘制的顺序排序。</p>
-<h2 id="盐城">盐城</h2>
-<p>规划思路慢慢写，随缘更新一下……</p>
-<p><img src="/2023/11/14/021jiangsumetro/盐城.png"></p>
-<h2 id="连云港">连云港</h2>
-<p><img src="/2023/11/14/021jiangsumetro/连云港.png"></p>
-<h2 id="淮安">淮安</h2>
-<p><img src="/2023/11/14/021jiangsumetro/淮安.png"></p>
-<h2 id="扬州镇江">扬州&amp;镇江</h2>
-<p><img src="/2023/11/14/021jiangsumetro/扬州镇江.png"></p>
-<h2 id="宿迁">宿迁</h2>
-<p><img src="/2023/11/14/021jiangsumetro/宿迁.png"></p>
-<h2 id="泰州">泰州</h2>
-<p><img src="/2023/11/14/021jiangsumetro/泰州.png"></p>
-]]></content>
-      <categories>
-        <category>设计</category>
-        <category>交通</category>
       </categories>
   </entry>
   <entry>
@@ -4759,7 +4722,38 @@ cpolar)。在cpolar官网的验证选项，复制指令并为cpolar添加authtok
 </ul>
 ]]></content>
       <categories>
+        <category>评价</category>
         <category>音乐</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>江苏轨道交通架空规划</title>
+    <url>/2023/11/14/021jiangsumetro/</url>
+    <content><![CDATA[<p>在开始之前，首先声明，本规划与官方无关，纯属个人yy，欢迎友好交流，请勿信以为真。</p>
+<span id="more"></span>
+<h1 id="规划思路">规划思路</h1>
+<p>本人并非城规、轨交专业学生，但对此方面较为感兴趣，也粗略读过一些相关书籍。对江苏省的城市，我基本还算有些了解，因此斗胆对其中没有轨道交通的七座城市进行一些粗浅的规划。不过，部分城市我也并未实际到访过，因此会有诸多不足之处。</p>
+<p>这几座城市的建设各有特点，有明确中心的城市，采用棋盘式、发散式布局；多中心组团型城市，采用市域线路连接，并在核心城区用低运量线路辅助。江苏省内的中小型城市发展基础较好，质量较高，但是城市框架不大。随着中国人口开始呈现下降趋势，老龄化也日渐严重，我认为对于中小型城市，交通导向的规划已经不在是必要。因此，在这几座城市的轨道交通规划中，我大多采用了较为保守的线路布局。但对于一些可能会在未来获得发展机遇，抑或轨道交通能支撑起城市骨架的案例，我也给出了较为激进的规划。</p>
+<p>在此附上规划高清图片<a href="http://octyun.xyz/nextcloud/index.php/s/y9Z7axJdbR8s3dz">下载链接</a>（这两天个人云盘访问出了点问题，周末修一下）。</p>
+<h1 id="具体介绍">具体介绍</h1>
+<p>以下按我绘制的顺序排序。</p>
+<h2 id="盐城">盐城</h2>
+<p>规划思路慢慢写，随缘更新一下……</p>
+<p><img src="/2023/11/14/021jiangsumetro/盐城.png"></p>
+<h2 id="连云港">连云港</h2>
+<p><img src="/2023/11/14/021jiangsumetro/连云港.png"></p>
+<h2 id="淮安">淮安</h2>
+<p><img src="/2023/11/14/021jiangsumetro/淮安.png"></p>
+<h2 id="扬州镇江">扬州&amp;镇江</h2>
+<p><img src="/2023/11/14/021jiangsumetro/扬州镇江.png"></p>
+<h2 id="宿迁">宿迁</h2>
+<p><img src="/2023/11/14/021jiangsumetro/宿迁.png"></p>
+<h2 id="泰州">泰州</h2>
+<p><img src="/2023/11/14/021jiangsumetro/泰州.png"></p>
+]]></content>
+      <categories>
+        <category>设计</category>
+        <category>交通</category>
       </categories>
   </entry>
   <entry>
@@ -4823,32 +4817,6 @@ https://baike.baidu.com/item/%E6%91%A9%E5%8D%A1%E5%A3%B6/224714.</li>
       <categories>
         <category>设计</category>
         <category>产品</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>OpenCV基本函数简介</title>
-    <url>/2024/01/19/024opencvintro/</url>
-    <content><![CDATA[<p>自学过程中顺便记录一下</p>
-<span id="more"></span>
-<h1 id="简介">简介</h1>
-<p><a href="https://opencv.org/">OpenCV</a>的设计目标是提供一套简单而且可扩展的计算机视觉库，应用领域包括人机互动、图像识别、机器视觉、运动分析等。</p>
-<p>在Python环境下，使用<code>pip install opencv-python</code>安装OpenCV库，使用<code>import cv2</code>进行调用。</p>
-<h1 id="基本函数">基本函数</h1>
-<h2 id="文件操作">文件操作</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 加载图像</span></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示图像</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;image&#x27;</span>,img)</span><br><span class="line"><span class="comment"># 等待用户按键，delay设置为0将无限期等待</span></span><br><span class="line">cv2.waitKey(delay)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图像到指定路径</span></span><br><span class="line">cv2.imwrite(<span class="string">&#x27;image.jpg&#x27;</span>,img)</span><br></pre></td></tr></table></figure>
-<h2 id="图像属性查看">图像属性查看</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取像素</span></span><br><span class="line"><span class="comment"># 灰度图通过行列坐标获取</span></span><br><span class="line">px = img[y, x]</span><br><span class="line"><span class="comment"># 彩图加入RGB通道索引(分别为0/1/2)</span></span><br><span class="line">px = img[y, x, c]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改像素</span></span><br><span class="line">img[y, x] = [y_new, x_new]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取图像属性</span></span><br><span class="line"><span class="comment"># 图像大小：行数、列数、通道数</span></span><br><span class="line"><span class="built_in">print</span>(img.shape)</span><br><span class="line"><span class="comment"># 像素总数</span></span><br><span class="line"><span class="built_in">print</span>(img.size)</span><br><span class="line"><span class="comment"># 数据类型</span></span><br><span class="line"><span class="built_in">print</span>(img.dtype)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置感兴趣的区域(起始、结束坐标)</span></span><br><span class="line">roi = img[y1:y2, x1:x2]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拆分颜色通道</span></span><br><span class="line">b,g,r = cv2.split(img)</span><br><span class="line"><span class="comment"># 合并颜色通道</span></span><br><span class="line">img = cv2.merge([b,g,r])</span><br></pre></td></tr></table></figure>
-<h1 id="图像操作">图像操作</h1>
-<h2 id="基本编辑">基本编辑</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 图像缩放</span></span><br><span class="line">resize_img = cv2.resize(img, (width, height))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取旋转矩阵</span></span><br><span class="line">rotate_matrix = cv2.getRotationMatrix2D(center, angle, scale)</span><br><span class="line"><span class="comment"># 图像旋转</span></span><br><span class="line">rotate_img = cv2.warpAffine(img, rotate_matrix, (width, height))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 图像翻转(1表示水平翻转，0表示垂直翻转，-1表示水平和垂直同时翻转)</span></span><br><span class="line">flip_img = cv2.flip(img, <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="图像预处理">图像预处理</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 颜色空间转换(将图像从一种颜色表示方式转换为另一种)</span></span><br><span class="line"><span class="comment"># 例：RGB图像转换为灰度图</span></span><br><span class="line">gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 阈值处理(将图像中的像素按阈值分为两个区域)</span></span><br><span class="line"><span class="comment"># 例：将灰度图按阈值127，最大值255进行二进制阈值化，大于阈值变为最大值，否则变为0</span></span><br><span class="line">ret, binary_img = cv2.threshold(gray_img, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_BINARY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 滤波操作：用于平滑、去噪或增强图像特征</span></span><br><span class="line"><span class="comment"># 高斯滤波(高斯核大小、标准差)</span></span><br><span class="line">gaussblur_img = cv2.GaussianBlur(img, (<span class="number">5</span>, <span class="number">5</span>), <span class="number">0</span>)</span><br><span class="line"><span class="comment"># 中值滤波(滤波器大小)</span></span><br><span class="line">medianblur_img = cv2.medianBlur(img, <span class="number">5</span>)</span><br><span class="line"><span class="comment"># 均值滤波(滤波器大小)</span></span><br><span class="line">meanblur_img = cv2.blur(img, (<span class="number">5</span>, <span class="number">5</span>))</span><br></pre></td></tr></table></figure>
-<h2 id="图像识别检测">图像识别检测</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Canny边缘检测</span></span><br><span class="line">edge = cv2.Canny(img, threshold1, threshold2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 霍夫变换检测直线</span></span><br><span class="line">line = cv2.HoughLines(edge, rho, theta, threshold)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 霍夫变换检测圆</span></span><br><span class="line">circ = cv2.HoughCircles(img, cv2.HOUGH_GRADIENT, dp, minDist, param1, param2, minR, maxR)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>教程</category>
-        <category>程序</category>
       </categories>
   </entry>
   <entry>
@@ -4996,7 +4964,34 @@ Chan》，适合抖腿。《空城计》作为一首短而无趣的芭乐，词�
 </ul>
 ]]></content>
       <categories>
+        <category>评价</category>
         <category>音乐</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>OpenCV基本函数简介</title>
+    <url>/2024/01/19/024opencvintro/</url>
+    <content><![CDATA[<p>自学过程中顺便记录一下</p>
+<span id="more"></span>
+<h1 id="简介">简介</h1>
+<p><a href="https://opencv.org/">OpenCV</a>的设计目标是提供一套简单而且可扩展的计算机视觉库，应用领域包括人机互动、图像识别、机器视觉、运动分析等。</p>
+<p>在Python环境下，使用<code>pip install opencv-python</code>安装OpenCV库，使用<code>import cv2</code>进行调用。</p>
+<h1 id="基本函数">基本函数</h1>
+<h2 id="文件操作">文件操作</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 加载图像</span></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示图像</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;image&#x27;</span>,img)</span><br><span class="line"><span class="comment"># 等待用户按键，delay设置为0将无限期等待</span></span><br><span class="line">cv2.waitKey(delay)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图像到指定路径</span></span><br><span class="line">cv2.imwrite(<span class="string">&#x27;image.jpg&#x27;</span>,img)</span><br></pre></td></tr></table></figure>
+<h2 id="图像属性查看">图像属性查看</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取像素</span></span><br><span class="line"><span class="comment"># 灰度图通过行列坐标获取</span></span><br><span class="line">px = img[y, x]</span><br><span class="line"><span class="comment"># 彩图加入RGB通道索引(分别为0/1/2)</span></span><br><span class="line">px = img[y, x, c]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改像素</span></span><br><span class="line">img[y, x] = [y_new, x_new]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取图像属性</span></span><br><span class="line"><span class="comment"># 图像大小：行数、列数、通道数</span></span><br><span class="line"><span class="built_in">print</span>(img.shape)</span><br><span class="line"><span class="comment"># 像素总数</span></span><br><span class="line"><span class="built_in">print</span>(img.size)</span><br><span class="line"><span class="comment"># 数据类型</span></span><br><span class="line"><span class="built_in">print</span>(img.dtype)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置感兴趣的区域(起始、结束坐标)</span></span><br><span class="line">roi = img[y1:y2, x1:x2]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拆分颜色通道</span></span><br><span class="line">b,g,r = cv2.split(img)</span><br><span class="line"><span class="comment"># 合并颜色通道</span></span><br><span class="line">img = cv2.merge([b,g,r])</span><br></pre></td></tr></table></figure>
+<h1 id="图像操作">图像操作</h1>
+<h2 id="基本编辑">基本编辑</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 图像缩放</span></span><br><span class="line">resize_img = cv2.resize(img, (width, height))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取旋转矩阵</span></span><br><span class="line">rotate_matrix = cv2.getRotationMatrix2D(center, angle, scale)</span><br><span class="line"><span class="comment"># 图像旋转</span></span><br><span class="line">rotate_img = cv2.warpAffine(img, rotate_matrix, (width, height))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 图像翻转(1表示水平翻转，0表示垂直翻转，-1表示水平和垂直同时翻转)</span></span><br><span class="line">flip_img = cv2.flip(img, <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="图像预处理">图像预处理</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 颜色空间转换(将图像从一种颜色表示方式转换为另一种)</span></span><br><span class="line"><span class="comment"># 例：RGB图像转换为灰度图</span></span><br><span class="line">gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 阈值处理(将图像中的像素按阈值分为两个区域)</span></span><br><span class="line"><span class="comment"># 例：将灰度图按阈值127，最大值255进行二进制阈值化，大于阈值变为最大值，否则变为0</span></span><br><span class="line">ret, binary_img = cv2.threshold(gray_img, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_BINARY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 滤波操作：用于平滑、去噪或增强图像特征</span></span><br><span class="line"><span class="comment"># 高斯滤波(高斯核大小、标准差)</span></span><br><span class="line">gaussblur_img = cv2.GaussianBlur(img, (<span class="number">5</span>, <span class="number">5</span>), <span class="number">0</span>)</span><br><span class="line"><span class="comment"># 中值滤波(滤波器大小)</span></span><br><span class="line">medianblur_img = cv2.medianBlur(img, <span class="number">5</span>)</span><br><span class="line"><span class="comment"># 均值滤波(滤波器大小)</span></span><br><span class="line">meanblur_img = cv2.blur(img, (<span class="number">5</span>, <span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="图像识别检测">图像识别检测</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Canny边缘检测</span></span><br><span class="line">edge = cv2.Canny(img, threshold1, threshold2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 霍夫变换检测直线</span></span><br><span class="line">line = cv2.HoughLines(edge, rho, theta, threshold)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 霍夫变换检测圆</span></span><br><span class="line">circ = cv2.HoughCircles(img, cv2.HOUGH_GRADIENT, dp, minDist, param1, param2, minR, maxR)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>程序</category>
       </categories>
   </entry>
   <entry>
@@ -5053,45 +5048,6 @@ Chan》，适合抖腿。《空城计》作为一首短而无趣的芭乐，词�
       </categories>
   </entry>
   <entry>
-    <title>福建轨道交通架空规划</title>
-    <url>/2024/08/06/027fujianmetro/</url>
-    <content><![CDATA[<p>学期内懒得更新，一次性更新下之前摸鱼的图，主要为福建各城市地铁架空规划……</p>
-<span id="more"></span>
-<h1 id="福建">福建</h1>
-<h2 id="泉州">泉州</h2>
-<p><img src="/2024/08/06/027fujianmetro/泉州-01.jpg"></p>
-<h2 id="漳州厦门">漳州（厦门）</h2>
-<figure>
-<img src="/2024/08/06/027fujianmetro/厦门&amp;漳州-01.jpg" alt="厦门&amp;漳州-01">
-<figcaption aria-hidden="true">厦门&amp;漳州-01</figcaption>
-</figure>
-<h2 id="宁德">宁德</h2>
-<figure>
-<img src="/2024/08/06/027fujianmetro/宁德-01.jpg" alt="宁德-01">
-<figcaption aria-hidden="true">宁德-01</figcaption>
-</figure>
-<h2 id="莆田">莆田</h2>
-<figure>
-<img src="/2024/08/06/027fujianmetro/莆田-01.jpg" alt="莆田-01">
-<figcaption aria-hidden="true">莆田-01</figcaption>
-</figure>
-<h2 id="龙岩">龙岩</h2>
-<figure>
-<img src="/2024/08/06/027fujianmetro/龙岩-01.jpg" alt="龙岩-01">
-<figcaption aria-hidden="true">龙岩-01</figcaption>
-</figure>
-<h2 id="三明">三明</h2>
-<figure>
-<img src="/2024/08/06/027fujianmetro/三明-01.jpg" alt="三明-01">
-<figcaption aria-hidden="true">三明-01</figcaption>
-</figure>
-]]></content>
-      <categories>
-        <category>设计</category>
-        <category>交通</category>
-      </categories>
-  </entry>
-  <entry>
     <title>我们为什么要烧毁金阁</title>
     <url>/2024/02/07/026kinkaku/</url>
     <content><![CDATA[<p>从日本现代文学和《金阁寺》开始，随便聊聊。这篇博客完全展示我个人的主观意见，我的理解非常片面，或许幼稚可笑。所以，如果您持有不同的观点，请不必太过上纲上线，欢迎友好交流，多谢理解！</p>
@@ -5135,8 +5091,72 @@ Chan》，适合抖腿。《空城计》作为一首短而无趣的芭乐，词�
 <p>最后，我也希望看到这里的人，可以想一想，自己的执念是什么，你有没有尝试着消灭它，这一行为又有何意义？</p>
 ]]></content>
       <categories>
-        <category>书评</category>
+        <category>评价</category>
         <category>文学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>福建轨道交通架空规划</title>
+    <url>/2024/08/06/027fujianmetro/</url>
+    <content><![CDATA[<p>学期内懒得更新，一次性更新下之前摸鱼的图，主要为福建各城市地铁架空规划……</p>
+<span id="more"></span>
+<h1 id="福建">福建</h1>
+<h2 id="泉州">泉州</h2>
+<p><img src="/2024/08/06/027fujianmetro/泉州-01.jpg"></p>
+<h2 id="漳州厦门">漳州（厦门）</h2>
+<figure>
+<img src="/2024/08/06/027fujianmetro/厦门&amp;漳州-01.jpg" alt="厦门&amp;漳州-01">
+<figcaption aria-hidden="true">厦门&amp;漳州-01</figcaption>
+</figure>
+<h2 id="宁德">宁德</h2>
+<figure>
+<img src="/2024/08/06/027fujianmetro/宁德-01.jpg" alt="宁德-01">
+<figcaption aria-hidden="true">宁德-01</figcaption>
+</figure>
+<h2 id="莆田">莆田</h2>
+<figure>
+<img src="/2024/08/06/027fujianmetro/莆田-01.jpg" alt="莆田-01">
+<figcaption aria-hidden="true">莆田-01</figcaption>
+</figure>
+<h2 id="龙岩">龙岩</h2>
+<figure>
+<img src="/2024/08/06/027fujianmetro/龙岩-01.jpg" alt="龙岩-01">
+<figcaption aria-hidden="true">龙岩-01</figcaption>
+</figure>
+<h2 id="三明">三明</h2>
+<figure>
+<img src="/2024/08/06/027fujianmetro/三明-01.jpg" alt="三明-01">
+<figcaption aria-hidden="true">三明-01</figcaption>
+</figure>
+]]></content>
+      <categories>
+        <category>设计</category>
+        <category>交通</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>巴尔干半岛纪行</title>
+    <url>/2024/08/06/028balkan/</url>
+    <content><![CDATA[<p>这只是一篇流水账式的游记，我不会涉猎太多细节，只随便讲讲，想到什么就是什么，仅供娱乐看看。</p>
+<span id="more"></span>
+<h1 id="part1-文化历史建筑">Part1 文化、历史、建筑</h1>
+<p><img src="/2024/08/06/028balkan/20240724_153023.jpg" height="600"></p>
+<p>众所周知，巴尔干地区自古就是战争要地，在近代被夹在俄罗斯、奥匈帝国和奥斯曼土耳其三方强国之间，形成了宗教、历史文化与建筑风格的混合地带。这些不同在各国一次次短暂的占领中，并未得到有机的整合，而仅仅存在于此，相互对立，这也造就了90年代以来前南斯拉夫地区的种族战争，此处且按下不表。</p>
+<p>这些矛盾之处，很大程度上丰富了巴尔干地区的旅游资源，我们得以在一个国家乃至一个城市中，见到多种不同风格的建筑，这在贝尔格莱德得到了极好的体现：这座城市旧城区的建筑以巴洛克等近代欧洲风格为主；而城市中心屹立着的卡莱梅格丹城堡，则为奥斯曼帝国时期修建的土耳其式建筑。</p>
+<p><img src="/2024/08/06/028balkan/20240724_154651.jpg" height="600"></p>
+<p>这座城堡地处萨瓦河与多瑙河交汇的山上，扼地势之险要，登临其上，也可以俯瞰整个贝尔格莱德的景观。</p>
+<p><img src="/2024/08/06/028balkan/20240724_155405.jpg" height="600"></p>
+<p>河对岸的地区被称作新贝尔格莱德，这是南斯拉夫时期逐步发展起来的新城。在这一地区，受前南社会主义要求与苏联美学观念影响，大量野蛮主义的住宅建筑被兴建使用——简单来说，就是模板化复制的板楼和筒子楼。不过，值得一提的是，或许是受到路面光照等规则限制，这些住宅许多以退台形式临街建立，在颜色上也颇有新意，总体视觉效果其实相当出彩。</p>
+<p>随着南斯拉夫解体，塞尔维亚的建筑也走向现代化，在贝尔格莱德的新建筑中，解构主义和后现代主义等都可以见到。</p>
+<p><img src="/2024/08/06/028balkan/20240725_091348.jpg" height="600"></p>
+<h1 id="part2-向山进发">Part2 向山进发</h1>
+<h1 id="part3-宗教与民族">Part3 宗教与民族</h1>
+<h1 id="part4-冉冉升起的破落城市">Part4 冉冉升起的破落城市</h1>
+<h1 id="part5-蓝色的亚得里亚海">Part5 蓝色的亚得里亚海</h1>
+<h1 id="part6-何为南斯拉夫精神">Part6 何为南斯拉夫精神</h1>
+]]></content>
+      <categories>
+        <category>杂记</category>
       </categories>
   </entry>
 </search>
